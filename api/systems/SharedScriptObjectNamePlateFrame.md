@@ -1,0 +1,3 @@
+# SharedScriptObjectNamePlateFrame
+
+source `interface/addons/blizzard_apidocumentationgenerated/sharedscriptobjectnameplateframedocumentation.lua` (FileDataID 7676213)

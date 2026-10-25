@@ -1,0 +1,7525 @@
+# FrameXML global functions
+
+Global Lua functions defined by Blizzard's UI code (not the C API; for that see `api/`). Parameters are as written in the source.
+
+
+## blizzard_achievementui
+
+- `AcheivementFullSearchResultsButton_OnClick(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3742`
+- `AchievementButton_Collapse(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:766`
+- `AchievementButton_Desaturate(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:842`
+- `AchievementButton_DisplayAchievement(button, category, achievement, selectionID)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:954`
+- `AchievementButton_DisplayObjectives(button, id, completed)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:1096`
+- `AchievementButton_Expand(self, height)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:785`
+- `AchievementButton_GetMeta(index)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:1225`
+- `AchievementButton_GetProgressivePoints(achievementID)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:1902`
+- `AchievementButton_Localize(button)`: `interface/addons/blizzard_achievementui/mainline/localization.lua:25`
+- `AchievementButton_LocalizeMetaAchievement(frame)`: `interface/addons/blizzard_achievementui/mainline/localization.lua:13`
+- `AchievementButton_LocalizeMiniAchievement(frame)`: `interface/addons/blizzard_achievementui/mainline/localization.lua:5`
+- `AchievementButton_LocalizeProgressBar(frame)`: `interface/addons/blizzard_achievementui/mainline/localization.lua:9`
+- `AchievementButton_OnClick(self, button, down, ignoreModifiers)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:893`
+- `AchievementButton_OnLoad(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:870`
+- `AchievementButton_ResetCriteria()`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:1220`
+- `AchievementButton_ResetTable(t)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:1818`
+- `AchievementButton_Saturate(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:808`
+- `AchievementButton_ToggleMetaView(frame)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:1239`
+- `AchievementButton_ToggleTracking(id)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:926`
+- `AchievementButton_UpdatePlusMinusTexture(button)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:735`
+- `AchievementCategoryButton_Localize(button)`: `interface/addons/blizzard_achievementui/mainline/localization.lua:21`
+- `AchievementCategoryButton_OnLoad(button)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:492`
+- `AchievementComparisonButton_Localize(button)`: `interface/addons/blizzard_achievementui/mainline/localization.lua:29`
+- `AchievementComparisonFriendButton_Desaturate(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:2266`
+- `AchievementComparisonFriendButton_Desaturate(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3278`
+- `AchievementComparisonFriendButton_OnLoad(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:2284`
+- `AchievementComparisonFriendButton_OnLoad(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3296`
+- `AchievementComparisonFriendButton_Saturate(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:2245`
+- `AchievementComparisonFriendButton_Saturate(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3258`
+- `AchievementComparisonPlayerButton_Desaturate(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:2199`
+- `AchievementComparisonPlayerButton_Desaturate(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3223`
+- `AchievementComparisonPlayerButton_OnLoad(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:2233`
+- `AchievementComparisonPlayerButton_OnLoad(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3251`
+- `AchievementComparisonPlayerButton_Saturate(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:2161`
+- `AchievementComparisonPlayerButton_Saturate(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3190`
+- `AchievementFrame_DisplayComparison(unit)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:50`
+- `AchievementFrame_DisplayComparison(unit)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:245`
+- `AchievementFrame_FindDisplayedAchievement(baseAchievementID)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3441`
+- `AchievementFrame_ForceUpdate()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:344`
+- `AchievementFrame_GetCategoryNumAchievements_All(categoryID)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:1989`
+- `AchievementFrame_GetCategoryNumAchievements_Complete(categoryID)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:1994`
+- `AchievementFrame_GetCategoryNumAchievements_Incomplete(categoryID)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:1999`
+- `AchievementFrame_GetCategoryTotalNumAchievements(id, showAll)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2730`
+- `AchievementFrame_GetOverridePoints(points, achievementId)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:432`
+- `AchievementFrame_HideFilterDropdown(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:332`
+- `AchievementFrame_HideSearchPreview()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3472`
+- `AchievementFrame_IsComparison()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3331`
+- `AchievementFrame_IsFeatOfStrength()`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:2292`
+- `AchievementFrame_LoadUI()`: `interface/addons/blizzard_achievementui/blizzard_achievementui_bootstrap.lua:3`
+- `AchievementFrame_LocalizeCriteria(frame)`: `interface/addons/blizzard_achievementui/mainline/localization.lua:17`
+- `AchievementFrame_OnHide(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:308`
+- `AchievementFrame_OnLoad(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:61`
+- `AchievementFrame_OnLoad(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:257`
+- `AchievementFrame_OnShow(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:296`
+- `AchievementFrame_RefreshBackButton(showBackButton)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:408`
+- `AchievementFrame_RefreshView()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:374`
+- `AchievementFrame_SelectAchievement(id, forceSelect)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:1794`
+- `AchievementFrame_SelectAchievement(id, forceSelect)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2811`
+- `AchievementFrame_SelectAndScrollToAchievementId(scrollBox, achievementId)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2840`
+- `AchievementFrame_SelectSearchItem(id)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3796`
+- `AchievementFrame_SelectSummaryStatistic(criteriaId)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:1929`
+- `AchievementFrame_SetComparisonMode(isComparison)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3303`
+- `AchievementFrame_SetComparisonTabs()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:359`
+- `AchievementFrame_SetDateCompleted(frame, day, month, year)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:422`
+- `AchievementFrame_SetFilter(value)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2012`
+- `AchievementFrame_SetRestrictedMode(self, restrictedCategoryID)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:316`
+- `AchievementFrame_SetSearchPreviewSelection(selectedIndex)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3707`
+- `AchievementFrame_SetTabs()`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:103`
+- `AchievementFrame_SetTabs()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:354`
+- `AchievementFrame_ShowAsComplete(completed, wasEarnedByMe)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:427`
+- `AchievementFrame_ShowDateCompleted(parent, show)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:417`
+- `AchievementFrame_ShowFullSearch()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3749`
+- `AchievementFrame_ShowSearchPreviewResults()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3556`
+- `AchievementFrame_ShowSubFrame(...)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:265`
+- `AchievementFrame_ShowSubFrame(...)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:540`
+- `AchievementFrame_ToggleAchievementFrame(_toggleStatFrame, _toggleGuildView)`: `interface/addons/blizzard_achievementui/camelot/blizzard_achievementui.lua:13`
+- `AchievementFrame_ToggleAchievementFrame(toggleStatFrame)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:28`
+- `AchievementFrame_ToggleAchievementFrame(toggleStatFrame, toggleGuildView)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:215`
+- `AchievementFrame_ToggleView()`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:126`
+- `AchievementFrame_TryShowFilterDropdown(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:337`
+- `AchievementFrame_UpdateAndSelectCategory(category)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2787`
+- `AchievementFrame_UpdateFullSearchResults()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3787`
+- `AchievementFrame_UpdateSearch(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3837`
+- `AchievementFrame_UpdateSearchPreview()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3486`
+- `AchievementFrame_UpdateTabs(clickedTab)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:113`
+- `AchievementFrame_UpdateTabs(clickedTab)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:364`
+- `AchievementFrame_ViewStatisticByAchievementID(achievementID)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2857`
+- `AchievementFrameAchievements_CheckGuildMembersTooltip(requestFrame)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:2406`
+- `AchievementFrameAchievements_CheckGuildMembersTooltip(requestFrame)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3387`
+- `AchievementFrameAchievements_ClearSelection()`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:641`
+- `AchievementFrameAchievements_ForceUpdate()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:1050`
+- `AchievementFrameAchievements_GetSelectedAchievementId()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:954`
+- `AchievementFrameAchievements_GetSelectedElementData()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:950`
+- `AchievementFrameAchievements_OnAchievementEarned(achievementId)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:959`
+- `AchievementFrameAchievements_OnCriteriaUpdate()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:971`
+- `AchievementFrameAchievements_OnEvent(self, event, ...)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:525`
+- `AchievementFrameAchievements_OnEvent(self, event, ...)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:989`
+- `AchievementFrameAchievements_OnHide(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:875`
+- `AchievementFrameAchievements_OnLoad(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:500`
+- `AchievementFrameAchievements_OnLoad(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:904`
+- `AchievementFrameAchievements_OnShow()`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:477`
+- `AchievementFrameAchievements_OnShow(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:865`
+- `AchievementFrameAchievements_SelectButton(button)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:1086`
+- `AchievementFrameAchievements_ToggleView()`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:659`
+- `AchievementFrameAchievements_Update()`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:586`
+- `AchievementFrameAchievements_UpdateDataProvider()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:1024`
+- `AchievementFrameAchievements_UpdateTrackedAchievements()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:981`
+- `AchievementFrameAchievementsBackdrop_OnLoad(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:581`
+- `AchievementFrameAchievementsBackdrop_OnLoad(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:1020`
+- `AchievementFrameBaseTab_OnClick(id)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:166`
+- `AchievementFrameBaseTab_OnClick(tabIndex)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:461`
+- `AchievementFrameCategories_DisplayButton(button, element)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:326`
+- `AchievementFrameCategories_ExpandToCategory(category)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:662`
+- `AchievementFrameCategories_FindCategoryElement(categories, category)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:654`
+- `AchievementFrameCategories_GetCategoryList(categories)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:297`
+- `AchievementFrameCategories_OnCategoryChanged(category)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:820`
+- `AchievementFrameCategories_OnCategoryClicked(button)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:757`
+- `AchievementFrameCategories_OnLoad(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:290`
+- `AchievementFrameCategories_OnLoad(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:643`
+- `AchievementFrameCategories_OnShow(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:763`
+- `AchievementFrameCategories_SelectButton(button)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:384`
+- `AchievementFrameCategories_SelectDefaultElementData()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:768`
+- `AchievementFrameCategories_SelectElementData(elementData, ignoreCollapse)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:693`
+- `AchievementFrameCategories_UpdateDataProvider()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:779`
+- `AchievementFrameCategories_UpdateTooltip()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:812`
+- `AchievementFrameCategory_FeatOfStrengthTooltip(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:805`
+- `AchievementFrameCategory_StatusBarTooltip(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:797`
+- `AchievementFrameComparison_DisplayAchievement(button, category, index)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:2074`
+- `AchievementFrameComparison_ForceUpdate()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3038`
+- `AchievementFrameComparison_OnEvent(self, event, ...)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:2048`
+- `AchievementFrameComparison_OnEvent(self, event, ...)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3006`
+- `AchievementFrameComparison_OnHide()`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:2039`
+- `AchievementFrameComparison_OnHide(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2996`
+- `AchievementFrameComparison_OnLoad(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:2021`
+- `AchievementFrameComparison_OnLoad(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2956`
+- `AchievementFrameComparison_OnShow()`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:2030`
+- `AchievementFrameComparison_OnShow(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2984`
+- `AchievementFrameComparison_SetUnit(unit)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:2062`
+- `AchievementFrameComparison_SetUnit(unit)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3026`
+- `AchievementFrameComparison_UpdateDataProvider()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3046`
+- `AchievementFrameComparison_UpdateStatsDataProvider()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3060`
+- `AchievementFrameComparison_UpdateStatusBars(id)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:881`
+- `AchievementFrameComparisonStat_OnLoad(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:2156`
+- `AchievementFrameComparisonStat_OnLoad(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3095`
+- `AchievementFrameComparisonTab_OnClick(id)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:225`
+- `AchievementFrameComparisonTab_OnClick(tabIndex)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:497`
+- `AchievementFrameSearch_InitButton(button, result)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3762`
+- `AchievementFrameSearchBox_OnEnterPressed(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3669`
+- `AchievementFrameSearchBox_OnFocusGained(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3693`
+- `AchievementFrameSearchBox_OnFocusLost(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3688`
+- `AchievementFrameSearchBox_OnKeyDown(self, key)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3699`
+- `AchievementFrameSearchBox_OnLoad(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3655`
+- `AchievementFrameSearchBox_OnShow(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3662`
+- `AchievementFrameSearchBox_OnTextChanged(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3602`
+- `AchievementFrameSearchBox_OnUpdate(self, elapsed)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3503`
+- `AchievementFrameSearchBoxContainer_OnLoad(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3646`
+- `AchievementFrameSearchProgressBar_OnUpdate(self, elapsed)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3542`
+- `AchievementFrameShowAllSearchResults_OnEnter()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3833`
+- `AchievementFrameStats_OnEvent(self, event, ...)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2403`
+- `AchievementFrameStats_OnHide(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2423`
+- `AchievementFrameStats_OnLoad(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2409`
+- `AchievementFrameStats_OnShow(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2419`
+- `AchievementFrameStats_UpdateDataProvider()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2427`
+- `AchievementFrameSummary_LocalizeButton(button)`: `interface/addons/blizzard_achievementui/mainline/localization.lua:1`
+- `AchievementFrameSummary_OnShow()`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:1568`
+- `AchievementFrameSummary_OnShow()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2473`
+- `AchievementFrameSummary_Refresh()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2505`
+- `AchievementFrameSummary_ToggleView()`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:1589`
+- `AchievementFrameSummary_Update(isCompare)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:1584`
+- `AchievementFrameSummary_Update()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2484`
+- `AchievementFrameSummary_UpdateAchievements(...)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:1630`
+- `AchievementFrameSummary_UpdateAchievements(...)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2529`
+- `AchievementFrameSummary_UpdateSummaryProgressBars(categories)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2490`
+- `AchievementFrameSummaryAchievement_OnClick(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2683`
+- `AchievementFrameSummaryAchievement_OnEnter(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2710`
+- `AchievementFrameSummaryAchievement_OnLoad(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:1768`
+- `AchievementFrameSummaryAchievement_OnLoad(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2667`
+- `AchievementFrameSummaryAchievement_SetGuildTextures(button)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:1778`
+- `AchievementFrameSummaryAchievement_SetGuildTextures(button)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2675`
+- `AchievementFrameSummaryCategoriesStatusBar_Update()`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:1761`
+- `AchievementFrameSummaryCategoriesStatusBar_Update()`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2660`
+- `AchievementFrameSummaryCategory_OnEvent(self, event, ...)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2749`
+- `AchievementFrameSummaryCategory_OnHide(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2762`
+- `AchievementFrameSummaryCategory_OnLoad(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:1786`
+- `AchievementFrameSummaryCategory_OnLoad(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2725`
+- `AchievementFrameSummaryCategory_OnShow(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2753`
+- `AchievementFrameSummaryCategoryButton_OnClick(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2720`
+- `AchievementIcon_Desaturate(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:1061`
+- `AchievementIcon_OnLoad(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:717`
+- `AchievementIcon_OnLoad(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:1073`
+- `AchievementIcon_Saturate(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:1067`
+- `AchievementMeta_OnEnter(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:2348`
+- `AchievementMeta_OnLeave(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:2357`
+- `AchievementMeta_OnLeave(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3339`
+- `AchievementObjectives_DisplayCriteria(objectivesFrame, id)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:1312`
+- `AchievementObjectives_DisplayCriteria(objectivesFrame, id)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:2021`
+- `AchievementObjectives_DisplayProgressiveAchievement(objectivesFrame, id)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:1252`
+- `AchievementObjectives_DisplayProgressiveAchievement(objectivesFrame, id)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:1921`
+- `AchievementSearchPreviewButton_OnClick(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3824`
+- `AchievementSearchPreviewButton_OnEnter(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3820`
+- `AchievementSearchPreviewButton_OnLoad(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3809`
+- `AchievementSearchPreviewButton_OnShow(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3805`
+- `AchievementShield_Desaturate(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:724`
+- `AchievementShield_Desaturate(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:1080`
+- `AchievementShield_OnEnter(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:2362`
+- `AchievementShield_OnEnter(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3344`
+- `AchievementShield_OnLeave(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:2395`
+- `AchievementShield_OnLeave(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:3376`
+- `AchievementShield_OnLoad(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:1088`
+- `AchievementShield_Saturate(self)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:728`
+- `AchievementShield_Saturate(self)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:1084`
+- `AchievementShield_SetPoints(points, pointString, normalFont, smallFont)`: `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.lua:1805`
+- `AchievementStatButton_OnLoad(self, parentFrame)`: `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.lua:1561`
+- `InspectAchievements(unit)`: `interface/addons/blizzard_achievementui/blizzard_achievementui_bootstrap.lua:7`
+- `ShowAchievementFrameForAchievement(achievementID, closeOtherWindows)`: `interface/addons/blizzard_achievementui/blizzard_achievementui_bootstrap.lua:19`
+- `ShowAchievementFrameForAchievement(achievementID, closeOtherWindows)`: `interface/addons/blizzard_achievementui/camelot/blizzard_achievementui.lua:19`
+- `ToggleAchievementFrame(stats)`: `interface/addons/blizzard_achievementui/blizzard_achievementui_bootstrap.lua:13`
+
+## blizzard_actionbar
+
+- `ActionBar_PageDown()`: `interface/addons/blizzard_actionbar/shared/actionbutton.lua:191`
+- `ActionBar_PageUp()`: `interface/addons/blizzard_actionbar/shared/actionbutton.lua:176`
+- `ActionButton_ApplyCooldown(normalCooldown, cooldownInfo, chargeCooldown, chargeInfo, lossOfControlCooldown, lossOfControlInfo)`: `interface/addons/blizzard_actionbar/shared/actionbutton.lua:897`
+- `ActionButton_UpdateCooldown(self)`: `interface/addons/blizzard_actionbar/shared/actionbutton.lua:867`
+- `ActionButton_UpdateCooldownNumberHidden(actionButton)`: `interface/addons/blizzard_actionbar/shared/actionbutton.lua:857`
+- `ActionButton_UpdateRangeIndicator(self, checksRange, inRange)`: `interface/addons/blizzard_actionbar/shared/actionbutton.lua:1289`
+- `ActionButtonDown(id)`: `interface/addons/blizzard_actionbar/shared/actionbutton.lua:146`
+- `ActionButtonUp(id)`: `interface/addons/blizzard_actionbar/shared/actionbutton.lua:161`
+- `ChangeMultiCastActionPage(page)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:353`
+- `ClearActionButtonCooldowns(normalCooldown, chargeCooldown, lossOfControlCooldown)`: `interface/addons/blizzard_actionbar/shared/actionbutton.lua:913`
+- `ClearNewActionHighlight(action, preventIdenticalActionsFromClearing)`: `interface/addons/blizzard_actionbar/shared/actionbutton.lua:31`
+- `ClearOnBarHighlightMarks()`: `interface/addons/blizzard_actionbar/shared/actionbutton.lua:65`
+- `ExtraActionBar_CancelForceShow()`: `interface/addons/blizzard_actionbar/shared/extraactionbar.lua:56`
+- `ExtraActionBar_ForceEmpty()`: `interface/addons/blizzard_actionbar/shared/extraactionbar.lua:32`
+- `ExtraActionBar_ForceShowIfNeeded()`: `interface/addons/blizzard_actionbar/shared/extraactionbar.lua:38`
+- `ExtraActionBar_OnLoad(self)`: `interface/addons/blizzard_actionbar/shared/extraactionbar.lua:5`
+- `ExtraActionBar_Update()`: `interface/addons/blizzard_actionbar/shared/extraactionbar.lua:10`
+- `ExtraActionButtonKey(id, isDown)`: `interface/addons/blizzard_actionbar/shared/extraactionbar.lua:68`
+- `GetActionButtonForID(id)`: `interface/addons/blizzard_actionbar/shared/actionbutton.lua:97`
+- `GetNewActionHighlightMark(action)`: `interface/addons/blizzard_actionbar/shared/actionbutton.lua:61`
+- `GetOnBarHighlightMark(action)`: `interface/addons/blizzard_actionbar/shared/actionbutton.lua:73`
+- `HasMultiCastActionBar()`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:345`
+- `HasMultiCastActionPage(page)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:349`
+- `IsNormalActionBarState()`: `interface/addons/blizzard_actionbar/shared/multiactionbars.lua:53`
+- `IsOnPrimaryActionBar(action)`: `interface/addons/blizzard_actionbar/wowlabs/actionbuttonoverrides.lua:9`
+- `MainActionBar_InitializeGamepad()`: `interface/addons/blizzard_actionbar/shared/mainactionbar.lua:31`
+- `MainActionBar_InitializeMKB()`: `interface/addons/blizzard_actionbar/shared/mainactionbar.lua:42`
+- `MainActionBar_UnInitializeMKB()`: `interface/addons/blizzard_actionbar/shared/mainactionbar.lua:48`
+- `MarkNewActionHighlight(action)`: `interface/addons/blizzard_actionbar/shared/actionbutton.lua:27`
+- `MultiActionBar_GetBarForPage(page)`: `interface/addons/blizzard_actionbar/shared/multiactionbars.lua:131`
+- `MultiActionBar_HideAllGrids(reason)`: `interface/addons/blizzard_actionbar/shared/multiactionbars.lua:113`
+- `MultiActionBar_SetAllQuickKeybindModeEffectsShown(showEffects)`: `interface/addons/blizzard_actionbar/shared/multiactionbars.lua:122`
+- `MultiActionBar_ShowAllGrids(reason)`: `interface/addons/blizzard_actionbar/shared/multiactionbars.lua:104`
+- `MultiActionBar_Update()`: `interface/addons/blizzard_actionbar/shared/multiactionbars.lua:95`
+- `MultiActionButtonDown(barName, id)`: `interface/addons/blizzard_actionbar/shared/multiactionbars.lua:35`
+- `MultiActionButtonUp(barName, id)`: `interface/addons/blizzard_actionbar/shared/multiactionbars.lua:44`
+- `MultiBar1_IsVisible()`: `interface/addons/blizzard_actionbar/shared/multiactionbars.lua:140`
+- `MultiBar2_IsVisible()`: `interface/addons/blizzard_actionbar/shared/multiactionbars.lua:144`
+- `MultiBar3_IsVisible()`: `interface/addons/blizzard_actionbar/shared/multiactionbars.lua:148`
+- `MultiBar4_IsVisible()`: `interface/addons/blizzard_actionbar/shared/multiactionbars.lua:152`
+- `MultiBar5_IsVisible()`: `interface/addons/blizzard_actionbar/shared/multiactionbars.lua:156`
+- `MultiBar6_IsVisible()`: `interface/addons/blizzard_actionbar/shared/multiactionbars.lua:160`
+- `MultiBar7_IsVisible()`: `interface/addons/blizzard_actionbar/shared/multiactionbars.lua:164`
+- `Multibar_EmptyFunc(show)`: `interface/addons/blizzard_actionbar/shared/multiactionbars.lua:136`
+- `MultiCastActionBarFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:225`
+- `MultiCastActionBarFrame_OnLoad(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:213`
+- `MultiCastActionBarFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:231`
+- `MultiCastActionBarFrame_Update(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:262`
+- `MultiCastActionButton_OnEnter(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:452`
+- `MultiCastActionButton_OnEvent(self, event, ...)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:437`
+- `MultiCastActionButton_OnLeave(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:457`
+- `MultiCastActionButton_OnLoad(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:420`
+- `MultiCastActionButton_OnPostClick(self, button, down)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:462`
+- `MultiCastActionButton_OnShow(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:446`
+- `MultiCastActionButton_Update(self, id, index, slot)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:467`
+- `MultiCastActionButtonDown(id)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:485`
+- `MultiCastActionButtonUp(id)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:493`
+- `MultiCastButton_ApplyOverrides(button)`: `interface/addons/blizzard_actionbar/camelot/multicastactionbaroverrides.lua:2`
+- `MultiCastButton_ApplyOverrides(button)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:411`
+- `MultiCastFlyoutButton_OnClick(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:514`
+- `MultiCastFlyoutButton_OnEnter(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:529`
+- `MultiCastFlyoutButton_OnLeave(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:533`
+- `MultiCastFlyoutButton_OnLoad(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:507`
+- `MultiCastFlyoutButton_SetTooltip(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:537`
+- `MultiCastFlyoutFrame_Hide(self, forceHide)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:602`
+- `MultiCastFlyoutFrame_LoadPageSpells(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:650`
+- `MultiCastFlyoutFrame_LoadSlotSpells(self, slot, ...)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:715`
+- `MultiCastFlyoutFrame_OnEnter(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:576`
+- `MultiCastFlyoutFrame_OnHide(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:571`
+- `MultiCastFlyoutFrame_OnLeave(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:579`
+- `MultiCastFlyoutFrame_OnShow(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:567`
+- `MultiCastFlyoutFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:587`
+- `MultiCastFlyoutFrame_ToggleFlyout(self, type, parent)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:615`
+- `MultiCastFlyoutFrameCloseButton_OnClick(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:790`
+- `MultiCastFlyoutFrameOpenButton_Hide(self, force)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:825`
+- `MultiCastFlyoutFrameOpenButton_OnClick(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:799`
+- `MultiCastFlyoutFrameOpenButton_OnLeave(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:803`
+- `MultiCastFlyoutFrameOpenButton_Show(self, type, parent)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:807`
+- `MultiCastRecallSpellButton_OnClick(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:1022`
+- `MultiCastRecallSpellButton_OnLoad(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:1017`
+- `MultiCastRecallSpellButton_Update(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:1026`
+- `MultiCastRecallSpellButtonUp(id)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:1076`
+- `MultiCastSlotButton_OnEnter(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:378`
+- `MultiCastSlotButton_OnEvent(self, event, ...)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:370`
+- `MultiCastSlotButton_OnLeave(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:391`
+- `MultiCastSlotButton_Update(self, slot)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:396`
+- `MultiCastSpellButton_OnEnter(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:860`
+- `MultiCastSpellButton_OnEvent(self, event, ...)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:850`
+- `MultiCastSpellButton_OnLeave(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:866`
+- `MultiCastSpellButton_OnLoad(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:837`
+- `MultiCastSpellButton_SetTooltip(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:870`
+- `MultiCastSpellButton_UpdateCooldown(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:883`
+- `MultiCastSpellButton_UpdateState(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:893`
+- `MultiCastSummonSpellButton_OnClick(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:922`
+- `MultiCastSummonSpellButton_OnEnter(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:926`
+- `MultiCastSummonSpellButton_OnEvent(self, event, ...)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:911`
+- `MultiCastSummonSpellButton_OnLeave(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:940`
+- `MultiCastSummonSpellButton_OnLoad(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:906`
+- `MultiCastSummonSpellButton_Update(self)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:945`
+- `MultiCastSummonSpellButtonUp(id)`: `interface/addons/blizzard_actionbar/shared/multicastactionbarframe.lua:1008`
+- `SharedActionButton_RefreshSpellHighlight(button, shown)`: `interface/addons/blizzard_actionbar/shared/actionbutton.lua:669`
+- `SpellFlyout_EscapePressed()`: `interface/addons/blizzard_actionbar/shared/spellflyout.lua:11`
+- `TryUseActionButton(self, checkingFromDown)`: `interface/addons/blizzard_actionbar/shared/actionbutton.lua:109`
+- `UpdateOnBarHighlightMarksByFlyout(flyoutID)`: `interface/addons/blizzard_actionbar/shared/actionbutton.lua:89`
+- `UpdateOnBarHighlightMarksByPetAction(petAction)`: `interface/addons/blizzard_actionbar/shared/actionbutton.lua:93`
+- `UpdateOnBarHighlightMarksBySpell(spellID)`: `interface/addons/blizzard_actionbar/shared/actionbutton.lua:85`
+
+## blizzard_actionbarcontroller
+
+- `ActionBarBusy()`: `interface/addons/blizzard_actionbarcontroller/actionbarcontroller.lua:201`
+- `ActionBarController_GetCurrentActionBarState()`: `interface/addons/blizzard_actionbarcontroller/actionbarcontroller.lua:4`
+- `ActionBarController_OnEvent(self, event, ...)`: `interface/addons/blizzard_actionbarcontroller/actionbarcontroller.lua:55`
+- `ActionBarController_OnLoad(self)`: `interface/addons/blizzard_actionbarcontroller/actionbarcontroller.lua:8`
+- `ActionBarController_ResetToDefault(force)`: `interface/addons/blizzard_actionbarcontroller/actionbarcontroller.lua:190`
+- `ActionBarController_UpdateAll(force)`: `interface/addons/blizzard_actionbarcontroller/actionbarcontroller.lua:145`
+- `ActionBarController_UpdateAllSpellHighlights()`: `interface/addons/blizzard_actionbarcontroller/actionbarcontroller.lua:184`
+- `BeginActionBarTransition(bar, animIn)`: `interface/addons/blizzard_actionbarcontroller/actionbarcontroller.lua:205`
+- `ValidateActionBarTransition()`: `interface/addons/blizzard_actionbarcontroller/actionbarcontroller.lua:211`
+
+## blizzard_actionstatus
+
+- `ActionStatus_DisplayMessage(text, ignoreNewbieTooltipSetting)`: `interface/addons/blizzard_actionstatus/classic/actionstatus.lua:28`
+- `ActionStatus_OnEvent(self, event, ...)`: `interface/addons/blizzard_actionstatus/classic/actionstatus.lua:12`
+- `ActionStatus_OnLoad(self)`: `interface/addons/blizzard_actionstatus/classic/actionstatus.lua:3`
+- `ActionStatus_OnUpdate(self)`: `interface/addons/blizzard_actionstatus/classic/actionstatus.lua:38`
+
+## blizzard_addfriend
+
+- `AddFriendEntryFrame_Init(clearText)`: `interface/addons/blizzard_addfriend/addfriendtemplates.lua:209`
+- `AddFriendFrame_Accept()`: `interface/addons/blizzard_addfriend/addfriendtemplates.lua:225`
+- `AddFriendFrame_IsValidBattlenetName(text)`: `interface/addons/blizzard_addfriend/addfriendtemplates.lua:239`
+- `AddFriendFrame_Show()`: `interface/addons/blizzard_addfriend/addfriendtemplates.lua:77`
+- `AddFriendNameEditBox_OnTextChanged(self, userInput)`: `interface/addons/blizzard_addfriend/addfriendtemplates.lua:188`
+- `GlueAddFriendAccept(name)`: `interface/addons/blizzard_addfriend/addfriendtemplates.lua:250`
+- `IsValidBattlenetName(text)`: `interface/addons/blizzard_addfriend/addfriendtemplates.lua:260`
+
+## blizzard_addonlist
+
+- `AddonList_ClearCharacterDropdown()`: `interface/addons/blizzard_addonlist/addonlist.lua:188`
+- `AddonList_DisableAll(self, button, down)`: `interface/addons/blizzard_addonlist/addonlist.lua:597`
+- `AddonList_DisableOutOfDate()`: `interface/addons/blizzard_addonlist/addonlist.lua:816`
+- `AddonList_Enable(index, enabled)`: `interface/addons/blizzard_addonlist/addonlist.lua:577`
+- `AddonList_EnableAll(self, button, down)`: `interface/addons/blizzard_addonlist/addonlist.lua:590`
+- `AddonList_HasAnyChanged()`: `interface/addons/blizzard_addonlist/addonlist.lua:192`
+- `AddonList_HasOutOfDate()`: `interface/addons/blizzard_addonlist/addonlist.lua:788`
+- `AddonList_InitAddon(entry, treeNode)`: `interface/addons/blizzard_addonlist/addonlist.lua:352`
+- `AddonList_IsAddOnLoadOnDemand(index)`: `interface/addons/blizzard_addonlist/addonlist.lua:560`
+- `AddonList_LoadAddOn(index)`: `interface/addons/blizzard_addonlist/addonlist.lua:604`
+- `AddonList_OnCancel()`: `interface/addons/blizzard_addonlist/addonlist.lua:623`
+- `AddonList_OnKeyDown(self, key)`: `interface/addons/blizzard_addonlist/addonlist.lua:550`
+- `AddonList_OnOkay()`: `interface/addons/blizzard_addonlist/addonlist.lua:613`
+- `AddonList_SetSecurityIcon(texture, index)`: `interface/addons/blizzard_addonlist/addonlist.lua:806`
+- `AddonList_SetStatus(self, lod, status, reload)`: `interface/addons/blizzard_addonlist/addonlist.lua:307`
+- `AddonList_Update()`: `interface/addons/blizzard_addonlist/addonlist.lua:440`
+- `AddonTooltip_ActionBlocked(addon)`: `interface/addons/blizzard_addonlist/addonlist.lua:895`
+- `AddonTooltip_BuildDeps(...)`: `interface/addons/blizzard_addonlist/addonlist.lua:832`
+- `AddonTooltip_Update(owner)`: `interface/addons/blizzard_addonlist/addonlist.lua:851`
+
+## blizzard_adventuremap
+
+- `AdventureMap_IsPositionBlockedByZoneChoice(mapID, normalizedX, normalizedY, insetIndex)`: `interface/addons/blizzard_adventuremap/blizzard_adventuremaputils.lua:14`
+- `AdventureMap_IsQuestValid(questID, normalizedX, normalizedY)`: `interface/addons/blizzard_adventuremap/blizzard_adventuremaputils.lua:24`
+- `AdventureMap_IsZoneIDBlockedByZoneChoice(mapID, zoneMapID)`: `interface/addons/blizzard_adventuremap/blizzard_adventuremaputils.lua:1`
+- `AdventureMapFrame_LoadUI()`: `interface/addons/blizzard_adventuremap/blizzard_adventuremap_bootstrap.lua:3`
+
+## blizzard_alliedracesui
+
+- `AlliedRaces_LoadUI()`: `interface/addons/blizzard_alliedracesui/blizzard_alliedracesui_bootstrap.lua:3`
+- `AlliedRacesFrame_TryShow(raceID)`: `interface/addons/blizzard_alliedracesui/blizzard_alliedracesui_bootstrap.lua:18`
+
+## blizzard_animadiversionui
+
+- `AnimaDiversionFrame_LoadUI()`: `interface/addons/blizzard_animadiversionui/blizzard_animadiversionui_bootstrap.lua:3`
+- `TryShowAnimaDiversionFrame(...)`: `interface/addons/blizzard_animadiversionui/blizzard_animadiversionui_bootstrap.lua:7`
+
+## blizzard_apidocumentation
+
+- `APIDocumentation_LoadUI()`: `interface/addons/blizzard_apidocumentation/blizzard_apidocumentation_bootstrap.lua:3`
+
+## blizzard_archaeologyui
+
+- `ArchaeologyFrame_CurrentArtifactUpdate(self)`: `interface/addons/blizzard_archaeologyui/blizzard_archaeologyui.lua:321`
+- `ArchaeologyFrame_Hide()`: `interface/addons/blizzard_archaeologyui/blizzard_archaeologyui.lua:46`
+- `ArchaeologyFrame_KeyStoneClick(self)`: `interface/addons/blizzard_archaeologyui/blizzard_archaeologyui.lua:710`
+- `ArchaeologyFrame_LoadUI()`: `interface/addons/blizzard_archaeologyui/blizzard_archaeologyui_bootstrap.lua:3`
+- `ArchaeologyFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_archaeologyui/blizzard_archaeologyui.lua:206`
+- `ArchaeologyFrame_OnHide(self)`: `interface/addons/blizzard_archaeologyui/blizzard_archaeologyui.lua:195`
+- `ArchaeologyFrame_OnLoad(self)`: `interface/addons/blizzard_archaeologyui/blizzard_archaeologyui.lua:76`
+- `ArchaeologyFrame_OnMouseWheel(self, value)`: `interface/addons/blizzard_archaeologyui/blizzard_archaeologyui.lua:245`
+- `ArchaeologyFrame_OnShow(self)`: `interface/addons/blizzard_archaeologyui/blizzard_archaeologyui.lua:157`
+- `ArchaeologyFrame_OnTabClick(self)`: `interface/addons/blizzard_archaeologyui/blizzard_archaeologyui.lua:623`
+- `ArchaeologyFrame_PageClick(self, nextPage)`: `interface/addons/blizzard_archaeologyui/blizzard_archaeologyui.lua:719`
+- `ArchaeologyFrame_Show()`: `interface/addons/blizzard_archaeologyui/blizzard_archaeologyui.lua:43`
+- `ArchaeologyFrame_ShowArtifact(RaceID, ArtifactID)`: `interface/addons/blizzard_archaeologyui/blizzard_archaeologyui.lua:595`
+- `ArchaeologyFrame_ShowFailed(self)`: `interface/addons/blizzard_archaeologyui/blizzard_archaeologyui.lua:50`
+- `ArchaeologyFrame_ToggleUI()`: `interface/addons/blizzard_archaeologyui/blizzard_archaeologyui_bootstrap.lua:13`
+- `ArchaeologyFrame_UpdateComplete(self)`: `interface/addons/blizzard_archaeologyui/blizzard_archaeologyui.lua:418`
+- `ArchaeologyFrame_UpdateSummary(self)`: `interface/addons/blizzard_archaeologyui/blizzard_archaeologyui.lua:269`
+- `ArchaeologyFrameSummary_PageClick(self, nextPage)`: `interface/addons/blizzard_archaeologyui/blizzard_archaeologyui.lua:733`
+- `ArcheologyDigsiteProgressBar_OnSurveyCast(event, ...)`: `interface/addons/blizzard_archaeologyui/blizzard_archaeologyui_bootstrap.lua:7`
+
+## blizzard_ardenwealdgardening
+
+- `ArdenwealdGardening_LoadUI()`: `interface/addons/blizzard_ardenwealdgardening/blizzard_ardenwealdgardening_bootstrap.lua:3`
+
+## blizzard_artifactui
+
+- `ArtifactFrame_LoadUI()`: `interface/addons/blizzard_artifactui/blizzard_artifactui_bootstrap.lua:3`
+- `ArtifactFrame_OnTraitsRefunded(numRefunded, refundedTier)`: `interface/addons/blizzard_artifactui/blizzard_artifactui_bootstrap.lua:19`
+- `ArtifactsModelTemplate_OnModelLoaded(self)`: `interface/addons/blizzard_artifactui/blizzard_artifactperks.lua:140`
+- `ArtifactUI_CanViewArtifact()`: `interface/addons/blizzard_artifactui/blizzard_artifactui.lua:40`
+- `ArtifactUI_HasPurchasedAnything()`: `interface/addons/blizzard_artifactui/blizzard_artifactui.lua:44`
+- `ShowArtifactFrame()`: `interface/addons/blizzard_artifactui/blizzard_artifactui_bootstrap.lua:7`
+- `ShowArtifactRelicForgeFrame()`: `interface/addons/blizzard_artifactui/blizzard_artifactui_bootstrap.lua:13`
+
+## blizzard_auctionhouseui
+
+- `AuctionFrame_CreateCategory(name)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctiondata.lua:52`
+- `AuctionFrame_DoesCategoryHaveFlag(flag, categoryIndex, subCategoryIndex, subSubCategoryIndex)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctiondata.lua:44`
+- `AuctionFrame_GetDetailColumnString(categoryIndex, subCategoryIndex)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctiondata.lua:34`
+- `AuctionFrame_GetDetailColumnStringUnsafe(categoryIndex, subCategoryIndex)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctiondata.lua:39`
+- `AuctionFrameFilter_OnEnter(self)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousecategorieslist.lua:67`
+- `AuctionFrameFilter_OnLeave(self)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousecategorieslist.lua:73`
+- `AuctionFrameFilter_OnLoad(self)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousecategorieslist.lua:63`
+- `AuctionFrameFilter_OnMouseDown(self)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousecategorieslist.lua:79`
+- `AuctionFrameFilter_OnMouseUp(self)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousecategorieslist.lua:83`
+- `AuctionFrameFilters_AddSubCategories(categoriesList, subCategories)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousecategorieslist.lua:38`
+- `AuctionFrameFilters_AddSubSubCategories(categoriesList, subSubCategories)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousecategorieslist.lua:52`
+- `AuctionFrameFilters_Update(categoriesList, forceSelectionIntoView)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousecategorieslist.lua:6`
+- `AuctionFrameFilters_UpdateCategories(categoriesList, forceSelectionIntoView)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousecategorieslist.lua:10`
+- `AuctionHouse_ShouldUseRequiredLevel()`: `interface/addons/blizzard_auctionhouseui/camelot/blizzard_auctiondata.lua:4`
+- `AuctionHouse_ShouldUseRequiredLevel()`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctiondata.lua:14`
+- `AuctionHouseCategory_FindDeepest(categoryIndex, ...)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctiondata.lua:211`
+- `AuctionHouseFavoriteContextMenu(frame, itemKey)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousesharedtemplates.lua:1`
+- `AuctionHouseFilterButton_SetUp(button, info)`: `interface/addons/blizzard_auctionhouseui/classic/blizzard_auctionhousecategorieslist.lua:1`
+- `AuctionHouseFilterButton_SetUp(button, info)`: `interface/addons/blizzard_auctionhouseui/mainline/blizzard_auctionhousecategorieslist.lua:1`
+- `AuctionHouseFrame_LoadUI()`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhouseui_bootstrap.lua:3`
+- `AuctionWowToken_CancelUpdateTicker()`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousewowtokenframe.lua:345`
+- `AuctionWowToken_ShouldUpdatePrice()`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousewowtokenframe.lua:313`
+- `AuctionWowToken_UpdateMarketPrice()`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousewowtokenframe.lua:328`
+- `AuctionWowToken_UpdateMarketPriceCallback()`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousewowtokenframe.lua:303`
+- `BrowseWowTokenResults_OnEvent(self, event, ...)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousewowtokenframe.lua:78`
+- `BrowseWowTokenResults_OnHide(self)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousewowtokenframe.lua:55`
+- `BrowseWowTokenResults_OnLoad(self)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousewowtokenframe.lua:19`
+- `BrowseWowTokenResults_OnShow(self)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousewowtokenframe.lua:48`
+- `BrowseWowTokenResults_OnUpdate(self, elapsed)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousewowtokenframe.lua:59`
+- `BrowseWowTokenResults_Update(self)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousewowtokenframe.lua:129`
+- `BrowseWowTokenResultsBuyout_OnClick(self)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousewowtokenframe.lua:170`
+- `BrowseWowTokenResultsBuyout_OnEnter(self)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousewowtokenframe.lua:175`
+- `GetAHFilterCategoryName(category)`: `interface/addons/blizzard_auctionhouseui/classic/blizzard_auctionhouseutil.lua:34`
+- `GetAHFilterCategoryName(category)`: `interface/addons/blizzard_auctionhouseui/mainline/blizzard_auctionhouseutil.lua:41`
+- `GetAHFilterName(filter)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhouseutil.lua:10`
+- `HideAuctionHouseFrame()`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhouseui_bootstrap.lua:13`
+- `ShowAuctionHouseFrame()`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhouseui_bootstrap.lua:7`
+- `WoWTokenGameTimeTutorial_OnLoad(self)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousewowtokenframe.lua:352`
+- `WoWTokenGameTimeTutorial_OnShow(self)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousewowtokenframe.lua:359`
+- `WowTokenGameTimeTutorialStoreButton_OnEvent(self, event)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousewowtokenframe.lua:369`
+- `WowTokenGameTimeTutorialStoreButton_OnLoad(self)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousewowtokenframe.lua:385`
+- `WowTokenGameTimeTutorialStoreButton_UpdateState(self)`: `interface/addons/blizzard_auctionhouseui/shared/blizzard_auctionhousewowtokenframe.lua:375`
+
+## blizzard_authchallengeui
+
+- `AuthChallengeUI_Cancel()`: `interface/addons/blizzard_authchallengeui/blizzard_authchallengeui.lua:10`
+- `AuthChallengeUI_OnKeyDown(self, key)`: `interface/addons/blizzard_authchallengeui/blizzard_authchallengeui.lua:18`
+- `AuthChallengeUI_OnLoad(self)`: `interface/addons/blizzard_authchallengeui/blizzard_authchallengeui.lua:2`
+- `AuthChallengeUI_OnTabPressed(self)`: `interface/addons/blizzard_authchallengeui/blizzard_authchallengeui.lua:14`
+- `AuthChallengeUI_Submit()`: `interface/addons/blizzard_authchallengeui/blizzard_authchallengeui.lua:6`
+
+## blizzard_autocomplete
+
+- `AutoComplete_GetNumResults(self)`: `interface/addons/blizzard_autocomplete/autocomplete.lua:260`
+- `AutoComplete_GetSelectedIndex(self)`: `interface/addons/blizzard_autocomplete/autocomplete.lua:256`
+- `AutoComplete_HideIfAttachedTo(parent)`: `interface/addons/blizzard_autocomplete/autocomplete.lua:234`
+- `AutoComplete_IncrementSelection(editBox, up)`: `interface/addons/blizzard_autocomplete/autocomplete.lua:314`
+- `AutoComplete_OnEvent(self, event, ...)`: `interface/addons/blizzard_autocomplete/autocomplete.lua:150`
+- `AutoComplete_OnLoad(self)`: `interface/addons/blizzard_autocomplete/autocomplete.lua:131`
+- `AutoComplete_SetSelectedIndex(self, index)`: `interface/addons/blizzard_autocomplete/autocomplete.lua:246`
+- `AutoComplete_Update(parent, text, cursorPosition)`: `interface/addons/blizzard_autocomplete/autocomplete.lua:157`
+- `AutoComplete_UpdateResults(self, results, context)`: `interface/addons/blizzard_autocomplete/autocomplete.lua:264`
+- `AutoCompleteButton_OnClick(self)`: `interface/addons/blizzard_autocomplete/autocomplete.lua:434`
+- `AutoCompleteEditBox_AddHighlightedText(editBox, text)`: `interface/addons/blizzard_autocomplete/autocomplete.lua:392`
+- `AutoCompleteEditBox_OnArrowPressed(self, key)`: `interface/addons/blizzard_autocomplete/autocomplete.lua:350`
+- `AutoCompleteEditBox_OnChar(self)`: `interface/addons/blizzard_autocomplete/autocomplete.lua:414`
+- `AutoCompleteEditBox_OnEditFocusLost(self)`: `interface/addons/blizzard_autocomplete/autocomplete.lua:420`
+- `AutoCompleteEditBox_OnEnterPressed(self)`: `interface/addons/blizzard_autocomplete/autocomplete.lua:358`
+- `AutoCompleteEditBox_OnEscapePressed(self)`: `interface/addons/blizzard_autocomplete/autocomplete.lua:425`
+- `AutoCompleteEditBox_OnKeyDown(self, key)`: `interface/addons/blizzard_autocomplete/autocomplete.lua:380`
+- `AutoCompleteEditBox_OnKeyUp(self, key)`: `interface/addons/blizzard_autocomplete/autocomplete.lua:386`
+- `AutoCompleteEditBox_OnTabPressed(editBox)`: `interface/addons/blizzard_autocomplete/autocomplete.lua:346`
+- `AutoCompleteEditBox_OnTextChanged(self, userInput)`: `interface/addons/blizzard_autocomplete/autocomplete.lua:367`
+- `AutoCompleteEditBox_SetAutoCompleteSource(self, source, ...)`: `interface/addons/blizzard_autocomplete/autocomplete.lua:337`
+- `AutoCompleteEditBox_SetCustomAutoCompleteFunction(self, customAutoCompleteFunction)`: `interface/addons/blizzard_autocomplete/autocomplete.lua:342`
+
+## blizzard_azeriteessenceui
+
+- `AzeriteEssenceUI_LoadUI()`: `interface/addons/blizzard_azeriteessenceui/blizzard_azeriteessenceui_bootstrap.lua:3`
+- `OpenAzeriteEssenceUIFromItemLocation(itemLocation)`: `interface/addons/blizzard_azeriteessenceui/blizzard_azeriteessenceui_bootstrap.lua:7`
+
+## blizzard_azeriterespecui
+
+- `AzeriteRespecFrame_LoadUI()`: `interface/addons/blizzard_azeriterespecui/blizzard_azeriterespecui_bootstrap.lua:3`
+
+## blizzard_azeriteui
+
+- `AzeriteEmpoweredItemUI_LoadUI()`: `interface/addons/blizzard_azeriteui/blizzard_azeriteui_bootstrap.lua:3`
+- `OpenAzeriteEmpoweredItemUIFromItemLocation(itemLocation)`: `interface/addons/blizzard_azeriteui/blizzard_azeriteui_bootstrap.lua:7`
+- `OpenAzeriteEmpoweredItemUIFromLink(itemLink, overrideClassID, overrideSelectedPowersList)`: `interface/addons/blizzard_azeriteui/blizzard_azeriteui_bootstrap.lua:16`
+
+## blizzard_barbershopui
+
+- `BarberShopFrame_LoadUI()`: `interface/addons/blizzard_barbershopui/blizzard_barbershopui_bootstrap.lua:3`
+- `HideBarberShopFrame()`: `interface/addons/blizzard_barbershopui/blizzard_barbershopui_bootstrap.lua:13`
+- `ShowBarberShopFrame()`: `interface/addons/blizzard_barbershopui/blizzard_barbershopui_bootstrap.lua:7`
+
+## blizzard_battlefieldmap
+
+- `BattlefieldMap_LoadUI()`: `interface/addons/blizzard_battlefieldmap/blizzard_battlefieldmap_bootstrap.lua:3`
+- `BattlefieldMap_ToggleUI()`: `interface/addons/blizzard_battlefieldmap/blizzard_battlefieldmap_bootstrap.lua:7`
+- `GetBattlefieldMapInstanceType()`: `interface/addons/blizzard_battlefieldmap/classic/blizzard_battlefieldmap_bootstrap.lua:3`
+- `ToggleBattlefieldMap()`: `interface/addons/blizzard_battlefieldmap/classic/blizzard_battlefieldmap_bootstrap.lua:11`
+- `ToggleBattlefieldMap()`: `interface/addons/blizzard_battlefieldmap/mainline/blizzard_battlefieldmap_bootstrap.lua:3`
+
+## blizzard_behavioralmessaging
+
+- `AddBehavioralMessagingTrayToStatusFrames(statusFrames)`: `interface/addons/blizzard_behavioralmessaging/blizzard_behavioralmessaging_bootstrap.lua:13`
+- `BehavioralMessaging_LoadUI()`: `interface/addons/blizzard_behavioralmessaging/blizzard_behavioralmessaging_bootstrap.lua:3`
+- `BehavioralMessagingTray_OnNotification(event, ...)`: `interface/addons/blizzard_behavioralmessaging/blizzard_behavioralmessaging_bootstrap.lua:7`
+
+## blizzard_blackmarketui
+
+- `BlackMarket_LoadUI()`: `interface/addons/blizzard_blackmarketui/blizzard_blackmarketui_bootstrap.lua:3`
+- `BlackMarketBid_OnClick(self, button, down)`: `interface/addons/blizzard_blackmarketui/blizzard_blackmarketui.lua:254`
+- `BlackMarketFrame_ConfirmBid(auctionID)`: `interface/addons/blizzard_blackmarketui/blizzard_blackmarketui.lua:236`
+- `BlackMarketFrame_Hide()`: `interface/addons/blizzard_blackmarketui/blizzard_blackmarketui.lua:26`
+- `BlackMarketFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_blackmarketui/blizzard_blackmarketui.lua:130`
+- `BlackMarketFrame_OnHide(self)`: `interface/addons/blizzard_blackmarketui/blizzard_blackmarketui.lua:165`
+- `BlackMarketFrame_OnLoad(self)`: `interface/addons/blizzard_blackmarketui/blizzard_blackmarketui.lua:31`
+- `BlackMarketFrame_OnShow(self)`: `interface/addons/blizzard_blackmarketui/blizzard_blackmarketui.lua:145`
+- `BlackMarketFrame_Show()`: `interface/addons/blizzard_blackmarketui/blizzard_blackmarketui.lua:18`
+- `BlackMarketFrame_UpdateBidButton()`: `interface/addons/blizzard_blackmarketui/blizzard_blackmarketui.lua:225`
+- `BlackMarketFrame_UpdateHotItem(self)`: `interface/addons/blizzard_blackmarketui/blizzard_blackmarketui.lua:170`
+- `BlackMarketHotItemBid_OnClick(self, button, down)`: `interface/addons/blizzard_blackmarketui/blizzard_blackmarketui.lua:247`
+- `BlackMarketScrollFrame_Update()`: `interface/addons/blizzard_blackmarketui/blizzard_blackmarketui.lua:220`
+- `HideBlackMarketFrame()`: `interface/addons/blizzard_blackmarketui/blizzard_blackmarketui_bootstrap.lua:13`
+- `ShowBlackMarketFrame()`: `interface/addons/blizzard_blackmarketui/blizzard_blackmarketui_bootstrap.lua:7`
+
+## blizzard_bnet
+
+- `BNet_GetBattlenetClientAtlas(client)`: `interface/addons/blizzard_bnet/bnetshared.lua:24`
+- `BNet_GetClientAtlas(atlasPrefix, clientName)`: `interface/addons/blizzard_bnet/bnetshared.lua:1`
+- `BNet_GetClientEmbeddedAtlas(client, width, height, xOffset, yOffset)`: `interface/addons/blizzard_bnet/bnetshared.lua:14`
+- `BNet_GetClientEmbeddedTexture(texture, fileWidth, fileHeight, width, height, xOffset, yOffset)`: `interface/addons/blizzard_bnet/bnetshared.lua:28`
+
+## blizzard_boosttutorial
+
+- `BoostTutorial_LoadUI()`: `interface/addons/blizzard_boosttutorial/blizzard_boosttutorial_bootstrap.lua:12`
+- `DebugTutorials(value)`: `interface/addons/blizzard_boosttutorial/blizzard_tutoriallogic.lua:3124`
+- `GetCurrentScenarioType()`: `interface/addons/blizzard_boosttutorial/blizzard_boosttutorial_bootstrap.lua:3`
+- `IsBoostTutorialScenario()`: `interface/addons/blizzard_boosttutorial/blizzard_boosttutorial_bootstrap.lua:8`
+- `TutorialStatus()`: `interface/addons/blizzard_boosttutorial/blizzard_tutoriallogic.lua:3128`
+
+## blizzard_buttonpulse
+
+- `ButtonPulse_StopPulse(button)`: `interface/addons/blizzard_buttonpulse/blizzard_buttonpulse.lua:51`
+- `SetButtonPulse(button, duration, pulseRate)`: `interface/addons/blizzard_buttonpulse/blizzard_buttonpulse.lua:12`
+
+## blizzard_calendar
+
+- `Calendar_Hide()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:982`
+- `Calendar_LoadUI()`: `interface/addons/blizzard_calendar/blizzard_calendar_bootstrap.lua:3`
+- `Calendar_Show()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:986`
+- `Calendar_Toggle()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:974`
+- `CalendarClassButton_OnEnter(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4682`
+- `CalendarClassButton_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4678`
+- `CalendarClassButtonContainer_Hide()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4604`
+- `CalendarClassButtonContainer_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4653`
+- `CalendarClassButtonContainer_Show(parent)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4593`
+- `CalendarClassButtonContainer_Update()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4609`
+- `CalendarClassTotalsButton_OnEnter(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4700`
+- `CalendarClassTotalsButton_Update()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4690`
+- `CalendarCreateEvent_SetAutoApprove()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3820`
+- `CalendarCreateEvent_SetEventTime()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3763`
+- `CalendarCreateEvent_SetLockEvent()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3844`
+- `CalendarCreateEvent_SetSelectedIndex(selectedTextureIndex, eventType)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3746`
+- `CalendarCreateEvent_UpdateEventTime()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3771`
+- `CalendarCreateEvent_UpdateEventType()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3732`
+- `CalendarCreateEvent_UpdateTimeFormat()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3782`
+- `CalendarCreateEventAutoApproveCheck_OnClick(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3810`
+- `CalendarCreateEventAutoApproveCheck_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3804`
+- `CalendarCreateEventCreateButton_OnClick(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4066`
+- `CalendarCreateEventCreateButton_OnUpdate(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4074`
+- `CalendarCreateEventCreateButton_SetText(text)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4078`
+- `CalendarCreateEventCreateButton_Update()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4084`
+- `CalendarCreateEventCreatorName_Update()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3669`
+- `CalendarCreateEventDescriptionContainer_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3641`
+- `CalendarCreateEventFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3372`
+- `CalendarCreateEventFrame_OnHide(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3423`
+- `CalendarCreateEventFrame_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3349`
+- `CalendarCreateEventFrame_OnShow(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3417`
+- `CalendarCreateEventFrame_SetSelectedInvite(inviteButton)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3877`
+- `CalendarCreateEventFrame_Update()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3432`
+- `CalendarCreateEventInviteButton_OnClick(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3955`
+- `CalendarCreateEventInviteButton_OnUpdate(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3969`
+- `CalendarCreateEventInviteButton_Update()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3973`
+- `CalendarCreateEventInviteEdit_OnEditFocusLost(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3946`
+- `CalendarCreateEventInviteEdit_OnEnterPressed(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3933`
+- `CalendarCreateEventInviteList_InitButton(button, elementData)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2617`
+- `CalendarCreateEventInviteList_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2602`
+- `CalendarCreateEventInviteList_Update()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3852`
+- `CalendarCreateEventInviteListButton_OnClick(self, button)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3887`
+- `CalendarCreateEventInviteListScrollFrame_Update()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3858`
+- `CalendarCreateEventLockEventCheck_OnClick(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3834`
+- `CalendarCreateEventLockEventCheck_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3828`
+- `CalendarCreateEventMassInviteButton_OnClick()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3981`
+- `CalendarCreateEventMassInviteButton_OnUpdate(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3985`
+- `CalendarCreateEventMassInviteButton_Update()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3989`
+- `CalendarCreateEventRaidInviteButton_OnClick(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4019`
+- `CalendarCreateEventRaidInviteButton_OnEnter(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4041`
+- `CalendarCreateEventRaidInviteButton_OnEvent(self, event, ...)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4006`
+- `CalendarCreateEventRaidInviteButton_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4000`
+- `CalendarCreateEventRaidInviteButton_Update()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4051`
+- `CalendarCreateEventTexture_Update()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3679`
+- `CalendarCreateEventTitleEdit_OnEditFocusLost(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3633`
+- `CalendarCreateEventTitleEdit_OnTextChanged(self, userChanged)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3619`
+- `CalendarDayButton_Click(dayButton)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2342`
+- `CalendarDayButton_OnClick(self, button)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2318`
+- `CalendarDayButton_OnEnter(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2076`
+- `CalendarDayButton_OnLeave(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2194`
+- `CalendarDayButton_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2072`
+- `CalendarDayButtonMoreEventsButton_OnClick(self, button)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2376`
+- `CalendarDayButtonMoreEventsButton_OnEnter(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2365`
+- `CalendarDayButtonMoreEventsButton_OnLeave(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2371`
+- `CalendarDayButtonMoreEventsButton_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2361`
+- `CalendarDayContextMenu_AcceptInvite()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2049`
+- `CalendarDayContextMenu_ClearEvent(dayButton)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1987`
+- `CalendarDayContextMenu_CreateCommunityEvent(dayButton)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2017`
+- `CalendarDayContextMenu_CreateEvent(dayButton)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1993`
+- `CalendarDayContextMenu_CreateGuildAnnouncement(dayButton)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2001`
+- `CalendarDayContextMenu_CreateGuildEvent(dayButton)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2009`
+- `CalendarDayContextMenu_DeclineInvite()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2057`
+- `CalendarDayContextMenu_DeleteEvent()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2029`
+- `CalendarDayContextMenu_PasteEvent(dayButton)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2025`
+- `CalendarDayContextMenu_RemoveInvite()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2061`
+- `CalendarDayContextMenu_ReportSpam()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2044`
+- `CalendarDayContextMenu_SignUp()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2065`
+- `CalendarDayContextMenu_TentativeInvite()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2053`
+- `CalendarDayEventButton_Click(button, openEvent)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2431`
+- `CalendarDayEventButton_OnClick(self, button)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2414`
+- `CalendarDayEventButton_OnEnter(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2402`
+- `CalendarDayEventButton_OnLeave(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2408`
+- `CalendarDayEventButton_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2396`
+- `CalendarEvent_InitManagedScrollBarVisibility(self, scrollBox, scrollBar)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2590`
+- `CalendarEventCloseButton_OnClick(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2535`
+- `CalendarEventFrameBlocker_OnHide(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1951`
+- `CalendarEventFrameBlocker_OnShow(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1925`
+- `CalendarEventFrameBlocker_Update()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1961`
+- `CalendarEventInviteList_AnchorSortButtons(inviteList)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2649`
+- `CalendarEventInviteList_InitButtonShared(button, inviteIndex, inviteInfo)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2540`
+- `CalendarEventInviteList_UpdateSortButtons(inviteList)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2669`
+- `CalendarEventInviteListButton_OnEnter(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2698`
+- `CalendarEventInviteSortButton_OnClick(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2693`
+- `CalendarEventInviteSortButton_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2688`
+- `CalendarEventPickerButton_Click(button)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4408`
+- `CalendarEventPickerButton_OnClick(self, button)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4392`
+- `CalendarEventPickerButton_OnDoubleClick(self, button)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4437`
+- `CalendarEventPickerButton_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4388`
+- `CalendarEventPickerCloseButton_OnClick()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4384`
+- `CalendarEventPickerFrame_Hide()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4287`
+- `CalendarEventPickerFrame_InitButton(button, elementData)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4310`
+- `CalendarEventPickerFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4269`
+- `CalendarEventPickerFrame_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4257`
+- `CalendarEventPickerFrame_SetSelectedEvent(eventButton)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4300`
+- `CalendarEventPickerFrame_Show(dayButton)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4275`
+- `CalendarEventPickerFrame_Toggle(dayButton)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4292`
+- `CalendarEventPickerFrame_Update()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4363`
+- `CalendarEventRetrievingFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4706`
+- `CalendarFrame_CloseEvent()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1768`
+- `CalendarFrame_GetEventFrame()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1020`
+- `CalendarFrame_GetModal()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1903`
+- `CalendarFrame_HideEventFrame(frame)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1014`
+- `CalendarFrame_InitDay(buttonIndex)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1198`
+- `CalendarFrame_InitWeekday(index)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1187`
+- `CalendarFrame_OffsetMonth(offset)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1774`
+- `CalendarFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1103`
+- `CalendarFrame_OnHide(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1150`
+- `CalendarFrame_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1070`
+- `CalendarFrame_OnMouseWheel(self, value)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1175`
+- `CalendarFrame_OnShow(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1134`
+- `CalendarFrame_OpenEvent(dayButton, eventIndex)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1762`
+- `CalendarFrame_OpenToGuildEventIndex(guildEventIndex)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1810`
+- `CalendarFrame_PopModal(popAll)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1877`
+- `CalendarFrame_PushModal(frame)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1865`
+- `CalendarFrame_SetLastDay(dayButton, day)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1743`
+- `CalendarFrame_SetSelectedDay(dayButton)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1695`
+- `CalendarFrame_SetSelectedEvent(eventButton)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1750`
+- `CalendarFrame_SetToday(dayButton)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1712`
+- `CalendarFrame_ShowEventFrame(frame)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:990`
+- `CalendarFrame_Update()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1239`
+- `CalendarFrame_UpdateDay(index, day, monthOffset, isSelected, isContext, isToday, darkTopFlags, darkBottomFlags)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1429`
+- `CalendarFrame_UpdateDayEvents(index, day, monthOffset, selectedEventIndex, contextEventIndex)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1479`
+- `CalendarFrame_UpdateDayTextures(dayButton, numEvents, firstEventButton, firstHolidayIndex)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1642`
+- `CalendarFrame_UpdateFilter()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1857`
+- `CalendarFrame_UpdateMonthOffsetButtons()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1782`
+- `CalendarFrame_UpdateTimeFormat()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1024`
+- `CalendarFrame_UpdateTitle()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1424`
+- `CalendarMassInvite_GenerateDropdowns(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4170`
+- `CalendarMassInvite_Update()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4205`
+- `CalendarMassInviteAcceptButton_OnClick(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4242`
+- `CalendarMassInviteFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4182`
+- `CalendarMassInviteFrame_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4152`
+- `CalendarMassInviteFrame_OnShow(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4175`
+- `CalendarModalDummy_Hide(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1916`
+- `CalendarModalDummy_Show(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1907`
+- `CalendarNextMonthButton_OnClick()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1852`
+- `CalendarOnEditBoxTab(editBox)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:83`
+- `CalendarPrevMonthButton_OnClick()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1847`
+- `CalendarTexturePicker_InitButton(button, elementData)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4513`
+- `CalendarTexturePickerAcceptButton_OnClick(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4566`
+- `CalendarTexturePickerButton_OnClick(self, button)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4574`
+- `CalendarTexturePickerButton_OnDoubleClick(self, button)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4585`
+- `CalendarTexturePickerButton_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4570`
+- `CalendarTexturePickerFrame_Hide()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4473`
+- `CalendarTexturePickerFrame_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4445`
+- `CalendarTexturePickerFrame_Show(eventType)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4455`
+- `CalendarTexturePickerFrame_Toggle(eventType)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4479`
+- `CalendarTexturePickerFrame_Update()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4487`
+- `CalendarTexturePickerFrame_UpdateScrollBox()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4497`
+- `CalendarTexturePickerTitleFrame_Update()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:4505`
+- `CalendarTitleFrame_SetText(titleFrame, text)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2458`
+- `CalendarTodayFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:1725`
+- `CalendarViewEvent_SetEventButtons(inviteType, calendarType)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3055`
+- `CalendarViewEventAcceptButton_OnClick(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2909`
+- `CalendarViewEventAcceptButton_OnEnter(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2899`
+- `CalendarViewEventDeclineButton_OnClick(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2933`
+- `CalendarViewEventDeclineButton_OnEnter(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2927`
+- `CalendarViewEventDescriptionContainer_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2782`
+- `CalendarViewEventFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2737`
+- `CalendarViewEventFrame_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2722`
+- `CalendarViewEventFrame_OnShow(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2778`
+- `CalendarViewEventFrame_SetSelectedInvite(inviteButton)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3141`
+- `CalendarViewEventFrame_Update()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2788`
+- `CalendarViewEventFrameHeaderFrame_OnEnter(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2951`
+- `CalendarViewEventInviteList_InitButton(button, elementData)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2640`
+- `CalendarViewEventInviteList_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3126`
+- `CalendarViewEventInviteList_Update(inviteType, calendarType)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3087`
+- `CalendarViewEventInviteListButton_Click(button)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3181`
+- `CalendarViewEventInviteListButton_OnClick(self, button)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3151`
+- `CalendarViewEventInviteListScrollFrame_Update()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:3105`
+- `CalendarViewEventRemoveButton_OnClick(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2947`
+- `CalendarViewEventRemoveButton_OnEnter(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2937`
+- `CalendarViewEventRSVP_Update(month, day, year, pendingInvite, inviteStatus, inviteType, calendarType)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2988`
+- `CalendarViewEventRSVPButton_OnUpdate(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2895`
+- `CalendarViewEventTentativeButton_OnClick(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2923`
+- `CalendarViewEventTentativeButton_OnEnter(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2917`
+- `CalendarViewHolidayFrame_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2498`
+- `CalendarViewHolidayFrame_OnShow(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2503`
+- `CalendarViewHolidayFrame_Update()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2471`
+- `CalendarViewRaidFrame_OnLoad(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2509`
+- `CalendarViewRaidFrame_OnShow(self)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2513`
+- `CalendarViewRaidFrame_Update()`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2517`
+- `GenerateDayContextMenu(owner, rootDescription, flags, dayButton, eventButton)`: `interface/addons/blizzard_calendar/mainline/blizzard_calendar.lua:2198`
+- `ToggleCalendar()`: `interface/addons/blizzard_calendar/blizzard_calendar_bootstrap.lua:7`
+
+## blizzard_catalogshop
+
+- `CatalogShopFocusCarouselGamepad(carousel)`: `interface/addons/blizzard_catalogshop/blizzard_catalogshop_gamepad.lua:262`
+- `CatalogShopFocusGamepad(frame)`: `interface/addons/blizzard_catalogshop/blizzard_catalogshop_gamepad.lua:17`
+- `CatalogShopHideProductDetails(frame)`: `interface/addons/blizzard_catalogshop/blizzard_catalogshop_gamepad.lua:43`
+- `CatalogShopRefreshGamepadPurchaseButton(frame)`: `interface/addons/blizzard_catalogshop/blizzard_catalogshop_gamepad.lua:53`
+- `CatalogShopRefreshSmartNav(frame)`: `interface/addons/blizzard_catalogshop/blizzard_catalogshop_gamepad.lua:81`
+- `CatalogShopSetItemTooltip(itemID, left, top, point)`: `interface/addons/blizzard_catalogshop/blizzard_catalogshop_unsecure.lua:5`
+- `CatalogShopSetupGamepad(frame)`: `interface/addons/blizzard_catalogshop/blizzard_catalogshop_gamepad.lua:92`
+- `CatalogShopShowProductDetails(frame)`: `interface/addons/blizzard_catalogshop/blizzard_catalogshop_gamepad.lua:33`
+- `CatalogShopUnfocusCarouselGamepad(carousel)`: `interface/addons/blizzard_catalogshop/blizzard_catalogshop_gamepad.lua:273`
+- `CatalogShopUnfocusGamepad(frame)`: `interface/addons/blizzard_catalogshop/blizzard_catalogshop_gamepad.lua:25`
+- `CatalogShopVisibilityUpdated(shown)`: `interface/addons/blizzard_catalogshop/blizzard_catalogshop_unsecure.lua:12`
+- `ModelSceneShouldAllowRotation(modelSceneID)`: `interface/addons/blizzard_catalogshop/blizzard_catalogshop_products.lua:227`
+
+## blizzard_catalogshoprefundflow
+
+- `CatalogShopRefundFlow_Show(productID)`: `interface/addons/blizzard_catalogshoprefundflow/blizzard_catalogshoprefundflow_inbound.lua:26`
+
+## blizzard_catalogshopsharedtemplates
+
+- `FormatPriceStrings(productInfo)`: `interface/addons/blizzard_catalogshopsharedtemplates/blizzard_catalogshop_sharedproductcards.lua:14`
+
+## blizzard_catalogshoptopupflow
+
+- `CatalogShopTopUpFrame_GetFrame()`: `interface/addons/blizzard_catalogshoptopupflow/blizzard_catalogshoptopupflow_inbound.lua:5`
+
+## blizzard_challengesui
+
+- `ChallengeMode_LoadUI()`: `interface/addons/blizzard_challengesui/blizzard_challengesui_bootstrap.lua:3`
+- `ChallengeModeCompleteBanner_OnAnimOutFinished(self)`: `interface/addons/blizzard_challengesui/mainline/blizzard_challengesui.lua:1046`
+- `ChallengeModeCompleteBanner_OnChallengeModeCompleted(event, ...)`: `interface/addons/blizzard_challengesui/blizzard_challengesui_bootstrap.lua:7`
+- `MythicPlusSeasonChangeNoticeOnCloseClick(self)`: `interface/addons/blizzard_challengesui/mainline/blizzard_challengesui.lua:1083`
+- `ShowChallengesKeystoneFrame()`: `interface/addons/blizzard_challengesui/blizzard_challengesui_bootstrap.lua:13`
+
+## blizzard_channels
+
+- `ChannelFrame_Desaturate(texture, desaturate, a)`: `interface/addons/blizzard_channels/classic/channelframe.lua:656`
+- `ChannelFrame_Desaturate(texture, desaturate, a)`: `interface/addons/blizzard_channels/mainline/channelframe.lua:1047`
+- `ChannelFrame_GetIdealChannelName(channel)`: `interface/addons/blizzard_channels/classic/channelframe.lua:669`
+- `ChannelFrame_GetIdealChannelName(channel)`: `interface/addons/blizzard_channels/mainline/channelframe.lua:1060`
+- `ChannelFrame_IsCategoryCustom(category)`: `interface/addons/blizzard_channels/mainline/channelframe.lua:1076`
+- `ChannelFrame_IsCategoryGlobal(category)`: `interface/addons/blizzard_channels/mainline/channelframe.lua:1068`
+- `ChannelFrame_IsCategoryGroup(category)`: `interface/addons/blizzard_channels/mainline/channelframe.lua:1072`
+- `GetChannelTypeFromPartyCategory(partyCategory)`: `interface/addons/blizzard_channels/classic/voiceutils.lua:122`
+- `GetChannelTypeFromPartyCategory(partyCategory)`: `interface/addons/blizzard_channels/mainline/voiceutils.lua:125`
+- `GetPartyCategoryFromChannelType(channelType)`: `interface/addons/blizzard_channels/classic/voiceutils.lua:128`
+- `GetPartyCategoryFromChannelType(channelType)`: `interface/addons/blizzard_channels/mainline/voiceutils.lua:131`
+- `IsPublicVoiceChannel(channel)`: `interface/addons/blizzard_channels/classic/voiceutils.lua:132`
+- `IsPublicVoiceChannel(channel)`: `interface/addons/blizzard_channels/mainline/voiceutils.lua:135`
+- `Voice_FormatChannelNotification(channel, notification)`: `interface/addons/blizzard_channels/classic/voicechatprompt.lua:39`
+- `Voice_FormatChannelNotification(channel, notification)`: `interface/addons/blizzard_channels/mainline/voicechatprompt.lua:41`
+- `Voice_FormatTextForChannel(channel, text)`: `interface/addons/blizzard_channels/classic/voiceutils.lua:38`
+- `Voice_FormatTextForChannel(channel, text)`: `interface/addons/blizzard_channels/mainline/voiceutils.lua:44`
+- `Voice_FormatTextForChannelID(channelID, text)`: `interface/addons/blizzard_channels/classic/voiceutils.lua:43`
+- `Voice_FormatTextForChannelID(channelID, text)`: `interface/addons/blizzard_channels/mainline/voiceutils.lua:49`
+- `Voice_GetChannelActivatedNotification(channel)`: `interface/addons/blizzard_channels/classic/voicechatprompt.lua:30`
+- `Voice_GetChannelActivatedNotification(channel)`: `interface/addons/blizzard_channels/mainline/voicechatprompt.lua:31`
+- `Voice_GetChannelActivatePrompt(channel)`: `interface/addons/blizzard_channels/classic/voicechatprompt.lua:25`
+- `Voice_GetChannelActivatePrompt(channel)`: `interface/addons/blizzard_channels/mainline/voicechatprompt.lua:25`
+- `Voice_GetChatChannelType(channelType)`: `interface/addons/blizzard_channels/mainline/voiceutils.lua:14`
+- `Voice_GetChatInfoForChannelType(channel)`: `interface/addons/blizzard_channels/classic/voiceutils.lua:13`
+- `Voice_GetChatInfoForChannelType(channel)`: `interface/addons/blizzard_channels/mainline/voiceutils.lua:18`
+- `Voice_GetCommunicationModeNotification(channel)`: `interface/addons/blizzard_channels/classic/voicechatprompt.lua:48`
+- `Voice_GetCommunicationModeNotification(channel)`: `interface/addons/blizzard_channels/mainline/voicechatprompt.lua:50`
+- `Voice_GetGameAlertStringFromStatusCode(statusCode)`: `interface/addons/blizzard_channels/classic/voiceutils.lua:108`
+- `Voice_GetGameAlertStringFromStatusCode(statusCode)`: `interface/addons/blizzard_channels/mainline/voiceutils.lua:111`
+- `Voice_GetGameErrorFromStatusCode(statusCode)`: `interface/addons/blizzard_channels/classic/voiceutils.lua:70`
+- `Voice_GetGameErrorFromStatusCode(statusCode)`: `interface/addons/blizzard_channels/mainline/voiceutils.lua:76`
+- `Voice_GetGameErrorStringFromStatusCode(statusCode)`: `interface/addons/blizzard_channels/classic/voiceutils.lua:79`
+- `Voice_GetGameErrorStringFromStatusCode(statusCode)`: `interface/addons/blizzard_channels/mainline/voiceutils.lua:85`
+- `Voice_GetVoiceChannelNotificationColor(channelID)`: `interface/addons/blizzard_channels/classic/voiceutils.lua:34`
+- `Voice_GetVoiceChannelNotificationColor(channelID)`: `interface/addons/blizzard_channels/mainline/voiceutils.lua:40`
+- `Voice_IsConnectionError(statusCode)`: `interface/addons/blizzard_channels/classic/voiceutils.lua:91`
+- `Voice_IsConnectionError(statusCode)`: `interface/addons/blizzard_channels/mainline/voiceutils.lua:97`
+
+## blizzard_charactercreate
+
+- `SelectOtherRaceAvailable()`: `interface/addons/blizzard_charactercreate/camelot/blizzard_charactercreate.lua:3258`
+- `SelectOtherRaceAvailable()`: `interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2534`
+
+## blizzard_chatframe
+
+- `AddCharacterNameToSpeechCheckButton_OnClick(self)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:545`
+- `AddCharacterNameToSpeechCheckButton_OnLoad(self)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:541`
+- `CanCreateFilters()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2169`
+- `ChatAdditionalColor_OpenColorPicker(self)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1553`
+- `ChatConfig_CreateCheckboxes(frame, checkBoxTable, checkBoxTemplate, title)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:828`
+- `ChatConfig_CreateColorSwatches(frame, swatchTable, swatchTemplate, title)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:986`
+- `ChatConfig_CreateTieredCheckboxes(frame, checkBoxTable, checkBoxTemplate, subCheckboxTemplate, columns, spacing)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:903`
+- `ChatConfig_HideCombatTabs()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2061`
+- `ChatConfig_MoveFilterDown()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2134`
+- `ChatConfig_MoveFilterUp()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2117`
+- `ChatConfig_RefreshCurrentChatCategory(preserveCategorySelection)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2235`
+- `ChatConfig_ResetChatSettings()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1944`
+- `ChatConfig_ShowCombatTabs()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2055`
+- `ChatConfig_UpdateChatSettings()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1929`
+- `ChatConfig_UpdateCheckboxes(frame)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1027`
+- `ChatConfig_UpdateCombatSettings()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1892`
+- `ChatConfig_UpdateCombatTabs(selectedTabID)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2034`
+- `ChatConfig_UpdateFilterList()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1872`
+- `ChatConfig_UpdateSwatches(frame)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1109`
+- `ChatConfig_UpdateTieredCheckboxes(frame, index)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1141`
+- `ChatConfig_UpdateTieredCheckboxFrame(frame)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1131`
+- `ChatConfigBaseCheckButton_MouseUp()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2176`
+- `ChatConfigCancel_OnClick()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2152`
+- `ChatConfigCategory_OnClick(self)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1660`
+- `ChatConfigCategory_UpdateEnabled()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1685`
+- `ChatConfigCategoryFrame_Refresh(preserveCategorySelection)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2191`
+- `ChatConfigChannelSettings_MoveChannelDown(channelIndex)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2281`
+- `ChatConfigChannelSettings_MoveChannelUp(channelIndex)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2289`
+- `ChatConfigChannelSettings_OnShow()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2264`
+- `ChatConfigChannelSettings_SwapChannelsByIndex(firstChannelIndex, secondChannelIndex)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2270`
+- `ChatConfigChannelSettings_UpdateCheckboxes()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2257`
+- `ChatConfigChatSettings_OnShow()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2252`
+- `ChatConfigChatSettings_UpdateCheckboxes()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2248`
+- `ChatConfigCombat_InitButton(button, elementData)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1849`
+- `ChatConfigCombat_OnEvent(self, event)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1831`
+- `ChatConfigCombat_OnHide()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1867`
+- `ChatConfigCombat_OnLoad(self)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1799`
+- `ChatConfigCombat_OnShow()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1861`
+- `ChatConfigCombatButton_OnClick(button, buttonName, down)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1845`
+- `ChatConfigFilter_OnClick(id)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1883`
+- `ChatConfigFrame_OnChatDisabledChanged(disabled)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2337`
+- `ChatConfigFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:781`
+- `ChatConfigFrame_OnLoad(self)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:772`
+- `ChatConfigFrame_PlayCheckboxSound(checked)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2183`
+- `ChatConfigFrame_ReplaceChatConfigLeftTooltips(disabled)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2351`
+- `ChatConfigFrameDefaultButton_OnClick()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2325`
+- `ChatConfigFrameRedockButton_OnClick()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2329`
+- `ChatConfigFrameRedockButton_OnLoad(self)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2333`
+- `ChatConfigOtherSettings_OnShow()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2305`
+- `ChatConfigOtherSettings_UpdateCheckboxes()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2297`
+- `ChatConfigTextToSpeechChannelSettings_OnShow()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2320`
+- `ChatConfigTextToSpeechChannelSettings_UpdateCheckboxes()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2314`
+- `ChatConfigTextToSpeechSettings_OnShow()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2310`
+- `ChatUnitColor_OpenColorPicker(self)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1544`
+- `CombatConfig_Colorize_Update()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1242`
+- `CombatConfig_CreateCombatFilter(name, filter)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2067`
+- `CombatConfig_DeleteCurrentCombatFilter()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2090`
+- `CombatConfig_Formatting_Update()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1293`
+- `CombatConfig_SetCombatFiltersToDefault()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2107`
+- `CombatConfig_SetFilterName(name)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1325`
+- `CombatConfig_Settings_Update()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1315`
+- `CreateChatChannelList(self, ...)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1704`
+- `CreateChatTextToSpeechChannelList(self, ...)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1746`
+- `DamageColor_OpenColorPicker(self)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1571`
+- `GetChatAdditionalColor(type)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1615`
+- `GetChatUnitColor(type)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1620`
+- `GetMessageTypeColor(messageType)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1594`
+- `GetMessageTypeState(messageType)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2026`
+- `GetSpellNameColor()`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1629`
+- `GetTableColor(color)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1639`
+- `HasMessageType(messageType)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:2014`
+- `HasMessageTypeGroup(checkBoxList, index)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1998`
+- `IsClassColoringMessageType(messageType)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1461`
+- `IsListeningForMessageType(messageType)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1451`
+- `IsMessageDoneBy(filter)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1972`
+- `IsMessageDoneTo(filter)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1982`
+- `IsTypeAdditionalChatColor(type)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1611`
+- `MessageTypeColor_OpenColorPicker(self)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1580`
+- `NarrateMyMessagesCheckButton_OnClick(self)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:563`
+- `NarrateMyMessagesCheckButton_OnLoad(self)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:559`
+- `PlayActivitySoundWhenNotFocusedCheckButton_OnClick(self)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:554`
+- `PlayActivitySoundWhenNotFocusedCheckButton_OnLoad(self)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:550`
+- `PlaySoundSeparatingChatLinesCheckButton_OnClick(self)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:536`
+- `PlaySoundSeparatingChatLinesCheckButton_OnLoad(self)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:532`
+- `SetChatUnitColor(type, r, g, b)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1625`
+- `SetSpellNameColor(r, g, b)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1634`
+- `SetTableColor(color, r, g, b)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1643`
+- `SpellColor_OpenColorPicker(self)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1562`
+- `TextToSpeech_GetSelectedVoice(voiceType)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:72`
+- `TextToSpeech_IsSelectedVoice(voice, voiceType)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:85`
+- `TextToSpeech_PlayNextQueuedMessage()`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:127`
+- `TextToSpeech_PlaySample(voiceType)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:100`
+- `TextToSpeech_SetRate(self, rate)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:643`
+- `TextToSpeech_SetSelectedVoice(voice, voiceType)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:96`
+- `TextToSpeech_SetVoice(newVoiceID, voiceType)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:724`
+- `TextToSpeech_SetVolume(self, volume)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:686`
+- `TextToSpeech_Speak(text, voice, neverQueue, allowOverlappedSpeech)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:148`
+- `TextToSpeech_StartPlayNextQueuedMessageTimer()`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:115`
+- `TextToSpeech_StopAll()`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:187`
+- `TextToSpeechButtonFrame_OnLoad(self)`: `interface/addons/blizzard_chatframe/shared/texttospeech.lua:13`
+- `TextToSpeechChatTypeCheckButton_OnClick(self, button)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:634`
+- `TextToSpeechFrame_AddMessageObserver(frame, message, r, g, b, id)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:836`
+- `TextToSpeechFrame_CheckLoad(self)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:457`
+- `TextToSpeechFrame_CreateCheckboxes(frame, checkBoxTable, checkBoxTemplate)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:603`
+- `TextToSpeechFrame_DisplaySilentSystemMessage(text)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:894`
+- `TextToSpeechFrame_GetChatTypeEnabled(msgType)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:870`
+- `TextToSpeechFrame_IsEventNarrationEnabled(frame, event, ...)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:901`
+- `TextToSpeechFrame_LoadLegacySettings()`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:296`
+- `TextToSpeechFrame_MessageEventHandler(frame, event, ...)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:963`
+- `TextToSpeechFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:481`
+- `TextToSpeechFrame_OnHide(self)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:511`
+- `TextToSpeechFrame_OnLoad(self)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:386`
+- `TextToSpeechFrame_OnShow(self)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:502`
+- `TextToSpeechFrame_PlayCooldownAlertMessage(_alert, message, allowOverlappedSpeech)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:828`
+- `TextToSpeechFrame_PlayMessage(frame, message, id, ignoreTypeFilters, ignoreActivitySound)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:789`
+- `TextToSpeechFrame_SetChannelEnabled(channelInfo, enabled)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:882`
+- `TextToSpeechFrame_SetChatTypeEnabled(msgType, enabled)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:863`
+- `TextToSpeechFrame_SetToDefaults()`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:515`
+- `TextToSpeechFrame_SetupAlternateVoiceDropdown(self)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:453`
+- `TextToSpeechFrame_SetupVoiceDropdown(self)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:449`
+- `TextToSpeechFrame_Show()`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:201`
+- `TextToSpeechFrame_ToggleChannelEnabled(channelInfo)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:889`
+- `TextToSpeechFrame_ToggleChatTypeEnabled(msgType)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:878`
+- `TextToSpeechFrame_Update(self)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:205`
+- `TextToSpeechFrame_UpdateAlternate(self)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:254`
+- `TextToSpeechFrame_UpdateCheckboxLayout(frame, scale)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:574`
+- `TextToSpeechFrame_UpdateElementsForTextScale(self, scale)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:1040`
+- `TextToSpeechFrame_UpdateMessageCheckboxes(frame)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:240`
+- `TextToSpeechFrame_UpdateSliders(self)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:269`
+- `TextToSpeechFrameAdjustRateSlider_OnLoad(self)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:680`
+- `TextToSpeechFrameAdjustVolumeSlider_OnLoad(self)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:698`
+- `TextToSpeechFrameDefaults_OnClick(self, button)`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:275`
+- `ToggleChatColorNamesByClassGroup(checked, group)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1342`
+- `ToggleChatMessageGroup(checked, group)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1333`
+- `ToggleMessageDest(checked, filter)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1365`
+- `ToggleMessageSource(checked, filter)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1353`
+- `ToggleMessageType(checked, ...)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1440`
+- `ToggleMessageTypeGroup(checked, frame, index)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1388`
+- `ToggleTextToSpeechFrame()`: `interface/addons/blizzard_chatframe/shared/texttospeechframe.lua:521`
+- `UsesGUID(direction)`: `interface/addons/blizzard_chatframe/mainline/chatconfigframe.lua:1950`
+- `VoiceTranscription_GetChatTypeAndInfo()`: `interface/addons/blizzard_chatframe/shared/voicechattranscriptionframe.lua:47`
+- `VoiceTranscriptionFrame_CustomEventHandler(self, event, ...)`: `interface/addons/blizzard_chatframe/shared/voicechattranscriptionframe.lua:145`
+- `VoiceTranscriptionFrame_Init(self)`: `interface/addons/blizzard_chatframe/shared/voicechattranscriptionframe.lua:184`
+- `VoiceTranscriptionFrame_UpdateEditBox(self)`: `interface/addons/blizzard_chatframe/shared/voicechattranscriptionframe.lua:124`
+- `VoiceTranscriptionFrame_UpdateVisibility(self)`: `interface/addons/blizzard_chatframe/shared/voicechattranscriptionframe.lua:5`
+- `VoiceTranscriptionFrame_UpdateVoiceTab(self)`: `interface/addons/blizzard_chatframe/shared/voicechattranscriptionframe.lua:106`
+
+## blizzard_chatframebase
+
+- `AddSecureCmd(cmd, cmdString)`: `interface/addons/blizzard_chatframebase/shared/slashcommandsregistry.lua:53`
+- `AddSecureCmdAliases(cmd, ...)`: `interface/addons/blizzard_chatframebase/shared/slashcommandsregistry.lua:61`
+- `AllowChatFramesToShow(chatFrame)`: `interface/addons/blizzard_chatframebase/shared/floatingchatframegame.lua:1`
+- `ChatEdit_CustomTabPressed(editBox)`: `interface/addons/blizzard_chatframebase/shared/chatframeeditbox.lua:463`
+- `ChatFrame_WargameTargetsVerifyBNetAccounts(target1, target2)`: `interface/addons/blizzard_chatframebase/mainline/slashcommandsoverrides.lua:291`
+- `ChatHistory_GetAccessID(chatType, chatTarget, chanSender)`: `interface/addons/blizzard_chatframebase/shared/historykeeper.lua:8`
+- `ChatHistory_GetAllAccessIDsByChanSender(chanSender)`: `interface/addons/blizzard_chatframebase/shared/historykeeper.lua:23`
+- `ChatHistory_GetChatType(accessID)`: `interface/addons/blizzard_chatframebase/shared/historykeeper.lua:19`
+- `ChatHistory_GetToken(chatType, chatTarget, chanSender)`: `interface/addons/blizzard_chatframebase/shared/historykeeper.lua:34`
+- `DisplayInterfaceActionBlockedMessage()`: `interface/addons/blizzard_chatframebase/mainline/chatframeutiloverrides.lua:3`
+- `DisplayInterfaceActionBlockedMessage()`: `interface/addons/blizzard_chatframebase/shared/chatframeutil.lua:317`
+- `DoesActivePlayerHaveMentorStatus()`: `interface/addons/blizzard_chatframebase/mainline/chatframeutiloverrides.lua:173`
+- `FCF_CancelWindowColorSettings(previousValues)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1111`
+- `FCF_CanOpenNewWindow()`: `interface/addons/blizzard_chatframebase/shared/floatingchatframe.lua:36`
+- `FCF_CheckShowChatFrame(frame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2068`
+- `FCF_ClearFullScreenFrame()`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:428`
+- `FCF_Close(frame, fallback)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1766`
+- `FCF_CopyChatSettings(copyTo, copyFrom)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:471`
+- `FCF_CreateMinimizedFrame(chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1989`
+- `FCF_DockFrame(frame, index, selected)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1626`
+- `FCF_DockUpdate()`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1616`
+- `FCF_FadeInChatFrame(chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1237`
+- `FCF_FadeInScrollbar(chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1212`
+- `FCF_FadeOutChatFrame(chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1270`
+- `FCF_FadeOutScrollbar(chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1222`
+- `FCF_FlagMinimizedPositionReset(chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2062`
+- `FCF_FlashTab(self)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1822`
+- `FCF_GetButtonSide(chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1612`
+- `FCF_GetChatFrameByID(chatFrameID)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1069`
+- `FCF_GetChatWindowInfo(id)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:448`
+- `FCF_GetCurrentChatFrame()`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1073`
+- `FCF_GetCurrentChatFrameID()`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1065`
+- `FCF_GetCurrentFullScreenFrame()`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:444`
+- `FCF_GetNextOpenChatWindowIndex()`: `interface/addons/blizzard_chatframebase/shared/floatingchatframe.lua:26`
+- `FCF_GetNumActiveChatFrames()`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:696`
+- `FCF_HideOnFadeFinished(frame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1521`
+- `FCF_IsChatWindowIndexActive(chatWindowIndex)`: `interface/addons/blizzard_chatframebase/shared/floatingchatframe.lua:5`
+- `FCF_IsChatWindowIndexReserved(chatWindowIndex)`: `interface/addons/blizzard_chatframebase/shared/floatingchatframe.lua:1`
+- `FCF_IsValidChatFrame(chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1525`
+- `FCF_IterateActiveChatWindows(callback)`: `interface/addons/blizzard_chatframebase/shared/floatingchatframe.lua:15`
+- `FCF_MaximizeFrame(chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1971`
+- `FCF_MinimizeFrame(chatFrame, side)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1949`
+- `FCF_NewChatWindow()`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:981`
+- `FCF_OnUpdate(elapsed)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1305`
+- `FCF_OpenNewWindow(name, noDefaultChannels)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:706`
+- `FCF_OpenTemporaryWindow(chatType, chatTarget, sourceChatFrame, selectWindow)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:881`
+- `FCF_PopInWindow(frame, fallback)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1749`
+- `FCF_RedockAllWindows()`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:985`
+- `FCF_RemoveAllMessagesFromChanSender(chatFrame, chanSender)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:963`
+- `FCF_RenameChatWindow_Popup()`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:977`
+- `FCF_ResetAllWindows()`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:989`
+- `FCF_ResetChatWindow(windowFrame, windowName)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1850`
+- `FCF_ResetChatWindows()`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1863`
+- `FCF_RestoreChatsToFrame(targetFrame, sourceFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1800`
+- `FCF_RestorePositionAndDimensions(chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1380`
+- `FCF_SaveDock()`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1743`
+- `FCF_SavePositionAndDimensions(chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1353`
+- `FCF_SelectDockFrame(frame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1678`
+- `FCF_Set_NormalChat()`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1830`
+- `FCF_SetButtonSide(chatFrame, buttonSide, forceUpdate)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1556`
+- `FCF_SetChatWindowBackGroundColor()`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1079`
+- `FCF_SetChatWindowFontSize(self, chatFrame, fontSize)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1090`
+- `FCF_SetChatWindowOpacity()`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1085`
+- `FCF_SetExpandedUninteractable(chatFrame, isUninteractable)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1192`
+- `FCF_SetFullScreenFrame(frame, buttonDisabledTooltip)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:419`
+- `FCF_SetLocked(chatFrame, isLocked)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1176`
+- `FCF_SetTabPosition(chatFrame, x)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1737`
+- `FCF_SetTemporaryWindowType(chatFrame, chatType, chatTarget)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:789`
+- `FCF_SetUninteractable(chatFrame, isUninteractable)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1202`
+- `FCF_SetWindowAlpha(frame, alpha, doNotSave)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1053`
+- `FCF_SetWindowColor(frame, r, g, b, doNotSave)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1032`
+- `FCF_SetWindowName(frame, name, doNotSave)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:993`
+- `FCF_StartAlertFlash(chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1582`
+- `FCF_StopAlertFlash(chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1597`
+- `FCF_StopDragging(chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1402`
+- `FCF_StripChatMsg(string)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1121`
+- `FCF_Tab_OnClick(self, button)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1697`
+- `FCF_Tab_SetupMenu(self)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:542`
+- `FCF_TabCompare(chatFrame1, chatFrame2)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1620`
+- `FCF_ToggleLock()`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1138`
+- `FCF_ToggleLockOnDockedFrame()`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1129`
+- `FCF_ToggleUninteractable()`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1183`
+- `FCF_UnDockFrame(frame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1663`
+- `FCF_UpdateButtonSide(chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1538`
+- `FCF_UpdateChatFrameParent(chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:436`
+- `FCF_UpdateResizeButton(chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1170`
+- `FCF_UpdateScrollbarAnchors(chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1155`
+- `FCFDock_AddChatFrame(dock, chatFrame, position)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2211`
+- `FCFDock_CalculateTabSize(dock, numDynFrames)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2439`
+- `FCFDock_ForceReanchoring(dock)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2202`
+- `FCFDock_GetChatFrames(dock)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2164`
+- `FCFDock_GetInsertIndex(dock, chatFrame, mouseX, mouseY)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2501`
+- `FCFDock_GetNewTabAnchor(dock)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2318`
+- `FCFDock_GetSelectedWindow(dock)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2314`
+- `FCFDock_HasDockedChatFrame(dock, chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2294`
+- `FCFDock_HideInsertHighlight(dock)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2566`
+- `FCFDock_OnEvent(dock, event, ...)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2157`
+- `FCFDock_OnPrimarySizeChanged(dock)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2184`
+- `FCFDock_OnUpdate(self)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2194`
+- `FCFDock_PlaceInsertHighlight(dock, chatFrame, mouseX, mouseY)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2539`
+- `FCFDock_RemoveChatFrame(dock, chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2261`
+- `FCFDock_ScrollToSelectedTab(dock)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2473`
+- `FCFDock_SelectWindow(dock, chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2298`
+- `FCFDock_SetDirty(dock)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2570`
+- `FCFDock_SetPrimary(dock, chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2168`
+- `FCFDock_UpdateTabs(dock, forceUpdate)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2322`
+- `FCFDockOverflow_CloseLists()`: `interface/addons/blizzard_chatframebase/shared/floatingchatframe.lua:40`
+- `FCFDockOverflowButton_OnClick(self, button)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2654`
+- `FCFDockOverflowButton_OnEvent(self, event, ...)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2664`
+- `FCFDockOverflowButton_UpdatePulseState(self)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2620`
+- `FCFDockOverflowList_Update(list, dock)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2670`
+- `FCFDockOverflowListButton_OnClick(self, button)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2735`
+- `FCFDockOverflowListButton_SetValue(button, chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2703`
+- `FCFDockScrollFrame_GetLeftmostTab(scrollFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2592`
+- `FCFDockScrollFrame_GetScrollDistanceNeeded(scrollFrame, dynFrameIndex)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2574`
+- `FCFDockScrollFrame_JumpToTab(scrollFrame, leftTab)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2596`
+- `FCFDockScrollFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2483`
+- `FCFManager_GetChatTarget(chatGroup, playerTarget, channelTarget)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2784`
+- `FCFManager_GetNumDedicatedFrames(chatType, chatTarget)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2778`
+- `FCFManager_RegisterDedicatedFrame(chatFrame, chatType, chatTarget)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2759`
+- `FCFManager_ShouldSuppressMessage(chatFrame, chatType, chatTarget)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2798`
+- `FCFManager_ShouldSuppressMessageFlash(chatFrame, chatType, chatTarget)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2813`
+- `FCFManager_StopFlashOnDedicatedWindows(chatType, chatTarget)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2828`
+- `FCFManager_UnregisterDedicatedFrame(chatFrame, chatType, chatTarget)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2770`
+- `FCFMin_UpdateColors(minFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2040`
+- `FCFTab_GetChatTabByID(id)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1693`
+- `FCFTab_OnDragStop(self, button)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1448`
+- `FCFTab_OnUpdate(self, elapsed)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1422`
+- `FCFTab_UpdateAlpha(chatFrame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1494`
+- `FCFTab_UpdateColors(self, selected)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1454`
+- `FloatingChatFrame_OnMouseScroll(self, delta)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:321`
+- `FloatingChatFrame_SetupScrolling(self)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:296`
+- `FloatingChatFrame_Update(id, onUpdateEvent)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:484`
+- `FloatingChatFrame_UpdateBackgroundAnchors(self)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:278`
+- `FloatingChatFrame_UpdateScroll(self)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:329`
+- `FloatingChatFrameManager_OnEvent(self, event, ...)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2847`
+- `FloatingChatFrameManager_OnLoad(self)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:2838`
+- `GetRandomArgument(...)`: `interface/addons/blizzard_chatframebase/shared/chatframeutil.lua:1185`
+- `IsActivePlayerGuide()`: `interface/addons/blizzard_chatframebase/mainline/chatframeutiloverrides.lua:181`
+- `IsActivePlayerNewcomer()`: `interface/addons/blizzard_chatframebase/mainline/chatframeutiloverrides.lua:189`
+- `IsBuiltinChatWindow(frame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1913`
+- `IsCombatLog(frame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1905`
+- `IsSecureCmd(command)`: `interface/addons/blizzard_chatframebase/shared/slashcommandsregistry.lua:21`
+- `IsVoiceTranscription(frame)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1909`
+- `QueryCastSequence(sequence)`: `interface/addons/blizzard_chatframebase/shared/castsequencemanager.lua:205`
+- `RegisterNewSlashCommand(callback, command, commandAlias)`: `interface/addons/blizzard_chatframebase/shared/slashcommandsregistry.lua:42`
+- `RemoveExtraSpaces(str)`: `interface/addons/blizzard_chatframebase/shared/chatframeutil.lua:1189`
+- `RemoveNewlines(str)`: `interface/addons/blizzard_chatframebase/shared/chatframeutil.lua:1193`
+- `SecureCmdItemParse(item)`: `interface/addons/blizzard_chatframebase/shared/chatframeutil.lua:1197`
+- `SecureCmdUseItem(name, bag, slot, target)`: `interface/addons/blizzard_chatframebase/shared/chatframeutil.lua:1213`
+- `SetChatMouseOverDelay(noDelay)`: `interface/addons/blizzard_chatframebase/mainline/floatingchatframe.lua:1840`
+- `ToggleChannelFrame()`: `interface/addons/blizzard_chatframebase/mainline/channelframebuttonmixin.lua:3`
+
+## blizzard_chromietimeui
+
+- `ChromieTimeFrame_LoadUI()`: `interface/addons/blizzard_chromietimeui/blizzard_chromietimeui_bootstrap.lua:3`
+
+## blizzard_classtrial
+
+- `ClassTrial_ConfirmApplyToken(guid, boostType)`: `interface/addons/blizzard_classtrial/blizzard_classtrial.lua:72`
+- `ClassTrial_SetHasAvailableBoost(hasBoost)`: `interface/addons/blizzard_classtrial/blizzard_classtrial.lua:68`
+- `ClassTrial_ShowStoreServices(guid, boostType)`: `interface/addons/blizzard_classtrial/blizzard_classtrial.lua:76`
+
+## blizzard_clickbindingui
+
+- `ClickBindingFrame_LoadUI()`: `interface/addons/blizzard_clickbindingui/blizzard_clickbindingui_bootstrap.lua:14`
+- `ClickBindingFrame_Toggle()`: `interface/addons/blizzard_clickbindingui/blizzard_clickbindingui.lua:821`
+- `InClickBindingMode()`: `interface/addons/blizzard_clickbindingui/blizzard_clickbindingui_bootstrap.lua:3`
+- `ToggleClickBindingFrame()`: `interface/addons/blizzard_clickbindingui/blizzard_clickbindingui_bootstrap.lua:7`
+
+## blizzard_collections
+
+- `CollectionItemListButton_SetRedOverlayShown(self, showRedOverlay)`: `interface/addons/blizzard_collections/shared/blizzard_collectiontemplates.lua:132`
+- `CollectionsButton_OnEvent(self, event, ...)`: `interface/addons/blizzard_collections/shared/blizzard_collectiontemplates.lua:8`
+- `CollectionsJournal_CheckAndDisplayTabs()`: `interface/addons/blizzard_collections/shared/blizzard_collections.lua:119`
+- `CollectionsJournal_ClickTab(self)`: `interface/addons/blizzard_collections/shared/blizzard_collections.lua:3`
+- `CollectionsJournal_GetTab(self)`: `interface/addons/blizzard_collections/shared/blizzard_collections.lua:14`
+- `CollectionsJournal_GetTab_Internal(tabContainer)`: `interface/addons/blizzard_collections/camelot/blizzard_collectionsoverrides.lua:35`
+- `CollectionsJournal_GetTab_Internal(tabContainer)`: `interface/addons/blizzard_collections/shared/blizzard_collections.lua:55`
+- `CollectionsJournal_HideTab_Internal(tabContainer, tabID)`: `interface/addons/blizzard_collections/camelot/blizzard_collectionsoverrides.lua:44`
+- `CollectionsJournal_HideTab_Internal(tabContainer, tabID)`: `interface/addons/blizzard_collections/shared/blizzard_collections.lua:63`
+- `CollectionsJournal_HideTabHelpTips()`: `interface/addons/blizzard_collections/shared/blizzard_collections.lua:115`
+- `CollectionsJournal_LoadUI()`: `interface/addons/blizzard_collections/blizzard_collections_bootstrap.lua:3`
+- `CollectionsJournal_OnHide(self)`: `interface/addons/blizzard_collections/shared/blizzard_collections.lua:172`
+- `CollectionsJournal_OnLoad(self)`: `interface/addons/blizzard_collections/shared/blizzard_collections.lua:151`
+- `CollectionsJournal_OnShow(self)`: `interface/addons/blizzard_collections/shared/blizzard_collections.lua:158`
+- `CollectionsJournal_SearchBox_OnLoad(self)`: `interface/addons/blizzard_collections/shared/blizzard_collectiontemplates.lua:161`
+- `CollectionsJournal_SetNumTabs_Internal(tabContainer, tab)`: `interface/addons/blizzard_collections/camelot/blizzard_collectionsoverrides.lua:49`
+- `CollectionsJournal_SetNumTabs_Internal(tabContainer, numTabs)`: `interface/addons/blizzard_collections/shared/blizzard_collections.lua:67`
+- `CollectionsJournal_SetTab(self, tab)`: `interface/addons/blizzard_collections/shared/blizzard_collections.lua:8`
+- `CollectionsJournal_SetTab_Internal(tabContainer, selectedTabID)`: `interface/addons/blizzard_collections/camelot/blizzard_collectionsoverrides.lua:21`
+- `CollectionsJournal_SetTab_Internal(tabContainer, tab)`: `interface/addons/blizzard_collections/shared/blizzard_collections.lua:51`
+- `CollectionsJournal_ShowTab_Internal(tabContainer, tabID)`: `interface/addons/blizzard_collections/camelot/blizzard_collectionsoverrides.lua:39`
+- `CollectionsJournal_ShowTab_Internal(tabContainer, tabID)`: `interface/addons/blizzard_collections/shared/blizzard_collections.lua:59`
+- `CollectionsJournal_UpdateSelectedTab(self)`: `interface/addons/blizzard_collections/shared/blizzard_collections.lua:89`
+- `CollectionsJournal_ValidateTab(tabIndex)`: `interface/addons/blizzard_collections/shared/blizzard_collections.lua:18`
+- `CollectionsSpellButton_OnHide(self)`: `interface/addons/blizzard_collections/shared/blizzard_collectiontemplates.lua:24`
+- `CollectionsSpellButton_OnLoad(self, updateFunction)`: `interface/addons/blizzard_collections/shared/blizzard_collectiontemplates.lua:1`
+- `CollectionsSpellButton_OnShow(self)`: `interface/addons/blizzard_collections/shared/blizzard_collectiontemplates.lua:16`
+- `CollectionsSpellButton_UpdateCooldown(self)`: `interface/addons/blizzard_collections/shared/blizzard_collectiontemplates.lua:30`
+- `GetPetTypeTexture(petType)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:702`
+- `GetPetTypeTexture(petType)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1473`
+- `HeirloomsJournal_OnEvent(self, event, ...)`: `interface/addons/blizzard_collections/classic/blizzard_heirloomcollection.lua:6`
+- `HeirloomsJournal_OnEvent(self, event, ...)`: `interface/addons/blizzard_collections/mainline/blizzard_heirloomcollection.lua:6`
+- `HeirloomsJournal_OnMouseWheel(self, delta)`: `interface/addons/blizzard_collections/classic/blizzard_heirloomcollection.lua:43`
+- `HeirloomsJournal_OnMouseWheel(self, delta)`: `interface/addons/blizzard_collections/mainline/blizzard_heirloomcollection.lua:47`
+- `HeirloomsJournal_OnShow(self)`: `interface/addons/blizzard_collections/classic/blizzard_heirloomcollection.lua:16`
+- `HeirloomsJournal_OnShow(self)`: `interface/addons/blizzard_collections/mainline/blizzard_heirloomcollection.lua:16`
+- `HeirloomsJournal_UpdateButton(self)`: `interface/addons/blizzard_collections/classic/blizzard_heirloomcollection.lua:47`
+- `HeirloomsJournal_UpdateButton(self)`: `interface/addons/blizzard_collections/mainline/blizzard_heirloomcollection.lua:51`
+- `HeirloomsJournalSearchBox_OnTextChanged(self)`: `interface/addons/blizzard_collections/classic/blizzard_heirloomcollection.lua:717`
+- `HeirloomsJournalSearchBox_OnTextChanged(self)`: `interface/addons/blizzard_collections/mainline/blizzard_heirloomcollection.lua:716`
+- `HeirloomsJournalSpellButton_OnClick(self, button)`: `interface/addons/blizzard_collections/classic/blizzard_heirloomcollection.lua:68`
+- `HeirloomsJournalSpellButton_OnClick(self, button)`: `interface/addons/blizzard_collections/mainline/blizzard_heirloomcollection.lua:72`
+- `HeirloomsJournalSpellButton_OnEnter(self)`: `interface/addons/blizzard_collections/classic/blizzard_heirloomcollection.lua:51`
+- `HeirloomsJournalSpellButton_OnEnter(self)`: `interface/addons/blizzard_collections/mainline/blizzard_heirloomcollection.lua:55`
+- `MountJournal_ApplyEquipment(self, itemLocation)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:376`
+- `MountJournal_ApplyEquipmentFromContainerClick(self, itemLocation)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:95`
+- `MountJournal_CanApplyMountEquipment(itemLocation)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:78`
+- `MountJournal_ClearPendingAndUpdate(self)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:481`
+- `MountJournal_ClearPendingApply(self)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:470`
+- `MountJournal_ClearSearch()`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:589`
+- `MountJournal_ClearSearch()`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:910`
+- `MountJournal_EvaluateListHelpTip(self)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:309`
+- `MountJournal_FullUpdate(self)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:243`
+- `MountJournal_FullUpdate(self, skipMountDisplay)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:576`
+- `MountJournal_GetCollectedFilter()`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:597`
+- `MountJournal_GetCollectedFilter()`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:918`
+- `MountJournal_GetDisplayedMountEquipmentItem(self)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:453`
+- `MountJournal_GetMountButtonByMountID(mountID)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:464`
+- `MountJournal_GetMountButtonByMountID(mountID)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:783`
+- `MountJournal_GetMountButtonHeight()`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:460`
+- `MountJournal_GetMountButtonHeight()`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:779`
+- `MountJournal_GetNotCollectedFilter()`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:605`
+- `MountJournal_GetNotCollectedFilter()`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:926`
+- `MountJournal_GetPendingMountChanges()`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:672`
+- `MountJournal_GetUnusableFilter()`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:613`
+- `MountJournal_GetUnusableFilter()`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:934`
+- `MountJournal_HasPendingMountEquipment(self)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:457`
+- `MountJournal_InitFilterButton(self)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:44`
+- `MountJournal_InitFilterButton(self)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:951`
+- `MountJournal_InitializeEquipmentSlot(self, item)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:524`
+- `MountJournal_InitializeEquipmentTooltip(self)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:502`
+- `MountJournal_InitMountButton(button, elementData)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:139`
+- `MountJournal_InitMountButton(button, elementData)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:257`
+- `MountJournal_ModelScene_OnEnter(button)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:408`
+- `MountJournal_ModelScene_OnLeave(button)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:412`
+- `MountJournal_ModelScene_OnReset()`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:416`
+- `MountJournal_OnDialogApplyEquipmentChoice(self, isAccepted)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:486`
+- `MountJournal_OnEquipmentApplyResult(self, success)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:498`
+- `MountJournal_OnEvent(self, event, ...)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:221`
+- `MountJournal_OnEvent(self, event, ...)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:342`
+- `MountJournal_OnHide(self)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:263`
+- `MountJournal_OnHide(self)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:610`
+- `MountJournal_OnLoad(self)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:18`
+- `MountJournal_OnLoad(self)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:129`
+- `MountJournal_OnModelLoaded(mountActor)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:676`
+- `MountJournal_OnSearchTextChanged(self)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:584`
+- `MountJournal_OnSearchTextChanged(self)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:905`
+- `MountJournal_OnShow(self)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:255`
+- `MountJournal_OnShow(self)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:591`
+- `MountJournal_ResetMountButton(button)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:120`
+- `MountJournal_ResetMountButton(button)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:238`
+- `MountJournal_Select(index)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:450`
+- `MountJournal_Select(index)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:769`
+- `MountJournal_SelectByMountID(mountID)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:455`
+- `MountJournal_SelectByMountID(mountID)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:774`
+- `MountJournal_SetAllSourceFilters(value)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:617`
+- `MountJournal_SetAllSourceFilters(value)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:938`
+- `MountJournal_SetCollectedFilter(value)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:593`
+- `MountJournal_SetCollectedFilter(value)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:914`
+- `MountJournal_SetNotCollectedFilter(value)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:601`
+- `MountJournal_SetNotCollectedFilter(value)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:922`
+- `MountJournal_SetPendingApply(self, item)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:461`
+- `MountJournal_SetPendingMountChanges(isPending)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:668`
+- `MountJournal_SetSelected(selectedMountID, selectedSpellID)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:470`
+- `MountJournal_SetSelected(selectedMountID, selectedSpellID)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:789`
+- `MountJournal_SetUnusableFilter(value)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:609`
+- `MountJournal_SetUnusableFilter(value)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:930`
+- `MountJournal_UpdateEquipment(self)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:546`
+- `MountJournal_UpdateEquipmentPalette(self)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:421`
+- `MountJournal_UpdateMountDisplay(forceSceneChange)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:363`
+- `MountJournal_UpdateMountDisplay(forceSceneChange, refreshPlayer)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:680`
+- `MountJournal_UpdateMountList()`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:268`
+- `MountJournal_UpdateMountList()`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:615`
+- `MountJournal_ValidateCursorDragSourceCompatible(self)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:514`
+- `MountJournalMountButton_ChooseFallbackMountToDisplay(mountID, random)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:351`
+- `MountJournalMountButton_ChooseFallbackMountToDisplay(mountID, random)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:656`
+- `MountJournalMountButton_OnClick(self)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:515`
+- `MountJournalMountButton_OnClick(self)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:836`
+- `MountJournalMountButton_OnEnter(self)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:521`
+- `MountJournalMountButton_OnEnter(self)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:842`
+- `MountJournalMountButton_UpdateTooltip(self)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:347`
+- `MountJournalMountButton_UpdateTooltip(self)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:652`
+- `MountJournalMountButton_UseMount(mountID)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:498`
+- `MountJournalMountButton_UseMount(mountID)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:818`
+- `MountJournalSummonRandomFavoriteButton_OnClick(self)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:631`
+- `MountJournalSummonRandomFavoriteButton_OnDragStart(self)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:635`
+- `MountJournalSummonRandomFavoriteButton_OnEnter(self)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:639`
+- `MountJournalSummonRandomFavoriteButton_OnLoad(self)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:622`
+- `MountListDragButton_OnClick(self, button)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:543`
+- `MountListDragButton_OnClick(self, button)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:864`
+- `MountListItem_OnClick(self, button)`: `interface/addons/blizzard_collections/classic/blizzard_mountcollection.lua:564`
+- `MountListItem_OnClick(self, button)`: `interface/addons/blizzard_collections/mainline/blizzard_mountcollection.lua:885`
+- `PetJournal_ClearPendingCage()`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:692`
+- `PetJournal_ClearPendingCage()`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1463`
+- `PetJournal_FindPetCardIndex()`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:531`
+- `PetJournal_FindPetCardIndex()`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1174`
+- `PetJournal_GetPetAbilityHyperlink(abilityID, petID)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1623`
+- `PetJournal_HideAbilityTooltip(self)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1664`
+- `PetJournal_InitFilterDropdown(self)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:48`
+- `PetJournal_InitFilterDropdown(self)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:118`
+- `PetJournal_InitPetButton(pet, elementData)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:254`
+- `PetJournal_InitPetButton(pet, elementData)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:766`
+- `PetJournal_IsPendingCage(petID)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:697`
+- `PetJournal_IsPendingCage(petID)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1468`
+- `PetJournal_OnEvent(self, event, ...)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:125`
+- `PetJournal_OnEvent(self, event, ...)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:243`
+- `PetJournal_OnHide(self)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:121`
+- `PetJournal_OnHide(self)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:236`
+- `PetJournal_OnLoad(self)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:19`
+- `PetJournal_OnLoad(self)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:92`
+- `PetJournal_OnSearchTextChanged(self)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:345`
+- `PetJournal_OnSearchTextChanged(self)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:887`
+- `PetJournal_OnShow(self)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:112`
+- `PetJournal_OnShow(self)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:216`
+- `PetJournal_SelectPet(self, petID)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:174`
+- `PetJournal_SelectPet(self, petID)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:302`
+- `PetJournal_SelectSpecies(self, targetSpeciesID)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:156`
+- `PetJournal_SelectSpecies(self, targetSpeciesID)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:289`
+- `PetJournal_SetPendingCage(petID)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:687`
+- `PetJournal_SetPendingCage(petID)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1458`
+- `PetJournal_ShowAbilityCompareTooltip(abilityID1, abilityID2, speciesID, petID)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1639`
+- `PetJournal_ShowAbilityTooltip(self, abilityID, speciesID, petID, additionalText)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1610`
+- `PetJournal_ShowPetCard(index)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:513`
+- `PetJournal_ShowPetCard(index)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1162`
+- `PetJournal_ShowPetCardByID(petID)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:483`
+- `PetJournal_ShowPetCardByID(petID)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1132`
+- `PetJournal_ShowPetCardBySpeciesID(speciesID)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:498`
+- `PetJournal_ShowPetCardBySpeciesID(speciesID)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1147`
+- `PetJournal_ShowPetDropdown(button, index, petID)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:474`
+- `PetJournal_ShowPetDropdown(button, index, petID)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1123`
+- `PetJournal_ShowPetSelect(self)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:434`
+- `PetJournal_ToggleTutorial()`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1768`
+- `PetJournal_UnwrapPet(petID)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:672`
+- `PetJournal_UnwrapPet(petID)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1443`
+- `PetJournal_UpdateAll()`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:248`
+- `PetJournal_UpdateAll()`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:760`
+- `PetJournal_UpdateFindBattleButton()`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1686`
+- `PetJournal_UpdatePetAbility(abilityFrame, abilityID, petID)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:407`
+- `PetJournal_UpdatePetCard(self, forceSceneChange)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:571`
+- `PetJournal_UpdatePetCard(self, forceSceneChange)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1211`
+- `PetJournal_UpdatePetList()`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:333`
+- `PetJournal_UpdatePetList()`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:874`
+- `PetJournal_UpdatePetLoadOut(forceSceneChange)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:524`
+- `PetJournal_UpdateSummonButtonState()`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:187`
+- `PetJournal_UpdateSummonButtonState()`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:315`
+- `PetJournalAchievementStatus_OnClick()`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1706`
+- `PetJournalAchievementStatus_OnEnter(self)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1719`
+- `PetJournalAchievementStatus_OnLeave()`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1727`
+- `PetJournalDragButton_OnClick(self, button)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:427`
+- `PetJournalDragButton_OnDragStart(self)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:453`
+- `PetJournalDragButton_OnEnter(self)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:416`
+- `PetJournalDragButton_OnEvent(self, event, ...)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:465`
+- `PetJournalFilterDropdown_GetBattlePetsFilter()`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1501`
+- `PetJournalFilterDropdown_GetCollectedFilter()`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:714`
+- `PetJournalFilterDropdown_GetCollectedFilter()`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1485`
+- `PetJournalFilterDropdown_GetNonCombatPetsFilter()`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1509`
+- `PetJournalFilterDropdown_GetNotCollectedFilter()`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:722`
+- `PetJournalFilterDropdown_GetNotCollectedFilter()`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1493`
+- `PetJournalFilterDropdown_SetAllPetSources(value)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:730`
+- `PetJournalFilterDropdown_SetAllPetSources(value)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1518`
+- `PetJournalFilterDropdown_SetAllPetTypes(value)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:726`
+- `PetJournalFilterDropdown_SetAllPetTypes(value)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1513`
+- `PetJournalFilterDropdown_SetBattlePetsFilter(value)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1497`
+- `PetJournalFilterDropdown_SetCollectedFilter(value)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:710`
+- `PetJournalFilterDropdown_SetCollectedFilter(value)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1481`
+- `PetJournalFilterDropdown_SetNonCombatPetsFilter(value)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1505`
+- `PetJournalFilterDropdown_SetNotCollectedFilter(value)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:718`
+- `PetJournalFilterDropdown_SetNotCollectedFilter(value)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1489`
+- `PetJournalFindBattle_OnEnter(self)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1690`
+- `PetJournalFindBattle_Update(self)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1677`
+- `PetJournalListItem_OnClick(self, button)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:391`
+- `PetJournalLoadout_GetRequiredLevel(loadoutPlate, abilityID)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:398`
+- `PetJournalLoadOut_MenuRegion_OnMouseUp(self, button, buttonName)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1113`
+- `PetJournalPetCard_OnClick(self, button)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:544`
+- `PetJournalPetCard_OnClick(self, button)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1187`
+- `PetJournalPetCount_OnEnter(self)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:734`
+- `PetJournalPetCount_OnEnter(self)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1670`
+- `PetJournalRequirement_ShowRequirementToolTip(self)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:750`
+- `PetJournalSummonButton_OnClick(self)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:763`
+- `PetJournalSummonButton_OnEnter(self)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:742`
+- `PetJournalSummonButton_OnEnter(self)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:1732`
+- `PetJournalUtil_GetDisplayName(petID)`: `interface/addons/blizzard_collections/classic/blizzard_petcollection.lua:10`
+- `PetJournalUtil_GetDisplayName(petID)`: `interface/addons/blizzard_collections/shared/blizzard_petcollection.lua:83`
+- `SetCollectionsJournalShown(shown, tabIndex)`: `interface/addons/blizzard_collections/blizzard_collections_bootstrap.lua:22`
+- `ShowHeirloomsJournalToClosestUpgradeablePage()`: `interface/addons/blizzard_collections/blizzard_collections_bootstrap.lua:42`
+- `ToggleCollectionsJournal(tabIndex)`: `interface/addons/blizzard_collections/blizzard_collections_bootstrap.lua:14`
+- `ToggleToyCollection(autoPageToCollectedToyID)`: `interface/addons/blizzard_collections/blizzard_collections_bootstrap.lua:35`
+- `ToyBox_FindPageForToyID(toyID)`: `interface/addons/blizzard_collections/classic/blizzard_toybox.lua:106`
+- `ToyBox_FindPageForToyID(toyID)`: `interface/addons/blizzard_collections/mainline/blizzard_toybox.lua:194`
+- `ToyBox_InitFilterDropdown(self)`: `interface/addons/blizzard_collections/classic/blizzard_toybox.lua:42`
+- `ToyBox_InitFilterDropdown(self)`: `interface/addons/blizzard_collections/mainline/blizzard_toybox.lua:47`
+- `ToyBox_OnEvent(self, event, itemID, new, fanfare)`: `interface/addons/blizzard_collections/classic/blizzard_toybox.lua:62`
+- `ToyBox_OnEvent(self, event, itemID, new, fanfare)`: `interface/addons/blizzard_collections/mainline/blizzard_toybox.lua:152`
+- `ToyBox_OnLoad(self)`: `interface/addons/blizzard_collections/classic/blizzard_toybox.lua:4`
+- `ToyBox_OnLoad(self)`: `interface/addons/blizzard_collections/mainline/blizzard_toybox.lua:4`
+- `ToyBox_OnMouseWheel(self, value)`: `interface/addons/blizzard_collections/classic/blizzard_toybox.lua:116`
+- `ToyBox_OnMouseWheel(self, value)`: `interface/addons/blizzard_collections/mainline/blizzard_toybox.lua:204`
+- `ToyBox_OnSearchTextChanged(self)`: `interface/addons/blizzard_collections/classic/blizzard_toybox.lua:373`
+- `ToyBox_OnSearchTextChanged(self)`: `interface/addons/blizzard_collections/mainline/blizzard_toybox.lua:465`
+- `ToyBox_OnShow(self)`: `interface/addons/blizzard_collections/classic/blizzard_toybox.lua:88`
+- `ToyBox_OnShow(self)`: `interface/addons/blizzard_collections/mainline/blizzard_toybox.lua:178`
+- `ToyBox_UpdateButtons()`: `interface/addons/blizzard_collections/classic/blizzard_toybox.lua:343`
+- `ToyBox_UpdateButtons()`: `interface/addons/blizzard_collections/mainline/blizzard_toybox.lua:430`
+- `ToyBox_UpdatePages()`: `interface/addons/blizzard_collections/classic/blizzard_toybox.lua:351`
+- `ToyBox_UpdatePages()`: `interface/addons/blizzard_collections/mainline/blizzard_toybox.lua:438`
+- `ToyBox_UpdateProgress(self)`: `interface/addons/blizzard_collections/mainline/blizzard_toybox.lua:450`
+- `ToyBox_UpdateProgressBar(self)`: `interface/addons/blizzard_collections/classic/blizzard_toybox.lua:363`
+- `ToySpellButton_CreateContextMenu(self, itemID)`: `interface/addons/blizzard_collections/classic/blizzard_toybox.lua:175`
+- `ToySpellButton_CreateContextMenu(self, itemID)`: `interface/addons/blizzard_collections/mainline/blizzard_toybox.lua:263`
+- `ToySpellButton_FadeInIcon(self)`: `interface/addons/blizzard_collections/classic/blizzard_toybox.lua:194`
+- `ToySpellButton_FadeInIcon(self)`: `interface/addons/blizzard_collections/mainline/blizzard_toybox.lua:283`
+- `ToySpellButton_OnClick(self, button)`: `interface/addons/blizzard_collections/classic/blizzard_toybox.lua:150`
+- `ToySpellButton_OnClick(self, button)`: `interface/addons/blizzard_collections/mainline/blizzard_toybox.lua:238`
+- `ToySpellButton_OnDrag(self)`: `interface/addons/blizzard_collections/classic/blizzard_toybox.lua:217`
+- `ToySpellButton_OnDrag(self)`: `interface/addons/blizzard_collections/mainline/blizzard_toybox.lua:306`
+- `ToySpellButton_OnEnter(self)`: `interface/addons/blizzard_collections/classic/blizzard_toybox.lua:134`
+- `ToySpellButton_OnEnter(self)`: `interface/addons/blizzard_collections/mainline/blizzard_toybox.lua:222`
+- `ToySpellButton_OnHide(self)`: `interface/addons/blizzard_collections/classic/blizzard_toybox.lua:128`
+- `ToySpellButton_OnHide(self)`: `interface/addons/blizzard_collections/mainline/blizzard_toybox.lua:216`
+- `ToySpellButton_OnModifiedClick(self, button)`: `interface/addons/blizzard_collections/classic/blizzard_toybox.lua:208`
+- `ToySpellButton_OnModifiedClick(self, button)`: `interface/addons/blizzard_collections/mainline/blizzard_toybox.lua:297`
+- `ToySpellButton_OnShow(self)`: `interface/addons/blizzard_collections/classic/blizzard_toybox.lua:122`
+- `ToySpellButton_OnShow(self)`: `interface/addons/blizzard_collections/mainline/blizzard_toybox.lua:210`
+- `ToySpellButton_UpdateButton(self)`: `interface/addons/blizzard_collections/classic/blizzard_toybox.lua:221`
+- `ToySpellButton_UpdateButton(self)`: `interface/addons/blizzard_collections/mainline/blizzard_toybox.lua:310`
+
+## blizzard_colorpickerframe
+
+- `ColorPickerSoftCursor_OnUpdate(self, delta)`: `interface/addons/blizzard_colorpickerframe/mainline/colorpickerframe.lua:205`
+- `OpacityFrame_EscapePressed()`: `interface/addons/blizzard_colorpickerframe/shared/colorpickerframe.lua:1`
+
+## blizzard_colors
+
+- `GetMaterialTextColors(material)`: `interface/addons/blizzard_colors/shared/materialcolors.lua:1`
+
+## blizzard_combatlog
+
+- `Blizzard_CombatLog_DisableEvent(settings, ...)`: `interface/addons/blizzard_combatlog/mainline/blizzard_combatlog.lua:456`
+- `Blizzard_CombatLog_EnableEvent(settings, ...)`: `interface/addons/blizzard_combatlog/mainline/blizzard_combatlog.lua:437`
+- `Blizzard_CombatLog_GenerateFullEventList()`: `interface/addons/blizzard_combatlog/mainline/blizzard_combatlog.lua:156`
+- `Blizzard_CombatLog_GenerateFullFlagList(flag)`: `interface/addons/blizzard_combatlog/mainline/blizzard_combatlog.lua:164`
+- `Blizzard_CombatLog_HasEvent(settings, ...)`: `interface/addons/blizzard_combatlog/mainline/blizzard_combatlog.lua:417`
+- `Blizzard_CombatLog_InitializeFilters(settings)`: `interface/addons/blizzard_combatlog/mainline/blizzard_combatlog.lua:139`
+- `Blizzard_CombatLog_MenuHelper(checked, ...)`: `interface/addons/blizzard_combatlog/mainline/blizzard_combatlog.lua:1084`
+- `Blizzard_CombatLog_QuickButton_OnClick(id)`: `interface/addons/blizzard_combatlog/mainline/blizzard_combatlog.lua:1642`
+- `Blizzard_CombatLog_QuickButtonFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_combatlog/mainline/blizzard_combatlog.lua:1393`
+- `Blizzard_CombatLog_QuickButtonFrame_OnLoad(self)`: `interface/addons/blizzard_combatlog/mainline/blizzard_combatlog.lua:1433`
+- `Blizzard_CombatLog_QuickButtonRightClick(event, filterId)`: `interface/addons/blizzard_combatlog/mainline/blizzard_combatlog.lua:1288`
+- `Blizzard_CombatLog_RefreshGlobalLinks()`: `interface/addons/blizzard_combatlog/mainline/blizzard_combatlog.lua:1667`
+- `Blizzard_CombatLog_SpellMenuClick(action, spellName, spellId, eventType)`: `interface/addons/blizzard_combatlog/mainline/blizzard_combatlog.lua:1351`
+- `Blizzard_CombatLog_UnitMenuClick(event, unitName, unitGUID, unitFlags)`: `interface/addons/blizzard_combatlog/mainline/blizzard_combatlog.lua:1194`
+- `Blizzard_CombatLog_Update_QuickButtons()`: `interface/addons/blizzard_combatlog/mainline/blizzard_combatlog.lua:1568`
+- `CombatLog_LoadUI()`: `interface/addons/blizzard_combatlog/blizzard_combatlog_bootstrap.lua:3`
+- `CreateCombatLogContextMenu(region, tbls)`: `interface/addons/blizzard_combatlog/mainline/blizzard_combatlog.lua:1491`
+- `ShowQuickButton(filter)`: `interface/addons/blizzard_combatlog/mainline/blizzard_combatlog.lua:1653`
+
+## blizzard_combattext
+
+- `CombatText_LoadUI()`: `interface/addons/blizzard_combattext/blizzard_combattext_bootstrap.lua:3`
+- `CombatText_UpdateDisplayedMessages()`: `interface/addons/blizzard_combattext/shared/combattext.lua:468`
+
+## blizzard_commentator
+
+- `Commentator_LoadUI()`: `interface/addons/blizzard_commentator/blizzard_commentator_bootstrap.lua:3`
+- `CycleFollowCameraTransitionPreset(index)`: `interface/addons/blizzard_commentator/classic/blizzard_commentator.lua:36`
+- `CycleFollowCameraTransitionPreset(index)`: `interface/addons/blizzard_commentator/mainline/blizzard_commentator.lua:35`
+- `SetFollowCameraTransitionPreset(index)`: `interface/addons/blizzard_commentator/classic/blizzard_commentator.lua:31`
+- `SetFollowCameraTransitionPreset(index)`: `interface/addons/blizzard_commentator/mainline/blizzard_commentator.lua:30`
+- `SetSpectatorModeForOtherFrames(spectatorMode)`: `interface/addons/blizzard_commentator/classic/blizzard_commentator.lua:44`
+
+## blizzard_communities
+
+- `AddCommunitiesFlow_Hide()`: `interface/addons/blizzard_communities/communitiesadddialoginsecure.lua:10`
+- `AddCommunitiesFlow_IsShown()`: `interface/addons/blizzard_communities/communitiesadddialoginsecure.lua:16`
+- `AddCommunitiesFlow_Toggle()`: `interface/addons/blizzard_communities/communitiesadddialoginsecure.lua:2`
+- `CloseCommunitiesSettingsDialog()`: `interface/addons/blizzard_communities/communitiessettings.lua:7`
+- `ClubFinderApplicantListColumnDisplay_OnClick(self, columnIndex)`: `interface/addons/blizzard_communities/clubfinderapplicantlist.lua:279`
+- `ClubFinderApplicantReport(clubFinderGUID, playerName, playerGUID)`: `interface/addons/blizzard_communities/clubfinderapplicantlist.lua:246`
+- `ClubFinderApplicantSortFunction(shouldReverse, firstValue, secondValue)`: `interface/addons/blizzard_communities/clubfinderapplicantlist.lua:283`
+- `ClubFinderApplicantSortFunctionBySpecIds(shouldReverse, firstSpecIds, secondSpecIds)`: `interface/addons/blizzard_communities/clubfinderapplicantlist.lua:318`
+- `ClubFinderApplicantSpecSortReturnSpecValue(specIds)`: `interface/addons/blizzard_communities/clubfinderapplicantlist.lua:291`
+- `ClubFinderCancelOrAcceptApplicant(self, shouldInvite, forceAccept)`: `interface/addons/blizzard_communities/clubfinderapplicantlist.lua:523`
+- `ClubFinderCreateRecruitingSpecsMap(specIds)`: `interface/addons/blizzard_communities/clubfinder.lua:1070`
+- `ClubFinderDoesSelectedClubHaveActiveListing(clubId)`: `interface/addons/blizzard_communities/clubfinder.lua:2250`
+- `ClubFinderGetClubApplicationExpirationTime(time)`: `interface/addons/blizzard_communities/clubfinder.lua:2264`
+- `ClubFinderGetClubPostingExpirationTime(clubId)`: `interface/addons/blizzard_communities/clubfinder.lua:2255`
+- `ClubFinderGetCurrentClubListingInfo(clubId)`: `interface/addons/blizzard_communities/clubfinder.lua:2246`
+- `ClubFinderGetFocusStringFromFlags(recruitmentFlags)`: `interface/addons/blizzard_communities/clubfinder.lua:1198`
+- `ClubFinderGetPlayerSettingsByValue(value)`: `interface/addons/blizzard_communities/clubfinder.lua:43`
+- `ClubFinderGetPlayerSpecIds()`: `interface/addons/blizzard_communities/clubfinder.lua:1498`
+- `ClubFinderGetRecruitmentSettingByValue(value)`: `interface/addons/blizzard_communities/clubfinder.lua:24`
+- `ClubFinderMessageApplicant(self)`: `interface/addons/blizzard_communities/clubfinderapplicantlist.lua:545`
+- `ClubFinderReportPosting(clubFinderGUID, clubName, playerGUID)`: `interface/addons/blizzard_communities/clubfinder.lua:1064`
+- `CommunitiesAddLanguageInitializer(description, localeInfo)`: `interface/addons/blizzard_communities/communitieslanguage.lua:12`
+- `CommunitiesAvatarPicker_CloseDialog()`: `interface/addons/blizzard_communities/communitiesavatarpickerdialog.lua:17`
+- `CommunitiesAvatarPicker_IsShown()`: `interface/addons/blizzard_communities/communitiesavatarpickerdialog.lua:21`
+- `CommunitiesAvatarPicker_OpenDialog(clubType, avatarId, onOkay, onCancel)`: `interface/addons/blizzard_communities/communitiesavatarpickerdialog.lua:9`
+- `CommunitiesChatEditBox_OnEnterPressed(self)`: `interface/addons/blizzard_communities/communitieschatframe.lua:495`
+- `CommunitiesChatEditBox_OnFocusGained(self)`: `interface/addons/blizzard_communities/communitieschatframe.lua:490`
+- `CommunitiesChatEditBox_OnHide(self)`: `interface/addons/blizzard_communities/communitieschatframe.lua:505`
+- `CommunitiesCreateBattleNetDialog()`: `interface/addons/blizzard_communities/communitiesadddialoginsecure.lua:42`
+- `CommunitiesCreateCommunityDialog()`: `interface/addons/blizzard_communities/communitiesadddialoginsecure.lua:36`
+- `CommunitiesCreateDialog_ClearText()`: `interface/addons/blizzard_communities/communitiesadddialoginsecure.lua:32`
+- `CommunitiesCreateDialog_SetAvatarId(avatarId)`: `interface/addons/blizzard_communities/communitiesadddialoginsecure.lua:20`
+- `CommunitiesCreateDialog_SetClubType(clubType)`: `interface/addons/blizzard_communities/communitiesadddialoginsecure.lua:28`
+- `CommunitiesCreateDialog_SetShown(shown)`: `interface/addons/blizzard_communities/communitiesadddialoginsecure.lua:24`
+- `CommunitiesFrame_ShouldDisplayPersonalAchievements()`: `interface/addons/blizzard_communities/camelot/communitiesframeoverrides.lua:1`
+- `CommunitiesFrame_ShouldDisplayPersonalAchievements()`: `interface/addons/blizzard_communities/communitiesframe.lua:4`
+- `CommunitiesFrameMaximizeMinimizeButton_OnLoad(self)`: `interface/addons/blizzard_communities/communitiesframe.lua:1708`
+- `CommunitiesGetCurrentLocale()`: `interface/addons/blizzard_communities/communitieslanguage.lua:1`
+- `CommunitiesGuildEventButton_OnClick(self, button)`: `interface/addons/blizzard_communities/guildnews.lua:221`
+- `CommunitiesGuildFinderFrameFindAGuildButton_OnClick(self)`: `interface/addons/blizzard_communities/communitiesguildfinderframe.lua:2`
+- `CommunitiesGuildInfoFrame_HideChallenges(self)`: `interface/addons/blizzard_communities/guildinfo.lua:66`
+- `CommunitiesGuildInfoFrame_OnEvent(self, event, arg1)`: `interface/addons/blizzard_communities/guildinfo.lua:25`
+- `CommunitiesGuildInfoFrame_OnLoad(self)`: `interface/addons/blizzard_communities/guildinfo.lua:7`
+- `CommunitiesGuildInfoFrame_OnShow(self)`: `interface/addons/blizzard_communities/guildinfo.lua:40`
+- `CommunitiesGuildInfoFrame_UpdateChallenges(self)`: `interface/addons/blizzard_communities/guildinfo.lua:78`
+- `CommunitiesGuildInfoFrame_UpdatePermissions(self)`: `interface/addons/blizzard_communities/guildinfo.lua:47`
+- `CommunitiesGuildInfoFrame_UpdateText(self, infoText)`: `interface/addons/blizzard_communities/guildinfo.lua:60`
+- `CommunitiesGuildLogFrame_OnLoad(self)`: `interface/addons/blizzard_communities/guildinfo.lua:159`
+- `CommunitiesGuildLogFrame_Update(self)`: `interface/addons/blizzard_communities/guildinfo.lua:164`
+- `CommunitiesGuildNews_Update(self)`: `interface/addons/blizzard_communities/guildnews.lua:65`
+- `CommunitiesGuildNewsButton_AnchorTooltip(self)`: `interface/addons/blizzard_communities/guildnews.lua:217`
+- `CommunitiesGuildNewsButton_OnClick(self, button)`: `interface/addons/blizzard_communities/guildnews.lua:236`
+- `CommunitiesGuildNewsButton_OnEnter(self)`: `interface/addons/blizzard_communities/guildnews.lua:146`
+- `CommunitiesGuildNewsButton_OnLeave(self)`: `interface/addons/blizzard_communities/guildnews.lua:280`
+- `CommunitiesGuildNewsButton_SetEvent(button, event_id)`: `interface/addons/blizzard_communities/guildnews.lua:106`
+- `CommunitiesGuildNewsFilter_OnClick(self)`: `interface/addons/blizzard_communities/guildnews.lua:310`
+- `CommunitiesGuildNewsFiltersFrame_HideInvalidFilters(self)`: `interface/addons/blizzard_communities/guildnews.lua:322`
+- `CommunitiesGuildNewsFiltersFrame_OnLoad(self)`: `interface/addons/blizzard_communities/guildnews.lua:290`
+- `CommunitiesGuildNewsFiltersFrame_OnShow(self)`: `interface/addons/blizzard_communities/guildnews.lua:296`
+- `CommunitiesGuildNewsFrame_OnEvent(self, event)`: `interface/addons/blizzard_communities/guildnews.lua:61`
+- `CommunitiesGuildNewsFrame_OnHide(self)`: `interface/addons/blizzard_communities/guildnews.lua:54`
+- `CommunitiesGuildNewsFrame_OnLoad(self)`: `interface/addons/blizzard_communities/guildnews.lua:23`
+- `CommunitiesGuildNewsFrame_OnShow(self)`: `interface/addons/blizzard_communities/guildnews.lua:42`
+- `CommunitiesGuildPerks_Update(self)`: `interface/addons/blizzard_communities/guildperks.lua:59`
+- `CommunitiesGuildPerksButton_OnClick(self)`: `interface/addons/blizzard_communities/guildperks.lua:52`
+- `CommunitiesGuildPerksButton_OnEnter(self)`: `interface/addons/blizzard_communities/guildperks.lua:41`
+- `CommunitiesGuildPerksButton_OnLeave(self)`: `interface/addons/blizzard_communities/guildperks.lua:48`
+- `CommunitiesGuildPerksFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_communities/guildperks.lua:35`
+- `CommunitiesGuildPerksFrame_OnLoad(self)`: `interface/addons/blizzard_communities/guildperks.lua:11`
+- `CommunitiesGuildPerksFrame_OnShow(self)`: `interface/addons/blizzard_communities/guildperks.lua:31`
+- `CommunitiesGuildPreferredPlaySettingsFrame_OnDatacenterApplyButtonClick(button)`: `interface/addons/blizzard_communities/guildpreferredplaysettings.lua:195`
+- `CommunitiesGuildPreferredPlaySettingsFrame_OnDatacenterApplyButtonEnter(button)`: `interface/addons/blizzard_communities/guildpreferredplaysettings.lua:199`
+- `CommunitiesGuildPreferredPlaySettingsFrame_OnDatacenterApplyButtonLeave(button)`: `interface/addons/blizzard_communities/guildpreferredplaysettings.lua:207`
+- `CommunitiesGuildPreferredPlaySettingsFrame_OnLocaleApplyButtonClick(button)`: `interface/addons/blizzard_communities/guildpreferredplaysettings.lua:179`
+- `CommunitiesGuildPreferredPlaySettingsFrame_OnLocaleApplyButtonEnter(button)`: `interface/addons/blizzard_communities/guildpreferredplaysettings.lua:183`
+- `CommunitiesGuildPreferredPlaySettingsFrame_OnLocaleApplyButtonLeave(button)`: `interface/addons/blizzard_communities/guildpreferredplaysettings.lua:191`
+- `CommunitiesGuildRewardsButton_OnClick(self, button)`: `interface/addons/blizzard_communities/guildrewards.lua:139`
+- `CommunitiesGuildRewardsButton_OnEnter(self)`: `interface/addons/blizzard_communities/guildrewards.lua:101`
+- `CommunitiesGuildRewardsButton_OnLeave(self)`: `interface/addons/blizzard_communities/guildrewards.lua:134`
+- `CommunitiesGuildTextEditFrame_OnAccept()`: `interface/addons/blizzard_communities/guildinfo.lua:148`
+- `CommunitiesGuildTextEditFrame_OnLoad(self)`: `interface/addons/blizzard_communities/guildinfo.lua:122`
+- `CommunitiesGuildTextEditFrame_SetType(self, editType, guildInfoFrame)`: `interface/addons/blizzard_communities/guildinfo.lua:127`
+- `CommunitiesInviteButton_OnClick(self)`: `interface/addons/blizzard_communities/communitiesinvitationframe.lua:111`
+- `CommunitiesInvitebutton_OnHide(self)`: `interface/addons/blizzard_communities/communitiesinvitationframe.lua:120`
+- `CommunitiesJumpToUnreadButton_OnClick(self)`: `interface/addons/blizzard_communities/communitieschatframe.lua:511`
+- `CommunitiesMassNotificationsSettingsButton_OnClick(self)`: `interface/addons/blizzard_communities/communitiesstreams.lua:356`
+- `CommunitiesMemberListColumnDisplay_OnClick(self, columnIndex)`: `interface/addons/blizzard_communities/communitiesmemberlist.lua:927`
+- `CommunitiesNotificationSettingsDialogCancelButton_OnClick(self)`: `interface/addons/blizzard_communities/communitiesstreams.lua:366`
+- `CommunitiesNotificationSettingsDialogOkayButton_OnClick(self)`: `interface/addons/blizzard_communities/communitiesstreams.lua:361`
+- `CommunitiesSettingsButton_OnClick(self)`: `interface/addons/blizzard_communities/communitiessettings.lua:414`
+- `CommunitiesSettingsDialogAcceptButton_OnClick(self)`: `interface/addons/blizzard_communities/communitiessettings.lua:385`
+- `CommunitiesSettingsDialogAcceptButton_OnEnter(self)`: `interface/addons/blizzard_communities/communitiessettings.lua:360`
+- `CommunitiesSettingsDialogAcceptButton_OnLeave(self)`: `interface/addons/blizzard_communities/communitiessettings.lua:381`
+- `CommunitiesSettingsDialogCancelButton_OnClick(self)`: `interface/addons/blizzard_communities/communitiessettings.lua:408`
+- `CommunitiesSettingsDialogChangeAvatarButton_OnClick(self)`: `interface/addons/blizzard_communities/communitiessettings.lua:353`
+- `CommunitiesSettingsDialogDeleteButton_OnClick(self)`: `interface/addons/blizzard_communities/communitiessettings.lua:397`
+- `CommunitiesSettingsGetRecruitmentSettingByValue(value)`: `interface/addons/blizzard_communities/communitiessettings.lua:206`
+- `CommunitiesTicketManagerDialog_OnStreamChanged(clubId, streamId)`: `interface/addons/blizzard_communities/communitiesticketmanagerdialog.lua:53`
+- `CommunitiesTicketManagerDialog_Open(clubId, streamId)`: `interface/addons/blizzard_communities/communitiesticketmanagerdialog.lua:47`
+- `CreateCommunitiesIconNotificationMarkup(text, xoffset, yoffset)`: `interface/addons/blizzard_communities/communitieslist.lua:14`
+- `GetCommunitiesChatPermissionOptions()`: `interface/addons/blizzard_communities/communitieschatframe.lua:13`
+- `GetCommunitiesErrorString(action, error, clubType)`: `interface/addons/blizzard_communities/communitieserrors.lua:105`
+- `IsCommunitiesUIDisabledByTrialAccount()`: `interface/addons/blizzard_communities/mainline/communitiesframe_bootstrap.lua:1`
+- `OpenCommunitiesSettingsDialog(clubId)`: `interface/addons/blizzard_communities/communitiessettings.lua:2`
+- `TextEditButton_OnClick(self)`: `interface/addons/blizzard_communities/guildinfo.lua:108`
+- `ToggleCommunitiesFrame()`: `interface/addons/blizzard_communities/communitiesframe.lua:573`
+- `ToggleCommunityFinder()`: `interface/addons/blizzard_communities/communitiesframe.lua:560`
+- `ToggleGuildFinder()`: `interface/addons/blizzard_communities/communitiesframe.lua:547`
+
+## blizzard_communitiessecure
+
+- `CommunitiesAddDialogBattleNetButton_OnClick(self)`: `interface/addons/blizzard_communitiessecure/communitiesadddialog.lua:156`
+- `CommunitiesAddDialogBattleNetButton_OnEnter(self)`: `interface/addons/blizzard_communitiessecure/communitiesadddialog.lua:150`
+- `CommunitiesAddDialogJoinButton_OnClick(self)`: `interface/addons/blizzard_communitiessecure/communitiesadddialog.lua:164`
+- `CommunitiesAddDialogWoWButton_OnClick(self)`: `interface/addons/blizzard_communitiessecure/communitiesadddialog.lua:142`
+- `CommunitiesAddDialogWoWButton_OnEnter(self)`: `interface/addons/blizzard_communitiessecure/communitiesadddialog.lua:126`
+- `CommunitiesAddDialogWoWButton_OnLeave(self)`: `interface/addons/blizzard_communitiessecure/communitiesadddialog.lua:138`
+- `CommunitiesCreateDialogCancelButton_OnClick(self)`: `interface/addons/blizzard_communitiessecure/communitiesadddialog.lua:180`
+- `CommunitiesCreateDialogChangeAvatarButton_OnClick(self)`: `interface/addons/blizzard_communitiessecure/communitiesadddialog.lua:173`
+- `CommunitiesCreateDialogCreateButton_OnClick(self)`: `interface/addons/blizzard_communitiessecure/communitiesadddialog.lua:186`
+- `CommunitiesCreateDialogCreateButton_OnEnter(self)`: `interface/addons/blizzard_communitiessecure/communitiesadddialog.lua:193`
+- `CommunitiesCreateDialogCreateButton_OnLeave(self)`: `interface/addons/blizzard_communitiessecure/communitiesadddialog.lua:214`
+
+## blizzard_compactraidframes
+
+- `CompactRaidFrameManager_Collapse(self)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:153`
+- `CompactRaidFrameManager_Collapse()`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:344`
+- `CompactRaidFrameManager_Expand(self)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:146`
+- `CompactRaidFrameManager_Expand()`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:329`
+- `CompactRaidFrameManager_GetFilterOptions(index)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:472`
+- `CompactRaidFrameManager_GetSetting(settingName)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:352`
+- `CompactRaidFrameManager_GetSetting(settingName)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:937`
+- `CompactRaidFrameManager_GetSettingBeforeLoad(settingName)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:360`
+- `CompactRaidFrameManager_GetSettingBeforeLoad(settingName)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:945`
+- `CompactRaidFrameManager_InitializeGamepad(self)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:503`
+- `CompactRaidFrameManager_OnEvent(self, event, ...)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:50`
+- `CompactRaidFrameManager_OnEvent(self, event, ...)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:267`
+- `CompactRaidFrameManager_OnLoad(self)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:21`
+- `CompactRaidFrameManager_OnLoad(self)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:73`
+- `CompactRaidFrameManager_RefreshGroundTargetingBinding(self)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:378`
+- `CompactRaidFrameManager_RefreshOpenBinding(self)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:359`
+- `CompactRaidFrameManager_RefreshSmartNavJumps()`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:397`
+- `CompactRaidFrameManager_RegisterForTransitions(self)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:515`
+- `CompactRaidFrameManager_SetFilterOptions(index, newValue)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:481`
+- `CompactRaidFrameManager_SetupExpandBinding(self)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:466`
+- `CompactRaidFrameManager_SetupFrameFooter(self)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:432`
+- `CompactRaidFrameManager_SetupGamepad(self)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:487`
+- `CompactRaidFrameManager_SetupGroundTargetingBinding(self)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:474`
+- `CompactRaidFrameManager_SetupRaidMarkerDropdown(self)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:73`
+- `CompactRaidFrameManager_Toggle(self)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:138`
+- `CompactRaidFrameManager_Toggle()`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:321`
+- `CompactRaidFrameManager_ToggleGroupFilter(group)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:316`
+- `CompactRaidFrameManager_ToggleGroupFilter(group)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:846`
+- `CompactRaidFrameManager_ToggleRoleFilter(role)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:292`
+- `CompactRaidFrameManager_ToggleRoleFilter(role)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:811`
+- `CompactRaidFrameManager_UpdateContainerBounds()`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:449`
+- `CompactRaidFrameManager_UpdateContainerBounds()`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1043`
+- `CompactRaidFrameManager_UpdateContainerVisibility()`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:434`
+- `CompactRaidFrameManager_UpdateContainerVisibility()`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1028`
+- `CompactRaidFrameManager_UpdateDifficultyDropdown()`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:541`
+- `CompactRaidFrameManager_UpdateDisplayCounts(self)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:247`
+- `CompactRaidFrameManager_UpdateDisplayCounts()`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:737`
+- `CompactRaidFrameManager_UpdateFilterInfo()`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:258`
+- `CompactRaidFrameManager_UpdateFilterInfo()`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:763`
+- `CompactRaidFrameManager_UpdateGroupFilterButton(button, usedGroups)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:298`
+- `CompactRaidFrameManager_UpdateGroupFilterButton(button, usedGroups, showPlayerIndicator)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:817`
+- `CompactRaidFrameManager_UpdateHeaderInfo(self)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:253`
+- `CompactRaidFrameManager_UpdateHeaderInfo()`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:743`
+- `CompactRaidFrameManager_UpdateLabel(self)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:130`
+- `CompactRaidFrameManager_UpdateLabel()`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:313`
+- `CompactRaidFrameManager_UpdateOptionsFlowContainer(self)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:160`
+- `CompactRaidFrameManager_UpdateOptionsFlowContainer()`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:570`
+- `CompactRaidFrameManager_UpdateRaidIcons()`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:322`
+- `CompactRaidFrameManager_UpdateRaidIcons()`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:853`
+- `CompactRaidFrameManager_UpdateRoleFilterButton(button)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:271`
+- `CompactRaidFrameManager_UpdateRoleFilterButton(button)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:782`
+- `CompactRaidFrameManager_UpdateShown(self)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:116`
+- `CompactRaidFrameManager_UpdateShown()`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:298`
+- `CompactRaidFrameReservation_GetFrame(self, key)`: `interface/addons/blizzard_compactraidframes/blizzard_compactraidframereservationmanager.lua:7`
+- `CompactRaidFrameReservation_GetReservation(self, key)`: `interface/addons/blizzard_compactraidframes/blizzard_compactraidframereservationmanager.lua:35`
+- `CompactRaidFrameReservation_NewManager(releaseFunc)`: `interface/addons/blizzard_compactraidframes/blizzard_compactraidframereservationmanager.lua:3`
+- `CompactRaidFrameReservation_RegisterReservation(self, frame, key)`: `interface/addons/blizzard_compactraidframes/blizzard_compactraidframereservationmanager.lua:17`
+- `CompactRaidFrameReservation_ReleaseUnusedReservations(self)`: `interface/addons/blizzard_compactraidframes/blizzard_compactraidframereservationmanager.lua:23`
+- `CRF_AddToCount(isDead, assignedRole)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:644`
+- `CRF_AddToCount(isDead, assignedRole)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1153`
+- `CRF_CountStuff()`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:626`
+- `CRF_CountStuff()`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1135`
+- `CRF_GetFilterGroup(group)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:568`
+- `CRF_GetFilterGroup(group)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1077`
+- `CRF_GetFilterRole(role)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:559`
+- `CRF_GetFilterRole(role)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1068`
+- `CRF_SetFilterGroup(group, show)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:563`
+- `CRF_SetFilterGroup(group, show)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1072`
+- `CRF_SetFilterRole(role, show)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:555`
+- `CRF_SetFilterRole(role, show)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1064`
+- `CRFFlowFilterFunc(token)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:573`
+- `CRFFlowFilterFunc(token)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1082`
+- `CRFGroupFilterFunc(groupNum)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:602`
+- `CRFGroupFilterFunc(groupNum)`: `interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1111`
+- `CRFSort_Alphabetical(token1, token2)`: `interface/addons/blizzard_compactraidframes/blizzard_compactraidframecontainer.lua:537`
+- `CRFSort_Alphabetical(token1, token2)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:542`
+- `CRFSort_Group(token1, token2)`: `interface/addons/blizzard_compactraidframes/blizzard_compactraidframecontainer.lua:485`
+- `CRFSort_Group(token1, token2)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:490`
+- `CRFSort_Role(token1, token2)`: `interface/addons/blizzard_compactraidframes/blizzard_compactraidframecontainer.lua:515`
+- `CRFSort_Role(token1, token2)`: `interface/addons/blizzard_compactraidframes/classic/blizzard_compactraidframemanager.lua:520`
+- `RaidUtil_GetUsedGroups(tab)`: `interface/addons/blizzard_compactraidframes/blizzard_compactraidframecontainer.lua:466`
+
+## blizzard_console
+
+- `BlizzardConsoleMessageFrame_OnHyperlinkClick(self, link, text, button)`: `interface/addons/blizzard_console/blizzard_console.lua:547`
+- `DeveloperConsole_GetLastCommand()`: `interface/addons/blizzard_console/blizzard_console.lua:561`
+- `DeveloperConsole_RepeatLastCommand()`: `interface/addons/blizzard_console/blizzard_console.lua:575`
+
+## blizzard_contribution
+
+- `ContributionCollectionFrame_LoadUI()`: `interface/addons/blizzard_contribution/blizzard_contribution_bootstrap.lua:3`
+
+## blizzard_cooldownbroadcaster
+
+- `CooldownBroadcaster_LoadUI()`: `interface/addons/blizzard_cooldownbroadcaster/blizzard_cooldownbroadcaster_bootstrap.lua:3`
+
+## blizzard_cooldownviewer
+
+- `CDMDebugGetDebugger()`: `interface/addons/blizzard_cooldownviewer/cooldownviewer.lua:10`
+- `CooldownManagerLayout_Create(id, name, classAndSpecTag)`: `interface/addons/blizzard_cooldownviewer/cooldownviewersettingslayoutmanager.lua:6`
+- `CooldownManagerLayout_GetClassAndSpecTag(layout)`: `interface/addons/blizzard_cooldownviewer/cooldownviewersettingslayoutmanager.lua:41`
+- `CooldownManagerLayout_GetCooldownInfo(layout, allowCreate)`: `interface/addons/blizzard_cooldownviewer/cooldownviewersettingslayoutmanager.lua:53`
+- `CooldownManagerLayout_GetGroupBuffVisualAlerts(layout)`: `interface/addons/blizzard_cooldownviewer/cooldownviewersettingslayoutmanager.lua:81`
+- `CooldownManagerLayout_GetHiddenGroupBuffs(layout)`: `interface/addons/blizzard_cooldownviewer/cooldownviewersettingslayoutmanager.lua:73`
+- `CooldownManagerLayout_GetID(layout)`: `interface/addons/blizzard_cooldownviewer/cooldownviewersettingslayoutmanager.lua:11`
+- `CooldownManagerLayout_GetName(layout)`: `interface/addons/blizzard_cooldownviewer/cooldownviewersettingslayoutmanager.lua:28`
+- `CooldownManagerLayout_GetNameExplicit(layout)`: `interface/addons/blizzard_cooldownviewer/cooldownviewersettingslayoutmanager.lua:20`
+- `CooldownManagerLayout_GetOrderedCooldownIDs(layout)`: `interface/addons/blizzard_cooldownviewer/cooldownviewersettingslayoutmanager.lua:45`
+- `CooldownManagerLayout_GetType(layout)`: `interface/addons/blizzard_cooldownviewer/cooldownviewersettingslayoutmanager.lua:15`
+- `CooldownManagerLayout_IsDefaultLayout(layout)`: `interface/addons/blizzard_cooldownviewer/cooldownviewersettingslayoutmanager.lua:65`
+- `CooldownManagerLayout_SetGroupBuffVisualAlerts(layout, visualAlerts)`: `interface/addons/blizzard_cooldownviewer/cooldownviewersettingslayoutmanager.lua:85`
+- `CooldownManagerLayout_SetHiddenGroupBuffs(layout, hiddenGroupBuffs)`: `interface/addons/blizzard_cooldownviewer/cooldownviewersettingslayoutmanager.lua:77`
+- `CooldownManagerLayout_SetIsDefault(layout, isDefault)`: `interface/addons/blizzard_cooldownviewer/cooldownviewersettingslayoutmanager.lua:69`
+- `CooldownManagerLayout_SetName(layout, newLayoutName)`: `interface/addons/blizzard_cooldownviewer/cooldownviewersettingslayoutmanager.lua:37`
+- `CooldownManagerLayout_SetOrderedCooldownIDs(layout, cooldownIDs)`: `interface/addons/blizzard_cooldownviewer/cooldownviewersettingslayoutmanager.lua:49`
+- `CooldownViewer_MarkAuraCacheDirty()`: `interface/addons/blizzard_cooldownviewer/cooldownvieweritemdata.lua:745`
+- `CooldownViewer_MarkTotemCacheDirty()`: `interface/addons/blizzard_cooldownviewer/cooldownvieweritemdata.lua:871`
+- `CooldownViewerAlert_Assign(destAlert, sourceAlert)`: `interface/addons/blizzard_cooldownviewer/cooldownvieweralert.lua:49`
+- `CooldownViewerAlert_Create(alertType, alertEvent, alertPayload)`: `interface/addons/blizzard_cooldownviewer/cooldownvieweralert.lua:45`
+- `CooldownViewerAlert_GetAlertStatus(alert)`: `interface/addons/blizzard_cooldownviewer/cooldownvieweralert.lua:62`
+- `CooldownViewerAlert_GetEvent(alert)`: `interface/addons/blizzard_cooldownviewer/cooldownvieweralert.lua:92`
+- `CooldownViewerAlert_GetEventText(alertOrAlertEventType)`: `interface/addons/blizzard_cooldownviewer/cooldownvieweralert.lua:96`
+- `CooldownViewerAlert_GetPayload(alert)`: `interface/addons/blizzard_cooldownviewer/cooldownvieweralert.lua:108`
+- `CooldownViewerAlert_GetPayloadContextData(alert)`: `interface/addons/blizzard_cooldownviewer/cooldownvieweralert.lua:129`
+- `CooldownViewerAlert_GetPayloadText(alert)`: `interface/addons/blizzard_cooldownviewer/cooldownvieweralert.lua:112`
+- `CooldownViewerAlert_GetType(alert)`: `interface/addons/blizzard_cooldownviewer/cooldownvieweralert.lua:80`
+- `CooldownViewerAlert_GetTypeAtlas(alertType)`: `interface/addons/blizzard_cooldownviewer/cooldownvieweralert.lua:17`
+- `CooldownViewerAlert_GetTypeText(alert)`: `interface/addons/blizzard_cooldownviewer/cooldownvieweralert.lua:84`
+- `CooldownViewerAlert_GetValues(alert)`: `interface/addons/blizzard_cooldownviewer/cooldownvieweralert.lua:143`
+- `CooldownViewerAlert_Matches(alert1, alert2)`: `interface/addons/blizzard_cooldownviewer/cooldownvieweralert.lua:147`
+- `CooldownViewerAlert_PlayAlert(cooldownItem, spellName, alert, soundSubType)`: `interface/addons/blizzard_cooldownviewer/cooldownvieweralert.lua:202`
+- `CooldownViewerAlert_SetEvent(alert, alertEvent)`: `interface/addons/blizzard_cooldownviewer/cooldownvieweralert.lua:88`
+- `CooldownViewerAlert_SetPayload(alert, alertPayload)`: `interface/addons/blizzard_cooldownviewer/cooldownvieweralert.lua:104`
+- `CooldownViewerAlert_SetType(alert, alertType)`: `interface/addons/blizzard_cooldownviewer/cooldownvieweralert.lua:76`
+- `CooldownViewerAlert_SetupTypeButton(button, alertType)`: `interface/addons/blizzard_cooldownviewer/cooldownvieweralert.lua:25`
+- `CooldownViewerContextMenu_AddAlertEntryButton(rootDescription, alertType, payloadText, eventText, editCallback, deleteCallback, playSampleCallback)`: `interface/addons/blizzard_cooldownviewer/cooldownviewersettingsalerts.lua:193`
+- `CooldownViewerContextMenu_AddNewAlertButton(rootDescription, text, isEnabled, onClickCallback, disabledTooltipCallback)`: `interface/addons/blizzard_cooldownviewer/cooldownviewersettingsalerts.lua:175`
+- `CooldownViewerDraggedItem_Clear()`: `interface/addons/blizzard_cooldownviewer/cooldownviewerdraggeditembase.lua:24`
+- `CooldownViewerDraggedItem_Pickup(iconFileID)`: `interface/addons/blizzard_cooldownviewer/cooldownviewerdraggeditembase.lua:16`
+- `CooldownViewerDraggedItem_SetIsLegalTarget(isLegal)`: `interface/addons/blizzard_cooldownviewer/cooldownviewerdraggeditembase.lua:31`
+- `CooldownViewerSettingsDataProvider_GetCategories()`: `interface/addons/blizzard_cooldownviewer/cooldownviewersettingsdataprovider.lua:90`
+- `CreateCategoryObjectLookup()`: `interface/addons/blizzard_cooldownviewer/cooldownviewersettings.lua:134`
+
+## blizzard_covenantcallings
+
+- `CovenantCallings_LoadUI()`: `interface/addons/blizzard_covenantcallings/blizzard_covenantcallings_bootstrap.lua:3`
+
+## blizzard_covenantpreviewui
+
+- `CovenantPreviewFrame_LoadUI()`: `interface/addons/blizzard_covenantpreviewui/blizzard_covenantpreviewui_bootstrap.lua:3`
+- `TryShowCovenantPreviewFrame(...)`: `interface/addons/blizzard_covenantpreviewui/blizzard_covenantpreviewui_bootstrap.lua:7`
+
+## blizzard_covenantrenown
+
+- `CovenantRenown_LoadUI()`: `interface/addons/blizzard_covenantrenown/blizzard_covenantrenown_bootstrap.lua:3`
+- `ToggleCovenantRenown()`: `interface/addons/blizzard_covenantrenown/blizzard_covenantrenown_bootstrap.lua:7`
+
+## blizzard_covenantsanctum
+
+- `CovenantSanctum_LoadUI()`: `interface/addons/blizzard_covenantsanctum/blizzard_covenantsanctum_bootstrap.lua:3`
+
+## blizzard_deathrecap
+
+- `DeathRecap_LoadUI()`: `interface/addons/blizzard_deathrecap/mainline/blizzard_deathrecap_bootstrap.lua:3`
+- `OpenDeathRecapUI(id)`: `interface/addons/blizzard_deathrecap/mainline/blizzard_deathrecap_bootstrap.lua:7`
+
+## blizzard_debugtools
+
+- `CompareFunctionReturns(func1, func2, ...)`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:317`
+- `DebugIdentifierFrame_OnLoad(self)`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:296`
+- `DebugTools_LoadUI()`: `interface/addons/blizzard_debugtools/blizzard_debugtools_bootstrap.lua:3`
+- `DebugTooltip_OnLoad(self)`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:1`
+- `DisplayTableInspectorWindow(focusedTable, customTitle, tableFocusedCallback)`: `interface/addons/blizzard_debugtools/blizzard_tableinspector.lua:280`
+- `FrameStackTooltip_ChangeHighlight(self, direction)`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:74`
+- `FrameStackTooltip_HandleFrameCommand(self)`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:98`
+- `FrameStackTooltip_Hide(self)`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:143`
+- `FrameStackTooltip_InspectTable(self)`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:79`
+- `FrameStackTooltip_IsFramestackEnabled()`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:15`
+- `FrameStackTooltip_IsHighlightEnabled()`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:23`
+- `FrameStackTooltip_IsShowAnchorsEnabled()`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:31`
+- `FrameStackTooltip_IsShowHiddenEnabled()`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:19`
+- `FrameStackTooltip_IsShowRegionsEnabled()`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:27`
+- `FrameStackTooltip_OnDisplaySizeChanged(self)`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:6`
+- `FrameStackTooltip_OnEvent(self, event, ...)`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:102`
+- `FrameStackTooltip_OnFramestackVisibilityUpdated(self)`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:35`
+- `FrameStackTooltip_OnHide(self)`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:267`
+- `FrameStackTooltip_OnLoad(self)`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:51`
+- `FrameStackTooltip_OnShow(self)`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:243`
+- `FrameStackTooltip_OnTooltipCleared(self)`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:271`
+- `FrameStackTooltip_OnTooltipSetFrameStack(self, highlightFrame)`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:110`
+- `FrameStackTooltip_OnUpdate(self)`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:228`
+- `FrameStackTooltip_Show(self, showHidden, showRegions, showAnchors)`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:133`
+- `FrameStackTooltip_Toggle(showHidden, showRegions, showAnchors)`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:166`
+- `FrameStackTooltip_ToggleDefaults()`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:152`
+- `FrameStackTooltip_ToggleTextureInformation(self)`: `interface/addons/blizzard_debugtools/blizzard_debugtools.lua:94`
+- `TableAttributeDisplayDuplicateButton_OnClick(self)`: `interface/addons/blizzard_debugtools/blizzard_tableinspector.lua:244`
+- `TableAttributeDisplayDynamicUpdateButton_OnClick(self)`: `interface/addons/blizzard_debugtools/blizzard_tableinspector.lua:264`
+- `TableAttributeDisplayEditBox_OnEditFocusGained(self)`: `interface/addons/blizzard_debugtools/blizzard_tableinspectorattributedataprovider.lua:196`
+- `TableAttributeDisplayEditBox_OnEnterPressed(self)`: `interface/addons/blizzard_debugtools/blizzard_tableinspectorattributedataprovider.lua:202`
+- `TableAttributeDisplayHighlightButton_OnClick(self)`: `interface/addons/blizzard_debugtools/blizzard_tableinspector.lua:268`
+- `TableAttributeDisplayNavigateBackwardButton_OnClick(self)`: `interface/addons/blizzard_debugtools/blizzard_tableinspector.lua:252`
+- `TableAttributeDisplayNavigateForwardButton_OnClick(self)`: `interface/addons/blizzard_debugtools/blizzard_tableinspector.lua:256`
+- `TableAttributeDisplayParentButton_OnClick(self)`: `interface/addons/blizzard_debugtools/blizzard_tableinspector.lua:248`
+- `TableAttributeDisplayValueButton_OnMouseDown(self)`: `interface/addons/blizzard_debugtools/blizzard_tableinspectorattributedataprovider.lua:221`
+- `TableAttributeDisplayVisibilityButton_OnClick(self)`: `interface/addons/blizzard_debugtools/blizzard_tableinspector.lua:260`
+- `TableInspectorFilterBox_OnEnterPressed(self)`: `interface/addons/blizzard_debugtools/blizzard_tableinspector.lua:272`
+- `TableInspectorFilterBox_OnTextChanged(self)`: `interface/addons/blizzard_debugtools/blizzard_tableinspector.lua:276`
+
+## blizzard_debugutil
+
+- `GMError(...)`: `interface/addons/blizzard_debugutil/debugutil.lua:1`
+- `OnExcessiveErrors()`: `interface/addons/blizzard_debugutil/debugutil.lua:7`
+
+## blizzard_declensionframe
+
+- `DeclensionFrame_Next()`: `interface/addons/blizzard_declensionframe/camelot/declensionframeglue.lua:170`
+- `DeclensionFrame_Next()`: `interface/addons/blizzard_declensionframe/mainline/declensionframe.lua:133`
+- `DeclensionFrame_Next()`: `interface/addons/blizzard_declensionframe/mainline/declensionframeglue.lua:119`
+- `DeclensionFrame_OnCancel()`: `interface/addons/blizzard_declensionframe/camelot/declensionframeglue.lua:164`
+- `DeclensionFrame_OnCancel()`: `interface/addons/blizzard_declensionframe/mainline/declensionframe.lua:128`
+- `DeclensionFrame_OnCancel()`: `interface/addons/blizzard_declensionframe/mainline/declensionframeglue.lua:114`
+- `DeclensionFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_declensionframe/camelot/declensionframeglue.lua:27`
+- `DeclensionFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_declensionframe/mainline/declensionframe.lua:18`
+- `DeclensionFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_declensionframe/mainline/declensionframeglue.lua:18`
+- `DeclensionFrame_OnLoad(self)`: `interface/addons/blizzard_declensionframe/camelot/declensionframeglue.lua:16`
+- `DeclensionFrame_OnLoad(self)`: `interface/addons/blizzard_declensionframe/mainline/declensionframeglue.lua:10`
+- `DeclensionFrame_OnOkay()`: `interface/addons/blizzard_declensionframe/camelot/declensionframeglue.lua:137`
+- `DeclensionFrame_OnOkay()`: `interface/addons/blizzard_declensionframe/mainline/declensionframe.lua:107`
+- `DeclensionFrame_OnOkay()`: `interface/addons/blizzard_declensionframe/mainline/declensionframeglue.lua:97`
+- `DeclensionFrame_Prev()`: `interface/addons/blizzard_declensionframe/camelot/declensionframeglue.lua:187`
+- `DeclensionFrame_Prev()`: `interface/addons/blizzard_declensionframe/mainline/declensionframe.lua:145`
+- `DeclensionFrame_Prev()`: `interface/addons/blizzard_declensionframe/mainline/declensionframeglue.lua:131`
+- `DeclensionFrame_Update()`: `interface/addons/blizzard_declensionframe/camelot/declensionframeglue.lua:42`
+- `DeclensionFrame_Update()`: `interface/addons/blizzard_declensionframe/mainline/declensionframe.lua:49`
+- `DeclensionFrame_Update()`: `interface/addons/blizzard_declensionframe/mainline/declensionframeglue.lua:33`
+
+## blizzard_deprecated
+
+- `CancelItemTempEnchantment(index)`: `interface/addons/blizzard_deprecated/shared/deprecated_12_1_0.lua:28`
+- `GetBattlefieldScore(playerIndex)`: `interface/addons/blizzard_deprecated/mainline/deprecated_12_0_1.lua:8`
+- `GetBattlefieldStatData(playerIndex, statIndex)`: `interface/addons/blizzard_deprecated/mainline/deprecated_12_0_1.lua:52`
+- `getglobal(var)`: `interface/addons/blizzard_deprecated/shared/deprecated_12_1_0.lua:9`
+- `GetMerchantCurrencies()`: `interface/addons/blizzard_deprecated/mainline/deprecated_12_0_7.lua:29`
+- `GetWeaponEnchantInfo()`: `interface/addons/blizzard_deprecated/shared/deprecated_12_1_0.lua:44`
+- `setglobal(var, val)`: `interface/addons/blizzard_deprecated/shared/deprecated_12_1_0.lua:14`
+- `UnitIsSpellTarget(unit, target)`: `interface/addons/blizzard_deprecated/mainline/deprecated_12_0_1.lua:67`
+
+## blizzard_deprecatedactionbar
+
+- `ActionHasRange(actionID)`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:76`
+- `ChangeActionBarPage(pageIndex)`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:144`
+- `GetActionAutocast(actionID)`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:10`
+- `GetActionBarPage()`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:148`
+- `GetActionCharges(actionID)`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:31`
+- `GetActionCooldown(actionID)`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:26`
+- `GetActionCount(actionID)`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:22`
+- `GetActionLossOfControlCooldown(actionID)`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:36`
+- `GetActionText(actionID)`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:14`
+- `GetActionTexture(actionID)`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:18`
+- `GetBonusBarIndex()`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:88`
+- `GetBonusBarOffset()`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:92`
+- `GetExtraBarIndex()`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:96`
+- `GetMultiCastBarIndex()`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:100`
+- `GetOverrideBarIndex()`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:104`
+- `GetOverrideBarSkin()`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:108`
+- `GetTempShapeshiftBarIndex()`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:112`
+- `GetVehicleBarIndex()`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:116`
+- `HasAction(actionID)`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:40`
+- `HasBonusActionBar()`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:120`
+- `HasExtraActionBar()`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:124`
+- `HasOverrideActionBar()`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:128`
+- `HasTempShapeshiftActionBar()`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:132`
+- `HasVehicleActionBar()`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:136`
+- `IsActionInRange(actionID)`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:80`
+- `IsAttackAction(actionID)`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:44`
+- `IsAutoRepeatAction(actionID)`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:52`
+- `IsConsumableAction(actionID)`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:60`
+- `IsCurrentAction(actionID)`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:48`
+- `IsEquippedAction(actionID)`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:72`
+- `IsItemAction(actionID)`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:68`
+- `IsPossessBarVisible()`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:140`
+- `IsStackableAction(actionID)`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:64`
+- `IsUsableAction(actionID)`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:56`
+- `SetActionUIButton(checkboxFrame, actionID, cooldownFrame)`: `interface/addons/blizzard_deprecatedactionbar/deprecated_actionbar.lua:84`
+
+## blizzard_deprecatedautocomplete
+
+- `GetAutoCompletePresenceID(name)`: `interface/addons/blizzard_deprecatedautocomplete/deprecated_autocomplete.lua:26`
+- `GetAutoCompleteRealms()`: `interface/addons/blizzard_deprecatedautocomplete/deprecated_autocomplete.lua:36`
+- `GetAutoCompleteResults(name, numResults, cursorPosition, allowFullMatch, includeFlags, excludeFlags)`: `interface/addons/blizzard_deprecatedautocomplete/deprecated_autocomplete.lua:30`
+- `IsRecognizedName(name, includeFlags, excludeFlags)`: `interface/addons/blizzard_deprecatedautocomplete/deprecated_autocomplete.lua:40`
+
+## blizzard_deprecatedpartyinfo
+
+- `ConfirmReadyCheck(isReady)`: `interface/addons/blizzard_deprecatedpartyinfo/deprecated_partyinfo.lua:8`
+- `DemoteAssistant(name, exactNameMatch)`: `interface/addons/blizzard_deprecatedpartyinfo/deprecated_partyinfo.lua:16`
+- `DoReadyCheck()`: `interface/addons/blizzard_deprecatedpartyinfo/deprecated_partyinfo.lua:20`
+- `IsGUIDInGroup(guid, category)`: `interface/addons/blizzard_deprecatedpartyinfo/deprecated_partyinfo.lua:40`
+- `PromoteToAssistant(name, exactNameMatch)`: `interface/addons/blizzard_deprecatedpartyinfo/deprecated_partyinfo.lua:24`
+- `PromoteToLeader(name, exactNameMatch)`: `interface/addons/blizzard_deprecatedpartyinfo/deprecated_partyinfo.lua:28`
+- `SetEveryoneIsAssistant(isAssistant)`: `interface/addons/blizzard_deprecatedpartyinfo/deprecated_partyinfo.lua:32`
+- `UninviteUnit(unit, reason, exactNameMatch)`: `interface/addons/blizzard_deprecatedpartyinfo/deprecated_partyinfo.lua:36`
+
+## blizzard_deprecatedunitscript
+
+- `CastingInfo()`: `interface/addons/blizzard_deprecatedunitscript/classic/deprecated_unitscriptoverrides.lua:8`
+- `ChannelInfo()`: `interface/addons/blizzard_deprecatedunitscript/classic/deprecated_unitscriptoverrides.lua:12`
+
+## blizzard_editmode
+
+- `EditModeManagerFrame_EscapePressed()`: `interface/addons/blizzard_editmode/shared/editmodemanager.lua:12`
+
+## blizzard_encounterjournal
+
+- `AdventureJournal_Reward_OnEnter(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3372`
+- `AdventureJournal_Reward_OnLeave(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3549`
+- `AdventureJournal_Reward_OnMouseDown(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3557`
+- `AreMonthlyActivitiesRestricted()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_monthlyactivities.lua:107`
+- `CanShowEncounterJournal()`: `interface/addons/blizzard_encounterjournal/blizzard_encounterjournal_bootstrap.lua:7`
+- `EJ_ContentTab_OnClick(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2790`
+- `EJ_ContentTab_Select(id)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2795`
+- `EJ_ContentTab_SelectAppropriateInstanceTab(instanceID)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2893`
+- `EJ_ContentTab_SetEnabled(self, enabled)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2899`
+- `EJ_HideLootJournalPanel()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2919`
+- `EJ_HideNonInstancePanels()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2935`
+- `EJ_HideSuggestPanel()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2903`
+- `EJ_HideTutorialsPanel()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3729`
+- `EJ_ShowLootJournalPanel()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2928`
+- `EJ_ShowTutorialPanel()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3724`
+- `EJInstanceSelect_UpdateTitle(tabId)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3650`
+- `EJNAV_GetEncounterList(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3037`
+- `EJNAV_GetInstanceList(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3017`
+- `EJNAV_RefreshEncounter()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3028`
+- `EJNAV_RefreshInstance()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3004`
+- `EJNAV_SelectEncounter(self, index, navBar)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3032`
+- `EJNAV_SelectInstance(self, index, navBar)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3008`
+- `EJSuggestFrame_GetDisplayFrame(suggestionIndex)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3146`
+- `EJSuggestFrame_NextSuggestion()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3089`
+- `EJSuggestFrame_OnClick(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3367`
+- `EJSuggestFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3059`
+- `EJSuggestFrame_OnLoad(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3051`
+- `EJSuggestFrame_OnMouseWheel(self, value)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3103`
+- `EJSuggestFrame_OnShow(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3081`
+- `EJSuggestFrame_OpenFrame()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3111`
+- `EJSuggestFrame_PrevSuggestion()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3096`
+- `EJSuggestFrame_RefreshDisplay()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3157`
+- `EJSuggestFrame_RefreshRewards()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3359`
+- `EJSuggestFrame_SuggestionTextOnEnter(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3353`
+- `EJSuggestFrame_UpdateRewards(suggestion)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3115`
+- `EJSuggestTab_GetPlayerTierIndex()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2786`
+- `EJTutorialsFrame_OpenFrame()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3720`
+- `EncounterItemTemplate_DividerFrameTipOnEnter(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:694`
+- `EncounterJournal_AJ_OnUpdate(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3544`
+- `EncounterJournal_AnchorExpansionDropdown(xOffset, yOffset, relativeKey)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:740`
+- `EncounterJournal_CheckAndDisplayLootJournalViewDropdown(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2992`
+- `EncounterJournal_CheckAndDisplaySuggestedContentTab()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:875`
+- `EncounterJournal_CheckAndDisplayTradingPostTab()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:886`
+- `EncounterJournal_CleanBullets(self, start, keep)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:1582`
+- `EncounterJournal_ClearChildHeaders(self, doNotShift)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2165`
+- `EncounterJournal_ClearDetails()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2195`
+- `EncounterJournal_ClearSearch()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2703`
+- `EncounterJournal_DisableExpansionDropdown()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:735`
+- `EncounterJournal_DisplayCreature(self, forceUpdate)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:1455`
+- `EncounterJournal_DisplayEncounter(encounterID, noButton)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:1348`
+- `EncounterJournal_DisplayInstance(instanceID, noButton)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:1239`
+- `EncounterJournal_EnableExpansionDropdown(xOffset, yOffset, relativeKey)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:722`
+- `EncounterJournal_ExpansionDropdown_Select(self, tier)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2942`
+- `EncounterJournal_FindCreatureButtonForDisplayInfo(displayInfo)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:1059`
+- `EncounterJournal_FocusSection(sectionID)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2126`
+- `EncounterJournal_FocusSectionCallback(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2142`
+- `EncounterJournal_GetCreatureButton(index)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:1044`
+- `EncounterJournal_GetIconAtlasFromFlag(flag)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2416`
+- `EncounterJournal_GetIconFlagFromIndex(index)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2391`
+- `EncounterJournal_GetIconIndexFromFlag(flag)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2395`
+- `EncounterJournal_GetLootJournalPanels(view)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:710`
+- `EncounterJournal_GetLootJournalView()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:701`
+- `EncounterJournal_GetSearchDisplay(index)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2457`
+- `EncounterJournal_HasChangedContext(instanceID, instanceType, difficultyID)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:745`
+- `EncounterJournal_HideCreatures(clearDisplayInfo)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:1519`
+- `EncounterJournal_HideGreatVaultButton()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:731`
+- `EncounterJournal_IsDungeonTabSelected(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:911`
+- `EncounterJournal_IsJourneysTabSelected(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:923`
+- `EncounterJournal_IsLootTabSelected(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:919`
+- `EncounterJournal_IsRaidTabSelected(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:915`
+- `EncounterJournal_IsSuggestTabSelected(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:907`
+- `EncounterJournal_ListInstances()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:1092`
+- `EncounterJournal_LoadUI()`: `interface/addons/blizzard_encounterjournal/blizzard_encounterjournal_bootstrap.lua:3`
+- `EncounterJournal_Loot_OnClick(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2347`
+- `EncounterJournal_Loot_OnUpdate(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2337`
+- `EncounterJournal_LootCallback(itemID)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2268`
+- `EncounterJournal_LootUpdate()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2278`
+- `EncounterJournal_MoveSectionUpdate(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2153`
+- `EncounterJournal_OnClick(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:1562`
+- `EncounterJournal_OnEvent(self, event, ...)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:1002`
+- `EncounterJournal_OnFilterChanged(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2947`
+- `EncounterJournal_OnHide(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:897`
+- `EncounterJournal_OnHyperlinkEnter(self, link, text, fontString, left, bottom, width, height)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:1575`
+- `EncounterJournal_OnLoad(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:305`
+- `EncounterJournal_OnShow(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:775`
+- `EncounterJournal_OpenJournal(difficultyID, instanceID, encounterID, sectionID, creatureID, itemID, tierIndex)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2738`
+- `EncounterJournal_OpenToJourney(factionID)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2719`
+- `EncounterJournal_OpenToPowerID(powerID)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2712`
+- `EncounterJournal_OpenToTieredEntrance(instanceID, difficultyID)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2728`
+- `EncounterJournal_Refresh(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2447`
+- `EncounterJournal_ResetDisplay(instanceID, instanceType, difficultyID)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:756`
+- `EncounterJournal_ResetHeaders()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2117`
+- `EncounterJournal_RestartSearchTracking()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2575`
+- `EncounterJournal_SearchUpdate()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2556`
+- `EncounterJournal_SelectDifficulty(self, value)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2781`
+- `EncounterJournal_SelectSearch(index)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2506`
+- `EncounterJournal_SetBullets(object, description, hideBullets)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:1598`
+- `EncounterJournal_SetClassAndSpecFilter(self, classID, specID)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2951`
+- `EncounterJournal_SetDescriptionWithBullets(infoHeader, description)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:1669`
+- `EncounterJournal_SetFlagIcon(texture, index)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2420`
+- `EncounterJournal_SetLootJournalView(view)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:705`
+- `EncounterJournal_SetSlotFilter(self, slot)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2961`
+- `EncounterJournal_SetSlotFilterInternal(self, slot)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2956`
+- `EncounterJournal_SetTab(tabType)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2225`
+- `EncounterJournal_SetTabEnabled(tab, enabled)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2245`
+- `EncounterJournal_SetTooltipWithCompare(tooltip, link, useSpec)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2354`
+- `EncounterJournal_SetupDifficultyDropdown(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:562`
+- `EncounterJournal_SetupExpansionDropdown(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:675`
+- `EncounterJournal_SetupLootJournalViewDropdown(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:623`
+- `EncounterJournal_SetupLootSlotFilterDropdown(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:538`
+- `EncounterJournal_SetUpOverview(self, overviewSectionID, index)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:1683`
+- `EncounterJournal_ShiftHeaders(index)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2098`
+- `EncounterJournal_ShowCreatures(forceUpdate)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:1508`
+- `EncounterJournal_ShowFullSearch()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2562`
+- `EncounterJournal_ShowGreatVaultButton()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:727`
+- `EncounterJournal_ShowSearch()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2587`
+- `EncounterJournal_TabClicked(self, button)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2219`
+- `EncounterJournal_ToggleHeaders(self, doNotShift)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:1791`
+- `EncounterJournal_UpdateButtonState(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:1533`
+- `EncounterJournal_UpdateDifficulty(newDifficultyID)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:1037`
+- `EncounterJournal_UpdateFilterString()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2966`
+- `EncounterJournal_UpdatePortraits()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:1069`
+- `EncounterJournal_UpdateSearchPreview()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2669`
+- `EncounterJournal_ValidateSelectedTab()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2254`
+- `EncounterJournalBossButton_OnClick(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3603`
+- `EncounterJournalBossButton_OnEvent(self, event)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3597`
+- `EncounterJournalBossButton_OnHide(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3593`
+- `EncounterJournalBossButton_OnShow(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3589`
+- `EncounterJournalBossButton_UpdateDifficultyOverlay(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3575`
+- `EncounterJournalBossButtonDefeatedOverlay_OnEnter(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:3618`
+- `EncounterJournalInstanceButton_OnClick(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:1149`
+- `EncounterJournalSearchBox_OnEditFocusGained(editBox)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2658`
+- `EncounterJournalSearchBox_OnHide(editBox)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2664`
+- `EncounterJournalSearchBox_OnTextChanged(editBox)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2647`
+- `EncounterJournalSearchBox_OnUpdate(self, elapsed)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2598`
+- `EncounterJournalSearchBoxSearchProgressBar_OnUpdate(self, elapsed)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2618`
+- `EncounterJournalSearchBoxShowAllResults_OnEnter(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:2708`
+- `GetEJTierData(tier)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:125`
+- `GetEJTierDataTableID(expansion)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_encounterjournal.lua:147`
+- `LootJournalItemButtonTemplate_OnEnter(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_lootjournalitems.lua:47`
+- `LootJournalItemButtonTemplate_OnLeave(self)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_lootjournalitems.lua:59`
+- `MonthlyActivities_ToggleTutorial()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_monthlyactivities.lua:98`
+- `MonthlyActivitiesFrame_OpenFrame()`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_monthlyactivities.lua:1577`
+- `MonthlyActivitiesFrame_OpenFrameToActivity(activityID)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_monthlyactivities.lua:1582`
+- `OpenEncounterJournalToJourney(factionID)`: `interface/addons/blizzard_encounterjournal/blizzard_encounterjournal_bootstrap.lua:19`
+- `OpenEncounterJournalToTieredEntrance(instanceID, difficultyID)`: `interface/addons/blizzard_encounterjournal/blizzard_encounterjournal_bootstrap.lua:25`
+- `SortItemSetItems(entry1, entry2)`: `interface/addons/blizzard_encounterjournal/mainline/blizzard_lootjournalitems.lua:241`
+- `ToggleEncounterJournal()`: `interface/addons/blizzard_encounterjournal/blizzard_encounterjournal_bootstrap.lua:11`
+
+## blizzard_eventtrace
+
+- `EventTrace_LoadUI()`: `interface/addons/blizzard_eventtrace/blizzard_eventtrace_bootstrap.lua:3`
+
+## blizzard_expansionlandingpage
+
+- `ToggleExpansionLandingPage()`: `interface/addons/blizzard_expansionlandingpage/blizzard_expansionlandingpage.lua:13`
+
+## blizzard_expansiontrial
+
+- `ClassTrial_IsExpansionTrialUpgradeDialogShowing()`: `interface/addons/blizzard_expansiontrial/mainline/blizzard_expansiontrial_bootstrap.lua:7`
+- `ExpansionTrial_LoadUI()`: `interface/addons/blizzard_expansiontrial/mainline/blizzard_expansiontrial_bootstrap.lua:3`
+
+## blizzard_flightmap
+
+- `FlightMap_LoadUI()`: `interface/addons/blizzard_flightmap/blizzard_flightmap_bootstrap.lua:3`
+- `ShowFlightMapFrame()`: `interface/addons/blizzard_flightmap/blizzard_flightmap_bootstrap.lua:7`
+
+## blizzard_framerateframe
+
+- `FramerateFrame_OnShow(self)`: `interface/addons/blizzard_framerateframe/classic/framerateframe.lua:13`
+- `FramerateFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_framerateframe/classic/framerateframe.lua:17`
+- `ToggleFramerate(benchmark)`: `interface/addons/blizzard_framerateframe/classic/framerateframe.lua:3`
+
+## blizzard_framexml
+
+- `AchievementAlertFrame_OnClick(self, button, down)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:400`
+- `AchievementAlertFrame_SetUp(frame, achievementID, alreadyEarned)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:316`
+- `AlertFrame_OnClick(self, button, down)`: `interface/addons/blizzard_framexml/mainline/alertframes.lua:895`
+- `AlertFrame_PauseOutAnimation(frame)`: `interface/addons/blizzard_framexml/mainline/alertframes.lua:834`
+- `AlertFrame_PlayAnimations(frame)`: `interface/addons/blizzard_framexml/mainline/alertframes.lua:878`
+- `AlertFrame_PlayIntroAnimation(frame)`: `interface/addons/blizzard_framexml/mainline/alertframes.lua:852`
+- `AlertFrame_PlayOutAnimation(frame, optionalDelay)`: `interface/addons/blizzard_framexml/mainline/alertframes.lua:838`
+- `AlertFrame_PlayOutroAnimation(frame)`: `interface/addons/blizzard_framexml/mainline/alertframes.lua:870`
+- `AlertFrame_ResumeOutAnimation(frame)`: `interface/addons/blizzard_framexml/mainline/alertframes.lua:843`
+- `AlertFrame_SetDuration(frame, duration)`: `interface/addons/blizzard_framexml/mainline/alertframes.lua:886`
+- `AlertFrame_ShowNewAlert(frame)`: `interface/addons/blizzard_framexml/mainline/alertframes.lua:890`
+- `AlertFrameSystems_Register()`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:5`
+- `AutoFollowStatus_OnEvent(self, event, ...)`: `interface/addons/blizzard_framexml/mainline/zonetext.lua:141`
+- `AutoFollowStatus_OnLoad(self)`: `interface/addons/blizzard_framexml/mainline/zonetext.lua:135`
+- `AutoFollowStatus_OnUpdate(self, elapsed)`: `interface/addons/blizzard_framexml/mainline/zonetext.lua:160`
+- `BattlePetTooltip_OnLoad(self)`: `interface/addons/blizzard_framexml/camelot/floatingpetbattletooltip.lua:31`
+- `BattlePetTooltip_OnLoad(self)`: `interface/addons/blizzard_framexml/floatingpetbattletooltip.lua:97`
+- `BattlePetToolTip_Show(speciesID, level, breedQuality, maxHealth, power, speed, customName)`: `interface/addons/blizzard_framexml/battlepettooltip.lua:23`
+- `BattlePetToolTip_ShowLink(battlePetLink)`: `interface/addons/blizzard_framexml/battlepettooltip.lua:13`
+- `BattlePetToolTip_UnpackBattlePetLink(battlePetLink)`: `interface/addons/blizzard_framexml/battlepettooltip.lua:3`
+- `BattlePetTooltipJournalClick_OnClick(self)`: `interface/addons/blizzard_framexml/camelot/floatingpetbattletooltip.lua:53`
+- `BattlePetTooltipJournalClick_OnClick(self)`: `interface/addons/blizzard_framexml/floatingpetbattletooltip.lua:160`
+- `BattlePetTooltipTemplate_AddTextLine(self, text, r, g, b, wrap)`: `interface/addons/blizzard_framexml/floatingpetbattletooltip.lua:127`
+- `BattlePetTooltipTemplate_SetBattlePet(tooltipFrame, data)`: `interface/addons/blizzard_framexml/camelot/floatingpetbattletooltip.lua:36`
+- `BattlePetTooltipTemplate_SetBattlePet(tooltipFrame, data)`: `interface/addons/blizzard_framexml/floatingpetbattletooltip.lua:103`
+- `BossBanner_AnimBannerIn(self, entry)`: `interface/addons/blizzard_framexml/bossbannertoast.lua:17`
+- `BossBanner_AnimBannerOut(self, entry)`: `interface/addons/blizzard_framexml/bossbannertoast.lua:116`
+- `BossBanner_AnimKillHold(self, entry)`: `interface/addons/blizzard_framexml/bossbannertoast.lua:22`
+- `BossBanner_AnimLootExpand(self, entry)`: `interface/addons/blizzard_framexml/bossbannertoast.lua:37`
+- `BossBanner_AnimLootInsert(self, entry)`: `interface/addons/blizzard_framexml/bossbannertoast.lua:46`
+- `BossBanner_AnimSwitch(self, entry)`: `interface/addons/blizzard_framexml/bossbannertoast.lua:26`
+- `BossBanner_BeginAnims(self, animState)`: `interface/addons/blizzard_framexml/bossbannertoast.lua:132`
+- `BossBanner_ConfigureLootFrame(lootFrame, data)`: `interface/addons/blizzard_framexml/bossbannertoast.lua:73`
+- `BossBanner_IsExclusiveQueued()`: `interface/addons/blizzard_framexml/bossbannertoast.lua:228`
+- `BossBanner_OnAnimOutFinished(self)`: `interface/addons/blizzard_framexml/bossbannertoast.lua:276`
+- `BossBanner_OnEvent(self, event, ...)`: `interface/addons/blizzard_framexml/bossbannertoast.lua:188`
+- `BossBanner_OnLoad(self)`: `interface/addons/blizzard_framexml/bossbannertoast.lua:178`
+- `BossBanner_OnLootItemEnter(self)`: `interface/addons/blizzard_framexml/bossbannertoast.lua:213`
+- `BossBanner_OnLootItemLeave(self)`: `interface/addons/blizzard_framexml/bossbannertoast.lua:223`
+- `BossBanner_OnMouseDown(...)`: `interface/addons/blizzard_framexml/bossbannertoast.lua:170`
+- `BossBanner_OnUpdate(self, elapsed)`: `interface/addons/blizzard_framexml/bossbannertoast.lua:150`
+- `BossBanner_Play(self, data)`: `interface/addons/blizzard_framexml/bossbannertoast.lua:232`
+- `BossBanner_SetAnimState(self, animState)`: `interface/addons/blizzard_framexml/bossbannertoast.lua:136`
+- `BossBanner_Stop(self)`: `interface/addons/blizzard_framexml/bossbannertoast.lua:269`
+- `CinematicFrame_CancelCinematic()`: `interface/addons/blizzard_framexml/shared/cinematicframe.lua:135`
+- `CinematicFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_framexml/shared/cinematicframe.lua:81`
+- `CinematicFrame_OnHide(self)`: `interface/addons/blizzard_framexml/shared/cinematicframe.lua:77`
+- `CinematicFrame_OnKeyDown(self, key)`: `interface/addons/blizzard_framexml/shared/cinematicframe.lua:116`
+- `CinematicFrame_OnLoad(self)`: `interface/addons/blizzard_framexml/shared/cinematicframe.lua:70`
+- `CinematicFrame_UpdateLettboxForAspectRatio(self)`: `interface/addons/blizzard_framexml/shared/cinematicframe.lua:11`
+- `CoinPickupFrame_OnChar(self, text)`: `interface/addons/blizzard_framexml/mainline/coinpickupframe.lua:117`
+- `CoinPickupFrame_OnHide()`: `interface/addons/blizzard_framexml/mainline/coinpickupframe.lua:237`
+- `CoinPickupFrame_OnKeyDown(self, key)`: `interface/addons/blizzard_framexml/mainline/coinpickupframe.lua:153`
+- `CoinPickupFrame_OnKeyUp(self, key)`: `interface/addons/blizzard_framexml/mainline/coinpickupframe.lua:189`
+- `CoinPickupFrameCancel_Click()`: `interface/addons/blizzard_framexml/mainline/coinpickupframe.lua:232`
+- `CoinPickupFrameLeft_Click()`: `interface/addons/blizzard_framexml/mainline/coinpickupframe.lua:198`
+- `CoinPickupFrameOkay_Click()`: `interface/addons/blizzard_framexml/mainline/coinpickupframe.lua:224`
+- `CoinPickupFrameRight_Click()`: `interface/addons/blizzard_framexml/mainline/coinpickupframe.lua:211`
+- `CombatFeedback_Initialize(self, feedbackText, fontHeight)`: `interface/addons/blizzard_framexml/mainline/combatfeedback.lua:21`
+- `CombatFeedback_OnCombatEvent(self, event, flags, amount, type)`: `interface/addons/blizzard_framexml/mainline/combatfeedback.lua:26`
+- `CombatFeedback_OnUpdate(self, elapsed)`: `interface/addons/blizzard_framexml/mainline/combatfeedback.lua:97`
+- `CreateContinuableContainerForLFGRewards()`: `interface/addons/blizzard_framexml/mainline/alertframes.lua:512`
+- `CriteriaAlertFrame_SetUp(frame, achievementID, criteriaString)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:422`
+- `CustomizationDebugFrame_OnLoad(self)`: `interface/addons/blizzard_framexml/customizationdebugframe.lua:12`
+- `CustomizationDebugFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_framexml/customizationdebugframe.lua:16`
+- `DestinyFrame_OnEvent(self, event)`: `interface/addons/blizzard_framexml/destinyframe.lua:1`
+- `DestinyFrame_UpdateRecruitInfo(self)`: `interface/addons/blizzard_framexml/destinyframe.lua:24`
+- `DigsiteCompleteToastFrame_SetUp(frame, raceName, raceTexture)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:651`
+- `DungeonCompletionAlertFrame_OnLoad(self)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:63`
+- `DungeonCompletionAlertFrame_SetUp(frame, rewardData)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:169`
+- `DungeonCompletionAlertFrameReward_OnEnter(self)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:222`
+- `DungeonCompletionAlertFrameReward_OnLeave(frame)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:247`
+- `DungeonCompletionAlertFrameReward_SetReward(frame, reward)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:164`
+- `DungeonCompletionAlertFrameReward_SetRewardItem(frame, itemLink, texture)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:159`
+- `DungeonCompletionAlertFrameReward_SetRewardMoney(frame, optionalMoney)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:145`
+- `DungeonCompletionAlertFrameReward_SetRewardXP(frame, optionalXP)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:152`
+- `EntitlementDelivered_OnClick(self, button, down)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:707`
+- `EntitlementDeliveredAlertFrame_SetUp(frame, type, icon, name, payloadID, showFancyToast)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:658`
+- `EquipmentFlyout_ChangePage(delta)`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:314`
+- `EquipmentFlyout_ChangePage(delta)`: `interface/addons/blizzard_framexml/equipmentflyout.lua:233`
+- `EquipmentFlyout_CreateButton()`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:123`
+- `EquipmentFlyout_CreateButton()`: `interface/addons/blizzard_framexml/equipmentflyout.lua:59`
+- `EquipmentFlyout_DisplayButton(button, paperDollItemSlot)`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:533`
+- `EquipmentFlyout_DisplayButton(button, paperDollItemSlot)`: `interface/addons/blizzard_framexml/equipmentflyout.lua:440`
+- `EquipmentFlyout_DisplaySpecialButton(button, paperDollItemSlot)`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:582`
+- `EquipmentFlyout_DisplaySpecialButton(button, paperDollItemSlot)`: `interface/addons/blizzard_framexml/equipmentflyout.lua:489`
+- `EquipmentFlyout_GetFrame()`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:221`
+- `EquipmentFlyout_GetFrame()`: `interface/addons/blizzard_framexml/equipmentflyout.lua:140`
+- `EquipmentFlyout_Hide()`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:225`
+- `EquipmentFlyout_Hide()`: `interface/addons/blizzard_framexml/equipmentflyout.lua:144`
+- `EquipmentFlyout_OnEvent(self, event, ...)`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:192`
+- `EquipmentFlyout_OnEvent(self, event, ...)`: `interface/addons/blizzard_framexml/equipmentflyout.lua:111`
+- `EquipmentFlyout_OnHide(self)`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:176`
+- `EquipmentFlyout_OnHide(self)`: `interface/addons/blizzard_framexml/equipmentflyout.lua:100`
+- `EquipmentFlyout_OnLoad(self)`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:118`
+- `EquipmentFlyout_OnLoad(self)`: `interface/addons/blizzard_framexml/equipmentflyout.lua:55`
+- `EquipmentFlyout_OnShow(self)`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:164`
+- `EquipmentFlyout_OnShow(self)`: `interface/addons/blizzard_framexml/equipmentflyout.lua:95`
+- `EquipmentFlyout_OnUpdate(self, elapsed)`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:142`
+- `EquipmentFlyout_OnUpdate(self, elapsed)`: `interface/addons/blizzard_framexml/equipmentflyout.lua:78`
+- `EquipmentFlyout_SetBackgroundTexture(texture)`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:668`
+- `EquipmentFlyout_SetBackgroundTexture(texture)`: `interface/addons/blizzard_framexml/equipmentflyout.lua:575`
+- `EquipmentFlyout_SetTooltipAnchor(button)`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:661`
+- `EquipmentFlyout_SetTooltipAnchor(button)`: `interface/addons/blizzard_framexml/equipmentflyout.lua:568`
+- `EquipmentFlyout_Show(itemButton)`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:229`
+- `EquipmentFlyout_Show(itemButton)`: `interface/addons/blizzard_framexml/equipmentflyout.lua:148`
+- `EquipmentFlyout_UpdateFlyout(button)`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:646`
+- `EquipmentFlyout_UpdateFlyout(button)`: `interface/addons/blizzard_framexml/equipmentflyout.lua:553`
+- `EquipmentFlyout_UpdateItems()`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:327`
+- `EquipmentFlyout_UpdateItems()`: `interface/addons/blizzard_framexml/equipmentflyout.lua:240`
+- `EquipmentFlyoutButton_OnClick(self)`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:636`
+- `EquipmentFlyoutButton_OnClick(self)`: `interface/addons/blizzard_framexml/equipmentflyout.lua:543`
+- `EquipmentFlyoutButton_OnEnter(self)`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:630`
+- `EquipmentFlyoutButton_OnEnter(self)`: `interface/addons/blizzard_framexml/equipmentflyout.lua:537`
+- `EquipmentFlyoutButton_UpdateTooltip(self, tooltip)`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:812`
+- `EquipmentFlyoutButton_UpdateTooltip(self, tooltip)`: `interface/addons/blizzard_framexml/equipmentflyout.lua:664`
+- `EquipmentFlyoutButton_UpdateTooltipAnchors(self, tooltip)`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:801`
+- `EquipmentFlyoutButton_UpdateTooltipAnchors(self, tooltip)`: `interface/addons/blizzard_framexml/equipmentflyout.lua:653`
+- `EquipmentFlyoutPopoutButton_HideAll()`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:767`
+- `EquipmentFlyoutPopoutButton_HideAll()`: `interface/addons/blizzard_framexml/equipmentflyout.lua:598`
+- `EquipmentFlyoutPopoutButton_OnClick(self)`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:789`
+- `EquipmentFlyoutPopoutButton_OnClick(self)`: `interface/addons/blizzard_framexml/equipmentflyout.lua:620`
+- `EquipmentFlyoutPopoutButton_OnLoad(self)`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:757`
+- `EquipmentFlyoutPopoutButton_OnLoad(self)`: `interface/addons/blizzard_framexml/equipmentflyout.lua:594`
+- `EquipmentFlyoutPopoutButton_OnStateChanged(self)`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:763`
+- `EquipmentFlyoutPopoutButton_RefreshVisualState(self)`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:731`
+- `EquipmentFlyoutPopoutButton_SetReversed(self, isReversed)`: `interface/addons/blizzard_framexml/equipmentflyout.lua:633`
+- `EquipmentFlyoutPopoutButton_ShowAll()`: `interface/addons/blizzard_framexml/camelot/equipmentflyout.lua:783`
+- `EquipmentFlyoutPopoutButton_ShowAll()`: `interface/addons/blizzard_framexml/equipmentflyout.lua:614`
+- `EquipmentManager_EquipContainerItem(action)`: `interface/addons/blizzard_framexml/mainline/equipmentmanager.lua:96`
+- `EquipmentManager_EquipInventoryItem(action)`: `interface/addons/blizzard_framexml/mainline/equipmentmanager.lua:119`
+- `EquipmentManager_EquipItemByLocation(location, invSlot)`: `interface/addons/blizzard_framexml/mainline/equipmentmanager.lua:73`
+- `EquipmentManager_EquipSet(setID)`: `interface/addons/blizzard_framexml/mainline/equipmentmanager.lua:259`
+- `EquipmentManager_GetItemInfoByLocation(location)`: `interface/addons/blizzard_framexml/mainline/equipmentmanager.lua:220`
+- `EquipmentManager_GetLocationData(location)`: `interface/addons/blizzard_framexml/shared/equipmentmanager.lua:1`
+- `EquipmentManager_OnEvent(self, event, ...)`: `interface/addons/blizzard_framexml/mainline/equipmentmanager.lua:51`
+- `EquipmentManager_PutItemInInventory(action)`: `interface/addons/blizzard_framexml/mainline/equipmentmanager.lua:147`
+- `EquipmentManager_RunAction(action)`: `interface/addons/blizzard_framexml/mainline/equipmentmanager.lua:268`
+- `EquipmentManager_UnequipItemInSlot(invSlot)`: `interface/addons/blizzard_framexml/mainline/equipmentmanager.lua:134`
+- `EquipmentManager_UpdateFreeBagSpace()`: `interface/addons/blizzard_framexml/mainline/equipmentmanager.lua:18`
+- `FloatingBattlePet_Show(speciesID, breedQuality, customName, bPetID)`: `interface/addons/blizzard_framexml/camelot/floatingpetbattletooltip.lua:12`
+- `FloatingBattlePet_Show(speciesID, level, breedQuality, maxHealth, power, speed, customName, bPetID)`: `interface/addons/blizzard_framexml/floatingpetbattletooltip.lua:61`
+- `FloatingBattlePet_Toggle(speciesID, level, breedQuality, maxHealth, power, speed, customName, bPetID)`: `interface/addons/blizzard_framexml/camelot/floatingpetbattletooltip.lua:3`
+- `FloatingBattlePet_Toggle(speciesID, level, breedQuality, maxHealth, power, speed, customName, bPetID)`: `interface/addons/blizzard_framexml/floatingpetbattletooltip.lua:52`
+- `FloatingPetBattleAbility_Show(abilityID, maxHealth, power, speed)`: `interface/addons/blizzard_framexml/floatingpetbattletooltip.lua:38`
+- `FreeTimerTrackerTimer(timer)`: `interface/addons/blizzard_framexml/timer.lua:79`
+- `GarrisonAlertFrame_OnClick(self, button, down)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:943`
+- `GarrisonBuildingAlertFrame_SetUp(frame, name, garrisonType)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:755`
+- `GarrisonCommonFollowerAlertFrame_SetUp(frame, followerID, name, quality, isUpgraded)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:830`
+- `GarrisonFollowerAlertFrame_OnClick(self, button, down)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:920`
+- `GarrisonFollowerAlertFrame_OnEnter(self)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:902`
+- `GarrisonFollowerAlertFrame_OnLeave(self)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:914`
+- `GarrisonFollowerAlertFrame_SetUp(frame, followerID, name, level, quality, isUpgraded, followerInfo)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:859`
+- `GarrisonMissionAlertFrame_SetUp(frame, missionInfo)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:762`
+- `GarrisonRandomMissionAlertFrame_SetUp(frame, missionInfo)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:800`
+- `GarrisonShipFollowerAlertFrame_SetUp(frame, followerID, name, class, textureKit, level, quality, isUpgraded, followerInfo)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:880`
+- `GarrisonTalentAlertFrame_SetUp(frame, garrisonType, talent)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:962`
+- `GetPlayerFactionGroup()`: `interface/addons/blizzard_framexml/timer.lua:67`
+- `GuildChallengeAlertFrame_OnClick(self, button, down)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:58`
+- `GuildChallengeAlertFrame_SetUp(frame, challengeType, count, max)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:40`
+- `GuildInviteFrame_OnEnter()`: `interface/addons/blizzard_framexml/guildinviteframe.lua:45`
+- `GuildInviteFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_framexml/guildinviteframe.lua:1`
+- `GuildInviteFrame_OnHide(self)`: `interface/addons/blizzard_framexml/guildinviteframe.lua:64`
+- `GuildInviteFrame_OnLeave()`: `interface/addons/blizzard_framexml/guildinviteframe.lua:52`
+- `GuildInviteFrame_OnLoad(self)`: `interface/addons/blizzard_framexml/guildinviteframe.lua:56`
+- `GuildInviteFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_framexml/guildinviteframe.lua:76`
+- `GuildInviteFrame_RegisterForTransitions(self)`: `interface/addons/blizzard_framexml/guildinviteframe.lua:83`
+- `GuildInviteFrame_SetupGamepad(self)`: `interface/addons/blizzard_framexml/guildinviteframe.lua:88`
+- `GuildNewsButton_SetIcon(button, icon_type, override_texture)`: `interface/addons/blizzard_framexml/guildutil.lua:28`
+- `GuildNewsButton_SetMOTD(button, text)`: `interface/addons/blizzard_framexml/guildutil.lua:46`
+- `GuildNewsButton_SetNews(button, news_id)`: `interface/addons/blizzard_framexml/guildutil.lua:56`
+- `GuildNewsButton_SetText(button, text_color, text, ...)`: `interface/addons/blizzard_framexml/guildutil.lua:41`
+- `GuildRenameAlertFrame_SetUp(frame, guildName)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:1463`
+- `HandleQuestSessionInviteToPartyConfirmation(name, willConvertToRaid)`: `interface/addons/blizzard_framexml/questsession.lua:924`
+- `HonorAwardedAlertFrame_SetUp(self, amount)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:643`
+- `HonorExhaustionTick_OnLoad(self)`: `interface/addons/blizzard_framexml/pvphonorsystem.lua:320`
+- `HonorExhaustionToolTipText(self)`: `interface/addons/blizzard_framexml/pvphonorsystem.lua:330`
+- `HonorLevelUpBanner_OnEvent(self, event, ...)`: `interface/addons/blizzard_framexml/pvphonorsystem.lua:338`
+- `HonorLevelUpBanner_OnLoad(self)`: `interface/addons/blizzard_framexml/pvphonorsystem.lua:334`
+- `HousingItemEarnedAlertFrameSystem_SetUp(frame, rewardData)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:1484`
+- `InitiativeTaskCompleteAlertFrameSystem_SetUp(frame, taskName)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:1509`
+- `IsWatchingHonorAsXP()`: `interface/addons/blizzard_framexml/pvphonorsystem.lua:150`
+- `LegendaryItemAlertFrame_OnClick(self, button, down)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:1154`
+- `LegendaryItemAlertFrame_OnEnter(self)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:1164`
+- `LegendaryItemAlertFrame_OnLeave(self)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:1172`
+- `LegendaryItemAlertFrame_SetUp(frame, itemLink)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:1140`
+- `LocalizeGarrisonAlerts_zh()`: `interface/addons/blizzard_framexml/shared/localization.lua:1`
+- `LootAlertFrame_OnEnter(self)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:434`
+- `LootUpgradeFrame_AnimDone(self)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:627`
+- `LootUpgradeFrame_OnClick(self, button, down)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:617`
+- `LootUpgradeFrame_SetUp(self, itemLink, quantity, specID, baseQuality)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:583`
+- `LootWonAlertFrame_OnClick(self, button, down)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:565`
+- `LootWonAlertFrame_SetUp(self, originalLink, originalQuantity, rollType, roll, specID, isCurrency, showFactionBG, lootSource, lessAwesome, isUpgraded, isCorrupted, wonRoll, showRatedBG, isSecondaryResult)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:469`
+- `LowHealth_OnUpdate(self)`: `interface/addons/blizzard_framexml/shared/lowhealthframe.lua:152`
+- `MoneyWonAlertFrame_SetUp(self, amount)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:635`
+- `MonthlyActivityAlertFrame_OnClick(self, button, down)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:1444`
+- `MonthlyActivityAlertFrame_SetUp(frame, perksActivityID)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:1435`
+- `MovieFrame_PlayMovie(movieFrame, movieID)`: `interface/addons/blizzard_framexml/movieframe.lua:114`
+- `NavBar_AddButton(self, buttonData)`: `interface/addons/blizzard_framexml/mainline/navigationbar.lua:77`
+- `NavBar_ButtonOnClick(self, button)`: `interface/addons/blizzard_framexml/mainline/navigationbar.lua:162`
+- `NavBar_ButtonOnEnter(self)`: `interface/addons/blizzard_framexml/mainline/navigationbar.lua:178`
+- `NavBar_ButtonOnLeave(self)`: `interface/addons/blizzard_framexml/mainline/navigationbar.lua:186`
+- `NavBar_CheckLength(self)`: `interface/addons/blizzard_framexml/mainline/navigationbar.lua:200`
+- `NavBar_ClearTrailingButtons(list, freeList, button)`: `interface/addons/blizzard_framexml/mainline/navigationbar.lua:133`
+- `NavBar_GetButton(self, index)`: `interface/addons/blizzard_framexml/mainline/navigationbar.lua:192`
+- `NavBar_GetNumButtons(self)`: `interface/addons/blizzard_framexml/mainline/navigationbar.lua:196`
+- `NavBar_Initialize(self, template, homeData, homeButton, overflowButton)`: `interface/addons/blizzard_framexml/mainline/navigationbar.lua:5`
+- `NavBar_ListOverFlowButtons(self)`: `interface/addons/blizzard_framexml/mainline/navigationbar.lua:274`
+- `NavBar_OpenTo(self, id)`: `interface/addons/blizzard_framexml/mainline/navigationbar.lua:146`
+- `NavBar_OverflowItemOnClick(junk, index, navBar)`: `interface/addons/blizzard_framexml/mainline/navigationbar.lua:314`
+- `NavBar_Reset(self)`: `interface/addons/blizzard_framexml/mainline/navigationbar.lua:67`
+- `NavButtonTemplate_OnShow(self)`: `interface/addons/blizzard_framexml/mainline/navigationbar.lua:310`
+- `NavButtonTemplate_SetupDropdown(self, dropdown)`: `interface/addons/blizzard_framexml/mainline/navigationbar.lua:288`
+- `NewCosmeticAlertFrameSystem_SetUp(frame, itemModifiedAppearanceID)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:1377`
+- `NewMountAlertFrame_SetUp(frame, mountID)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:1238`
+- `NewPetAlertFrame_SetUp(frame, petID)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:1204`
+- `NewRecipeLearnedAlertFrame_GetStarTextureFromRank(rank)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:974`
+- `NewRecipeLearnedAlertFrame_OnClick(self, button, down)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:1017`
+- `NewRecipeLearnedAlertFrame_SetUp(self, recipeID, recipeLevel)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:985`
+- `NewRuneforgePowerAlertSystem_SetUp(frame, powerID)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:1334`
+- `NewToyAlertFrame_SetUp(frame, toyID)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:1274`
+- `NewWarbandSceneAlertFrame_SetUp(frame, warbandSceneID)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:1301`
+- `OnPooledAlertFrameQueueHide(frame)`: `interface/addons/blizzard_framexml/mainline/alertframes.lua:169`
+- `OnPooledAlertFrameQueueReset(framePool, frame)`: `interface/addons/blizzard_framexml/mainline/alertframes.lua:84`
+- `OpenCoinPickupFrame(multiplier, maxMoney, parent)`: `interface/addons/blizzard_framexml/mainline/coinpickupframe.lua:5`
+- `OptionsListButton_OnClick(self, mouseButton)`: `interface/addons/blizzard_framexml/deprecatedtemplates.lua:11`
+- `OptionsListButton_OnEnter(self)`: `interface/addons/blizzard_framexml/deprecatedtemplates.lua:20`
+- `OptionsListButton_OnLeave(self)`: `interface/addons/blizzard_framexml/deprecatedtemplates.lua:27`
+- `OptionsListButton_OnLoad(self, toggleFunc)`: `interface/addons/blizzard_framexml/deprecatedtemplates.lua:1`
+- `OptionsListButtonToggle_OnClick(self)`: `interface/addons/blizzard_framexml/deprecatedtemplates.lua:31`
+- `PVPGetConquestLevelInfo()`: `interface/addons/blizzard_framexml/pvpuitemplates.lua:133`
+- `PVPHonorSystem_GetNextReward()`: `interface/addons/blizzard_framexml/pvphonorsystem.lua:261`
+- `PVPHonorSystemXPBarNextAvailable_OnEnter(self)`: `interface/addons/blizzard_framexml/pvphonorsystem.lua:310`
+- `PVPHonorXPBar_CheckLockState(self)`: `interface/addons/blizzard_framexml/pvphonorsystem.lua:194`
+- `PVPHonorXPBar_Lock(self)`: `interface/addons/blizzard_framexml/pvphonorsystem.lua:202`
+- `PVPHonorXPBar_OnEnter(self)`: `interface/addons/blizzard_framexml/pvphonorsystem.lua:227`
+- `PVPHonorXPBar_OnLeave(self)`: `interface/addons/blizzard_framexml/pvphonorsystem.lua:243`
+- `PVPHonorXPBar_OnLoad(self)`: `interface/addons/blizzard_framexml/pvphonorsystem.lua:158`
+- `PVPHonorXPBar_SetNextAvailable(self)`: `interface/addons/blizzard_framexml/pvphonorsystem.lua:292`
+- `PVPHonorXPBar_Unlock(self)`: `interface/addons/blizzard_framexml/pvphonorsystem.lua:216`
+- `PVPHonorXPBar_Update(self)`: `interface/addons/blizzard_framexml/pvphonorsystem.lua:176`
+- `RafRewardDeliveredAlertFrame_SetUp(frame, type, icon, name, payloadID, showFancyToast, rafVersion)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:673`
+- `ReadyCheck_Confirm(readyCheckFrame, ready)`: `interface/addons/blizzard_framexml/mainline/readycheck.lua:191`
+- `ReadyCheck_Finish(readyCheckFrame, finishTime, fadeTime, onFinishFunc, onFinishFuncArg)`: `interface/addons/blizzard_framexml/mainline/readycheck.lua:205`
+- `ReadyCheck_OnUpdate(readyCheckFrame, elapsed)`: `interface/addons/blizzard_framexml/mainline/readycheck.lua:230`
+- `ReadyCheck_Start(readyCheckFrame)`: `interface/addons/blizzard_framexml/mainline/readycheck.lua:182`
+- `ReadyCheckFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_framexml/mainline/readycheck.lua:44`
+- `ReadyCheckFrame_OnHide(self)`: `interface/addons/blizzard_framexml/mainline/readycheck.lua:59`
+- `ReadyCheckFrame_OnLoad(self)`: `interface/addons/blizzard_framexml/mainline/readycheck.lua:35`
+- `RoleChangedFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_framexml/mainline/rolepoll.lua:147`
+- `RoleChangedFrame_OnLoad(self)`: `interface/addons/blizzard_framexml/mainline/rolepoll.lua:143`
+- `RolePollPopup_InitializeGamepad(self)`: `interface/addons/blizzard_framexml/mainline/rolepoll.lua:83`
+- `RolePollPopup_OnEvent(self, event, ...)`: `interface/addons/blizzard_framexml/mainline/rolepoll.lua:7`
+- `RolePollPopup_OnHide(self)`: `interface/addons/blizzard_framexml/mainline/rolepoll.lua:137`
+- `RolePollPopup_OnLoad(self)`: `interface/addons/blizzard_framexml/mainline/rolepoll.lua:1`
+- `RolePollPopup_RegisterForTransitions(self)`: `interface/addons/blizzard_framexml/mainline/rolepoll.lua:91`
+- `RolePollPopup_SetupGamepad(self)`: `interface/addons/blizzard_framexml/mainline/rolepoll.lua:59`
+- `RolePollPopup_Show(self)`: `interface/addons/blizzard_framexml/mainline/rolepoll.lua:15`
+- `RolePollPopup_UpdateChecked(self)`: `interface/addons/blizzard_framexml/mainline/rolepoll.lua:47`
+- `RolePollPopupAccept_OnClick(self, button)`: `interface/addons/blizzard_framexml/mainline/rolepoll.lua:131`
+- `RolePollPopupRoleButton_Disable(button)`: `interface/addons/blizzard_framexml/mainline/rolepoll.lua:108`
+- `RolePollPopupRoleButton_Enable(button, isRecommended)`: `interface/addons/blizzard_framexml/mainline/rolepoll.lua:97`
+- `RolePollPopupRoleButtonCheckButton_OnClick(self, button)`: `interface/addons/blizzard_framexml/mainline/rolepoll.lua:119`
+- `ScenarioAlertFrame_SetUp(frame, rewardData)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:253`
+- `ScenarioLegionInvasionAlertFrame_Coalesce(frame, questID, rewardItemLink, texture)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:303`
+- `ScenarioLegionInvasionAlertFrame_SetUp(frame, rewardQuestID, name, showBonusCompletion, xp, money)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:281`
+- `SecureActionButton_OnClick(self, inputButton, down, isKeyPress, isSecureAction)`: `interface/addons/blizzard_framexml/securetemplates.lua:802`
+- `SecureActionButton_ShouldUseOnKeyDown(self)`: `interface/addons/blizzard_framexml/securetemplates.lua:792`
+- `SecureButton_GetAttribute(frame, name)`: `interface/addons/blizzard_framexml/securetemplates.lua:139`
+- `SecureButton_GetButtonSuffix(button)`: `interface/addons/blizzard_framexml/securetemplates.lua:101`
+- `SecureButton_GetEffectiveButton(self)`: `interface/addons/blizzard_framexml/securetemplates.lua:214`
+- `SecureButton_GetModifiedAttribute(frame, name, button, prefix, suffix)`: `interface/addons/blizzard_framexml/securetemplates.lua:119`
+- `SecureButton_GetModifiedUnit(self, button)`: `interface/addons/blizzard_framexml/securetemplates.lua:143`
+- `SecureButton_GetModifierPrefix(frame)`: `interface/addons/blizzard_framexml/securetemplates.lua:70`
+- `SecureButton_GetUnit(self)`: `interface/addons/blizzard_framexml/securetemplates.lua:201`
+- `SecureButton_ParseModifierString(msg)`: `interface/addons/blizzard_framexml/securetemplates.lua:60`
+- `SecureUnitButton_OnClick(self, button, down)`: `interface/addons/blizzard_framexml/securetemplates.lua:841`
+- `SecureUnitButton_OnLoad(self, unit, menufunc, clickArgs)`: `interface/addons/blizzard_framexml/securetemplates.lua:828`
+- `SetDoubleGuildTabardTextures(unit, leftEmblemTexture, rightEmblemTexture, backgroundTexture, borderTexture, tabardData)`: `interface/addons/blizzard_framexml/guildutil.lua:140`
+- `SetGhostFrameShown(shown)`: `interface/addons/blizzard_framexml/ghostframe.lua:3`
+- `SetGuildTabardTextures(emblemSize, columns, offset, unit, emblemTexture, backgroundTexture, borderTexture, tabardData)`: `interface/addons/blizzard_framexml/guildutil.lua:149`
+- `SetLargeGuildTabardTextures(unit, emblemTexture, backgroundTexture, borderTexture, tabardData)`: `interface/addons/blizzard_framexml/guildutil.lua:115`
+- `SetLootHistoryFrameToEncounter(encounterID)`: `interface/addons/blizzard_framexml/mainline/loothistory.lua:670`
+- `SetSmallGuildTabardTextures(unit, emblemTexture, backgroundTexture, borderTexture, tabardData)`: `interface/addons/blizzard_framexml/guildutil.lua:128`
+- `SetTalentButtonLocation(button, tier, column, talentButtonSize, initialOffsetX, initialOffsetY, buttonSpacingX, buttonSpacingY)`: `interface/addons/blizzard_framexml/cata/talentframebase.lua:383`
+- `SetWatchingHonorAsXP(value)`: `interface/addons/blizzard_framexml/pvphonorsystem.lua:154`
+- `SetZoneText(showZone)`: `interface/addons/blizzard_framexml/mainline/zonetext.lua:7`
+- `SharedPetBattleAbilityTooltip_GetInfoTable()`: `interface/addons/blizzard_framexml/sharedpetbattletemplates.lua:47`
+- `SharedPetBattleAbilityTooltip_OnLoad(self)`: `interface/addons/blizzard_framexml/sharedpetbattletemplates.lua:53`
+- `SharedPetBattleAbilityTooltip_SetAbility(self, abilityInfo, additionalText)`: `interface/addons/blizzard_framexml/sharedpetbattletemplates.lua:58`
+- `SharedPetBattleAbilityTooltip_UpdateSize(self)`: `interface/addons/blizzard_framexml/sharedpetbattletemplates.lua:206`
+- `ShowQuestSessionGroupInviteConfirmation(invite, text)`: `interface/addons/blizzard_framexml/questsession.lua:916`
+- `ShowQuestSessionGroupInviteReceivedConfirmation(name, text)`: `interface/addons/blizzard_framexml/questsession.lua:920`
+- `ShowReadyCheck(initiator, timeLeft)`: `interface/addons/blizzard_framexml/mainline/readycheck.lua:23`
+- `StackSplitCancelButton_OnClick()`: `interface/addons/blizzard_framexml/mainline/stacksplitframe.lua:337`
+- `StackSplitLeftButton_OnClick()`: `interface/addons/blizzard_framexml/mainline/stacksplitframe.lua:301`
+- `StackSplitOkayButton_OnClick()`: `interface/addons/blizzard_framexml/mainline/stacksplitframe.lua:329`
+- `StackSplitRightButton_OnClick()`: `interface/addons/blizzard_framexml/mainline/stacksplitframe.lua:315`
+- `StandardRewardAlertFrame_AdjustRewardAnchors(frame)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:109`
+- `StandardRewardAlertFrame_OnEnter(self)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:122`
+- `StartTimer_BarOnlyOnUpdate(self, elapsed)`: `interface/addons/blizzard_framexml/timer.lua:260`
+- `StartTimer_BigNumberOnUpdate(self, elapsed)`: `interface/addons/blizzard_framexml/timer.lua:215`
+- `StartTimer_NumberAnimOnFinished(self)`: `interface/addons/blizzard_framexml/timer.lua:368`
+- `StartTimer_OnShow(self)`: `interface/addons/blizzard_framexml/timer.lua:56`
+- `StartTimer_SetGoTexture(timer)`: `interface/addons/blizzard_framexml/timer.lua:345`
+- `StartTimer_SetTexNumbers(self, ...)`: `interface/addons/blizzard_framexml/timer.lua:279`
+- `StartTimer_SwitchToLargeDisplay(self)`: `interface/addons/blizzard_framexml/timer.lua:392`
+- `StreamingFrame_FadeIN_OnFinished()`: `interface/addons/blizzard_framexml/mainline/streamingframe.lua:57`
+- `StreamingFrame_FadeOUT_OnFinished()`: `interface/addons/blizzard_framexml/mainline/streamingframe.lua:61`
+- `StreamingIcon_OnEvent(self, event, ...)`: `interface/addons/blizzard_framexml/mainline/streamingframe.lua:9`
+- `StreamingIcon_OnLoad(self)`: `interface/addons/blizzard_framexml/mainline/streamingframe.lua:4`
+- `StreamingIcon_UpdateIcon(status)`: `interface/addons/blizzard_framexml/mainline/streamingframe.lua:20`
+- `SubZoneText_OnLoad(self)`: `interface/addons/blizzard_framexml/mainline/zonetext.lua:123`
+- `TalentFrame_Clear(TalentFrame)`: `interface/addons/blizzard_framexml/mainline/talentframebase.lua:16`
+- `TalentFrame_Clear(TalentFrame)`: `interface/addons/blizzard_framexml/mists/talentframebase.lua:11`
+- `TalentFrame_GetArrowTexture(TalentFrame)`: `interface/addons/blizzard_framexml/cata/talentframebase.lua:329`
+- `TalentFrame_GetBranchTexture(TalentFrame)`: `interface/addons/blizzard_framexml/cata/talentframebase.lua:341`
+- `TalentFrame_GetUnspentTalentPoints(TalentFrame)`: `interface/addons/blizzard_framexml/cata/talentframebase.lua:377`
+- `TalentFrame_Load(TalentFrame)`: `interface/addons/blizzard_framexml/mainline/talentframebase.lua:12`
+- `TalentFrame_SetArrowTexture(tier, column, texCoords, xOffset, yOffset, TalentFrame)`: `interface/addons/blizzard_framexml/cata/talentframebase.lua:313`
+- `TalentFrame_SetBranchTexture(tier, column, texCoords, xOffset, yOffset, TalentFrame, xSize, ySize)`: `interface/addons/blizzard_framexml/cata/talentframebase.lua:320`
+- `TalentFrame_SetPrereqs(TalentFrame, buttonTier, buttonColumn, forceDesaturated, tierUnlocked, preview, ...)`: `interface/addons/blizzard_framexml/cata/talentframebase.lua:356`
+- `TalentFrame_Update(TalentFrame)`: `interface/addons/blizzard_framexml/cata/talentframebase.lua:22`
+- `TalentFrame_Update(TalentFrame, talentUnit)`: `interface/addons/blizzard_framexml/mainline/talentframebase.lua:32`
+- `TalentFrame_Update(TalentFrame, talentUnit)`: `interface/addons/blizzard_framexml/mists/talentframebase.lua:27`
+- `TalentFrame_UpdateRowGlow(talentRow, restartGlow)`: `interface/addons/blizzard_framexml/mainline/talentframebase.lua:149`
+- `TalentFrame_UpdateSpecInfoCache(cache, inspect, pet, talentGroup)`: `interface/addons/blizzard_framexml/mainline/talentframebase.lua:174`
+- `TimerTracker_OnEvent(self, event, ...)`: `interface/addons/blizzard_framexml/timer.lua:181`
+- `TimerTracker_OnLoad(self)`: `interface/addons/blizzard_framexml/timer.lua:46`
+- `TimerTracker_StartTimerOfType(self, timerType, timeSeconds, totalTime, informChat, initiatedByGuid, initiatedByName)`: `interface/addons/blizzard_framexml/timer.lua:92`
+- `ToggleCustomizationDebugInfo()`: `interface/addons/blizzard_framexml/customizationdebugframe.lua:4`
+- `ToggleLootHistoryFrame()`: `interface/addons/blizzard_framexml/mainline/loothistory.lua:666`
+- `TooltipSetLFGCompletionReward(tooltip, itemLink, bonusQuantity)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:69`
+- `TopBannerManager_BannerFinished()`: `interface/addons/blizzard_framexml/topbannermanager.lua:52`
+- `TopBannerManager_IsIdle()`: `interface/addons/blizzard_framexml/topbannermanager.lua:61`
+- `TopBannerManager_LoadingScreenDisabled()`: `interface/addons/blizzard_framexml/topbannermanager.lua:43`
+- `TopBannerManager_LoadingScreenEnabled()`: `interface/addons/blizzard_framexml/topbannermanager.lua:37`
+- `TopBannerManager_Show(frame, data, isExclusiveQueued)`: `interface/addons/blizzard_framexml/topbannermanager.lua:18`
+- `TutorialFrame_AlertButton_OnClick(self)`: `interface/addons/blizzard_framexml/mainline/tutorialframe.lua:741`
+- `TutorialFrame_CheckBadge()`: `interface/addons/blizzard_framexml/mainline/tutorialframe.lua:760`
+- `TutorialFrame_CheckNextPrevButtons()`: `interface/addons/blizzard_framexml/mainline/tutorialframe.lua:337`
+- `TutorialFrame_ClearQueue()`: `interface/addons/blizzard_framexml/mainline/tutorialframe.lua:779`
+- `TutorialFrame_ClearTextures()`: `interface/addons/blizzard_framexml/mainline/tutorialframe.lua:609`
+- `TutorialFrame_Hide()`: `interface/addons/blizzard_framexml/mainline/tutorialframe.lua:752`
+- `TutorialFrame_NewTutorial(tutorialID, forceShow)`: `interface/addons/blizzard_framexml/mainline/tutorialframe.lua:667`
+- `TutorialFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_framexml/mainline/tutorialframe.lua:226`
+- `TutorialFrame_OnHide(self)`: `interface/addons/blizzard_framexml/mainline/tutorialframe.lua:264`
+- `TutorialFrame_OnKeyDown(self, key)`: `interface/addons/blizzard_framexml/mainline/tutorialframe.lua:273`
+- `TutorialFrame_OnLoad(self)`: `interface/addons/blizzard_framexml/mainline/tutorialframe.lua:192`
+- `TutorialFrame_OnMouseDown(self, button)`: `interface/addons/blizzard_framexml/mainline/tutorialframe.lua:304`
+- `TutorialFrame_OnShow(self)`: `interface/addons/blizzard_framexml/mainline/tutorialframe.lua:259`
+- `TutorialFrame_Update(currentTutorial)`: `interface/addons/blizzard_framexml/mainline/tutorialframe.lua:359`
+- `TutorialFrameNextButton_OnClick(self)`: `interface/addons/blizzard_framexml/mainline/tutorialframe.lua:728`
+- `TutorialFramePrevButton_OnClick(self)`: `interface/addons/blizzard_framexml/mainline/tutorialframe.lua:717`
+- `UpdateCoinPickupFrame(maxMoney)`: `interface/addons/blizzard_framexml/mainline/coinpickupframe.lua:81`
+- `WorldQuestCompleteAlertFrame_Coalesce(frame, questID, rewardItemLink, texture)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:1128`
+- `WorldQuestCompleteAlertFrame_GetIconForQuestID(questID)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:1077`
+- `WorldQuestCompleteAlertFrame_SetUp(frame, questData)`: `interface/addons/blizzard_framexml/mainline/alertframesystems.lua:1095`
+- `WorldStateChallengeMode_CheckTimers(...)`: `interface/addons/blizzard_framexml/mists/worldstateframe.lua:47`
+- `WorldStateChallengeMode_DisplayTimers(lineFrame, nextAnchor, maxHeight, frameWidth)`: `interface/addons/blizzard_framexml/mists/worldstateframe.lua:25`
+- `WorldStateChallengeMode_HideTimer(timerID)`: `interface/addons/blizzard_framexml/mists/worldstateframe.lua:85`
+- `WorldStateChallengeMode_OnEvent(self, event, ...)`: `interface/addons/blizzard_framexml/mists/worldstateframe.lua:11`
+- `WorldStateChallengeMode_OnLoad(self)`: `interface/addons/blizzard_framexml/mists/worldstateframe.lua:5`
+- `WorldStateChallengeMode_ShowTimer(timerID, elapsedTime, times)`: `interface/addons/blizzard_framexml/mists/worldstateframe.lua:62`
+- `WorldStateChallengeModeAnim_OnFinished(self)`: `interface/addons/blizzard_framexml/mists/worldstateframe.lua:174`
+- `WorldStateChallengeModeFrame_UpdateMedal(self, elapsedTime)`: `interface/addons/blizzard_framexml/mists/worldstateframe.lua:101`
+- `WorldStateChallengeModeFrame_UpdateValues(self, elapsedTime)`: `interface/addons/blizzard_framexml/mists/worldstateframe.lua:145`
+- `WorldStateChallengeModeTimer_OnUpdate(self, elapsed)`: `interface/addons/blizzard_framexml/mists/worldstateframe.lua:183`
+- `WorldStateProvingGrounds_CheckTimers(...)`: `interface/addons/blizzard_framexml/mists/worldstateframe.lua:216`
+- `WorldStateProvingGrounds_DisplayTimers(lineFrame, nextAnchor, maxHeight, frameWidth)`: `interface/addons/blizzard_framexml/mists/worldstateframe.lua:193`
+- `WorldStateProvingGrounds_HideTimer(timerID)`: `interface/addons/blizzard_framexml/mists/worldstateframe.lua:274`
+- `WorldStateProvingGrounds_OnEvent(self, event, ...)`: `interface/addons/blizzard_framexml/mists/worldstateframe.lua:318`
+- `WorldStateProvingGrounds_OnLoad(self)`: `interface/addons/blizzard_framexml/mists/worldstateframe.lua:312`
+- `WorldStateProvingGrounds_ShowTimer(timerID, elapsedTime, duration, medalIndex, currWave, maxWave)`: `interface/addons/blizzard_framexml/mists/worldstateframe.lua:232`
+- `WorldStateProvingGroundsAnim_OnFinished(self)`: `interface/addons/blizzard_framexml/mists/worldstateframe.lua:338`
+- `WorldStateProvingGroundsFrame_UpdateValues(self, elapsedTime)`: `interface/addons/blizzard_framexml/mists/worldstateframe.lua:290`
+- `WorldStateProvingGroundsTimer_OnUpdate(self, elapsed)`: `interface/addons/blizzard_framexml/mists/worldstateframe.lua:333`
+- `ZoneText_Clear()`: `interface/addons/blizzard_framexml/mainline/zonetext.lua:173`
+- `ZoneText_OnEvent(self, event, ...)`: `interface/addons/blizzard_framexml/mainline/zonetext.lua:83`
+- `ZoneText_OnLoad(self)`: `interface/addons/blizzard_framexml/mainline/zonetext.lua:71`
+
+## blizzard_framexmlbase
+
+- `FlowContainer_AddLineBreak(container)`: `interface/addons/blizzard_framexmlbase/flowcontainer.lua:47`
+- `FlowContainer_AddObject(container, object)`: `interface/addons/blizzard_framexmlbase/flowcontainer.lua:41`
+- `FlowContainer_AddPrimarySpacer(container, spacerSize)`: `interface/addons/blizzard_framexmlbase/flowcontainer.lua:59`
+- `FlowContainer_AddSpacer(container, spacerSize)`: `interface/addons/blizzard_framexmlbase/flowcontainer.lua:53`
+- `FlowContainer_BeginAtomicAdd(container)`: `interface/addons/blizzard_framexmlbase/flowcontainer.lua:65`
+- `FlowContainer_DoLayout(container)`: `interface/addons/blizzard_framexmlbase/flowcontainer.lua:125`
+- `FlowContainer_EndAtomicAdd(container)`: `interface/addons/blizzard_framexmlbase/flowcontainer.lua:71`
+- `FlowContainer_GetUsedBounds(container)`: `interface/addons/blizzard_framexmlbase/flowcontainer.lua:94`
+- `FlowContainer_Initialize(container)`: `interface/addons/blizzard_framexmlbase/flowcontainer.lua:1`
+- `FlowContainer_PauseUpdates(container)`: `interface/addons/blizzard_framexmlbase/flowcontainer.lua:12`
+- `FlowContainer_RemoveAllObjects(container)`: `interface/addons/blizzard_framexmlbase/flowcontainer.lua:89`
+- `FlowContainer_RemoveObject(container, object)`: `interface/addons/blizzard_framexmlbase/flowcontainer.lua:77`
+- `FlowContainer_ResumeUpdates(container)`: `interface/addons/blizzard_framexmlbase/flowcontainer.lua:16`
+- `FlowContainer_SetHorizontalSpacing(container, horizontalSpacing)`: `interface/addons/blizzard_framexmlbase/flowcontainer.lua:31`
+- `FlowContainer_SetMaxPerLine(container, maxPerLine)`: `interface/addons/blizzard_framexmlbase/flowcontainer.lua:26`
+- `FlowContainer_SetOrientation(container, orientation)`: `interface/addons/blizzard_framexmlbase/flowcontainer.lua:21`
+- `FlowContainer_SetStartingOffset(container, xOffset, yOffset)`: `interface/addons/blizzard_framexmlbase/flowcontainer.lua:102`
+- `FlowContainer_SetVerticalSpacing(container, verticalSpacing)`: `interface/addons/blizzard_framexmlbase/flowcontainer.lua:36`
+- `IconDataProvider_GetAllIconTypes()`: `interface/addons/blizzard_framexmlbase/icondataprovider.lua:39`
+
+## blizzard_framexmlutil
+
+- `CancelAnimations(frame)`: `interface/addons/blizzard_framexmlutil/animationsystem.lua:66`
+- `CooldownFrame_Clear(self)`: `interface/addons/blizzard_framexmlutil/cooldown.lua:11`
+- `CooldownFrame_Set(self, start, duration, enable, forceShowDrawEdge, modRate)`: `interface/addons/blizzard_framexmlutil/cooldown.lua:2`
+- `CooldownFrame_SetDisplayAsPercentage(self, percentage, seconds)`: `interface/addons/blizzard_framexmlutil/cooldown.lua:15`
+- `FadingFrame_CopyTextScalingTime(sourceFadingFrame, targetFadingFrame)`: `interface/addons/blizzard_framexmlutil/fadingframe.lua:75`
+- `FadingFrame_CopyTimes(sourceFadingFrame, targetFadingFrame)`: `interface/addons/blizzard_framexmlutil/fadingframe.lua:112`
+- `FadingFrame_GetRemainingTime(fadingFrame)`: `interface/addons/blizzard_framexmlutil/fadingframe.lua:51`
+- `FadingFrame_GetTextScalingMinHeight(fadingFrame)`: `interface/addons/blizzard_framexmlutil/fadingframe.lua:63`
+- `FadingFrame_InitSlot(fadingFrame, fadeInTime, fadeOutTime, minHeight, maxHeight, scaleUpTime, scaleDownTime)`: `interface/addons/blizzard_framexmlutil/fadingframe.lua:103`
+- `FadingFrame_OnLoad(fadingFrame)`: `interface/addons/blizzard_framexmlutil/fadingframe.lua:14`
+- `FadingFrame_OnUpdate(fadingFrame)`: `interface/addons/blizzard_framexmlutil/fadingframe.lua:28`
+- `FadingFrame_SetFadeInTime(fadingFrame, time)`: `interface/addons/blizzard_framexmlutil/fadingframe.lua:2`
+- `FadingFrame_SetFadeOutTime(fadingFrame, time)`: `interface/addons/blizzard_framexmlutil/fadingframe.lua:10`
+- `FadingFrame_SetHoldTime(fadingFrame, time)`: `interface/addons/blizzard_framexmlutil/fadingframe.lua:6`
+- `FadingFrame_SetTextScaling(fadingFrame, minHeight, maxHeight, scaleUpTime, scaleDownTime)`: `interface/addons/blizzard_framexmlutil/fadingframe.lua:56`
+- `FadingFrame_Show(fadingFrame)`: `interface/addons/blizzard_framexmlutil/fadingframe.lua:22`
+- `FadingFrame_StartTextScaling(fadingFrame)`: `interface/addons/blizzard_framexmlutil/fadingframe.lua:67`
+- `FadingFrame_StopTextScaling(fadingFrame)`: `interface/addons/blizzard_framexmlutil/fadingframe.lua:71`
+- `FadingFrame_UpdateTextScaling(fadingFrame, elapsedTime)`: `interface/addons/blizzard_framexmlutil/fadingframe.lua:79`
+- `GameTime_ComputeMilitaryTime(hour, am)`: `interface/addons/blizzard_framexmlutil/gametimeutil.lua:67`
+- `GameTime_ComputeMinutes(hour, minute, militaryTime, am)`: `interface/addons/blizzard_framexmlutil/gametimeutil.lua:35`
+- `GameTime_ComputeStandardTime(hour)`: `interface/addons/blizzard_framexmlutil/gametimeutil.lua:56`
+- `GameTime_GetFormattedTime(hour, minute, wantAMPM)`: `interface/addons/blizzard_framexmlutil/gametimeutil.lua:9`
+- `GameTime_GetGameTime(wantAMPM)`: `interface/addons/blizzard_framexmlutil/gametimeutil.lua:82`
+- `GameTime_GetLocalTime(wantAMPM)`: `interface/addons/blizzard_framexmlutil/gametimeutil.lua:77`
+- `GameTime_GetTime(showAMPM)`: `interface/addons/blizzard_framexmlutil/gametimeutil.lua:87`
+- `GameTime_UpdateTooltip()`: `interface/addons/blizzard_framexmlutil/gametimeutil.lua:95`
+- `GetColorForCurrencyReward(currencyID, rewardQuantity, defaultColor)`: `interface/addons/blizzard_framexmlutil/currencycontainer.lua:26`
+- `GetCreatureDifficultyColor(level)`: `interface/addons/blizzard_framexmlutil/mainline/difficultyutil.lua:72`
+- `GetDifficultyColor(difficulty)`: `interface/addons/blizzard_framexmlutil/mainline/difficultyutil.lua:64`
+- `GetEditModeAuraDataProvider()`: `interface/addons/blizzard_framexmlutil/editmodeauradataprovider.lua:121`
+- `GetExpansionName(expansion)`: `interface/addons/blizzard_framexmlutil/mainline/expansionutil.lua:1`
+- `GetGroupMemberCountsForDisplay()`: `interface/addons/blizzard_framexmlutil/partyutil.lua:110`
+- `GetQuestDifficultyColor(level, isScaling, optQuestID)`: `interface/addons/blizzard_framexmlutil/mainline/difficultyutil.lua:68`
+- `GetRelativeDifficultyColor(unitLevel, challengeLevel)`: `interface/addons/blizzard_framexmlutil/mainline/difficultyutil.lua:76`
+- `GetScalingQuestDifficultyColor(questLevel)`: `interface/addons/blizzard_framexmlutil/mainline/difficultyutil.lua:80`
+- `QuestSuperTracking_GetSuperTrackedContent(supertracker)`: `interface/addons/blizzard_framexmlutil/mainline/blizzard_questsupertracking.lua:107`
+- `QuestSuperTracking_GetSuperTrackedMapPin(supertracker)`: `interface/addons/blizzard_framexmlutil/mainline/blizzard_questsupertracking.lua:111`
+- `QuestSuperTracking_GetSuperTrackedQuestID(supertracker)`: `interface/addons/blizzard_framexmlutil/mainline/blizzard_questsupertracking.lua:103`
+- `QuestSuperTracking_GetSuperTrackedVignette(supertracker)`: `interface/addons/blizzard_framexmlutil/mainline/blizzard_questsupertracking.lua:115`
+- `QuestSuperTracking_Initialize()`: `interface/addons/blizzard_framexmlutil/mainline/blizzard_questsupertracking.lua:135`
+- `QuestSuperTracking_ShouldHighlightDungeons(uiMapID)`: `interface/addons/blizzard_framexmlutil/mainline/blizzard_questsupertracking.lua:127`
+- `QuestSuperTracking_ShouldHighlightTreasures(uiMapID)`: `interface/addons/blizzard_framexmlutil/mainline/blizzard_questsupertracking.lua:131`
+- `QuestSuperTracking_ShouldHighlightWorldQuests(uiMapID)`: `interface/addons/blizzard_framexmlutil/mainline/blizzard_questsupertracking.lua:119`
+- `QuestSuperTracking_ShouldHighlightWorldQuestsElite(uiMapID)`: `interface/addons/blizzard_framexmlutil/mainline/blizzard_questsupertracking.lua:123`
+- `QuestUtils_AddQuestCurrencyRewardsToTooltip(questID, tooltip, currencyContainerTooltip, context)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:906`
+- `QuestUtils_AddQuestRewardsToTooltip(tooltip, questID, style, context)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:765`
+- `QuestUtils_AddQuestTagLineToTooltip(tooltip, tagName, tagID, worldQuestType, color, iconWidth, iconHeight)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:680`
+- `QuestUtils_AddQuestTypeToTooltip(tooltip, questID, color, iconWidth, iconHeight)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:670`
+- `QuestUtils_DecorateQuestText(questID, text, useLargeIcon, ignoreReplayable, ignoreDisabled, ignoreTypes)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:728`
+- `QuestUtils_GetBestQualityItemRewardIndex(questID)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:1014`
+- `QuestUtils_GetCurrentQuestLineQuest(questLineID)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:994`
+- `QuestUtils_GetDisabledQuestDecoration(questID, useLargeIcon)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:718`
+- `QuestUtils_GetNumPartyMembersOnQuest(questID)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:1061`
+- `QuestUtils_GetQuestDecorationLink(linkType, questID, icon, width, height)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:704`
+- `QuestUtils_GetQuestLogRewardInfo(itemIndex, questID, rewardType)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:1006`
+- `QuestUtils_GetQuestName(questID)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:686`
+- `QuestUtils_GetQuestTagAtlas(tagID, worldQuestType)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:642`
+- `QuestUtils_GetQuestTimeColor(secondsRemaining)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:1051`
+- `QuestUtils_GetQuestTypeIconMarkupString(questID, iconWidth, iconHeight)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:663`
+- `QuestUtils_GetReplayQuestDecoration(questID, useLargeIcon)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:708`
+- `QuestUtils_IsQuestBonusObjective(questID)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:659`
+- `QuestUtils_IsQuestDungeonQuest(questID)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:654`
+- `QuestUtils_IsQuestWatched(questID)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:1072`
+- `QuestUtils_IsQuestWithinCriticalTimeThreshold(questID)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:1047`
+- `QuestUtils_IsQuestWithinLowTimeThreshold(questID)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:1043`
+- `QuestUtils_IsQuestWithinTimeThreshold(questID, threshold)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:1038`
+- `QuestUtils_IsQuestWorldQuest(questID)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:650`
+- `QuestUtils_ShouldDisplayExpirationWarning(questID)`: `interface/addons/blizzard_framexmlutil/mainline/questutils.lua:1056`
+- `SetQuestTitleLevelAndDifficultyColor(questID, title)`: `interface/addons/blizzard_framexmlutil/mainline/difficultyutil.lua:84`
+- `SetUpAnimation(frame, animTable, postFunc, reverse)`: `interface/addons/blizzard_framexmlutil/animationsystem.lua:46`
+- `TogglePlayerSpellsFrame(suggestedTab, inspectUnit)`: `interface/addons/blizzard_framexmlutil/mainline/playerspellsutil.lua:157`
+- `WillCurrencyRewardOverflow(currencyID, rewardQuantity)`: `interface/addons/blizzard_framexmlutil/currencycontainer.lua:20`
+
+## blizzard_friendsframe
+
+- `CanCooperateWithGameAccount(accountInfo)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:2251`
+- `CanCooperateWithGameAccount(accountInfo)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:2533`
+- `CanGroupWithAccount(bnetIDAccount)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:2262`
+- `CanGroupWithAccount(bnetIDAccount)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:2544`
+- `FriendsFrame_BattlenetInviteByIndex(friendIndex)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:2155`
+- `FriendsFrame_BattlenetInviteByIndex(friendIndex)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:2437`
+- `FriendsFrame_CheckBattlenetStatus()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1477`
+- `FriendsFrame_CheckBattlenetStatus()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1737`
+- `FriendsFrame_CheckQuickJoinHelpTip()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1322`
+- `FriendsFrame_CheckQuickJoinHelpTip()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1527`
+- `FriendsFrame_ClickSummonButton(self)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:183`
+- `FriendsFrame_ClickSummonButton(self)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:188`
+- `FriendsFrame_FriendButtonSetSelection(button, selected)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1678`
+- `FriendsFrame_FriendButtonSetSelection(button, selected)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1938`
+- `FriendsFrame_GetBestUIPanelWidth()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:97`
+- `FriendsFrame_GetBestUIPanelWidth()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:102`
+- `FriendsFrame_GetBNetAccountNameAndStatus(accountInfo, noCharacterName)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1525`
+- `FriendsFrame_GetBNetAccountNameAndStatus(accountInfo, noCharacterName)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1785`
+- `FriendsFrame_GetDisplayedInviteTypeAndGuid(index)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:2287`
+- `FriendsFrame_GetDisplayedInviteTypeAndGuid(index)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:2569`
+- `FriendsFrame_GetFormattedCharacterName(characterName, battleTag, client, timerunningSeasonID)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1515`
+- `FriendsFrame_GetFormattedCharacterName(characterName, battleTag, client, timerunningSeasonID)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1775`
+- `FriendsFrame_GetInviteRestriction(index)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:2313`
+- `FriendsFrame_GetInviteRestriction(index)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:2595`
+- `FriendsFrame_GetInviteRestrictionText(restriction)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:2354`
+- `FriendsFrame_GetInviteRestrictionText(restriction)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:2636`
+- `FriendsFrame_GetLastOnline(timeDifference, isAbsolute)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1454`
+- `FriendsFrame_GetLastOnline(timeDifference, isAbsolute)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1714`
+- `FriendsFrame_GetLastOnlineText(accountInfo)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1565`
+- `FriendsFrame_GetLastOnlineText(accountInfo)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1825`
+- `FriendsFrame_GetPlayerGUIDFromIndex(index)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:2275`
+- `FriendsFrame_GetPlayerGUIDFromIndex(index)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:2557`
+- `FriendsFrame_GroupInvite()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1245`
+- `FriendsFrame_GroupInvite()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1446`
+- `FriendsFrame_HideAllPotentialSubFrames()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:85`
+- `FriendsFrame_HideAllPotentialSubFrames()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:90`
+- `FriendsFrame_InviteOrRequestToJoin(guid, gameAccountID)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:2139`
+- `FriendsFrame_InviteOrRequestToJoin(guid, gameAccountID)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:2421`
+- `FriendsFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1024`
+- `FriendsFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1222`
+- `FriendsFrame_OnHide(self)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:490`
+- `FriendsFrame_OnHide(self)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:522`
+- `FriendsFrame_OnLoad(self)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:283`
+- `FriendsFrame_OnLoad(self)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:290`
+- `FriendsFrame_OnShow(self)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:378`
+- `FriendsFrame_OnShow(self)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:403`
+- `FriendsFrame_RemoveFriend()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1228`
+- `FriendsFrame_RemoveFriend()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1429`
+- `FriendsFrame_SelectFriend(friendType, id)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1122`
+- `FriendsFrame_SelectFriend(friendType, id)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1323`
+- `FriendsFrame_SelectSquelched(squelchType, index)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1149`
+- `FriendsFrame_SelectSquelched(squelchType, index)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1350`
+- `FriendsFrame_SendMessage()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1235`
+- `FriendsFrame_SendMessage()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1436`
+- `FriendsFrame_SetupTravelPassDropdown(friendIndex, attachedTo)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:2190`
+- `FriendsFrame_SetupTravelPassDropdown(friendIndex, attachedTo)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:2472`
+- `FriendsFrame_ShouldShowSummonButton(self)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:117`
+- `FriendsFrame_ShouldShowSummonButton(self)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:122`
+- `FriendsFrame_ShowBNDropdown(name, connected, lineID, chatType, chatFrame, friendsList, bnetIDAccount, communityClubID, communityStreamID, communityEpoch, communityPosition, battleTag)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:225`
+- `FriendsFrame_ShowBNDropdown(name, connected, lineID, chatType, chatFrame, friendsList, bnetIDAccount, communityClubID, communityStreamID, communityEpoch, communityPosition, battleTag)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:230`
+- `FriendsFrame_ShowDropdown(name, connected, lineID, chatType, chatFrame, friendsList, communityClubID, communityStreamID, communityEpoch, communityPosition, guid)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:200`
+- `FriendsFrame_ShowDropdown(name, connected, lineID, chatType, chatFrame, friendsList, communityClubID, communityStreamID, communityEpoch, communityPosition, guid)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:205`
+- `FriendsFrame_ShowSubFrame(frameName)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:69`
+- `FriendsFrame_ShowSubFrame(frameName)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:74`
+- `FriendsFrame_SummonButton_OnShow(self)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:113`
+- `FriendsFrame_SummonButton_OnShow(self)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:118`
+- `FriendsFrame_SummonButton_Update(self)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:150`
+- `FriendsFrame_SummonButton_Update(self)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:155`
+- `FriendsFrame_UnBlock(button, blockID)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1224`
+- `FriendsFrame_UnBlock(button, blockID)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1425`
+- `FriendsFrame_UnIgnore(button, name)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1218`
+- `FriendsFrame_UnIgnore(button, name)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1419`
+- `FriendsFrame_Update()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:427`
+- `FriendsFrame_Update()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:452`
+- `FriendsFrame_UpdateFriendButton(button, elementData)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1686`
+- `FriendsFrame_UpdateFriendButton(button, elementData)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1946`
+- `FriendsFrame_UpdateFriendInviteButton(button, elementData)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1665`
+- `FriendsFrame_UpdateFriendInviteButton(button, elementData)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1925`
+- `FriendsFrame_UpdateFriendInviteHeaderButton(button, elementData)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1632`
+- `FriendsFrame_UpdateFriendInviteHeaderButton(button, elementData)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1892`
+- `FriendsFrame_UpdateInsetVisibility()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:476`
+- `FriendsFrame_UpdateInsetVisibility()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:508`
+- `FriendsFrame_UpdatePartyInviteButton(button, elementData)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1648`
+- `FriendsFrame_UpdatePartyInviteButton(button, elementData)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1908`
+- `FriendsFrame_UpdatePartyInviteHeaderButton(button, elementData)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1659`
+- `FriendsFrame_UpdatePartyInviteHeaderButton(button, elementData)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1919`
+- `FriendsFrame_UpdateQuickJoinTab(numGroups)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:485`
+- `FriendsFrame_UpdateQuickJoinTab(numGroups)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:517`
+- `FriendsFrame_UpdateUIPanelWidth()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:108`
+- `FriendsFrame_UpdateUIPanelWidth()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:113`
+- `FriendsFrameBattlenetFrame_HideSubFrames()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1875`
+- `FriendsFrameBattlenetFrame_HideSubFrames()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:2135`
+- `FriendsFrameIgnorePlayerButton_OnClick(self)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1204`
+- `FriendsFrameIgnorePlayerButton_OnClick(self)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1405`
+- `FriendsFrameMuteButton_OnClick(self)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1188`
+- `FriendsFrameMuteButton_OnClick(self)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1389`
+- `FriendsFrameSendMessageButton_OnClick(self)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1172`
+- `FriendsFrameSendMessageButton_OnClick(self)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1373`
+- `FriendsFrameTooltip_SetLine(line, anchor, text, yOffset)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1880`
+- `FriendsFrameTooltip_SetLine(line, anchor, text, yOffset)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:2140`
+- `FriendsFrameUnsquelchButton_OnClick(self)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1193`
+- `FriendsFrameUnsquelchButton_OnClick(self)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1394`
+- `FriendsFriendsFrame_Show(bnetIDAccount)`: `interface/addons/blizzard_friendsframe/mainline/friendsfriendsframe.lua:274`
+- `FriendsList_CanWhisperFriend(friendType, friendIndex)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:756`
+- `FriendsList_CanWhisperFriend(friendType, friendIndex)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:788`
+- `FriendsList_CheckRIDWarning()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:883`
+- `FriendsList_CheckRIDWarning()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:915`
+- `FriendsList_ClosePendingInviteDialogs()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:750`
+- `FriendsList_ClosePendingInviteDialogs()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:782`
+- `FriendsList_Update(forceUpdate)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:771`
+- `FriendsList_Update(forceUpdate)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:803`
+- `FriendsListFrame_OnHide(self)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:698`
+- `FriendsListFrame_OnHide(self)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:730`
+- `FriendsListFrame_OnShow(self)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:681`
+- `FriendsListFrame_OnShow(self)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:713`
+- `FriendsListFrame_SetInviteHeaderAnimPlaying(playing)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:702`
+- `FriendsListFrame_SetInviteHeaderAnimPlaying(playing)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:734`
+- `FriendsListFrame_ToggleInvites()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:711`
+- `FriendsListFrame_ToggleInvites()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:743`
+- `IgnoreList_GetSelected()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:925`
+- `IgnoreList_GetSelected()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:957`
+- `IgnoreList_InitButton(button, elementData)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:903`
+- `IgnoreList_InitButton(button, elementData)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:935`
+- `IgnoreList_SetButtonSelected(button, selected)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:936`
+- `IgnoreList_SetButtonSelected(button, selected)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:968`
+- `IgnoreList_Update()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:944`
+- `IgnoreList_Update()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:976`
+- `OpenFriendsFrame(tab)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1340`
+- `OpenFriendsFrame(tab)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1545`
+- `ShowWhoPanel()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1359`
+- `ShowWhoPanel()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1619`
+- `ToggleFriendsFrame(requestedTab)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1266`
+- `ToggleFriendsFrame(requestedTab)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1467`
+- `ToggleFriendsPanel()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1388`
+- `ToggleFriendsPanel()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1648`
+- `ToggleFriendsSubPanel(panelIndex)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1368`
+- `ToggleFriendsSubPanel(panelIndex)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1628`
+- `ToggleIgnorePanel()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1424`
+- `ToggleIgnorePanel()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1684`
+- `ToggleQuickJoinPanel()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1415`
+- `ToggleQuickJoinPanel()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1675`
+- `ToggleRAFPanel()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1406`
+- `ToggleRAFPanel()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1666`
+- `ToggleRaidFrame()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1313`
+- `ToggleRaidFrame()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1518`
+- `ToggleRecentAlliesPanel()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1397`
+- `ToggleRecentAlliesPanel()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1657`
+- `TravelPassButton_OnEnter(self)`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:2401`
+- `TravelPassButton_OnEnter(self)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:2683`
+- `WhoFrame_GetDefaultWhoCommand()`: `interface/addons/blizzard_friendsframe/camelot/friendsframe.lua:1443`
+- `WhoFrame_GetDefaultWhoCommand()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1703`
+- `WhoFrameColumn_SetWidth(frame, width)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1108`
+- `WhoFrameDropdown_Initialize(self)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1157`
+- `WhoFrameDropdown_OnEnter(self)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1170`
+- `WhoFrameDropdown_OnLeave(self)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1174`
+- `WhoFrameDropdown_OnLoad(self)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1113`
+- `WhoFrameDropdown_OnShow(self)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1166`
+- `WhoList_InitButton(button, elementData)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1012`
+- `WhoList_SetSelectedButton(button)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1061`
+- `WhoList_Update()`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1085`
+- `WhoListButton_SetSelected(button, selected)`: `interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:1053`
+
+## blizzard_game
+
+- `CloseMenus()`: `interface/addons/blizzard_game/shared/game.lua:68`
+- `SetStoreUIShown(shown)`: `interface/addons/blizzard_game/classic/game.lua:34`
+- `ToggleGroupFinderFrame(sidePanelName, selection)`: `interface/addons/blizzard_game/shared/game.lua:74`
+- `ToggleGuildFrame()`: `interface/addons/blizzard_game/classic/game.lua:1`
+- `ToggleGuildFrame()`: `interface/addons/blizzard_game/mainline/game.lua:1`
+- `ToggleStoreUI()`: `interface/addons/blizzard_game/classic/game.lua:58`
+
+## blizzard_gamemenu
+
+- `GameMenuFrame_EscapePressed()`: `interface/addons/blizzard_gamemenu/shared/gamemenuframe.lua:26`
+- `GameMenuFrame_IsShown()`: `interface/addons/blizzard_gamemenu/shared/gamemenuframe.lua:22`
+- `GameMenuFrame_LeaveMatch()`: `interface/addons/blizzard_gamemenu/wowlabs/gamemenuframe.lua:35`
+- `GameMenuFrame_OnShow(self)`: `interface/addons/blizzard_gamemenu/wowlabs/gamemenuframe.lua:1`
+- `GameMenuFrame_Show()`: `interface/addons/blizzard_gamemenu/shared/gamemenuframe.lua:38`
+- `GameMenuFrame_UpdateVisibleButtons(self)`: `interface/addons/blizzard_gamemenu/wowlabs/gamemenuframe.lua:13`
+
+## blizzard_gamemenuesc
+
+- `RegisterGameMenuEscHandler(priority, handler)`: `interface/addons/blizzard_gamemenuesc/blizzard_gamemenuesc.lua:76`
+- `ToggleGameMenu()`: `interface/addons/blizzard_gamemenuesc/blizzard_gamemenuesc.lua:109`
+
+## blizzard_gamepadsharedutility
+
+- `DumpGamepadBindingsToClipboard()`: `interface/addons/blizzard_gamepadsharedutility/inputbindingstack/inputbindingmanager.lua:273`
+- `DumpGamepadBindingsToWindow()`: `interface/addons/blizzard_gamepadsharedutility/inputbindingstack/inputbindingmanager.lua:279`
+
+## blizzard_gamepadsmartnavigation
+
+- `ResolveAnchor(point, left, bottom, width, height)`: `interface/addons/blizzard_gamepadsmartnavigation/smartnavigation.lua:1078`
+- `SmartNavigation_AddBidirectionalJumpNavigationOverride(sourceButton, destinationDir, destinationButton, optionalSourceDir)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:375`
+- `SmartNavigation_AddIgnoreInputNavigationOverride(button, direction)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:436`
+- `SmartNavigation_AddJumpNavigationOverride(button, direction, overrideButton)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:338`
+- `SmartNavigation_CallOutgoingDirNavigationCallbacks(button, direction)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:532`
+- `SmartNavigation_CanFocusFrame(frame)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:196`
+- `SmartNavigation_ClearIgnoreStatus(inFrame)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:17`
+- `SmartNavigation_ClearJumpNavigationOverrides(button)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:398`
+- `SmartNavigation_ClearJumpNavigationOverridesInDirection(button, direction)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:416`
+- `SmartNavigation_GetNavigationOverrideFrame(button, direction)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:464`
+- `SmartNavigation_IsCurrentButtonClickable()`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:148`
+- `SmartNavigation_IsFrameBlockingSmartNavClick(inFrame)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:121`
+- `SmartNavigation_IsFrameFocusable(inFrame)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:47`
+- `SmartNavigation_IsFrameIgnored(frame)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:21`
+- `SmartNavigation_IsFrameNonCollapsingScrollBoxElement(inFrame)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:103`
+- `SmartNavigation_IsFrameSubSection(inFrame)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:84`
+- `SmartNavigation_IsIgnoredContainerFrame(inFrame)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:65`
+- `SmartNavigation_MarkFrameBlockingSmartNavClick(inFrame)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:117`
+- `SmartNavigation_MarkFrameFocusable(inFrame)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:43`
+- `SmartNavigation_MarkFrameIgnored(inFrame)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:13`
+- `SmartNavigation_MarkFrameIgnoredContainerFrame(inFrame)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:61`
+- `SmartNavigation_MarkFrameNonCollapsingScrollBoxElement(inFrame)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:99`
+- `SmartNavigation_MarkFrameSubSection(inFrame, inFocusKey)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:69`
+- `SmartNavigation_MarkScrollFrameMaintainPreviousButtonOnScroll(inScrollFrame)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:140`
+- `SmartNavigation_RegisterOutgoingDirNavCallback(button, direction, callback)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:489`
+- `SmartNavigation_RegisterOutgoingNavCallback_MultiDir(button, directions, callback)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:514`
+- `SmartNavigation_ResetData(frame, recurse)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:165`
+- `SmartNavigation_SelectScrollBoxCurrentOrTop(scrollBox)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:107`
+- `SmartNavigation_SetButtonFrame(inFrame, forFrame)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:52`
+- `SmartNavigation_SetCustomCursorAnchorPointForFrame(inFrame, cursorAnchor)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:125`
+- `SmartNavigation_SetDirectionBufferThreshold(inFrame, direction, degree)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:73`
+- `SmartNavigation_SetReturnFrameFocusButton(inButton)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:88`
+- `SmartNavigation_ShouldScrollFrameMaintainPreviousButtonOnScroll(inScrollFrame)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:144`
+- `SmartNavigation_UseVerticalCursorForFrame(inFrame)`: `interface/addons/blizzard_gamepadsmartnavigation/utility.lua:547`
+
+## blizzard_gamepadsoftcursor
+
+- `SoftCursor_CreateCircleBounds(inX, inY, inRadius)`: `interface/addons/blizzard_gamepadsoftcursor/softcursor.lua:163`
+- `SoftCursor_CreateRectBounds(inX, inY, inWidth, inHeight)`: `interface/addons/blizzard_gamepadsoftcursor/softcursor.lua:188`
+
+## blizzard_gamepadtargeting
+
+- `GetNextFriendlyRaidTargetMarkerIndex()`: `interface/addons/blizzard_gamepadtargeting/targetlogic.lua:50`
+- `GetNextHostileRaidTargetMarkerIndex()`: `interface/addons/blizzard_gamepadtargeting/targetlogic.lua:54`
+
+## blizzard_gametooltip
+
+- `EmbeddedItemTooltip_Clear(self)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:783`
+- `EmbeddedItemTooltip_Hide(self)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:778`
+- `EmbeddedItemTooltip_PrepareForFollower(self)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:803`
+- `EmbeddedItemTooltip_PrepareForItem(self)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:790`
+- `EmbeddedItemTooltip_PrepareForSpell(self)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:797`
+- `EmbeddedItemTooltip_SetCurrencyByID(self, currencyID, quantity)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:924`
+- `EmbeddedItemTooltip_SetItemByID(self, id, count)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:808`
+- `EmbeddedItemTooltip_SetItemByQuestReward(self, questLogIndex, questID, rewardType, showCollectionText)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:824`
+- `EmbeddedItemTooltip_SetSpellByFirstQuestReward(self, questID)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:858`
+- `EmbeddedItemTooltip_SetSpellByQuestReward(self, spellID, questID)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:867`
+- `EmbeddedItemTooltip_SetSpellWithTextureByID(self, spellID, texture)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:904`
+- `EmbeddedItemTooltip_UpdateSize(self)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:765`
+- `GameTooltip_AddColoredMoneyLine(self, rawCopper, color)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:315`
+- `GameTooltip_AddMoneyLine(self, rawCopper, useRedLineColor)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:320`
+- `GameTooltip_AddProgressBar(self, min, max, value, text)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:562`
+- `GameTooltip_AddQuest(self)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:641`
+- `GameTooltip_AddQuestRewardsToTooltip(tooltip, questID, style, context)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:193`
+- `GameTooltip_AddQuestTimeToTooltip(tooltip, questID)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:228`
+- `GameTooltip_AddStatusBar(self, min, max, value, text)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:530`
+- `GameTooltip_AddWidgetSet(self, widgetSetID, verticalPadding)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:588`
+- `GameTooltip_CalculatePadding(tooltip)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:236`
+- `GameTooltip_CheckAddQuestTimeToTooltip(tooltip, questID)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:222`
+- `GameTooltip_ClearAllStatusBars(self)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:516`
+- `GameTooltip_ClearProgressBars(self)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:547`
+- `GameTooltip_ClearStatusBars(self)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:504`
+- `GameTooltip_ClearStatusBarWatch(self)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:510`
+- `GameTooltip_ClearStyle(self)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:478`
+- `GameTooltip_ClearWidgetSet(self)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:612`
+- `GameTooltip_CycleSecondaryComparedItem(self)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:429`
+- `GameTooltip_Hide()`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:618`
+- `GameTooltip_HideBattlePetTooltip()`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:466`
+- `GameTooltip_HideEventHyperlink()`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:498`
+- `GameTooltip_HideResetCursor()`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:628`
+- `GameTooltip_HideShoppingTooltips(self)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:472`
+- `GameTooltip_HideTooltip(tooltip)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:624`
+- `GameTooltip_IsUpdateNeeded(self, elapsed)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:441`
+- `GameTooltip_OnHide(self)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:395`
+- `GameTooltip_OnLoad(self)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:306`
+- `GameTooltip_OnShow(self)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:380`
+- `GameTooltip_OnTooltipAddMoney(self, cost, maxcost)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:325`
+- `GameTooltip_OnUpdate(self, elapsed)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:451`
+- `GameTooltip_SetBasicTooltip(tooltip, text, x, y, wrap)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:185`
+- `GameTooltip_SetBottomInstructions(self, ...)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:302`
+- `GameTooltip_SetBottomText(self, text, lineColor)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:294`
+- `GameTooltip_SetTooltipWaitingForData(self, waitingForData)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:433`
+- `GameTooltip_ShowCompareItem(self, anchorFrame)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:483`
+- `GameTooltip_ShowEventHyperlink(hyperlink)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:493`
+- `GameTooltip_ShowHyperlink(self, hyperlinkString, classID, specID, clearTooltip)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:571`
+- `GameTooltip_ShowProgressBar(self, min, max, value, text)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:553`
+- `GameTooltip_ShowStatusBar(self, min, max, value, text)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:521`
+- `GameTooltip_SuppressAutomaticCompareItem(tooltip)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:761`
+- `GameTooltip_UnitColor(unit)`: `interface/addons/blizzard_gametooltip/mainline/gametooltip.lua:120`
+- `HealthBar_OnValueChanged(self, value, smooth)`: `interface/addons/blizzard_gametooltip/healthbar.lua:2`
+
+## blizzard_garrisonbase
+
+- `DoesFollowerMatchCurrentGarrisonType(followerType)`: `interface/addons/blizzard_garrisonbase/garrisonbaseutils.lua:432`
+- `FloatingGarrisonFollower_Show(floatingTooltip, garrisonFollowerID, followerTypeID, quality, level, itemLevel, spec1, ability1, ability2, ability3, ability4, trait1, trait2, trait3, trait4)`: `interface/addons/blizzard_garrisonbase/floatinggarrisonfollowertooltip.lua:24`
+- `FloatingGarrisonFollower_Toggle(garrisonFollowerID, quality, level, itemLevel, spec1, ability1, ability2, ability3, ability4, trait1, trait2, trait3, trait4)`: `interface/addons/blizzard_garrisonbase/floatinggarrisonfollowertooltip.lua:10`
+- `FloatingGarrisonFollowerAbility_Show(garrFollowerAbilityID)`: `interface/addons/blizzard_garrisonbase/floatinggarrisonfollowertooltip.lua:557`
+- `FloatingGarrisonFollowerAbility_Toggle(garrFollowerAbilityID)`: `interface/addons/blizzard_garrisonbase/floatinggarrisonfollowertooltip.lua:548`
+- `FloatingGarrisonMission_Show(garrMissionID, garrMissionDBID)`: `interface/addons/blizzard_garrisonbase/floatinggarrisonfollowertooltip.lua:635`
+- `FloatingGarrisonMission_Toggle(garrMissionID, garrMissionDBID)`: `interface/addons/blizzard_garrisonbase/floatinggarrisonfollowertooltip.lua:625`
+- `FloatingGarrisonMissionTooltip_OnEvent(self, event, ...)`: `interface/addons/blizzard_garrisonbase/floatinggarrisonfollowertooltip.lua:704`
+- `FloatingGarrisonMissionTooltip_OnHide(self)`: `interface/addons/blizzard_garrisonbase/floatinggarrisonfollowertooltip.lua:700`
+- `FloatingGarrisonMissionTooltip_OnShow(self)`: `interface/addons/blizzard_garrisonbase/floatinggarrisonfollowertooltip.lua:696`
+- `GarrisonFollowerAbilityTooltip_Show(tooltip, garrFollowerAbilityID, followerTypeID)`: `interface/addons/blizzard_garrisonbase/garrisonfollowertooltip.lua:85`
+- `GarrisonFollowerAbilityTooltipTemplate_SetAbility(tooltipFrame, garrFollowerAbilityID, followerTypeID)`: `interface/addons/blizzard_garrisonbase/floatinggarrisonfollowertooltip.lua:561`
+- `GarrisonFollowerTooltip_Show(garrisonFollowerID, collected, quality, level, xp, levelxp, itemLevel, spec1, ability1, ability2, ability3, ability4, trait1, trait2, trait3, trait4, noAbilityDescriptions, underBiased, underBiasedReason, tooltipFrame, xpWidth)`: `interface/addons/blizzard_garrisonbase/garrisonfollowertooltip.lua:2`
+- `GarrisonFollowerTooltip_ShowWithData(data, tooltipFrame)`: `interface/addons/blizzard_garrisonbase/garrisonfollowertooltip.lua:32`
+- `GarrisonFollowerTooltipTemplate_BuildDefaultDataForID(garrFollowerID)`: `interface/addons/blizzard_garrisonbase/garrisonfollowertooltip.lua:49`
+- `GarrisonFollowerTooltipTemplate_GetValidAbilities(abilities)`: `interface/addons/blizzard_garrisonbase/floatinggarrisonfollowertooltip.lua:474`
+- `GarrisonFollowerTooltipTemplate_SetAbility(Ability, ability, detailed, followerTypeID)`: `interface/addons/blizzard_garrisonbase/floatinggarrisonfollowertooltip.lua:487`
+- `GarrisonFollowerTooltipTemplate_SetAutoSpell(frame, autoSpell)`: `interface/addons/blizzard_garrisonbase/floatinggarrisonfollowertooltip.lua:525`
+- `GarrisonFollowerTooltipTemplate_SetGarrisonFollower(tooltipFrame, data, xpWidth)`: `interface/addons/blizzard_garrisonbase/floatinggarrisonfollowertooltip.lua:59`
+- `GarrisonFollowerTooltipTemplate_SetShipyardFollower(tooltipFrame, data, xpWidth)`: `interface/addons/blizzard_garrisonbase/floatinggarrisonfollowertooltip.lua:377`
+- `GetGarrisonMissionFrameNameForFollowerType(followerTypeID)`: `interface/addons/blizzard_garrisonbase/garrisonbaseutils.lua:335`
+- `GetGarrisonTalentCostString(talentInfo, abbreviate, colorCode)`: `interface/addons/blizzard_garrisonbase/garrisonbaseutils.lua:531`
+- `GetGarrisonTypeForFollowerType(followerTypeID)`: `interface/addons/blizzard_garrisonbase/garrisonbaseutils.lua:345`
+- `GetPrimaryGarrisonFollowerType(garrTypeID)`: `interface/addons/blizzard_garrisonbase/garrisonbaseutils.lua:326`
+- `HideGarrisonFollowerAbilityTooltip(followerTypeID)`: `interface/addons/blizzard_garrisonbase/garrisonfollowertooltip.lua:99`
+- `HideGarrisonFollowerAbilityTooltipWithExtraDescriptionText(followerTypeID)`: `interface/addons/blizzard_garrisonbase/garrisonfollowertooltip.lua:114`
+- `HideGarrisonFollowerMissionAbilityTooltip(followerTypeID)`: `interface/addons/blizzard_garrisonbase/garrisonfollowertooltip.lua:129`
+- `IsGarrisonLandingPageFeatured()`: `interface/addons/blizzard_garrisonbase/garrisonbaseutils.lua:368`
+- `ShouldShowFollowerAbilityBorder(followerTypeID, abilityInfo)`: `interface/addons/blizzard_garrisonbase/garrisonbaseutils.lua:355`
+- `ShouldShowILevelInFollowerList(followerInfo)`: `interface/addons/blizzard_garrisonbase/garrisonbaseutils.lua:360`
+- `ShowGarrisonFollowerAbilityTooltip(frame, garrFollowerAbilityID, followerTypeID)`: `interface/addons/blizzard_garrisonbase/garrisonfollowertooltip.lua:90`
+- `ShowGarrisonFollowerAbilityTooltipWithExtraDescriptionText(frame, garrFollowerAbilityID, followerTypeID, extraText)`: `interface/addons/blizzard_garrisonbase/garrisonfollowertooltip.lua:104`
+- `ShowGarrisonFollowerMissionAbilityTooltip(frame, garrFollowerAbilityID, followerTypeID)`: `interface/addons/blizzard_garrisonbase/garrisonfollowertooltip.lua:120`
+- `ShowGarrisonLandingPage(garrTypeID)`: `interface/addons/blizzard_garrisonbase/garrisonbaseutils.lua:373`
+
+## blizzard_garrisontemplates
+
+- `AddAutoCombatSpellToTooltip(tooltip, autoCombatSpell)`: `interface/addons/blizzard_garrisontemplates/blizzard_covenantmissiontemplates.lua:1`
+- `CovenantMission_GetSupportColorationPreviewType(previewType)`: `interface/addons/blizzard_garrisontemplates/blizzard_covenantmissiontemplates.lua:677`
+- `CovenantMissionAutoSpellAbilityTemplate_OnEnter(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_covenantmissiontemplates.lua:46`
+- `CovenantMissionAutoSpellAbilityTemplate_OnLeave()`: `interface/addons/blizzard_garrisontemplates/blizzard_covenantmissiontemplates.lua:57`
+- `CovenantMissionButton_InitButton(button, elementData)`: `interface/addons/blizzard_garrisontemplates/blizzard_covenantmissiontemplates.lua:391`
+- `CovenantMissionButton_OnClick(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_covenantmissiontemplates.lua:382`
+- `CovenantMissionButton_OnEnter(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_covenantmissiontemplates.lua:531`
+- `CovenantMissionHealFollowerButton_OnClick(buttonFrame)`: `interface/addons/blizzard_garrisontemplates/blizzard_covenantmissiontemplates.lua:65`
+- `CovenantMissionHealFollowerButton_OnEnter(buttonFrame)`: `interface/addons/blizzard_garrisontemplates/blizzard_covenantmissiontemplates.lua:70`
+- `CovenantMissionInfoTooltip_OnEnter(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_covenantmissiontemplates.lua:460`
+- `GarrisionFollowerPageUpgradeTarget_OnClick(self, button)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:2401`
+- `GarrisionFollowerPageUpgradeTarget_OnEvent(self, event)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1529`
+- `GarrisionFollowerPageUpgradeTarget_OnLoad(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1524`
+- `GarrisionFollowerPageUpgradeTarget_Update(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1535`
+- `Garrison_SortMissions(missionsList)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:2630`
+- `GarrisonCinematicModelBase_OnEvent(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1376`
+- `GarrisonCinematicModelBase_OnLoad(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1371`
+- `GarrisonEquipment_AddEquipment(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:2542`
+- `GarrisonEquipment_StopAnimations(frame)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:2576`
+- `GarrisonFollower_AttemptUpgrade(followerID)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1650`
+- `GarrisonFollower_DisplayUpgradeConfirmation(followerInfo, upgradeType)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1620`
+- `GarrisonFollower_GetAbilityUsageResult(followerID, followerInfo, abilityID, predicate)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1576`
+- `GarrisonFollower_GetUpgradeAttemptResult(followerID, followerInfo)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1595`
+- `GarrisonFollowerAbilities_IsNew(lastUpdate, followerID, abilityIdToTest, abilityType)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:2762`
+- `GarrisonFollowerButton_AddAbility(self, index, ability, followerType)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:908`
+- `GarrisonFollowerButton_AddAutoSpellButtons(button, follower)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:812`
+- `GarrisonFollowerButton_AddCounterButtons(button, follower, numShown, counters, lastUpdate)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:649`
+- `GarrisonFollowerButton_CalculateExpandedButtonHeight(collapsedHeight, elementData)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:889`
+- `GarrisonFollowerButton_SetAutoSpellButton(button, followerID, index, info, followerTypeID)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:818`
+- `GarrisonFollowerButton_SetCounterButton(button, followerID, index, info, lastUpdate, followerTypeID)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:716`
+- `GarrisonFollowerButton_UpdateAutoSpells(frame, button, follower)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:777`
+- `GarrisonFollowerButton_UpdateCounters(frame, button, follower, showCounters, lastUpdate)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:672`
+- `GarrisonFollowerList_DefaultMissionSort(self, follower1, follower2)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1196`
+- `GarrisonFollowerList_DefaultSort(self, follower1, follower2)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1145`
+- `GarrisonFollowerList_InitButton(frame, elementData)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:486`
+- `GarrisonFollowerList_InitializeDefaultMissionSort(self, followers)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1170`
+- `GarrisonFollowerList_InitializeDefaultSort(self, followers)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1130`
+- `GarrisonFollowerList_InitializePrioritizeSpecializationAbilityMissionSort(self, followers)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1230`
+- `GarrisonFollowerList_PrioritizeSpecializationAbilityMissionSort(self, follower1, follower2)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1260`
+- `GarrisonFollowerList_SetButtonMode(followerList, button, mode)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:456`
+- `GarrisonFollowerList_SortFollowers(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1290`
+- `GarrisonFollowerList_ToggleExpansion(elementData, scrollBox)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:941`
+- `GarrisonFollowerListButton_OnClick(self, button)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:953`
+- `GarrisonFollowerListButton_OnDragStart(self, button)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:329`
+- `GarrisonFollowerListButton_OnDragStop(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:336`
+- `GarrisonFollowerListButton_OnModifiedClick(self, button)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1088`
+- `GarrisonFollowerListButton_OnUserClick(self, button)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1106`
+- `GarrisonFollowerPage_AnchorAbility(abilityFrame, lastAnchor, headerString, isLandingPage)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1426`
+- `GarrisonFollowerPage_SetItem(itemFrame, itemID, itemLevel)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1392`
+- `GarrisonFollowerPageAbility_OnClick(self, button)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:2405`
+- `GarrisonFollowerPageAbility_StopAnimations(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:2435`
+- `GarrisonFollowerPageItemButton_OnEvent(self, event)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1386`
+- `GarrisonFollowerPageModelUpgrade_OnEvent(self, event)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1442`
+- `GarrisonFollowerPageModelUpgrade_OnLoad(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1437`
+- `GarrisonFollowerPageModelUpgrade_Update(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1469`
+- `GarrisonFollowerPlacer_OnUpdate(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:871`
+- `GarrisonFollowerPlacerFrame_OnClick(self, button)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2442`
+- `GarrisonFollowListEditBox_OnTextChanged(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:349`
+- `GarrisonMission_DetermineCounterableThreats(missionID, followerType)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2646`
+- `GarrisonMission_GetDurationStringCompact(time)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2777`
+- `GarrisonMission_SetFollowerModel(modelFrame, followerID, displayID, showWeapon)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1343`
+- `GarrisonMission_SetFollowerModelItems(modelFrame)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:1358`
+- `GarrisonMissionButton_AddThreatsToTooltip(missionID, followerTypeID, noGameTooltip, abilityCountersForMechanicTypes)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2700`
+- `GarrisonMissionButton_CheckTooltipThreat(threatFrame, missionID, mechanicID, counterableThreats)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2796`
+- `GarrisonMissionButton_SetReward(frame, reward, currencyMultipliers, goldMultiplier)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:2477`
+- `GarrisonMissionButton_SetRewards(self, rewards)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:2449`
+- `GarrisonMissionComplete_AnimXPBar_OnUpdate(self, elapsed)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:1951`
+- `GarrisonMissionComplete_AnimXPGainOnFinish(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2058`
+- `GarrisonMissionComplete_AnimXPGainOnStop(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2053`
+- `GarrisonMissionComplete_KillFollowerXPAnims(followerFrame)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2033`
+- `GarrisonMissionComplete_OnModelLoaded(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:1214`
+- `GarrisonMissionComplete_OnRewardEvent(self, event, ...)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2496`
+- `GarrisonMissionCompleteChest_OnEnter(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2485`
+- `GarrisonMissionCompleteChest_OnLeave(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2492`
+- `GarrisonMissionCompleteChest_OnMouseDown(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2454`
+- `GarrisonMissionController_CloseMission(buttonFrame)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2353`
+- `GarrisonMissionController_OnClickMissionStartButton(buttonFrame)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2403`
+- `GarrisonMissionController_OnClickTab(tab)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2346`
+- `GarrisonMissionController_OnClickViewCompletedMissionsButton(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2446`
+- `GarrisonMissionController_OnEnterMissionStartButton(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2395`
+- `GarrisonMissionController_OnStageUpdate(self, elapsed)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2363`
+- `GarrisonMissionFrame_OnLoad(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2342`
+- `GarrisonMissionFrame_SetItemRewardDetails(frame)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2068`
+- `GarrisonMissionMechanic_OnEnter(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2541`
+- `GarrisonMissionMechanic_OnLeave(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2578`
+- `GarrisonMissionMechanicFollowerCounter_OnEnter(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2583`
+- `GarrisonMissionMechanicFollowerCounter_OnLeave(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2640`
+- `GarrisonMissionPage_RewardOnEnter(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2162`
+- `GarrisonMissionPage_RewardOnLeave(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2193`
+- `GarrisonMissionPage_SetReward(frame, reward, missionComplete)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2081`
+- `GarrisonMissionPage_UpdateRewardQuantities(rewardsFrame, currencyMultipliers, goldMultiplier)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2200`
+- `GarrisonMissionPageRewardsFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2228`
+- `GarrisonMissionPageRewardsFrame_SetSuccessChance(self, chance)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2217`
+- `GarrisonMissionPageRewardsFrame_StopUpdate(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2242`
+- `GarrisonMissionPageRewardTemplate_MissionXPTooltipHitBox_OnEnter(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2510`
+- `GarrisonMissionPageRewardTemplate_TooltipHitBox_GenerateSuccessTooltip(tooltipAnchor)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2523`
+- `GarrisonMissionPageRewardTemplate_TooltipHitBox_OnEnter(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2518`
+- `GarrisonMissionSorter(mission1, mission2)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:2600`
+- `GarrisonMissionStage_OnLoad(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2436`
+- `GarrisonMissionStage_SetBack(self, atlas)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2424`
+- `GarrisonMissionStage_SetFore(self, atlas)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2432`
+- `GarrisonMissionStage_SetMid(self, atlas)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2428`
+- `GarrisonShowFollowerPlacerFrame(mainFrame, info)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2249`
+- `GarrisonThreatCounter_OnEnter(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:2737`
+- `GarrisonThreatCountersFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:2725`
+- `GarrisonThreatCountersFrame_OnLoad(self, followerType, tooltipString)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:2680`
+- `GarrisonThreatCountersFrame_Update(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:2731`
+- `GarrisonTruncationFrame_Check(fontString)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:2638`
+- `GarrisonTruncationFrame_OnEnter(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:2655`
+- `GarrisonTruncationFrame_OnLeave(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:2662`
+- `GetGarrisonFollowerQualityDescription(quality)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonsharedtemplates.lua:2103`
+- `MissionCompletePreload_Cancel(mainFrame)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2892`
+- `MissionCompletePreload_IsReady()`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2906`
+- `MissionCompletePreload_LoadMission(mainFrame, missionID, singleFollower, singleEncounter)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2842`
+- `MissionCompletePreload_OnModelLoaded(self)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2910`
+- `MissionCompletePreload_OnUpdate(self, elapsed)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2917`
+- `MissionCompletePreload_StartTimeout(waitTime, callbackFunc, mainFrame)`: `interface/addons/blizzard_garrisontemplates/blizzard_garrisonmissiontemplates.lua:2931`
+
+## blizzard_garrisonui
+
+- `BuildingSizeForTab(tabID)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:86`
+- `CovenantMissionHealAllButton_OnClick(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_covenantmissionui.lua:1231`
+- `CovenantMissionHealAllButton_OnEnter(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_covenantmissionui.lua:1219`
+- `CovenantMissionHealAllButton_OnLeave(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_covenantmissionui.lua:1227`
+- `CovenantMissionPage_OnHide(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_covenantmissionui.lua:1121`
+- `CovenantMissionPage_OnShow(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_covenantmissionui.lua:1108`
+- `CovenantMissionUpdateBoardTextures(frame, textureKit)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_covenantmissionui.lua:1310`
+- `Garrison_GetGoldCostString(goldCost)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1874`
+- `Garrison_GetMaterialCostString(materialCost)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1865`
+- `Garrison_GetTotalCostString(materialCost, goldCost)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1882`
+- `Garrison_LoadUI()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonui_bootstrap.lua:3`
+- `GarrisonBonusArea_Set(bonusArea, timeLeftStr, timeLeft, icon, name, description)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:929`
+- `GarrisonBonusEffectFrame_Set(frame, icon, name, description)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:922`
+- `GarrisonBuilding_HideLevelTooltip()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1232`
+- `GarrisonBuilding_ShowLevelTooltip(name, plotID, buildingID, anchor)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1150`
+- `GarrisonBuilding_ToggleTutorial()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1851`
+- `GarrisonBuildingAddFollowerButton_OnClick(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:981`
+- `GarrisonBuildingAddFollowerButton_OnEnter(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:992`
+- `GarrisonBuildingAddFollowerButton_OnLeave(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1001`
+- `GarrisonBuildingFollowerButton_GetFollowerList(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1032`
+- `GarrisonBuildingFollowerButton_OnClick(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1023`
+- `GarrisonBuildingFollowerButton_OnEnter(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1036`
+- `GarrisonBuildingFollowerButton_OnLeave(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1046`
+- `GarrisonBuildingFollowerList_OnHide(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1019`
+- `GarrisonBuildingFollowerList_OnShow(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1006`
+- `GarrisonBuildingFrame_CancelConfirmation()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1771`
+- `GarrisonBuildingFrame_ClearConfirmation()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1776`
+- `GarrisonBuildingFrame_ClearPlotHighlights()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1657`
+- `GarrisonBuildingFrame_ConfirmBuild()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1706`
+- `GarrisonBuildingFrame_ConfirmUpgrade()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1755`
+- `GarrisonBuildingFrame_ConfirmUpgradeGarrison()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1766`
+- `GarrisonBuildingFrame_HighlightPlots(plotList, highlightOwned)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1648`
+- `GarrisonBuildingFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:186`
+- `GarrisonBuildingFrame_OnHide(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:179`
+- `GarrisonBuildingFrame_OnLoad(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:90`
+- `GarrisonBuildingFrame_OnShow(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:150`
+- `GarrisonBuildingFrame_StartUpgrade(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1717`
+- `GarrisonBuildingFrame_UpdateBuildingList()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:330`
+- `GarrisonBuildingFrame_UpdateCurrency()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:384`
+- `GarrisonBuildingFrame_UpdateGarrisonInfo(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:361`
+- `GarrisonBuildingFrame_UpdatePlots()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:286`
+- `GarrisonBuildingFrame_UpdateUpgradeButton()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:339`
+- `GarrisonBuildingFrameComplete_OnEnter(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:778`
+- `GarrisonBuildingFrameConfirmation_SetContext(context)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1667`
+- `GarrisonBuildingFrameLevelIcon_OnEnter(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:923`
+- `GarrisonBuildingFrameLevelIcon_OnLeave(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:973`
+- `GarrisonBuildingFrameTimerCancel_OnClick(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:905`
+- `GarrisonBuildingFrameTimerCancel_OnConfirm(selectedBuilding)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:915`
+- `GarrisonBuildingInfoBox_OnDragStart(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:868`
+- `GarrisonBuildingInfoBox_OnDragStop(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:899`
+- `GarrisonBuildingInfoBox_OnUpdate(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:858`
+- `GarrisonBuildingInfoBox_ShowBuilding(ID, owned, showLock)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:575`
+- `GarrisonBuildingInfoBox_ShowEmptyPlot(plotSize)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:541`
+- `GarrisonBuildingInfoBox_ShowFollowerPortrait(owned, hasFollowerSlot, infoBox, isBuilding, canActivate, ID)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:785`
+- `GarrisonBuildingList_SelectBuilding(buildingID)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1136`
+- `GarrisonBuildingList_SelectTab(tab)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1059`
+- `GarrisonBuildingList_Show()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1054`
+- `GarrisonBuildingListButton_OnDragStart(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1274`
+- `GarrisonBuildingListButton_OnDragStop(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1296`
+- `GarrisonBuildingListButton_OnEnter(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1236`
+- `GarrisonBuildingListButton_OnLeave(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1255`
+- `GarrisonBuildingListButton_OnMouseDown(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1111`
+- `GarrisonBuildingListButton_Select(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1116`
+- `GarrisonBuildingPlacer_Clear()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1308`
+- `GarrisonBuildingPlacer_OnUpdate(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1302`
+- `GarrisonBuildingPlacerFrame_OnClick(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1326`
+- `GarrisonBuildingSpec_ConfirmSwitch()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1816`
+- `GarrisonBuildingSpec_OnClick(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1798`
+- `GarrisonBuildingSpec_OnEnter(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1826`
+- `GarrisonBuildingTab_OnMouseDown(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1099`
+- `GarrisonBuildingTab_Select(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1106`
+- `GarrisonBuildingUI_ToggleFrame()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:78`
+- `GarrisonCapacitiveCreateAllWorkOrders_OnClick(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisoncapacitivedisplay.lua:326`
+- `GarrisonCapacitiveDisplay_SetRequestedNumber(num)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisoncapacitivedisplay.lua:349`
+- `GarrisonCapacitiveDisplayFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisoncapacitivedisplay.lua:277`
+- `GarrisonCapacitiveDisplayFrame_OnHide(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisoncapacitivedisplay.lua:311`
+- `GarrisonCapacitiveDisplayFrame_OnLoad(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisoncapacitivedisplay.lua:11`
+- `GarrisonCapacitiveDisplayFrame_OnShow(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisoncapacitivedisplay.lua:306`
+- `GarrisonCapacitiveDisplayFrame_TimerUpdate()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisoncapacitivedisplay.lua:22`
+- `GarrisonCapacitiveDisplayFrame_ToggleFrame()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisoncapacitivedisplay.lua:3`
+- `GarrisonCapacitiveDisplayFrame_Update(self, success, maxShipments, ownedShipments, plotID)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisoncapacitivedisplay.lua:27`
+- `GarrisonCapacitiveDisplayFrameDecrement_OnClick()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisoncapacitivedisplay.lua:342`
+- `GarrisonCapacitiveDisplayFrameIncrement_OnClick()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisoncapacitivedisplay.lua:335`
+- `GarrisonCapacitiveStartWorkOrder_OnClick(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisoncapacitivedisplay.lua:320`
+- `GarrisonFollowerFilter_MustHaveZoneSupport(followerInfo)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_orderhallmissionui.lua:690`
+- `GarrisonFollowerMission_ResetMissionCompleteEncounter(encounter)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:518`
+- `GarrisonFollowerPortrait_OnEnter(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:825`
+- `GarrisonFollowerPortrait_OnLeave(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:829`
+- `GarrisonFollowerTooltipShow(self, followerID, garrFollowerID)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:833`
+- `GarrisonLandingPageReport_GetShipments(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:367`
+- `GarrisonLandingPageReport_OnEvent(self, event)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:314`
+- `GarrisonLandingPageReport_OnHide(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:306`
+- `GarrisonLandingPageReport_OnLoad(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:271`
+- `GarrisonLandingPageReport_OnShow(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:286`
+- `GarrisonLandingPageReport_OnUpdate(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:324`
+- `GarrisonLandingPageReport_SetTab(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:514`
+- `GarrisonLandingPageReportList_FormatXPNumbers(value)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:681`
+- `GarrisonLandingPageReportList_InitButton(button, elementData)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:697`
+- `GarrisonLandingPageReportList_InitButtonAvailable(button, elementData)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:571`
+- `GarrisonLandingPageReportList_OnHide(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:502`
+- `GarrisonLandingPageReportList_OnShow(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:493`
+- `GarrisonLandingPageReportList_Update()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:754`
+- `GarrisonLandingPageReportList_UpdateAvailable()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:560`
+- `GarrisonLandingPageReportList_UpdateItems()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:540`
+- `GarrisonLandingPageReportList_UpdateMouseOverTooltip(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:811`
+- `GarrisonLandingPageReportMission_FilterOutCombatAllyMissions(items)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:821`
+- `GarrisonLandingPageReportMission_OnClick(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:830`
+- `GarrisonLandingPageReportMission_OnEnter(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:848`
+- `GarrisonLandingPageReportMission_OnLeave(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:904`
+- `GarrisonLandingPageReportMissionReward_OnEnter(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:909`
+- `GarrisonLandingPageReportMissionReward_OnLeave(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:949`
+- `GarrisonLandingPageReportShipment_OnEnter(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:424`
+- `GarrisonLandingPageReportTab_OnClick(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:507`
+- `GarrisonLandingPageTab_OnClick(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:228`
+- `GarrisonLandingPageTab_SetTab(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonlandingpage.lua:233`
+- `GarrisonMissionButton_GetMissionFrame(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:1031`
+- `GarrisonMissionButton_OnClick(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:1026`
+- `GarrisonMissionButton_OnEnter(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:1036`
+- `GarrisonMissionButton_SetInProgressTooltip(missionInfo, showRewards)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:1068`
+- `GarrisonMissionButtonRewards_OnEnter(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:1001`
+- `GarrisonMissionFrame_ClearMouse()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:677`
+- `GarrisonMissionFrame_OnCloseShipyardTutorial()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1272`
+- `GarrisonMissionFrame_RandomMissionAdded(self, followerTypeID, missionID)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:761`
+- `GarrisonMissionFrame_ToggleFrame()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:669`
+- `GarrisonMissionList_InitButton(button, elementData, missionFrame)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:893`
+- `GarrisonMissionListTab_OnClick(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:840`
+- `GarrisonMissionListTab_SetTab(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:845`
+- `GarrisonMissionPage_OnClick(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:1216`
+- `GarrisonMissionPage_OnEvent(self, event, ...)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:1156`
+- `GarrisonMissionPage_OnHide(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:1198`
+- `GarrisonMissionPage_OnLoad(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:1147`
+- `GarrisonMissionPage_OnShow(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:1188`
+- `GarrisonMissionPage_OnUpdate(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:1208`
+- `GarrisonMissionPageEnvironment_OnEnter(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:1223`
+- `GarrisonMissionPageFollowerFrame_OnDragStart(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:1348`
+- `GarrisonMissionPageFollowerFrame_OnDragStop(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:1353`
+- `GarrisonMissionPageFollowerFrame_OnEnter(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:1363`
+- `GarrisonMissionPageFollowerFrame_OnLeave(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:1396`
+- `GarrisonMissionPageFollowerFrame_OnMouseUp(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:1137`
+- `GarrisonMissionPageFollowerFrame_OnReceiveDrag(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:1358`
+- `GarrisonMissionPortrait_SetFollowerPortrait(portraitFrame, followerInfo, missionPage)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:694`
+- `GarrisonMissonListTab_SetSelected(tab, isSelected)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:859`
+- `GarrisonMonuntmentFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmonumentui.lua:9`
+- `GarrisonMonuntmentFrame_OnHide(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmonumentui.lua:52`
+- `GarrisonMonuntmentFrame_OnLoad(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmonumentui.lua:1`
+- `GarrisonMonuntmentFrame_OnShow(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmonumentui.lua:48`
+- `GarrisonMonuntmentFrame_SaveSelection()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmonumentui.lua:35`
+- `GarrisonMonuntmentFrame_UpdateDisplay(trophy_id, trophy_name, lock_code)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmonumentui.lua:94`
+- `GarrisonMonuntmentFrame_UpdateSelectedTrophyID(delta)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmonumentui.lua:77`
+- `GarrisonMonuntmentLeftBtn_OnMouseDown(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmonumentui.lua:57`
+- `GarrisonMonuntmentLeftBtn_OnMouseUp(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmonumentui.lua:63`
+- `GarrisonMonuntmentLock_OnEnter(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmonumentui.lua:108`
+- `GarrisonMonuntmentRightBtn_OnMouseDown(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmonumentui.lua:67`
+- `GarrisonMonuntmentRightBtn_OnMouseUp(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmonumentui.lua:73`
+- `GarrisonPlot_ClearBuilding(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1556`
+- `GarrisonPlot_GetFollowerTooltipText(buildingID, plotID)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1497`
+- `GarrisonPlot_OnClick(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1441`
+- `GarrisonPlot_OnDragStart(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1346`
+- `GarrisonPlot_OnDragStop(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1376`
+- `GarrisonPlot_OnEnter(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1543`
+- `GarrisonPlot_OnLeave(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1549`
+- `GarrisonPlot_OnReceiveDrag(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1389`
+- `GarrisonPlot_OnUpdate(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1383`
+- `GarrisonPlot_SetBuilding(self, id, tooltip, textureKit, icon, rank, isBuilding, timeStart, buildTime, canActivate, canUpgrade, isPrebuilt)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1588`
+- `GarrisonPlot_SetBuildingArt(frame, texture)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1577`
+- `GarrisonPlot_SetGreyedOut(self, greyedOut)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1341`
+- `GarrisonPlot_ShowTooltip(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1512`
+- `GarrisonPlot_UpdateBuilding(plotID)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:1569`
+- `GarrisonPortrait_Set(portrait, portraitFileDataID)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonmissionui.lua:1644`
+- `GarrisonRecruiterFrame_ChooseRandomRecruits()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonrecruiterui.lua:186`
+- `GarrisonRecruiterFrame_ChooseRecruits()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonrecruiterui.lua:179`
+- `GarrisonRecruiterFrame_GenerateRecruits(ability, trait)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonrecruiterui.lua:170`
+- `GarrisonRecruiterFrame_HireRecruit(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonrecruiterui.lua:373`
+- `GarrisonRecruiterFrame_OnClickClose(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonrecruiterui.lua:134`
+- `GarrisonRecruiterFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonrecruiterui.lua:37`
+- `GarrisonRecruiterFrame_OnHide(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonrecruiterui.lua:138`
+- `GarrisonRecruiterFrame_OnLoad(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonrecruiterui.lua:17`
+- `GarrisonRecruiterFrame_OnShow(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonrecruiterui.lua:52`
+- `GarrisonRecruiterFrame_SetAbilityPreference(data)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonrecruiterui.lua:222`
+- `GarrisonRecruiterFrame_UpdateAbilityEntries(isTrait)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonrecruiterui.lua:191`
+- `GarrisonRecruiterType_OnClick(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonrecruiterui.lua:155`
+- `GarrisonRecruitSelectFrame_GetAbilityUIEntry(frame, index)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonrecruiterui.lua:388`
+- `GarrisonRecruitSelectFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonrecruiterui.lua:243`
+- `GarrisonRecruitSelectFrame_OnHide(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonrecruiterui.lua:365`
+- `GarrisonRecruitSelectFrame_OnLoad(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonrecruiterui.lua:237`
+- `GarrisonRecruitSelectFrame_OnShow(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonrecruiterui.lua:255`
+- `GarrisonRecruitSelectFrame_UpdateRecruits(waiting)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonrecruiterui.lua:259`
+- `GarrisonShipEquipment_OnClick(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:2147`
+- `GarrisonShipEquipment_OnEnter(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:2160`
+- `GarrisonShipEquipment_OnHide(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:2179`
+- `GarrisonShipEquipment_OnReceiveDrag(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:2184`
+- `GarrisonShipFollowerListButton_OnClick(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:2075`
+- `GarrisonShipFollowerListButton_OnDragStart(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:2190`
+- `GarrisonShipFollowerListButton_OnDragStop(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:2199`
+- `GarrisonShipMissionPageFollowerFrame_OnDragStart(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:2213`
+- `GarrisonShipMissionPageFollowerFrame_OnDragStop(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:2218`
+- `GarrisonShipMissionPageFollowerFrame_OnEnter(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:2233`
+- `GarrisonShipMissionPageFollowerFrame_OnLeave(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:2268`
+- `GarrisonShipMissionPageFollowerFrame_OnMouseUp(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:2228`
+- `GarrisonShipMissionPageFollowerFrame_OnReceiveDrag(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:2223`
+- `GarrisonShipTrait_OnClick(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:2130`
+- `GarrisonShipTrait_OnEnter(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:2139`
+- `GarrisonShipTrait_OnHide(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:2143`
+- `GarrisonShipyard_CalculateExpandedButtonHeight(elementData)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:2051`
+- `GarrisonShipyardFollowerList_InitButton(button, elementData)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1987`
+- `GarrisonShipyardFrame_ClearMouse()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:433`
+- `GarrisonShipyardMap_AdjustMissionPositions()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1132`
+- `GarrisonShipyardMap_CheckTutorials()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1296`
+- `GarrisonShipyardMap_OnEvent(self, event, ...)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:880`
+- `GarrisonShipyardMap_OnFogFrameUpdate(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1059`
+- `GarrisonShipyardMap_OnHide(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:915`
+- `GarrisonShipyardMap_OnLoad(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:868`
+- `GarrisonShipyardMap_OnShow(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:906`
+- `GarrisonShipyardMap_OnUpdate(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:936`
+- `GarrisonShipyardMap_ResetFogFrame(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1370`
+- `GarrisonShipyardMap_SetClampedPosition(frame, mission, moveX, moveY)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1111`
+- `GarrisonShipyardMap_SetupBonus(self, missionFrame, mission)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1093`
+- `GarrisonShipyardMap_SetupFog(self, siegeBreakerFrame, offeredGarrMissionTextureID)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1017`
+- `GarrisonShipyardMap_ShowTutorial(missionFrame, text)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1278`
+- `GarrisonShipyardMap_UpdateBonusEffects()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1327`
+- `GarrisonShipyardMap_UpdateMissions()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1170`
+- `GarrisonShipyardMap_UpdateMissionTime(frame)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1078`
+- `GarrisonShipyardMapMission_AnchorToBottomWidget(widget, x, y)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1670`
+- `GarrisonShipyardMapMission_OnClick(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1376`
+- `GarrisonShipyardMapMission_OnEnter(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1383`
+- `GarrisonShipyardMapMission_OnLeave(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1674`
+- `GarrisonShipyardMapMission_SetBottomWidget(widget, x, y)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1664`
+- `GarrisonShipyardMapMission_SetTooltip(info, inProgress)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1477`
+- `GarrisonShipyardMapMission_SetTooltipWidth(tooltip, width)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1645`
+- `GarrisonShipyardMapMission_UpdateTooltipSize(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1398`
+- `GarrisonShipyardMissionPage_OnEvent(self, event, ...)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1697`
+- `GarrisonShipyardMissionPage_OnHide(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1724`
+- `GarrisonShipyardMissionPage_OnLoad(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1686`
+- `GarrisonShipyardMissionPage_OnShow(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1715`
+- `GarrisonShipyardMissionPage_OnUpdate(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1732`
+- `GarrisonShipyardMissionPage_UpdatePortraitPulse(missionPage)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonshipyardui.lua:1740`
+- `GarrisonTownHall_GetName()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:392`
+- `GarrisonTownHall_OnClick(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:415`
+- `GarrisonTownHall_OnEnter(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:403`
+- `GarrisonTownHall_OnLeave(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:410`
+- `GarrisonTownHall_Select()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:420`
+- `GarrisonTownHall_StartUpgrade(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:453`
+- `GarrisonTownHall_UpdateNameBanner(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:397`
+- `GarrisonTownHallBoxMouseOver_GetColor(textLevel, garrisonLevel)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:505`
+- `GarrisonTownHallBoxMouseOver_OnEnter(self, button)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:513`
+- `GarrisonTownHallUpgradeButton_OnEnter(self)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonbuildingui.lua:488`
+- `HideGarrisonMissionFrames()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonui_bootstrap.lua:44`
+- `HideGarrisonShipyardFrame()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonui_bootstrap.lua:59`
+- `ShowAdventureMapFrameForFollowerType(followerType)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonui_bootstrap.lua:34`
+- `ShowGarrisonCapacitiveDisplayFrame()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonui_bootstrap.lua:65`
+- `ShowGarrisonMissionFrameForFollowerType(followerType)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonui_bootstrap.lua:19`
+- `ShowGarrisonRecruiterFrame()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonui_bootstrap.lua:71`
+- `ShowGarrisonShipyardFrame(followerTypeID)`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonui_bootstrap.lua:52`
+- `ToggleCovenantMissionUI()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonui_bootstrap.lua:77`
+- `ToggleGarrisonBuildingUI()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonui_bootstrap.lua:7`
+- `ToggleGarrisonMissionUI()`: `interface/addons/blizzard_garrisonui/mainline/blizzard_garrisonui_bootstrap.lua:13`
+
+## blizzard_generictraitui
+
+- `GenericTraitUI_LoadUI()`: `interface/addons/blizzard_generictraitui/blizzard_generictraitui_bootstrap.lua:3`
+
+## blizzard_glueparent
+
+- `AllowChatFramesToShow(chatFrame)`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:900`
+- `CheckSystemRequirements(includeSeenWarnings)`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:861`
+- `GetCurrentGlueTag()`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:762`
+- `GetDisplayedExpansionLogo(expansionLevel, releaseType)`: `interface/addons/blizzard_glueparent/shared/glueparentutil.lua:92`
+- `GetFreeTrialLogoPath()`: `interface/addons/blizzard_glueparent/camelot/glueparentutil.lua:1`
+- `GetFreeTrialLogoPath()`: `interface/addons/blizzard_glueparent/mainline/glueparentutil.lua:1`
+- `GetGameReleaseType()`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:813`
+- `GetLogoReleaseType()`: `interface/addons/blizzard_glueparent/shared/glueparentutil.lua:84`
+- `GetScaledCursorDelta()`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:877`
+- `GetScaledCursorPosition()`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:871`
+- `GlueParent_AddModalFrame(frame)`: `interface/addons/blizzard_glueparent/shared/glueparentutil.lua:3`
+- `GlueParent_CheckCinematic()`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:624`
+- `GlueParent_CheckFitSecondaryScreen(screenInfo)`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:576`
+- `GlueParent_CheckPhotosensitivity()`: `interface/addons/blizzard_glueparent/shared/glueparentutil.lua:54`
+- `GlueParent_CheckScreenNarrator()`: `interface/addons/blizzard_glueparent/shared/glueparentutil.lua:66`
+- `GlueParent_CloseSecondaryScreen()`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:584`
+- `GlueParent_EnsureValidScreen()`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:420`
+- `GlueParent_GetBestScreen()`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:241`
+- `GlueParent_GetCurrentScreen()`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:471`
+- `GlueParent_GetCurrentScreenInfo()`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:606`
+- `GlueParent_GetSecondaryScreen()`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:475`
+- `GlueParent_IsScreenValid(screen)`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:220`
+- `GlueParent_IsSecondaryScreenOpen(screen)`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:479`
+- `GlueParent_OpenSecondaryScreen(screen, contextKey)`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:542`
+- `GlueParent_RemoveModalFrame(frame)`: `interface/addons/blizzard_glueparent/shared/glueparentutil.lua:20`
+- `GlueParent_SetScreen(screen)`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:483`
+- `GlueParent_ShowCinematicsScreen(contextKey)`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:786`
+- `GlueParent_ShowCreditsScreen(contextKey)`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:796`
+- `GlueParent_ShowOptionsScreen(contextKey)`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:782`
+- `GlueParent_UpdateDialogs()`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:276`
+- `GlueParentBlockingFrame_OnKeyDown(self, key)`: `interface/addons/blizzard_glueparent/shared/glueparentutil.lua:37`
+- `GMError(...)`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:883`
+- `HideUIPanel(self)`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:804`
+- `IsKioskGlueEnabled()`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:809`
+- `MinutesToTime(mins, hideDays)`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:836`
+- `OnExcessiveErrors()`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:889`
+- `ResetModel(model)`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:770`
+- `SetExpansionLogo(texture, expansionLevel, releaseType)`: `interface/addons/blizzard_glueparent/shared/glueparentutil.lua:114`
+- `SetLoginScreenModel(model)`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:655`
+- `ToggleFrame(frame)`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:647`
+- `UpgradeAccount()`: `interface/addons/blizzard_glueparent/mainline/glueparent.lua:817`
+
+## blizzard_gluexml
+
+- `AccountLogin_CanAutoLogin()`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:660`
+- `AccountLogin_CheckAutoLogin()`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:664`
+- `AccountLogin_CheckLoginState(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:79`
+- `AccountLogin_ClearReconnectLogin()`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:238`
+- `AccountLogin_Exit()`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:254`
+- `AccountLogin_FocusAccount()`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:262`
+- `AccountLogin_FocusPassword()`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:258`
+- `AccountLogin_GetSelectedAccountString()`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:527`
+- `AccountLogin_InitializeGamepad(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:334`
+- `AccountLogin_LaunchCommunitySite()`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:696`
+- `AccountLogin_Login()`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:203`
+- `AccountLogin_ManageAccount()`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:691`
+- `AccountLogin_OnEditFocusGained(self, userAction)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:266`
+- `AccountLogin_OnEditFocusLost(self, userAction)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:272`
+- `AccountLogin_OnEnterPressed()`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:248`
+- `AccountLogin_OnEscapePressed(editBox)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:243`
+- `AccountLogin_OnEvent(self, event, ...)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:65`
+- `AccountLogin_OnKeyDown(self, key)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:185`
+- `AccountLogin_OnLoad(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:24`
+- `AccountLogin_OnShow(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:104`
+- `AccountLogin_OnSmartNavFocus(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:282`
+- `AccountLogin_OnTimerFinished()`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:641`
+- `AccountLogin_ReconnectLogin()`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:232`
+- `AccountLogin_RegisterForTransitions(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:343`
+- `AccountLogin_SetUpGamepad(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:307`
+- `AccountLogin_StartAutoLoginTimer()`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:636`
+- `AccountLogin_ToggleAlertFrame()`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:276`
+- `AccountLogin_UnfocusGamepad(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:303`
+- `AccountLogin_Update()`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:113`
+- `AccountLogin_UpdateSavedData(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:156`
+- `AccountLoginEditBox_OnKeyDown(self, key)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:168`
+- `AccountLoginEditBox_OnTextChanged(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:176`
+- `AccountReactivate_Cancel()`: `interface/addons/blizzard_gluexml/shared/accountreactivate.lua:5`
+- `AccountReactivate_CloseDialogs(preserveSubscription)`: `interface/addons/blizzard_gluexml/shared/accountreactivate.lua:10`
+- `AccountReactivate_ReactivateNow()`: `interface/addons/blizzard_gluexml/shared/accountreactivate.lua:1`
+- `AccountReactivate_RecheckEligibility()`: `interface/addons/blizzard_gluexml/shared/accountreactivate.lua:327`
+- `AccountUpgradePanel_GetBannerInfo()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1129`
+- `AccountUpgradePanel_GetDisplayExpansionLevel()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1105`
+- `BeginCharacterServicesFlow(flow, data)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1882`
+- `CaptchaEntry_Cancel(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:628`
+- `CaptchaEntry_Okay(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:623`
+- `CaptchaEntry_OnHide()`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:611`
+- `CaptchaEntry_OnKeyDown(self, key)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:615`
+- `CaptchaEntry_OnShow(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:595`
+- `CharacterSelect_AccountOptions()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:959`
+- `CharacterSelect_ActivateFactionChange()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1285`
+- `CharacterSelect_AllowedToEnterWorld()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:980`
+- `CharacterSelect_CheckDialogStates()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:720`
+- `CharacterSelect_CheckVeteranStatus()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1307`
+- `CharacterSelect_ConditionallyLoadAccountSaveUI()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1496`
+- `CharacterSelect_Delete()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:968`
+- `CharacterSelect_EndCharacterUndelete()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:2478`
+- `CharacterSelect_EnterWorld()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:924`
+- `CharacterSelect_Exit()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:947`
+- `CharacterSelect_FinishUndelete(guid)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:2502`
+- `CharacterSelect_HasVeteranEligibilityInfo()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1298`
+- `CharacterSelect_IsRetrievingCharacterList()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:305`
+- `CharacterSelect_IsUndeleting()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:313`
+- `CharacterSelect_IsVisible()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:309`
+- `CharacterSelect_ManageAccount()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1032`
+- `CharacterSelect_OnVASCharacterQueueStatusUpdate(guid, minutes)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:705`
+- `CharacterSelect_ResetVeteranStatus()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1302`
+- `CharacterSelect_RotateSelection(direction)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1037`
+- `CharacterSelect_SelectCharacter(index, noCreate)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:847`
+- `CharacterSelect_SetPendingTrialBoost(hasPendingTrialBoost, factionID, specID, guid)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:713`
+- `CharacterSelect_SetRetrievingCharacters(retrieving, success)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:284`
+- `CharacterSelect_SetSelectedCharacterName(name, timerunningSeasonID)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:665`
+- `CharacterSelect_ShowTimerunningChoiceWhenActive()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:837`
+- `CharacterSelect_StartCharacterUndelete()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:2460`
+- `CharacterSelect_StartCustomizeForVAS(vasType, info)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1056`
+- `CharacterSelect_TechSupport()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:963`
+- `CharacterSelect_UpdateButtonState()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1407`
+- `CharacterSelect_UpdateGameRoomBillingFrameAnchors()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1510`
+- `CharacterSelect_UpdateIfUpdateIsNotPending()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:699`
+- `CharacterSelect_UpdateLogo()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1180`
+- `CharacterSelect_UpdateState(fromLoginState)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:266`
+- `CharacterSelect_UpdateTimerunning()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:691`
+- `CharacterSelectRotateLeft_OnUpdate(self)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1026`
+- `CharacterSelectRotateRight_OnUpdate(self)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1020`
+- `CharacterSelectScrollDown_OnClick()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1062`
+- `CharacterSelectScrollUp_OnClick()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1066`
+- `CharacterServices_CanTrialBoostCharacter()`: `interface/addons/blizzard_gluexml/mainline/characterservices.lua:246`
+- `CharacterServices_UpdateSpecializationButtons(classID, gender, parentFrame, owner, allowAllSpecs, isTrialBoost, currentSpecID, allowAutoSelectSpec)`: `interface/addons/blizzard_gluexml/mainline/characterservices.lua:521`
+- `CharacterServicesFlow_IsShowing()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:2527`
+- `CharacterServicesFlow_ShowFinishConfirmation(data, bodyText, acceptText, cancelText)`: `interface/addons/blizzard_gluexml/mainline/characterservicesflowmixin.lua:318`
+- `CharacterServicesMaster_Advance()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:2355`
+- `CharacterServicesMaster_AllowCharacterReordering(self)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:2177`
+- `CharacterServicesMaster_ClearFlow(self)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:2173`
+- `CharacterServicesMaster_HideFlows(self)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:2287`
+- `CharacterServicesMaster_OnCharacterListUpdate()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:2093`
+- `CharacterServicesMaster_OnEvent(self, event, ...)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:2077`
+- `CharacterServicesMaster_OnHide(self)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:2278`
+- `CharacterServicesMaster_OnLoad(self)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:2069`
+- `CharacterServicesMaster_Restart()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:2217`
+- `CharacterServicesMaster_SetCurrentBlock(self, block, wasFromRewind)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:2181`
+- `CharacterServicesMaster_SetFlow(self, flow)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:2143`
+- `CharacterServicesMaster_Update()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:2225`
+- `CharacterServicesMaster_UpdateBoostButtons(displayOrder, upgradeInfo)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1750`
+- `CharacterServicesMaster_UpdateFinishLabel(self)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:2137`
+- `CharacterServicesMaster_UpdateServiceButton()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1548`
+- `CharacterServicesMaster_UpdateVASButtons(displayOrder)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1763`
+- `CharacterServicesMasterBackButton_OnClick()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:2333`
+- `CharacterServicesMasterFinishButton_OnClick()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:2362`
+- `CharacterServicesMasterNextButton_OnClick()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:2339`
+- `CharacterTemplatesFrame_OnLoad(self)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1195`
+- `CharacterTemplatesFrame_OnShow(self)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1208`
+- `CharacterTemplatesFrame_Update()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1185`
+- `CharacterUpgrade_BeginNewCharacterCreation(characterType)`: `interface/addons/blizzard_gluexml/mainline/characterservices.lua:971`
+- `CharacterUpgrade_IsCreatedCharacterTrialBoost()`: `interface/addons/blizzard_gluexml/mainline/characterservices.lua:909`
+- `CharacterUpgrade_IsCreatedCharacterUpgrade()`: `interface/addons/blizzard_gluexml/mainline/characterservices.lua:905`
+- `CharacterUpgrade_ResetBoostData()`: `interface/addons/blizzard_gluexml/mainline/characterservices.lua:913`
+- `CharacterUpgrade_SetupFlowForNewCharacter(characterType)`: `interface/addons/blizzard_gluexml/mainline/characterservices.lua:965`
+- `CharacterUpgradeCharacterSelectBlock_IsCharacterBoostable(characterID)`: `interface/addons/blizzard_gluexml/mainline/characterservices.lua:948`
+- `CharacterUpgradeCharacterSelectBlock_IsFilteringByBoostable()`: `interface/addons/blizzard_gluexml/mainline/characterservices.lua:940`
+- `CharacterUpgradeCharacterSelectBlock_SetFilteringByBoostable(boostsOnly)`: `interface/addons/blizzard_gluexml/mainline/characterservices.lua:944`
+- `CharacterUpgradeClassTrial_OnClick(self)`: `interface/addons/blizzard_gluexml/mainline/characterservices.lua:980`
+- `CharacterUpgradeCreateCharacter_OnClick(self)`: `interface/addons/blizzard_gluexml/mainline/characterservices.lua:976`
+- `CharacterUpgradePopup_BeginCharacterUpgradeFlow(data, guid)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1915`
+- `CharacterUpgradePopup_BeginVASFlow(data, guid)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1931`
+- `CharacterUpgradePopup_OnCharacterBoostDelivered(boostType, guid, reason)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1859`
+- `CharacterUpgradePopup_OnStartClick(self)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1950`
+- `CharacterUpgradePopup_OnStartEnter(self)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1959`
+- `CharacterUpgradePopup_OnStartLeave(self)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1968`
+- `CharacterUpgradePopup_OnTryNewClick(self)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1972`
+- `CharacterUpgradeSecondChanceWarningFrameCancelButton_OnClick(self)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:2391`
+- `CharacterUpgradeSecondChanceWarningFrameConfirmButton_OnClick(self)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:2383`
+- `CharacterUpgradeSelectCharacterFrame_OnLoad(self)`: `interface/addons/blizzard_gluexml/mainline/characterservices.lua:958`
+- `CharacterUpgradeSelectFactionFrame_ClearChecked()`: `interface/addons/blizzard_gluexml/mainline/characterservices.lua:1061`
+- `CharacterUpgradeSelectFactionFrame_OnLoad(self)`: `interface/addons/blizzard_gluexml/mainline/characterservices.lua:1054`
+- `CharacterUpgradeSelectFactionRadioButton_OnClick(self)`: `interface/addons/blizzard_gluexml/mainline/characterservices.lua:1070`
+- `CharacterUpgradeSelectSpecRadioButton_OnClick(self, button, down)`: `interface/addons/blizzard_gluexml/mainline/characterservices.lua:998`
+- `CharSelectServices_ShowFlowFrame()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1874`
+- `CharSelectServicesFlow_Maximize()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1617`
+- `CharSelectServicesFlow_Minimize()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1608`
+- `CheckAddVASErrorCode(errorTable, errorCode, requirementPassed)`: `interface/addons/blizzard_gluexml/mainline/characterservicesshared.lua:7`
+- `CheckAddVASErrorString(errorTable, errorString, requirementPassed)`: `interface/addons/blizzard_gluexml/mainline/characterservicesshared.lua:1`
+- `CheckDisplayEnterWorldConfirmationDialog(_characterGuid)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:917`
+- `ClickRecommendedSpecButton(ownerFrame, overrideSpecID)`: `interface/addons/blizzard_gluexml/mainline/characterservices.lua:432`
+- `CopyAccountData_OnClick(self)`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:104`
+- `CopyAccountData_OnClick(self)`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:104`
+- `CopyCharacter_AccountDataFromLive()`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:49`
+- `CopyCharacter_AccountDataFromLive()`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:49`
+- `CopyCharacter_KeyBindingsFromLive()`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:58`
+- `CopyCharacter_KeyBindingsFromLive()`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:58`
+- `CopyCharacterCharacterNameEditBox_OnTabPressed(self)`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:278`
+- `CopyCharacterCharacterNameEditBox_OnTabPressed(self)`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:278`
+- `CopyCharacterCopy_OnClick(self)`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:92`
+- `CopyCharacterCopy_OnClick(self)`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:92`
+- `CopyCharacterEditBox_OnEnterPressed(self)`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:270`
+- `CopyCharacterEditBox_OnEnterPressed(self)`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:270`
+- `CopyCharacterEditBox_OnLoad(self)`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:262`
+- `CopyCharacterEditBox_OnLoad(self)`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:262`
+- `CopyCharacterEditBox_OnShow(self)`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:266`
+- `CopyCharacterEditBox_OnShow(self)`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:266`
+- `CopyCharacterEntry_Init(self, characterIndex)`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:116`
+- `CopyCharacterEntry_Init(self, characterIndex)`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:116`
+- `CopyCharacterEntry_OnClick(self)`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:131`
+- `CopyCharacterEntry_OnClick(self)`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:131`
+- `CopyCharacterEntry_OnEnter(self)`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:154`
+- `CopyCharacterEntry_OnEnter(self)`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:154`
+- `CopyCharacterEntry_OnLeave(self)`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:158`
+- `CopyCharacterEntry_OnLeave(self)`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:158`
+- `CopyCharacterEntry_SetSelected(self, selected)`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:127`
+- `CopyCharacterEntry_SetSelected(self, selected)`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:127`
+- `CopyCharacterFrame_GetSelectedRegionID()`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:253`
+- `CopyCharacterFrame_GetSelectedRegionID()`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:253`
+- `CopyCharacterFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:239`
+- `CopyCharacterFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:239`
+- `CopyCharacterFrame_OnHide(self)`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:235`
+- `CopyCharacterFrame_OnHide(self)`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:235`
+- `CopyCharacterFrame_OnLoad(self)`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:162`
+- `CopyCharacterFrame_OnLoad(self)`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:162`
+- `CopyCharacterFrame_OnShow(self)`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:180`
+- `CopyCharacterFrame_OnShow(self)`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:180`
+- `CopyCharacterFrame_SetSelected(characterIndex)`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:135`
+- `CopyCharacterFrame_SetSelected(characterIndex)`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:135`
+- `CopyCharacterFrame_Update(self)`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:257`
+- `CopyCharacterFrame_Update(self)`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:257`
+- `CopyCharacterFromLive()`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:40`
+- `CopyCharacterFromLive()`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:40`
+- `CopyCharacterRealmNameEditBox_OnTabPressed(self)`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:274`
+- `CopyCharacterSearch_OnClick(self)`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:84`
+- `CopyCharacterSearch_OnClick(self)`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:84`
+- `CopyCharacterSurnameEditBox_OnTabPressed(self)`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:274`
+- `CopyKeyBindings_OnClick(self)`: `interface/addons/blizzard_gluexml/camelot/charactercopy.lua:110`
+- `CopyKeyBindings_OnClick(self)`: `interface/addons/blizzard_gluexml/mainline/charactercopy.lua:110`
+- `DisplayBattlepayTokenFreeFrame(freeFrame)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1786`
+- `DoEnterWorld()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:905`
+- `DoEnterWorldRPE()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:911`
+- `DoesClientThinkTheCharacterIsEligibleForCharacterUpgrade(characterID)`: `interface/addons/blizzard_gluexml/mainline/characterservices.lua:881`
+- `DoesClientThinkTheCharacterIsEligibleForFCM(characterID)`: `interface/addons/blizzard_gluexml/mainline/characterservicesfreecharactertransfer.lua:1`
+- `DoesClientThinkTheCharacterIsEligibleForHCT(characterID)`: `interface/addons/blizzard_gluexml/camelot/characterserviceshardcorecharactertransfer.lua:19`
+- `DoesClientThinkTheCharacterIsEligibleForPCT(characterID)`: `interface/addons/blizzard_gluexml/mainline/characterservicespaidcharactertransfer.lua:23`
+- `DoesClientThinkTheCharacterIsEligibleForPFC(characterID)`: `interface/addons/blizzard_gluexml/mainline/characterservicespaidfactionchange.lua:49`
+- `DoesClientThinkTheCharacterIsEligibleForPNC(characterID)`: `interface/addons/blizzard_gluexml/mainline/characterservicespaidnamechange.lua:49`
+- `DoesClientThinkTheCharacterIsEligibleForPRC(characterID)`: `interface/addons/blizzard_gluexml/mainline/characterservicespaidracechange.lua:31`
+- `EndCharacterServicesFlow(shouldMaximize)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1898`
+- `GetAvailableBoostTypesForCharacterByGUID(characterGUID)`: `interface/addons/blizzard_gluexml/mainline/characterservices.lua:923`
+- `GetFormattedVASName(name, surname)`: `interface/addons/blizzard_gluexml/mainline/characterservicesshared.lua:32`
+- `GetKioskAutoRealmAddress()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1482`
+- `GetRecommendedSpecButton(ownerFrame, overrideSpecID)`: `interface/addons/blizzard_gluexml/mainline/characterservices.lua:417`
+- `GetTimeLeftMinuteString(minutes)`: `interface/addons/blizzard_gluexml/shared/accountreactivate.lua:37`
+- `IsExpansionTrialCharacter(characterGUID)`: `interface/addons/blizzard_gluexml/mainline/characterservices.lua:918`
+- `IsRPEBoostEligible(charID)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1535`
+- `IsVASAssignmentValid(storeError, vasPurchaseResult, characterGUID)`: `interface/addons/blizzard_gluexml/mainline/characterservicesshared.lua:11`
+- `KioskMode_CheckAutoRealm()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1486`
+- `KioskMode_IsWaitingOnTrial()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1522`
+- `KioskMode_SetWaitingOnTrial(waiting)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1518`
+- `MovieFrame_Close()`: `interface/addons/blizzard_gluexml/movieframe.lua:92`
+- `MovieFrame_OnHide(self)`: `interface/addons/blizzard_gluexml/movieframe.lua:52`
+- `MovieFrame_OnKeyUp(self, key)`: `interface/addons/blizzard_gluexml/movieframe.lua:73`
+- `MovieFrame_OnLoad(self)`: `interface/addons/blizzard_gluexml/movieframe.lua:1`
+- `MovieFrame_OnMovieFinished(self)`: `interface/addons/blizzard_gluexml/movieframe.lua:85`
+- `MovieFrame_OnShow(self)`: `interface/addons/blizzard_gluexml/movieframe.lua:34`
+- `MovieFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_gluexml/movieframe.lua:62`
+- `MovieFrame_PlayMovie(self, index)`: `interface/addons/blizzard_gluexml/movieframe.lua:7`
+- `MovieFrame_PlayNextMovie(self)`: `interface/addons/blizzard_gluexml/movieframe.lua:29`
+- `PlayersOnServer_Update()`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1263`
+- `PromotionAwaitingFrame_OnShow(self)`: `interface/addons/blizzard_gluexml/promotionframe.lua:74`
+- `PromotionAwaitingFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_gluexml/promotionframe.lua:78`
+- `PromotionFrame_AwaitingPromotion()`: `interface/addons/blizzard_gluexml/promotionframe.lua:23`
+- `PromotionFrame_Hide()`: `interface/addons/blizzard_gluexml/promotionframe.lua:59`
+- `PromotionFrame_LaunchUpgradeURL()`: `interface/addons/blizzard_gluexml/promotionframe.lua:66`
+- `PromotionFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_gluexml/promotionframe.lua:8`
+- `PromotionFrame_OnLoad(self)`: `interface/addons/blizzard_gluexml/promotionframe.lua:3`
+- `PromotionFrame_ReceivePromotion(self, ...)`: `interface/addons/blizzard_gluexml/promotionframe.lua:32`
+- `PromotionFrameButton_SetTextures(button, texture)`: `interface/addons/blizzard_gluexml/promotionframe.lua:53`
+- `ReactivateAccount_CreatePriceUpdateTicker()`: `interface/addons/blizzard_gluexml/shared/accountreactivate.lua:295`
+- `ReactivateAccount_UpdateMarketPrice()`: `interface/addons/blizzard_gluexml/shared/accountreactivate.lua:307`
+- `ReactivateAccountDialog_CanOpen()`: `interface/addons/blizzard_gluexml/camelot/accountreactivateoverrides.lua:1`
+- `ReactivateAccountDialog_CanOpen()`: `interface/addons/blizzard_gluexml/shared/accountreactivate.lua:179`
+- `ReactivateAccountDialog_OnEvent(self, event, ...)`: `interface/addons/blizzard_gluexml/shared/accountreactivate.lua:83`
+- `ReactivateAccountDialog_OnLoad(self)`: `interface/addons/blizzard_gluexml/shared/accountreactivate.lua:27`
+- `ReactivateAccountDialog_OnReactivate(self)`: `interface/addons/blizzard_gluexml/shared/accountreactivate.lua:285`
+- `ReactivateAccountDialog_Open()`: `interface/addons/blizzard_gluexml/shared/accountreactivate.lua:201`
+- `RealmHelpText_OnShow(self)`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:618`
+- `RealmList_GetCategoryIndex(categoryID)`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:289`
+- `RealmList_GetInfoFromName(name)`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:578`
+- `RealmList_InitButton(button, realmAddr)`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:33`
+- `RealmList_InitializeGamepad()`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:784`
+- `RealmList_IsButtonSelectable(button)`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:29`
+- `RealmList_OnCancel()`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:321`
+- `RealmList_OnEvent(self, event, ...)`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:24`
+- `RealmList_OnKeyDown(key)`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:298`
+- `RealmList_OnLoad(self)`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:5`
+- `RealmList_OnOk()`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:308`
+- `RealmList_OnShow(self)`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:554`
+- `RealmList_PushSortOrdering(sortBy)`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:706`
+- `RealmList_SetButtonSelected(button, selected)`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:63`
+- `RealmList_SetupGamepad()`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:742`
+- `RealmList_UninitializeGamepad()`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:797`
+- `RealmList_Update(retainScrollPosition)`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:154`
+- `RealmList_UpdateOKButton()`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:229`
+- `RealmList_UpdateSortIndicators()`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:383`
+- `RealmList_UpdateTabs()`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:235`
+- `RealmListTab_OnClick(tab)`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:595`
+- `RealmListUtility_SortRealms(realms)`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:738`
+- `RealmListUtility_SortRealmsCB(realm1, realm2)`: `interface/addons/blizzard_gluexml/mainline/realmlist.lua:722`
+- `RequestAssignPNCForResults(results, isValidationOnly)`: `interface/addons/blizzard_gluexml/shared/characterservicespaidnamechange.lua:6`
+- `SetKioskAutoRealmAddress(realmAddr)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1478`
+- `SetStoreUIShown(shown)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1253`
+- `ShouldShowRegulationOverlay()`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:1`
+- `StarterEditionPopUp_OnShow(self)`: `interface/addons/blizzard_gluexml/promotionframe.lua:89`
+- `SubscriptionRequestDialog_Open()`: `interface/addons/blizzard_gluexml/shared/accountreactivate.lua:242`
+- `toCharacterNameCasing(name)`: `interface/addons/blizzard_gluexml/shared/characterservicespaidnamechange.lua:2`
+- `ToggleStoreUI(contextKey)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:1231`
+- `TokenEntry_Cancel(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:585`
+- `TokenEntry_Okay(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:580`
+- `TokenEntry_OnHide()`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:568`
+- `TokenEntry_OnKeyDown(self, key)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:572`
+- `TokenEntry_OnShow(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:563`
+- `UpdateCharacterList(skipSelect)`: `interface/addons/blizzard_gluexml/mainline/characterselect.lua:732`
+- `WoWAccountSelect_OnAccept()`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:476`
+- `WoWAccountSelect_OnCancel()`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:471`
+- `WoWAccountSelect_OnHide(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:414`
+- `WoWAccountSelect_OnKeyDown(self, key)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:455`
+- `WoWAccountSelect_OnLoad(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:380`
+- `WoWAccountSelect_OnShow(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:403`
+- `WoWAccountSelect_RegisterForTransitions(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:503`
+- `WoWAccountSelect_SelectAccount(selectedIndex)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:420`
+- `WoWAccountSelect_SetUpGamepad(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:480`
+- `WoWAccountSelect_Update(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:427`
+- `WoWAccountSelect_UpdateSelection(self)`: `interface/addons/blizzard_gluexml/mainline/accountlogin.lua:374`
+
+## blizzard_gluexmlbase
+
+- `GlobalGlueContextMenu_Acquire(owner, extraMenuHeight, extraMenuWidth)`: `interface/addons/blizzard_gluexmlbase/shared/gluecontextmenu.lua:16`
+- `GlobalGlueContextMenu_GetOwner()`: `interface/addons/blizzard_gluexmlbase/shared/gluecontextmenu.lua:12`
+- `GlobalGlueContextMenu_IsShown()`: `interface/addons/blizzard_gluexmlbase/shared/gluecontextmenu.lua:23`
+- `GlobalGlueContextMenu_Release()`: `interface/addons/blizzard_gluexmlbase/shared/gluecontextmenu.lua:27`
+- `GlueTemplates_DeselectTab(tab)`: `interface/addons/blizzard_gluexmlbase/mainline/gluetemplates.lua:50`
+- `GlueTemplates_DisableTab(frame, index)`: `interface/addons/blizzard_gluexmlbase/mainline/gluetemplates.lua:39`
+- `GlueTemplates_EnableTab(frame, index)`: `interface/addons/blizzard_gluexmlbase/mainline/gluetemplates.lua:44`
+- `GlueTemplates_GetSelectedTab(frame)`: `interface/addons/blizzard_gluexmlbase/mainline/gluetemplates.lua:15`
+- `GlueTemplates_SelectTab(tab)`: `interface/addons/blizzard_gluexmlbase/mainline/gluetemplates.lua:61`
+- `GlueTemplates_SetDisabledTabState(tab)`: `interface/addons/blizzard_gluexmlbase/mainline/gluetemplates.lua:72`
+- `GlueTemplates_SetNumTabs(frame, numTabs)`: `interface/addons/blizzard_gluexmlbase/mainline/gluetemplates.lua:35`
+- `GlueTemplates_SetTab(frame, id)`: `interface/addons/blizzard_gluexmlbase/mainline/gluetemplates.lua:10`
+- `GlueTemplates_TabResize(tab)`: `interface/addons/blizzard_gluexmlbase/mainline/gluetemplates.lua:5`
+- `GlueTemplates_UpdateTabs(frame)`: `interface/addons/blizzard_gluexmlbase/mainline/gluetemplates.lua:19`
+- `SafeGetExpansionData(dataTable, expansionLevel)`: `interface/addons/blizzard_gluexmlbase/mainline/constants.lua:1`
+
+## blizzard_gmchatui
+
+- `AddGMChatStatusFrameToStatusFrames(statusFrames)`: `interface/addons/blizzard_gmchatui/blizzard_gmchatui_bootstrap.lua:29`
+- `GMChatFrame_Close()`: `interface/addons/blizzard_gmchatui/blizzard_gmchatui.lua:179`
+- `GMChatFrame_IsGM(playerName)`: `interface/addons/blizzard_gmchatui/blizzard_gmchatui.lua:3`
+- `GMChatFrame_LoadUI()`: `interface/addons/blizzard_gmchatui/blizzard_gmchatui_bootstrap.lua:3`
+- `GMChatFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_gmchatui/blizzard_gmchatui.lua:53`
+- `GMChatFrame_OnHide(self)`: `interface/addons/blizzard_gmchatui/blizzard_gmchatui.lua:157`
+- `GMChatFrame_OnLoad(self)`: `interface/addons/blizzard_gmchatui/blizzard_gmchatui.lua:7`
+- `GMChatFrame_OnShow(self)`: `interface/addons/blizzard_gmchatui/blizzard_gmchatui.lua:136`
+- `GMChatFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_gmchatui/blizzard_gmchatui.lua:166`
+- `GMChatFrame_OnWhisperFromGM(event, ...)`: `interface/addons/blizzard_gmchatui/blizzard_gmchatui_bootstrap.lua:7`
+- `GMChatFrame_Show()`: `interface/addons/blizzard_gmchatui/blizzard_gmchatui.lua:175`
+- `RestoreGMChatFrameSession(lastTalkedToGM)`: `interface/addons/blizzard_gmchatui/blizzard_gmchatui_bootstrap.lua:16`
+
+## blizzard_groupfinder
+
+- `GetLFGLockedDescription(activityID)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4656`
+- `GetLFGLockedTooltip(activityID)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4674`
+- `GetLFGStringFromEnum(role)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:78`
+- `GroupFinderFrame_EvaluateButtonVisibility(self)`: `interface/addons/blizzard_groupfinder/mainline/pveframe.lua:263`
+- `GroupFinderFrame_EvaluateHelpTips(self)`: `interface/addons/blizzard_groupfinder/mainline/pveframe.lua:324`
+- `GroupFinderFrame_GetSelectedIndex(self)`: `interface/addons/blizzard_groupfinder/mainline/pveframe.lua:316`
+- `GroupFinderFrame_GetSelection(self)`: `interface/addons/blizzard_groupfinder/mainline/pveframe.lua:312`
+- `GroupFinderFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_groupfinder/mainline/pveframe.lua:308`
+- `GroupFinderFrame_OnLoad(self)`: `interface/addons/blizzard_groupfinder/mainline/pveframe.lua:207`
+- `GroupFinderFrame_OnShow(self)`: `interface/addons/blizzard_groupfinder/mainline/pveframe.lua:342`
+- `GroupFinderFrame_SelectGroupButton(index)`: `interface/addons/blizzard_groupfinder/mainline/pveframe.lua:382`
+- `GroupFinderFrame_ShowGroupFrame(frame)`: `interface/addons/blizzard_groupfinder/mainline/pveframe.lua:367`
+- `GroupFinderFrame_Update(self, frame)`: `interface/addons/blizzard_groupfinder/mainline/pveframe.lua:320`
+- `GroupFinderFrameButton_SetEnabled(button, enabled)`: `interface/addons/blizzard_groupfinder/mainline/pveframe.lua:291`
+- `GroupFinderFrameGroupButton_OnClick(self)`: `interface/addons/blizzard_groupfinder/mainline/pveframe.lua:396`
+- `GroupFinderFrameGroupButton_OnEnter(self)`: `interface/addons/blizzard_groupfinder/mainline/pveframe.lua:401`
+- `IsActivityLockedForCustomText(activityCategoryID, activityID)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4692`
+- `LFDCheckRolesRestricted(dungeonID, tank, healer, dps)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:244`
+- `LFDFrame_DisplayDungeonByID(dungeonID)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:109`
+- `LFDFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:37`
+- `LFDFrame_OnLoad(self)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:6`
+- `LFDFrame_OnShow(self)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:105`
+- `LFDFramePopupRoleCheckButton_OnClick(self)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:712`
+- `LFDFrameRoleCheckButton_OnClick(self)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:133`
+- `LFDGetNumDungeons()`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:997`
+- `LFDPopupCheckRoleSelectionValid(tank, healer, dps)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:896`
+- `LFDPopupRoleCheckButton_OnEnter(self)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:746`
+- `LFDQueueCheckRoleSelectionValid(tank, healer, dps)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:221`
+- `LFDQueueFrame_GetRoles()`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:126`
+- `LFDQueueFrame_Join()`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:312`
+- `LFDQueueFrame_OnHide(self)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:422`
+- `LFDQueueFrame_OnLoad(self)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:331`
+- `LFDQueueFrame_OnShow(self)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:361`
+- `LFDQueueFrame_SetRoles()`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:119`
+- `LFDQueueFrame_SetType(value)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:442`
+- `LFDQueueFrame_SetTypeFollowerDungeon()`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:463`
+- `LFDQueueFrame_SetTypeInternal(value)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:427`
+- `LFDQueueFrame_SetTypeRandomDungeon(hideCooldown)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:447`
+- `LFDQueueFrame_SetTypeSpecificDungeon()`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:455`
+- `LFDQueueFrame_Update()`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:690`
+- `LFDQueueFrame_UpdateRoleButton(button, locked, alert)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:197`
+- `LFDQueueFrame_UpdateRoleButtons()`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:139`
+- `LFDQueueFrameDungeonChoiceEnableButton_OnClick(self, button)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:316`
+- `LFDQueueFrameDungeonListButton_OnEnter(self)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:322`
+- `LFDQueueFrameExpandOrCollapseButton_OnClick(self, button)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:326`
+- `LFDQueueFrameFindGroupButton_Update()`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:593`
+- `LFDQueueFrameFollowerList_InitButton(button, elementData)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:296`
+- `LFDQueueFrameList_Update()`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:261`
+- `LFDQueueFrameRandom_UpdateFrame()`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:471`
+- `LFDQueueFrameRandomCooldownFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:490`
+- `LFDQueueFrameRandomCooldownFrame_OnLoad(self)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:482`
+- `LFDQueueFrameRandomCooldownFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:584`
+- `LFDQueueFrameRandomCooldownFrame_Update()`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:494`
+- `LFDQueueFrameSpecificList_InitButton(button, elementData)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:280`
+- `LFDRoleButton_OnEnter(self)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:478`
+- `LFDRoleCheckPopup_GetRolesChecked()`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:864`
+- `LFDRoleCheckPopup_OnEvent(self, event)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:787`
+- `LFDRoleCheckPopup_OnHide(self)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:783`
+- `LFDRoleCheckPopup_OnShow(self)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:776`
+- `LFDRoleCheckPopup_Update()`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:793`
+- `LFDRoleCheckPopup_UpdateAcceptButton()`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:911`
+- `LFDRoleCheckPopupAccept_OnClick()`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:871`
+- `LFDRoleCheckPopupDecline_OnClick()`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:889`
+- `LFG_BuildSelectedEntriesList(visibleEntryList, hiddenByCollapseEntryList)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1700`
+- `LFG_DisplayGroupLeaderWarning(eventFrame)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:292`
+- `LFG_HasRequiredGroupSize(category, joinType, dungeonList, hiddenByCollapseList)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1639`
+- `LFG_IsHeroicScenario(dungeonID)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:281`
+- `LFG_IsRandomDungeonDisplayable(id)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1980`
+- `LFG_JoinDungeon(category, joinType, dungeonList, hiddenByCollapseList)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1615`
+- `LFG_QueueForInstanceIfEnabled(category, queueID)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1607`
+- `LFG_SetRoleIconIncentive(roleButton, incentiveIndex)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:452`
+- `LFG_TryGetCrossFactionQueueFailureMessage(selectedEntryIDs)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1722`
+- `LFG_UpdateAllRoleCheckboxes()`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:393`
+- `LFG_UpdateFindGroupButtons()`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:363`
+- `LFG_UpdateFramesIfShown()`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:381`
+- `LFG_UpdateLockedOutPanels()`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:336`
+- `LFG_UpdateQueuedList()`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:374`
+- `LFG_UpdateRoleCheckboxes(category, lfgID, tankButton, healButton, dpsButton, leaderButton)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:410`
+- `LFG_UpdateRolesChangeable()`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:426`
+- `LFGBackfillCover_SetUp(self, subtypeIDs, lfgCategory, updateFunc)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1940`
+- `LFGBackfillCover_Update(self, forceUpdate)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1947`
+- `LFGConstructDeclinedMessage(dungeonID)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:529`
+- `LFGCooldownCover_ChangeSettings(self, showAll, showCooldown)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1809`
+- `LFGCooldownCover_OnEvent(self, event, ...)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1819`
+- `LFGCooldownCover_OnUpdate(self, elapsed)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1931`
+- `LFGCooldownCover_SetUp(self, backfillFrame)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1799`
+- `LFGCooldownCover_Update(self)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1825`
+- `LFGDebug(text, ...)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:12`
+- `LFGDungeonList_DisableEntries()`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1689`
+- `LFGDungeonList_EvaluateListState(category)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1459`
+- `LFGDungeonList_SetDungeonEnabled(dungeonID, isEnabled)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1739`
+- `LFGDungeonList_SetHeaderCollapsed(button, dungeonList, hiddenByCollapseList)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1672`
+- `LFGDungeonList_SetHeaderEnabled(category, headerID, isEnabled, dungeonList, hiddenByCollapseList)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1753`
+- `LFGDungeonList_Setup()`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1010`
+- `LFGDungeonListButton_OnEnter(button, tooltipTitle)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1767`
+- `LFGDungeonListButton_SetDungeon(button, dungeonID, enabled, checkedList)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1483`
+- `LFGDungeonListCheckButton_OnClick(button, category, dungeonList, hiddenByCollapseList)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1966`
+- `LFGDungeonReadyDialog_UpdateInstanceInfo(name, completedEncounters, totalEncounters)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:888`
+- `LFGDungeonReadyDialog_UpdateRewards(dungeonID, role)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:763`
+- `LFGDungeonReadyDialogInstanceInfo_OnEnter(self)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:903`
+- `LFGDungeonReadyDialogReward_OnEnter(self, dungeonID)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:868`
+- `LFGDungeonReadyDialogReward_SetMisc(button)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:846`
+- `LFGDungeonReadyDialogReward_SetReward(button, dungeonID, rewardIndex, rewardType, rewardArg)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:852`
+- `LFGDungeonReadyPopup_OnFail()`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:565`
+- `LFGDungeonReadyPopup_OnUpdate(self, elapsed)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:576`
+- `LFGDungeonReadyPopup_Update()`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:584`
+- `LFGDungeonReadyStatus_ResetReadyStates()`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:924`
+- `LFGDungeonReadyStatusGrouped_UpdateIcon(button, buttonRole, numMembers)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:952`
+- `LFGDungeonReadyStatusIndividual_UpdateIcon(button)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:931`
+- `LFGDungeonReadyStatusRoleless_UpdateCount(readyButton, numMembers)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:983`
+- `LFGEventFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:153`
+- `LFGEventFrame_OnLoad(self)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:100`
+- `LFGIsIDHeader(id)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1001`
+- `LFGList_DefaultFilterFunction(dungeonID, maxLevelDiff)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1560`
+- `LFGList_ReportAdvertisement(searchResultID)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4232`
+- `LFGList_ReportApplicant(applicantID, applicantName)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4236`
+- `LFGList_ReportListing(searchResultID, leaderName)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4226`
+- `LFGListApplicantMember_OnEnter(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2186`
+- `LFGListApplicantMember_OnMouseDown(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2155`
+- `LFGListApplicationDialog_OnEvent(self, event)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3566`
+- `LFGListApplicationDialog_OnLoad(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3560`
+- `LFGListApplicationDialog_Show(self, resultID)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3572`
+- `LFGListApplicationDialog_UpdateRoles(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3584`
+- `LFGListApplicationDialog_UpdateValidState(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3637`
+- `LFGListApplicationDialogSignUpButton_OnClick(button)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3649`
+- `LFGListApplicationViewer_InitButton(button, elementData)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1875`
+- `LFGListApplicationViewer_OnEvent(self, event, ...)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1607`
+- `LFGListApplicationViewer_OnLoad(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1582`
+- `LFGListApplicationViewer_OnShow(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1646`
+- `LFGListApplicationViewer_OpenEditMode()`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2107`
+- `LFGListApplicationViewer_UpdateApplicant(button, id)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1909`
+- `LFGListApplicationViewer_UpdateApplicantMember(member, appID, memberIdx, status, pendingStatus)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2019`
+- `LFGListApplicationViewer_UpdateAvailability(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1806`
+- `LFGListApplicationViewer_UpdateGroupData(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1655`
+- `LFGListApplicationViewer_UpdateInfo(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1666`
+- `LFGListApplicationViewer_UpdateInviteState(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1837`
+- `LFGListApplicationViewer_UpdateResultList(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1828`
+- `LFGListApplicationViewer_UpdateResults(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1884`
+- `LFGListApplicationViewer_UpdateRoleIcons(member, grayedOut, tank, healer, damage, noTouchy, assignedRole)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1983`
+- `LFGListApplicationViewerEditButton_OnClick(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2120`
+- `LFGListApplicationViewerRemoveEntryButton_OnClick(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2113`
+- `LFGListApplicationViewerUtil_GetButtonHeight(numApplicants)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2102`
+- `LFGListCanChangeLanguages()`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2421`
+- `LFGListCategorySelection_AddButton(self, btnIndex, categoryID, filters)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:648`
+- `LFGListCategorySelection_OnEvent(self, event, ...)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:597`
+- `LFGListCategorySelection_OnLoad(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:593`
+- `LFGListCategorySelection_OnShow(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:608`
+- `LFGListCategorySelection_SelectCategory(self, categoryID, filters)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:698`
+- `LFGListCategorySelection_StartFindGroup(self, questID)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:772`
+- `LFGListCategorySelection_StartFindScenarioGroup(self, scenarioID)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:558`
+- `LFGListCategorySelection_UpdateCategoryButtons(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:613`
+- `LFGListCategorySelection_UpdateNavButtons(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:705`
+- `LFGListCategorySelectionButton_OnClick(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:791`
+- `LFGListCategorySelectionFindGroupButton_OnClick(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:762`
+- `LFGListCategorySelectionStartGroupButton_OnClick(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:747`
+- `LFGListEditBox_AddToTabCategory(self, tabCategory)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4634`
+- `LFGListEditBox_OnTabPressed(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4645`
+- `LFGListEntryCreation_CheckAutoCreate(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1302`
+- `LFGListEntryCreation_Clear(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1055`
+- `LFGListEntryCreation_ClearAutoCreateMode(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1266`
+- `LFGListEntryCreation_ClearFocus(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1082`
+- `LFGListEntryCreation_GetAutoCreateData(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1294`
+- `LFGListEntryCreation_GetAutoCreateDataQuest(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1274`
+- `LFGListEntryCreation_GetAutoCreateDataScenario(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1284`
+- `LFGListEntryCreation_GetSanitizedName(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1190`
+- `LFGListEntryCreation_IsAutoCreateMode(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1270`
+- `LFGListEntryCreation_IsEditMode(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1473`
+- `LFGListEntryCreation_ListGroup(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1238`
+- `LFGListEntryCreation_ListGroupInternal(self, activityID, itemLevel, autoAccept, privateGroup, questID, mythicPlusRating, pvpRating, generalPlaystyle, isCrossFaction)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1194`
+- `LFGListEntryCreation_ListScenarioGroupInternal(self, activityID, itemLevel, autoAccept, privateGroup, scenarioID)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1231`
+- `LFGListEntryCreation_OnEvent(self, event, ...)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1019`
+- `LFGListEntryCreation_OnLoad(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:801`
+- `LFGListEntryCreation_OnPlayStyleSelectedInternal(self, generalPlaystyle)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1179`
+- `LFGListEntryCreation_OnShow(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1027`
+- `LFGListEntryCreation_Select(self, filters, categoryID, groupID, activityID)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1093`
+- `LFGListEntryCreation_SetAutoCreateDataInternal(self, activityType, activityID, contextID)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1256`
+- `LFGListEntryCreation_SetAutoCreateMode(self, activityType, activityID, contextID)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1262`
+- `LFGListEntryCreation_SetBaseFilters(self, baseFilters)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1395`
+- `LFGListEntryCreation_SetEditMode(self, editMode)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1411`
+- `LFGListEntryCreation_SetTitleFromActivityInfo(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1399`
+- `LFGListEntryCreation_SetupActivityDropdown(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:945`
+- `LFGListEntryCreation_SetupGroupDropdown(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:854`
+- `LFGListEntryCreation_SetupPlayStyleDropdown(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1000`
+- `LFGListEntryCreation_Show(self, baseFilters, selectedCategory, selectedFilters)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1034`
+- `LFGListEntryCreation_UpdateAuthenticatedState(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1386`
+- `LFGListEntryCreation_UpdateValidState(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1314`
+- `LFGListEntryCreationActivityFinder_Accept(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1549`
+- `LFGListEntryCreationActivityFinder_Cancel(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1556`
+- `LFGListEntryCreationActivityFinder_InitButton(button, elementData)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1530`
+- `LFGListEntryCreationActivityFinder_OnLoad(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1496`
+- `LFGListEntryCreationActivityFinder_Select(self, activityID)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1560`
+- `LFGListEntryCreationActivityFinder_SetButtonSelected(button, selected)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1540`
+- `LFGListEntryCreationActivityFinder_Show(self, categoryID, groupID, filters)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1507`
+- `LFGListEntryCreationActivityFinder_UpdateMatching(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1518`
+- `LFGListEntryCreationCancelButton_OnClick(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1477`
+- `LFGListEntryCreationListGroupButton_OnClick(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:1491`
+- `LFGListFilterChoices(list, filterFunc, filterMaxLevelDiff)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1049`
+- `LFGListFrame_BeginFindQuestGroup(self, questID, shouldShowCreateGroupButton)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:513`
+- `LFGListFrame_BeginFindScenarioGroup(self, scenarioID, shouldShowCreateGroupButton)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:538`
+- `LFGListFrame_CheckPendingQuestIDSearch(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:471`
+- `LFGListFrame_CheckPendingScenarioIDSearch(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:484`
+- `LFGListFrame_FixPanelValid(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:453`
+- `LFGListFrame_GetBestPanel(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:439`
+- `LFGListFrame_GetChatMessageForSearchStatusChange(newStatus)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:370`
+- `LFGListFrame_GetPendingQuestIDSearch(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:505`
+- `LFGListFrame_GetPendingScenarioIDSearch(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:497`
+- `LFGListFrame_IsPanelValid(self, panel)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:390`
+- `LFGListFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:253`
+- `LFGListFrame_OnHide(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:363`
+- `LFGListFrame_OnLoad(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:191`
+- `LFGListFrame_OnShow(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:355`
+- `LFGListFrame_SetActivePanel(self, panel)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:382`
+- `LFGListFrame_SetBaseFilters(self, filters)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:459`
+- `LFGListFrame_SetPendingQuestIDSearch(self, questID)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:509`
+- `LFGListFrame_SetPendingScenarioIDSearch(self, scenarioID)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:501`
+- `LFGListGroupDataDisplay_Update(self, activityID, displayData, disabled, showClassesByRole)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3802`
+- `LFGListGroupDataDisplayEnumerate_Update(self, numPlayers, displayData, disabled, iconOrder, showClassesByRole)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3863`
+- `LFGListGroupDataDisplayPlayerCount_Update(self, displayData, disabled)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3945`
+- `LFGListGroupDataDisplayRoleCount_Update(self, displayData, disabled)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3843`
+- `LFGListInviteDialog_Accept(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3782`
+- `LFGListInviteDialog_Acknowledge(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3794`
+- `LFGListInviteDialog_CheckPending(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3715`
+- `LFGListInviteDialog_Decline(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3788`
+- `LFGListInviteDialog_OnEvent(self, event, ...)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3679`
+- `LFGListInviteDialog_OnLoad(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3671`
+- `LFGListInviteDialog_Show(self, resultID, kstringGroupName)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3736`
+- `LFGListInviteDialog_UpdateOfflineNotice(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3772`
+- `LFGListNothingAvailable_OnEvent(self, event, ...)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:573`
+- `LFGListNothingAvailable_Update(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:580`
+- `LFGListPVEStub_OnShow(self)`: `interface/addons/blizzard_groupfinder/mainline/pveframe.lua:18`
+- `LFGListPVPStub_OnShow(self)`: `interface/addons/blizzard_groupfinder/mainline/pveframe.lua:13`
+- `LFGListRemoveCollapsedChildren(list, hiddenByCollapseList)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1135`
+- `LFGListRemoveHeadersWithoutChildren(list)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1062`
+- `LFGListRequirement_Validate(self, text)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3958`
+- `LFGListRoleButtonCheckButton_OnClick(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3656`
+- `LFGListSearchAutoCompleteButton_OnClick(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3071`
+- `LFGListSearchEntry_CreateContextMenu(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3448`
+- `LFGListSearchEntry_OnClick(self, button)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3489`
+- `LFGListSearchEntry_OnEnter(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3499`
+- `LFGListSearchEntry_OnLeave(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3514`
+- `LFGListSearchEntry_OnLoad(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3184`
+- `LFGListSearchEntry_Update(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3251`
+- `LFGListSearchEntry_UpdateExpiration(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3436`
+- `LFGListSearchEntryUtil_GetFriendList(resultID)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3520`
+- `LFGListSearchPanel_AutoCompleteAdvance(self, offset)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3079`
+- `LFGListSearchPanel_Clear(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2764`
+- `LFGListSearchPanel_CreateGroupInstead(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2819`
+- `LFGListSearchPanel_DoSearch(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2795`
+- `LFGListSearchPanel_EvaluateTutorial(self, mouseOverButton)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2771`
+- `LFGListSearchPanel_InitButton(button, elementData)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2853`
+- `LFGListSearchPanel_OnEvent(self, event, ...)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2371`
+- `LFGListSearchPanel_OnLoad(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2347`
+- `LFGListSearchPanel_OnShow(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2714`
+- `LFGListSearchPanel_SelectResult(self, resultID)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2910`
+- `LFGListSearchPanel_SetCategory(self, categoryID, filters, preferredFilters)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2784`
+- `LFGListSearchPanel_SetupLanguageFilter(dropdown, rootDescription)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2691`
+- `LFGListSearchPanel_SignUp(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3006`
+- `LFGListSearchPanel_UpdateAutoComplete(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3114`
+- `LFGListSearchPanel_UpdateButtonStatus(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2915`
+- `LFGListSearchPanel_UpdateResultList(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2825`
+- `LFGListSearchPanel_UpdateResults(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2858`
+- `LFGListSearchPanel_ValidateSelected(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2832`
+- `LFGListSearchPanelSearchBox_OnArrowPressed(self, key)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3034`
+- `LFGListSearchPanelSearchBox_OnEditFocusGained(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3047`
+- `LFGListSearchPanelSearchBox_OnEditFocusLost(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3066`
+- `LFGListSearchPanelSearchBox_OnEnterPressed(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3016`
+- `LFGListSearchPanelSearchBox_OnTabPressed(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3026`
+- `LFGListSearchPanelSearchBox_OnTextChanged(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3042`
+- `LFGListSearchPanelUtil_CanSelectResult(resultID)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:2838`
+- `LFGListUpdateHeaderEnabledAndLockedStates(dungeonList, enabledList, hiddenByCollapseList)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1082`
+- `LFGListUtil_AppendStatistic(label, value, title, lastTitle)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4217`
+- `LFGListUtil_AugmentWithBest(filters, categoryID, groupID, activityID)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:3970`
+- `LFGListUtil_CanListGroup()`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4213`
+- `LFGListUtil_CanSearchForGroup()`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4207`
+- `LFGListUtil_FindQuestGroup(questID, isFromGreenEyeButton)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4594`
+- `LFGListUtil_FindScenarioGroup(scenarioID, shouldShowCreateGroupButton)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4606`
+- `LFGListUtil_GetActiveQueueMessage(isApplication)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4305`
+- `LFGListUtil_GetCurrentExpansion()`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4074`
+- `LFGListUtil_GetDecoratedCategoryName(categoryName, filter, useColors)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4082`
+- `LFGListUtil_GetQuestCategoryData(questID)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4556`
+- `LFGListUtil_GetQuestDescription(questID)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4618`
+- `LFGListUtil_IsAppEmpowered()`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4199`
+- `LFGListUtil_IsEntryEmpowered()`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4203`
+- `LFGListUtil_IsStatusInactive(status)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4352`
+- `LFGListUtil_OpenBestWindow(toggle)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4242`
+- `LFGListUtil_SetAutoAccept(autoAccept)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4356`
+- `LFGListUtil_SetSearchEntryTooltip(tooltip, resultID, autoAcceptOption)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4379`
+- `LFGListUtil_SortActivitiesByRelevancy(activities)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4288`
+- `LFGListUtil_SortActivitiesByRelevancyCB(activityID1, activityID2)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4263`
+- `LFGListUtil_SortApplicants(applicants)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4195`
+- `LFGListUtil_SortApplicantsCB(applicantID1, applicantID2)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4183`
+- `LFGListUtil_SortSearchResults(self)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4179`
+- `LFGListUtil_SortSearchResultsCB(searchResultID1, searchResultID2)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4130`
+- `LFGListUtil_ValidateHonorLevelReq(self, text)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4066`
+- `LFGListUtil_ValidateLevelReq(self, text)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4039`
+- `LFGListUtil_ValidateMythicPlusRatingReq(self, text)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4060`
+- `LFGListUtil_ValidatePvPLevelReq(self, text)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4046`
+- `LFGListUtil_ValidatePvpRatingReq(self, text)`: `interface/addons/blizzard_groupfinder/mainline/lfglist.lua:4053`
+- `LFGQueueFrame_UpdateLFGDungeonList(dungeonList, hiddenByCollapseList, checkedList, filterFunc, filterMaxLevelDiff)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1026`
+- `LFGRandomList_OnEnter(self)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1986`
+- `LFGRewardsFrame_AdjustFont(self)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1150`
+- `LFGRewardsFrame_EstimateRemainingCompletions(dungeonID)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1422`
+- `LFGRewardsFrame_OnLoad(self)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1154`
+- `LFGRewardsFrame_SetItemButton(parentFrame, dungeonID, index, id, name, texture, numItems, rewardType, rewardID, quality, shortageIndex, showTankIcon, showHealerIcon, showDamageIcon)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1341`
+- `LFGRewardsFrame_UpdateFrame(parentFrame, dungeonID, background)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1161`
+- `LFGRewardsFrameEncounterList_OnEnter(self)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1440`
+- `LFGRoleCheckPopup_UpdatePvPRoles()`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:717`
+- `LFGRoleCheckPopup_UpdateRoleButton(button)`: `interface/addons/blizzard_groupfinder/mainline/lfdframe.lua:725`
+- `LFGRoleIconIncentive_OnEnter(self)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:471`
+- `LFGSpecificChoiceEnableButton_SetIsRadio(button, isRadio)`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:518`
+- `PVEFrame_HideLeftInset()`: `interface/addons/blizzard_groupfinder/mainline/pveframe.lua:149`
+- `PVEFrame_ShowFrame(sidePanelName, selection)`: `interface/addons/blizzard_groupfinder/mainline/pveframe.lua:74`
+- `PVEFrame_ShowLeftInset()`: `interface/addons/blizzard_groupfinder/mainline/pveframe.lua:165`
+- `PVEFrame_TabOnClick(self)`: `interface/addons/blizzard_groupfinder/mainline/pveframe.lua:144`
+- `PVEFrame_ToggleFrame(sidePanelName, selection)`: `interface/addons/blizzard_groupfinder/mainline/pveframe.lua:31`
+- `RaidFinder_UpdateRoleButton(button, locked)`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:353`
+- `RaidFinderFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:12`
+- `RaidFinderFrame_OnHide(self)`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:42`
+- `RaidFinderFrame_OnLoad(self)`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:3`
+- `RaidFinderFrame_OnShow(self)`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:33`
+- `RaidFinderFrame_UpdateAvailability()`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:47`
+- `RaidFinderFrameFindRaidButton_Update()`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:384`
+- `RaidFinderFrameRoleCheckButton_OnClick(self)`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:367`
+- `RaidFinderQueueFrame_Join()`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:313`
+- `RaidFinderQueueFrame_OnLoad(self)`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:188`
+- `RaidFinderQueueFrame_OnShow(self)`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:196`
+- `RaidFinderQueueFrame_SetRaid(raid)`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:308`
+- `RaidFinderQueueFrame_SetRaidInternal(raid)`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:300`
+- `RaidFinderQueueFrame_SetRoles()`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:372`
+- `RaidFinderQueueFrame_UpdateRoles()`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:322`
+- `RaidFinderQueueFrameCooldownAdditionalPlayers_OnEnter(self)`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:593`
+- `RaidFinderQueueFrameCooldownFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:474`
+- `RaidFinderQueueFrameCooldownFrame_OnLoad(self)`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:466`
+- `RaidFinderQueueFrameCooldownFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:478`
+- `RaidFinderQueueFrameCooldownFrame_Update()`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:487`
+- `RaidFinderQueueFrameIneligibleFrame_SetIneligibility(onGroup, onPlayer)`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:111`
+- `RaidFinderQueueFrameIneligibleFrame_SetQueueRestriction(otherQueue)`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:127`
+- `RaidFinderQueueFrameIneligibleFrame_UpdateFrame(self)`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:133`
+- `RaidFinderQueueFrameRewards_UpdateFrame()`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:379`
+- `RaidFinderRoleButton_OnEnter(self)`: `interface/addons/blizzard_groupfinder/shared/raidfinder.lua:438`
+- `ScenarioFinderFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_groupfinder/shared/scenariofinder_shared.lua:31`
+- `ScenarioFinderFrame_OnLoad(self)`: `interface/addons/blizzard_groupfinder/shared/scenariofinder_shared.lua:20`
+- `ScenarioFinderFrame_OnShow(self)`: `interface/addons/blizzard_groupfinder/shared/scenariofinder_shared.lua:49`
+- `ScenarioFinderFrame_UpdateAvailability()`: `interface/addons/blizzard_groupfinder/shared/scenariofinder_shared.lua:55`
+- `ScenarioQueueFrame_Join()`: `interface/addons/blizzard_groupfinder/shared/scenariofinder_shared.lua:169`
+- `ScenarioQueueFrame_OnLoad(self)`: `interface/addons/blizzard_groupfinder/shared/scenariofinder_shared.lua:263`
+- `ScenarioQueueFrame_OnShow(self)`: `interface/addons/blizzard_groupfinder/shared/scenariofinder_shared.lua:267`
+- `ScenarioQueueFrame_SetType(value)`: `interface/addons/blizzard_groupfinder/shared/scenariofinder_shared.lua:316`
+- `ScenarioQueueFrame_SetTypeInternal(value)`: `interface/addons/blizzard_groupfinder/shared/scenariofinder_shared.lua:304`
+- `ScenarioQueueFrame_SetTypeRandom()`: `interface/addons/blizzard_groupfinder/shared/scenariofinder_shared.lua:321`
+- `ScenarioQueueFrame_SetTypeSpecific()`: `interface/addons/blizzard_groupfinder/shared/scenariofinder_shared.lua:331`
+- `ScenarioQueueFrame_Update()`: `interface/addons/blizzard_groupfinder/mainline/scenariofinder.lua:1`
+- `ScenarioQueueFrameChoiceButton_OnEnter(self)`: `interface/addons/blizzard_groupfinder/shared/scenariofinder_shared.lua:259`
+- `ScenarioQueueFrameChoiceEnableButton_OnClick(self)`: `interface/addons/blizzard_groupfinder/shared/scenariofinder_shared.lua:249`
+- `ScenarioQueueFrameExpandOrCollapseButton_OnClick(self)`: `interface/addons/blizzard_groupfinder/shared/scenariofinder_shared.lua:254`
+- `ScenarioQueueFrameFindGroupButton_OnClick()`: `interface/addons/blizzard_groupfinder/shared/scenariofinder_shared.lua:173`
+- `ScenarioQueueFrameFindGroupButton_OnEnter(self)`: `interface/addons/blizzard_groupfinder/shared/scenariofinder_shared.lua:182`
+- `ScenarioQueueFrameFindGroupButton_Update()`: `interface/addons/blizzard_groupfinder/shared/scenariofinder_shared.lua:190`
+- `ScenarioQueueFrameRandom_UpdateFrame()`: `interface/addons/blizzard_groupfinder/shared/scenariofinder_shared.lua:125`
+- `ScenarioQueueFrameRandomRandomList_OnEnter(self)`: `interface/addons/blizzard_groupfinder/shared/scenariofinder_shared.lua:134`
+- `ScenarioQueueFrameSpecific_Update()`: `interface/addons/blizzard_groupfinder/shared/scenariofinder_shared.lua:101`
+- `ScenarioQueueFrameSpecificList_InitButton(button, elementData)`: `interface/addons/blizzard_groupfinder/shared/scenariofinder_shared.lua:4`
+- `ScenariosGetNumDungeons()`: `interface/addons/blizzard_groupfinder/shared/lfgframe.lua:1005`
+- `ToggleLFDParentFrame()`: `interface/addons/blizzard_groupfinder/mainline/pveframe.lua:58`
+
+## blizzard_groupfinder_vanillastyle
+
+- `GroupFinderVanillaStyle_LoadUI()`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_groupfinder_vanillastyle_bootstrap.lua:3`
+- `LFGBrowse_DoSearch()`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:331`
+- `LFGBrowseActivityDropDownResetButton_OnClick(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:1256`
+- `LFGBrowseCategoryButton_OnClick()`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:1096`
+- `LFGBrowseGroupDataDisplay_Update(self, displayType, maxNumPlayers, displayData, disabled, isSolo, soloRoles, comment, hasSelf)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:874`
+- `LFGBrowseGroupDataDisplayComment_Update(self, text, disabled)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:915`
+- `LFGBrowseGroupDataDisplayEnumerate_Update(self, numPlayers, displayData, disabled, iconOrder)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:960`
+- `LFGBrowseGroupDataDisplayPlayerCount_Update(self, displayData, disabled)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:989`
+- `LFGBrowseGroupDataDisplayRoleCount_Update(self, displayData, disabled)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:940`
+- `LFGBrowseGroupDataDisplaySolo_Update(self, soloRoles, disabled)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:924`
+- `LFGBrowseSearchButton_OnClick(self, button)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:327`
+- `LFGBrowseSearchEntry_Init(self, elementData, browseFrame)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:357`
+- `LFGBrowseSearchEntry_OnClick(self, button)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:515`
+- `LFGBrowseSearchEntry_OnEnter(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:528`
+- `LFGBrowseSearchEntry_OnEvent(self, event, ...)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:505`
+- `LFGBrowseSearchEntry_OnLeave(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:537`
+- `LFGBrowseSearchEntry_OnLoad(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:500`
+- `LFGBrowseSearchEntry_SetSelection(self, selected)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:542`
+- `LFGBrowseSearchEntry_Update(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:364`
+- `LFGBrowseSearchEntryTooltip_Load(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:554`
+- `LFGBrowseSearchEntryTooltip_UpdateAndShow(self, resultID)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:572`
+- `LFGBrowseUtil_GetBestDisplayTypeForActivityIDs(activityIDs)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:1511`
+- `LFGBrowseUtil_GetInviteActionForResult(resultID)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:1456`
+- `LFGBrowseUtil_MapRoleStatesToRoleIcons(iconArray, isTank, isHealer, isDPS, useSimple, useDisabled)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:1473`
+- `LFGBrowseUtil_ReportAdvertisement(searchResultID, leaderName)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:1501`
+- `LFGBrowseUtil_ReportListing(searchResultID, leaderName)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:1495`
+- `LFGBrowseUtil_SortSearchResults(results)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:1336`
+- `LFGListingActivityView_ActivityFiltersChanged(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:960`
+- `LFGListingActivityView_CanPostWithCurrentComment(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:1164`
+- `LFGListingActivityView_InitActivityButton(button, elementData)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:1108`
+- `LFGListingActivityView_InitActivityGroupButton(button, elementData, isCollapsed)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:1064`
+- `LFGListingActivityView_OnLoad(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:813`
+- `LFGListingActivityView_OnPlayStyleSelectedInternal(self, generalPlaystyle)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:952`
+- `LFGListingActivityView_OnShow(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:884`
+- `LFGListingActivityView_SetupPlayStyleDropdown(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:929`
+- `LFGListingActivityView_UpdateActivities(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:964`
+- `LFGListingBackButton_OnClick(self, button)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:703`
+- `LFGListingBackButton_OnEvent(self, event)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:697`
+- `LFGListingBackButton_OnLoad(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:692`
+- `LFGListingBackButton_UpdateText(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:712`
+- `LFGListingCategorySelection_ActivityFiltersChanged(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:759`
+- `LFGListingCategorySelection_AddButton(self, btnIndex, categoryID)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:779`
+- `LFGListingCategorySelection_OnShow(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:755`
+- `LFGListingCategorySelection_UpdateCategoryButtons(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:763`
+- `LFGListingCategorySelectionButton_OnClick(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:805`
+- `LFGListingComment_GetComment(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:1188`
+- `LFGListingComment_OnMouseDown(self, button)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:1182`
+- `LFGListingComment_OnTextChanged(self, userInput)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:1176`
+- `LFGListingLockedView_OnEvent(self, event)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:1202`
+- `LFGListingLockedView_OnLoad(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:1195`
+- `LFGListingLockedView_RefreshContent(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:1208`
+- `LFGListingLockedView_SafeAcquireFrame(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:1314`
+- `LFGListingLockedView_SetLineContent(self, frame, text, tooltip)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:1322`
+- `LFGListingNewPlayerFriendlyButtonCheckButton_OnClick(self, button)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:648`
+- `LFGListingNewPlayerFriendlyButtonCheckButton_OnShow(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:642`
+- `LFGListingPostButton_OnClick(self, button)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:674`
+- `LFGListingPostButton_OnEvent(self, event)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:668`
+- `LFGListingPostButton_OnLoad(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:662`
+- `LFGListingPostButton_UpdateText(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:679`
+- `LFGListingRoleDropdown_SetupDropdown(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:579`
+- `LFGListingRoleIcon_UpdateRoleTexture(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:597`
+- `LFGListingRolePollButton_OnClick(self, button)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:626`
+- `LFGListingRolePollButton_OnEvent(self, event)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:618`
+- `LFGListingRolePollButton_OnLoad(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:612`
+- `LFGListingRolePollButton_UpdateEnableState(self)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:631`
+- `LFGListingUtil_CanEditListing()`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_listing.lua:1333`
+- `LFGParentFrame_SearchActiveEntry()`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_parentframe.lua:179`
+- `LFGParentFrameTab1_OnClick()`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_parentframe.lua:164`
+- `LFGParentFrameTab2_OnClick()`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_parentframe.lua:169`
+- `LFGParentFrameTab3_OnClick()`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_parentframe.lua:174`
+- `LFGUtil_GetActivityGroupForActivity(activityID)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_parentframe.lua:228`
+- `LFGUtil_GetActivityInfoName(activityInfo)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_parentframe.lua:282`
+- `LFGUtil_GetFilteredActivities(categoryID, activityGroupID)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_parentframe.lua:258`
+- `LFGUtil_OrganizeActivitiesByActivityGroup(activities)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_parentframe.lua:239`
+- `LFGUtil_SortActivityGroupIDs(activityGroupIDList)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_parentframe.lua:208`
+- `LFGUtil_SortActivityIDs(activityIDList)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_parentframe.lua:187`
+- `LFGVanilla_ShowFrame(tab)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_parentframe.lua:119`
+- `LFGVanilla_ToggleFrame(tab)`: `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_parentframe.lua:134`
+
+## blizzard_guildbankui
+
+- `GuildBankFrame_LoadUI()`: `interface/addons/blizzard_guildbankui/blizzard_guildbankui_bootstrap.lua:3`
+- `GuildBankFrame_UpdateLog()`: `interface/addons/blizzard_guildbankui/mainline/blizzard_guildbankui.lua:750`
+- `GuildBankFrame_UpdateMoneyLog()`: `interface/addons/blizzard_guildbankui/mainline/blizzard_guildbankui.lua:782`
+- `HideGuildBankFrame()`: `interface/addons/blizzard_guildbankui/blizzard_guildbankui_bootstrap.lua:16`
+- `ShowGuildBankFrame()`: `interface/addons/blizzard_guildbankui/blizzard_guildbankui_bootstrap.lua:7`
+
+## blizzard_guildcontrolui
+
+- `GuildControlDiscord_Loaded_OnEvent(self, event)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:308`
+- `GuildControlDiscord_Loaded_OnLoad(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:300`
+- `GuildControlDiscord_SetGuildSettingsCheckboxes(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:304`
+- `GuildControlRankBank_OnLoad(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:524`
+- `GuildControlRankDiscord_OnLoad(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:279`
+- `GuildControlRankSettings_OnLoad(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:514`
+- `GuildControlUI_AddRankButton_OnClick()`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:647`
+- `GuildControlUI_BankFrame_OnLoad(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:612`
+- `GuildControlUI_BankTabPermissions_Update(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:157`
+- `GuildControlUI_CheckClicked(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:625`
+- `GuildControlUI_DisableRankButtons()`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:680`
+- `GuildControlUI_Discord_HideAll(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:262`
+- `GuildControlUI_Discord_Update(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:314`
+- `GuildControlUI_DiscordFrame_OnLoad(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:618`
+- `GuildControlUI_LoadUI()`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui_bootstrap.lua:3`
+- `GuildControlUI_OnEvent(self, event)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:120`
+- `GuildControlUI_OnLoad(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:91`
+- `GuildControlUI_OnShow(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:14`
+- `GuildControlUI_RankOrder_Update(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:530`
+- `GuildControlUI_RankPermissions_Update(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:415`
+- `GuildControlUI_RemoveRankButton_OnClick(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:637`
+- `GuildControlUI_SetBankTabChange(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:144`
+- `GuildControlUI_SetBankTabWithdrawChange(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:149`
+- `GuildControlUI_Setup()`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:80`
+- `GuildControlUI_SetupDiscord(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:252`
+- `GuildControlUI_SetupSelected(selected)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:23`
+- `GuildControlUI_ShiftRankDownButton_OnClick(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:657`
+- `GuildControlUI_ShiftRankUpButton_OnClick(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:669`
+- `GuildControlUI_Show()`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui_bootstrap.lua:7`
+- `GuildControlUI_SubmitChanges(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:139`
+- `GuildControlUI_UnlinkDiscord()`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:257`
+- `GuildControlUIRankDropdown_OnClick(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:689`
+- `GuildControlUIRankPermissions_HideGuildBankOptions(self)`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:701`
+- `ResetDiscordSettings()`: `interface/addons/blizzard_guildcontrolui/blizzard_guildcontrolui.lua:7`
+
+## blizzard_hardcoreui
+
+- `CheckHardcoreGuildLeadStatus()`: `interface/addons/blizzard_hardcoreui/hardcoreui.lua:9`
+- `GetDeathStaticPopup()`: `interface/addons/blizzard_hardcoreui/hardcoreui.lua:1`
+- `ShowHardcoreGuildHandoff()`: `interface/addons/blizzard_hardcoreui/hardcoreui.lua:13`
+
+## blizzard_helpframe
+
+- `AddTicketStatusFrameToStatusFrames(statusFrames)`: `interface/addons/blizzard_helpframe/helpframe.lua:280`
+- `HelpFrame_EscapePressed()`: `interface/addons/blizzard_helpframe/helpframe.lua:116`
+- `HelpFrame_IsGMTicketQueueActive()`: `interface/addons/blizzard_helpframe/helpframe.lua:138`
+- `HelpFrame_ShowReportCheatingDialog(playerLocation)`: `interface/addons/blizzard_helpframe/helpframe.lua:142`
+- `HelpOpenWebTicketButton_OnEnter(self, elapsed)`: `interface/addons/blizzard_helpframe/helpframe.lua:154`
+- `HelpOpenWebTicketButton_OnEvent(self, event, ...)`: `interface/addons/blizzard_helpframe/helpframe.lua:191`
+- `HelpOpenWebTicketButton_OnUpdate(self, elapsed)`: `interface/addons/blizzard_helpframe/helpframe.lua:180`
+- `TicketStatusFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_helpframe/helpframe.lua:245`
+- `TicketStatusFrame_OnHide(self)`: `interface/addons/blizzard_helpframe/helpframe.lua:276`
+- `TicketStatusFrame_OnLoad(self)`: `interface/addons/blizzard_helpframe/helpframe.lua:241`
+- `TicketStatusFrame_OnShow(self)`: `interface/addons/blizzard_helpframe/helpframe.lua:272`
+- `TicketStatusFrameButton_OnClick(self)`: `interface/addons/blizzard_helpframe/helpframe.lua:296`
+- `TicketStatusFrameButton_OnLoad(self)`: `interface/addons/blizzard_helpframe/helpframe.lua:291`
+- `ToggleHelpFrame(contextKey)`: `interface/addons/blizzard_helpframe/helpframe.lua:104`
+
+## blizzard_houseeditor
+
+- `CheckDisabledHelper(getButtons, getRestrictionFn, specializedRestrictionStrings)`: `interface/addons/blizzard_houseeditor/blizzard_houseeditorlayoutmodepin.lua:407`
+- `HouseEditorFrame_GetFrame()`: `interface/addons/blizzard_houseeditor/blizzard_houseeditor.lua:3`
+- `HouseEditorFrame_IsShown()`: `interface/addons/blizzard_houseeditor/blizzard_houseeditor.lua:7`
+
+## blizzard_housingbulletinboard
+
+- `HousingBulletinBoardFrame_LoadUI()`: `interface/addons/blizzard_housingbulletinboard/blizzard_housingbulletinboard_bootstrap.lua:3`
+- `HousingBulletinBoardRosterColumnDisplay_OnClick(self, columnIndex)`: `interface/addons/blizzard_housingbulletinboard/blizzard_housingbulletinboard.lua:218`
+
+## blizzard_housingcontrols
+
+- `HousingControls_LoadUI()`: `interface/addons/blizzard_housingcontrols/blizzard_housingcontrols_bootstrap.lua:3`
+
+## blizzard_housinghousefinder
+
+- `HouseFinderFrame_LoadUI()`: `interface/addons/blizzard_housinghousefinder/blizzard_housinghousefinder_bootstrap.lua:3`
+
+## blizzard_housingtutorials
+
+- `CanShowHouseFinderTutorial()`: `interface/addons/blizzard_housingtutorials/blizzard_housingtutorialsinit.lua:9`
+- `UpdateHousingTutorials()`: `interface/addons/blizzard_housingtutorials/blizzard_housingtutorialsinit.lua:15`
+
+## blizzard_hybridminimap
+
+- `HybridMinimap_LoadUI()`: `interface/addons/blizzard_hybridminimap/blizzard_hybridminimap_bootstrap.lua:3`
+
+## blizzard_inspectui
+
+- `InspectFrame_LoadUI()`: `interface/addons/blizzard_inspectui/mainline/blizzard_inspectui_bootstrap.lua:3`
+- `InspectFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_inspectui/mainline/blizzard_inspectui.lua:36`
+- `InspectFrame_OnHide(self)`: `interface/addons/blizzard_inspectui/mainline/blizzard_inspectui.lua:98`
+- `InspectFrame_OnLoad(self)`: `interface/addons/blizzard_inspectui/mainline/blizzard_inspectui.lua:20`
+- `InspectFrame_OnShow(self)`: `interface/addons/blizzard_inspectui/mainline/blizzard_inspectui.lua:89`
+- `InspectFrame_OnUpdate(self)`: `interface/addons/blizzard_inspectui/mainline/blizzard_inspectui.lua:108`
+- `InspectFrame_Show(unit)`: `interface/addons/blizzard_inspectui/camelot/blizzard_inspectui.lua:41`
+- `InspectFrame_Show(unit)`: `interface/addons/blizzard_inspectui/mainline/blizzard_inspectui.lua:8`
+- `InspectFrame_UnitChanged(self)`: `interface/addons/blizzard_inspectui/mainline/blizzard_inspectui.lua:77`
+- `InspectFrame_UpdateTabs()`: `interface/addons/blizzard_inspectui/mainline/blizzard_inspectui.lua:124`
+- `InspectFrameTab_OnClick(self)`: `interface/addons/blizzard_inspectui/camelot/blizzard_inspectui.lua:164`
+- `InspectFrameTab_OnClick(self)`: `interface/addons/blizzard_inspectui/mainline/blizzard_inspectui.lua:119`
+- `InspectGuildFrame_OnEvent(self, event, unit, ...)`: `interface/addons/blizzard_inspectui/camelot/inspectguildframe.lua:5`
+- `InspectGuildFrame_OnEvent(self, event, unit, ...)`: `interface/addons/blizzard_inspectui/mainline/inspectguildframe.lua:6`
+- `InspectGuildFrame_OnLoad(self)`: `interface/addons/blizzard_inspectui/camelot/inspectguildframe.lua:1`
+- `InspectGuildFrame_OnLoad(self)`: `interface/addons/blizzard_inspectui/mainline/inspectguildframe.lua:2`
+- `InspectGuildFrame_OnShow()`: `interface/addons/blizzard_inspectui/camelot/inspectguildframe.lua:12`
+- `InspectGuildFrame_OnShow()`: `interface/addons/blizzard_inspectui/mainline/inspectguildframe.lua:12`
+- `InspectGuildFrame_Update()`: `interface/addons/blizzard_inspectui/camelot/inspectguildframe.lua:17`
+- `InspectGuildFrame_Update()`: `interface/addons/blizzard_inspectui/mainline/inspectguildframe.lua:17`
+- `InspectPaperDollItemSlotButton_OnClick(self, button)`: `interface/addons/blizzard_inspectui/mainline/inspectpaperdollframe.lua:213`
+- `InspectPaperDollItemSlotButton_OnEnter(self)`: `interface/addons/blizzard_inspectui/mainline/inspectpaperdollframe.lua:227`
+- `InspectPaperDollItemSlotButton_OnEvent(self, event, ...)`: `interface/addons/blizzard_inspectui/mainline/inspectpaperdollframe.lua:203`
+- `InspectPaperDollItemSlotButton_OnLoad(self)`: `interface/addons/blizzard_inspectui/mainline/inspectpaperdollframe.lua:183`
+- `InspectPaperDollItemSlotButton_Update(button)`: `interface/addons/blizzard_inspectui/mainline/inspectpaperdollframe.lua:239`
+- `InspectPaperDollViewButton_OnClick(self)`: `interface/addons/blizzard_inspectui/mainline/inspectpaperdollframe.lua:273`
+- `InspectPaperDollViewButton_OnLoad(self)`: `interface/addons/blizzard_inspectui/mainline/inspectpaperdollframe.lua:269`
+- `InspectPVPFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_inspectui/mainline/inspectpvpframe.lua:58`
+- `InspectPVPFrame_OnLoad(self)`: `interface/addons/blizzard_inspectui/mainline/inspectpvpframe.lua:49`
+- `InspectPVPFrame_OnShow()`: `interface/addons/blizzard_inspectui/mainline/inspectpvpframe.lua:64`
+- `InspectPVPFrame_Update()`: `interface/addons/blizzard_inspectui/mainline/inspectpvpframe.lua:69`
+- `InspectPvPTalentFrameTalent_OnClick(self)`: `interface/addons/blizzard_inspectui/mainline/inspectpvpframe.lua:125`
+- `InspectPvPTalentFrameTalent_OnEnter(self)`: `interface/addons/blizzard_inspectui/mainline/inspectpvpframe.lua:119`
+- `InspectSwitchTabs(newID)`: `interface/addons/blizzard_inspectui/camelot/blizzard_inspectui.lua:154`
+- `InspectSwitchTabs(newID)`: `interface/addons/blizzard_inspectui/mainline/blizzard_inspectui.lua:111`
+- `InspectUnit(unit)`: `interface/addons/blizzard_inspectui/mainline/blizzard_inspectui_bootstrap.lua:7`
+
+## blizzard_islandspartyposeui
+
+- `IslandsPartyPose_LoadUI()`: `interface/addons/blizzard_islandspartyposeui/blizzard_islandspartyposeui_bootstrap.lua:3`
+
+## blizzard_islandsqueueui
+
+- `IslandsQueue_LoadUI()`: `interface/addons/blizzard_islandsqueueui/blizzard_islandsqueueui_bootstrap.lua:3`
+
+## blizzard_itembutton
+
+- `ClearItemButtonOverlay(button)`: `interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:181`
+- `ClearItemCraftingQualityOverlay(button)`: `interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:352`
+- `GetFormattedItemQuantity(quantity, maxQuantity)`: `interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:1`
+- `GetItemButtonBackgroundTexture(button)`: `interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:66`
+- `GetItemButtonCount(button)`: `interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:36`
+- `GetItemButtonIconTexture(button)`: `interface/addons/blizzard_itembutton/shared/itembuttontemplate.lua:264`
+- `HandleModifiedItemClick(link, itemLocation)`: `interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:367`
+- `SetItemButtonBorder(button, asset, isAtlas)`: `interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:200`
+- `SetItemButtonBorder_Base(button, asset, isAtlas)`: `interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:189`
+- `SetItemButtonBorderVertexColor(button, r, g, b)`: `interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:127`
+- `SetItemButtonCount(button, count, abbreviate)`: `interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:9`
+- `SetItemButtonDesaturated(button, desaturated)`: `interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:137`
+- `SetItemButtonNameFrameVertexColor(button, r, g, b)`: `interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:154`
+- `SetItemButtonNormalTextureVertexColor(button, r, g, b)`: `interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:146`
+- `SetItemButtonOverlay(button, itemIDOrLink, quality, isBound)`: `interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:260`
+- `SetItemButtonQuality(button, quality, itemIDOrLink, suppressOverlays, isBound, ignoreColorOverrides)`: `interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:241`
+- `SetItemButtonReagentCount(button, reagentCount, playerReagentCount)`: `interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:356`
+- `SetItemButtonSlotVertexColor(button, r, g, b)`: `interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:163`
+- `SetItemButtonStock(button, numInStock)`: `interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:40`
+- `SetItemButtonTexture(button, texture)`: `interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:94`
+- `SetItemButtonTextureVertexColor(button, r, g, b)`: `interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:111`
+- `SetItemCraftingQualityOverlay(button, itemIDOrLink)`: `interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:323`
+- `SetItemCraftingQualityOverlayOverride(button, qualityInfo)`: `interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:318`
+
+## blizzard_iteminteractionui
+
+- `ItemInteraction_LoadUI()`: `interface/addons/blizzard_iteminteractionui/blizzard_iteminteractionui_bootstrap.lua:3`
+
+## blizzard_itemsocketingui
+
+- `ItemSocketingFrame_LoadUI()`: `interface/addons/blizzard_itemsocketingui/blizzard_itemsocketingui_bootstrap.lua:3`
+- `ItemSocketingFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_itemsocketingui/blizzard_itemsocketingui.lua:44`
+- `ItemSocketingFrame_OnLoad(self)`: `interface/addons/blizzard_itemsocketingui/blizzard_itemsocketingui.lua:30`
+- `ItemSocketingFrame_Update()`: `interface/addons/blizzard_itemsocketingui/blizzard_itemsocketingui.lua:56`
+- `ItemSocketingSocketButton_OnScrollRangeChanged()`: `interface/addons/blizzard_itemsocketingui/blizzard_itemsocketingui.lua:69`
+- `ShowItemSocketingFrame()`: `interface/addons/blizzard_itemsocketingui/blizzard_itemsocketingui_bootstrap.lua:7`
+
+## blizzard_itemupgradeui
+
+- `HideItemUpgradeFrame()`: `interface/addons/blizzard_itemupgradeui/blizzard_itemupgradeui_bootstrap.lua:13`
+- `ItemUpgrade_LoadUI()`: `interface/addons/blizzard_itemupgradeui/blizzard_itemupgradeui_bootstrap.lua:3`
+- `ItemUpgradeFrame_Hide()`: `interface/addons/blizzard_itemupgradeui/mainline/blizzard_itemupgradeui.lua:10`
+- `ItemUpgradeFrame_Show()`: `interface/addons/blizzard_itemupgradeui/mainline/blizzard_itemupgradeui.lua:3`
+- `ShowItemUpgradeFrame()`: `interface/addons/blizzard_itemupgradeui/blizzard_itemupgradeui_bootstrap.lua:7`
+
+## blizzard_kiosk
+
+- `Kiosk_HandlePlayerEnteringWorld(isInitialLogin, isUIReload)`: `interface/addons/blizzard_kiosk/blizzard_kiosk_bootstrap.lua:7`
+- `Kiosk_LoadUI()`: `interface/addons/blizzard_kiosk/blizzard_kiosk_bootstrap.lua:3`
+
+## blizzard_landingsoulbinds
+
+- `LandingSoulbinds_LoadUI()`: `interface/addons/blizzard_landingsoulbinds/blizzard_landingsoulbinds_bootstrap.lua:3`
+
+## blizzard_legacysystem
+
+- `AchievementFrame_GetOverridePoints(points, achievementId)`: `interface/addons/blizzard_legacysystem/blizzard_legacyachievementoverrides.lua:25`
+- `AchievementFrame_SelectAchievement(id, forceSelect)`: `interface/addons/blizzard_legacysystem/blizzard_legacyachievementoverrides.lua:30`
+- `AchievementFrame_SetDateCompleted(frame, day, month, year)`: `interface/addons/blizzard_legacysystem/blizzard_legacyachievementoverrides.lua:3`
+- `AchievementFrame_ShowAsComplete(completed, wasEarnedByMe)`: `interface/addons/blizzard_legacysystem/blizzard_legacyachievementoverrides.lua:21`
+- `AchievementFrame_ShowDateCompleted(parent, show)`: `interface/addons/blizzard_legacysystem/blizzard_legacyachievementoverrides.lua:9`
+- `AchievementShield_OnEnter(self)`: `interface/addons/blizzard_legacysystem/blizzard_legacyachievementoverrides.lua:39`
+- `LegacySystemFrame_LoadUI()`: `interface/addons/blizzard_legacysystem/blizzard_legacysystem_bootstrap.lua:3`
+- `ShowLegacyChallenge(achievementID, closeOtherWindows)`: `interface/addons/blizzard_legacysystem/blizzard_legacysystem_bootstrap.lua:29`
+- `ToggleLegacyChallenges()`: `interface/addons/blizzard_legacysystem/blizzard_legacysystem_bootstrap.lua:23`
+- `ToggleLegacySystemUI()`: `interface/addons/blizzard_legacysystem/blizzard_legacysystem_bootstrap.lua:7`
+
+## blizzard_lfgutil
+
+- `ConfirmOrLeaveBattlefield()`: `interface/addons/blizzard_lfgutil/mainline/lfgutil.lua:43`
+- `ConfirmOrLeaveLFGParty()`: `interface/addons/blizzard_lfgutil/shared/lfgutilshared.lua:1`
+- `ConfirmOrLeaveParty()`: `interface/addons/blizzard_lfgutil/shared/lfgutilshared.lua:18`
+- `ConfirmSurrenderArena()`: `interface/addons/blizzard_lfgutil/mainline/lfgutil.lua:52`
+- `CreatePendingInviteConfirmationNames(invite, name, guid, rolesInvalid, willConvertToRaid)`: `interface/addons/blizzard_lfgutil/mainline/lfgutil.lua:223`
+- `CreatePendingInviteConfirmationText(invite)`: `interface/addons/blizzard_lfgutil/mainline/lfgutil.lua:167`
+- `CreatePendingInviteConfirmationText_AppendWarnings(text, invite, name, guid, rolesInvalid, willConvertToRaid)`: `interface/addons/blizzard_lfgutil/mainline/lfgutil.lua:275`
+- `CreatePendingInviteConfirmationText_GetWarnings(invite, name, guid, rolesInvalid, willConvertToRaid)`: `interface/addons/blizzard_lfgutil/mainline/lfgutil.lua:288`
+- `CreatePendingInviteConfirmationText_Request(invite, name, guid, rolesInvalid, willConvertToRaid, isCrossFaction, playerFactionGroup, localizedFaction)`: `interface/addons/blizzard_lfgutil/mainline/lfgutil.lua:179`
+- `CreatePendingInviteConfirmationText_Suggest(invite, name, guid, rolesInvalid, willConvertToRaid, isCrossFaction, playerFactionGroup, localizedFaction)`: `interface/addons/blizzard_lfgutil/mainline/lfgutil.lua:253`
+- `GetDisplayedInviteType(guid)`: `interface/addons/blizzard_lfgutil/mainline/lfgutil.lua:88`
+- `GetGeneralPlaystyleString(enumValue)`: `interface/addons/blizzard_lfgutil/mainline/lfgutil.lua:315`
+- `GetLFGMode(category, lfgID)`: `interface/addons/blizzard_lfgutil/shared/lfgutilshared.lua:31`
+- `HandlePendingInviteConfirmation(invite)`: `interface/addons/blizzard_lfgutil/mainline/lfgutil.lua:141`
+- `HandlePendingInviteConfirmation_QuestSession(invite)`: `interface/addons/blizzard_lfgutil/mainline/lfgutil.lua:160`
+- `HandlePendingInviteConfirmation_StaticPopup(invite)`: `interface/addons/blizzard_lfgutil/mainline/lfgutil.lua:149`
+- `IsInLFDBattlefield()`: `interface/addons/blizzard_lfgutil/mainline/lfgutil.lua:20`
+- `IsLFGModeActive(category)`: `interface/addons/blizzard_lfgutil/shared/lfgutilshared.lua:82`
+- `LeaveInstanceParty()`: `interface/addons/blizzard_lfgutil/mainline/lfgutil.lua:24`
+- `LeaveWalkInParty()`: `interface/addons/blizzard_lfgutil/mainline/lfgutil.lua:39`
+- `LFD_IsEmpowered()`: `interface/addons/blizzard_lfgutil/mainline/lfgutil.lua:1`
+- `LFG_DisableRoleButton(button)`: `interface/addons/blizzard_lfgutil/shared/lfgrole.lua:19`
+- `LFG_EnableRoleButton(button)`: `interface/addons/blizzard_lfgutil/shared/lfgrole.lua:96`
+- `LFG_PermanentlyDisableRoleButton(button)`: `interface/addons/blizzard_lfgutil/shared/lfgrole.lua:2`
+- `LFG_UpdateAvailableRoleButton(button, canBeRole)`: `interface/addons/blizzard_lfgutil/shared/lfgrole.lua:116`
+- `LFG_UpdateAvailableRoles(tankButton, healButton, dpsButton, leaderButton)`: `interface/addons/blizzard_lfgutil/shared/lfgrole.lua:124`
+- `LFGFrameRoleCheckButton_OnEnter(self)`: `interface/addons/blizzard_lfgutil/shared/lfgrole.lua:139`
+- `LFGInvitePopup_OnUpdate(self, elapsed)`: `interface/addons/blizzard_lfgutil/shared/lfginvitepopup.lua:119`
+- `LFGInvitePopup_Update(inviter, roleTankAvailable, roleHealerAvailable, roleDamagerAvailable, allowMultipleRoles, isQuestSessionActive)`: `interface/addons/blizzard_lfgutil/shared/lfginvitepopup.lua:52`
+- `LFGInvitePopup_UpdateAcceptButton()`: `interface/addons/blizzard_lfgutil/shared/lfginvitepopup.lua:6`
+- `LFGInvitePopupAccept_OnClick()`: `interface/addons/blizzard_lfgutil/shared/lfginvitepopup.lua:28`
+- `LFGInvitePopupCheckButton_OnClick(checkButton)`: `interface/addons/blizzard_lfgutil/shared/lfginvitepopup.lua:14`
+- `LFGInvitePopupDecline_OnClick()`: `interface/addons/blizzard_lfgutil/shared/lfginvitepopup.lua:33`
+- `LFGRole_GetChecked(button)`: `interface/addons/blizzard_lfgutil/shared/lfgrole.lua:32`
+- `LFGRole_SetChecked(button, checked)`: `interface/addons/blizzard_lfgutil/shared/lfgrole.lua:36`
+- `LFGRoleButton_LockReasonsTextTable(dungeonID, roleID, textTable)`: `interface/addons/blizzard_lfgutil/shared/lfgrole.lua:85`
+- `LFGRoleButtonTemplate_OnEnter(self)`: `interface/addons/blizzard_lfgutil/shared/lfgrole.lua:71`
+- `LFGRoleButtonTemplate_OnLoad(self)`: `interface/addons/blizzard_lfgutil/shared/lfgrole.lua:40`
+- `OnInviteToPartyConfirmation(name, willConvertToRaid, questSessionActive)`: `interface/addons/blizzard_lfgutil/mainline/lfgutil.lua:113`
+- `OverrideLFGSetRoleRestriction()`: `interface/addons/blizzard_lfgutil/mainline/lfgutil.lua:311`
+- `PVP_TryQueueForBattlefield(battleMasterListID)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:40`
+- `PVP_UpdateStatus()`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:53`
+- `PVPFramePopup_OnEvent(self, event, ...)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:81`
+- `PVPFramePopup_OnLoad(self)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:76`
+- `PVPFramePopup_OnResponse(accepted)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:113`
+- `PVPFramePopup_OnUpdate(self, elasped)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:90`
+- `PVPFramePopup_SetupPopUp(event, challengerName, bgName, timeout, tournamentRules)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:100`
+- `PVPHelper_QueueAllowsLeaveQueueWithMatchReady(queueType)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:483`
+- `PVPHelper_QueueNeedsRoles(queueType, isRated)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:479`
+- `PVPHelperFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:16`
+- `PVPHelperFrame_OnLoad(self)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:5`
+- `PVPReadyDialog_Display(self, index, displayName, isRated, queueType, gameType, role)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:358`
+- `PVPReadyDialog_OnEvent(self, event, ...)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:325`
+- `PVPReadyDialog_OnHide(self)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:350`
+- `PVPReadyDialog_OnLoad(self)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:319`
+- `PVPReadyDialog_Showing(index)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:354`
+- `PVPReadyDialog_Update(self, index)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:339`
+- `PVPRoleCheckPopup_Display(self, queueName)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:280`
+- `PVPRoleCheckPopup_OnEvent(self, event, ...)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:250`
+- `PVPRoleCheckPopup_OnLoad(self)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:245`
+- `PVPRoleCheckPopup_OnShow(self)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:258`
+- `PVPRoleCheckPopup_RoleButtonClicked(self)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:290`
+- `PVPRoleCheckPopup_SetRoles()`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:294`
+- `PVPRoleCheckPopup_UpdateAvailableRoles(tankButton, healButton, dpsButton)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:265`
+- `PVPRoleCheckPopup_UpdateRolesChangeable(self)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:269`
+- `PVPRoleCheckPopup_UpdateSelectedRoles(self)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:273`
+- `PVPRoleCheckPopupAccept_OnClick()`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:300`
+- `PVPRoleCheckPopupDecline_OnClick()`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:310`
+- `PVPTimerFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_lfgutil/mainline/pvphelper.lua:187`
+- `SetLookingForGroupUIAvailable(available)`: `interface/addons/blizzard_lfgutil/camelot/lfgutil.lua:1`
+- `UpdateInviteConfirmationDialogs()`: `interface/addons/blizzard_lfgutil/mainline/lfgutil.lua:134`
+- `WillAcceptInviteRemoveQueues()`: `interface/addons/blizzard_lfgutil/mainline/lfgutil.lua:56`
+
+## blizzard_macroui
+
+- `MacroEditButton_OnClick(self, button)`: `interface/addons/blizzard_macroui/blizzard_macroui.lua:335`
+- `MacroFrame_LoadUI()`: `interface/addons/blizzard_macroui/blizzard_macroui_bootstrap.lua:3`
+- `MacroFrame_SaveMacro()`: `interface/addons/blizzard_macroui/blizzard_macroui.lua:20`
+- `MacroFrame_Show()`: `interface/addons/blizzard_macroui/blizzard_macroui.lua:16`
+- `MacroFrameCancelButton_OnClick()`: `interface/addons/blizzard_macroui/blizzard_macroui.lua:276`
+- `MacroFrameSaveButton_OnClick()`: `interface/addons/blizzard_macroui/blizzard_macroui.lua:266`
+- `MacroNewButton_OnClick(self, button)`: `interface/addons/blizzard_macroui/blizzard_macroui.lua:329`
+- `ShowMacroFrame()`: `interface/addons/blizzard_macroui/blizzard_macroui_bootstrap.lua:7`
+
+## blizzard_mailframe
+
+- `InboxFrame_OnClick(self, index)`: `interface/addons/blizzard_mailframe/mailframe.lua:459`
+- `InboxFrame_OnModifiedClick(self, index)`: `interface/addons/blizzard_mailframe/mailframe.lua:475`
+- `InboxFrameItem_OnEnter(self)`: `interface/addons/blizzard_mailframe/mailframe.lua:490`
+- `MailFrame_Hide()`: `interface/addons/blizzard_mailframe/mailframe.lua:118`
+- `MailFrame_Show()`: `interface/addons/blizzard_mailframe/mailframe.lua:99`
+- `MailFrameTab_OnClick(self, tabID)`: `interface/addons/blizzard_mailframe/mailframe.lua:189`
+- `OpenMailAttachment_OnClick(self, index)`: `interface/addons/blizzard_mailframe/mailframe.lua:1167`
+- `OpenMailAttachment_OnEnter(self, index)`: `interface/addons/blizzard_mailframe/mailframe.lua:1156`
+- `SendMailAttachment_OnEnter(self)`: `interface/addons/blizzard_mailframe/mailframe.lua:1500`
+- `SendMailAttachmentButton_OnClick(self, button)`: `interface/addons/blizzard_mailframe/mailframe.lua:1492`
+- `SendMailAttachmentButton_OnDropAny()`: `interface/addons/blizzard_mailframe/mailframe.lua:1496`
+- `SendMailFrame_CanSend()`: `interface/addons/blizzard_mailframe/mailframe.lua:1433`
+- `SendMailFrame_EnableSendMailButton()`: `interface/addons/blizzard_mailframe/mailframe.lua:1281`
+- `SendMailFrame_Reset()`: `interface/addons/blizzard_mailframe/mailframe.lua:1422`
+- `SendMailFrame_SendMail()`: `interface/addons/blizzard_mailframe/mailframe.lua:1276`
+- `SendMailFrame_Update()`: `interface/addons/blizzard_mailframe/mailframe.lua:1285`
+- `SendMailMoneyButton_OnClick()`: `interface/addons/blizzard_mailframe/mailframe.lua:1480`
+- `SendMailRadioButton_OnClick(index)`: `interface/addons/blizzard_mailframe/mailframe.lua:1467`
+
+## blizzard_mainmenubarbagbuttons
+
+- `BackpackButton_OnModifiedClick(self)`: `interface/addons/blizzard_mainmenubarbagbuttons/shared/mainmenubarbagbuttons.lua:166`
+- `GetKeyRingSize()`: `interface/addons/blizzard_mainmenubarbagbuttons/camelot/mainmenubarbagbuttons.lua:60`
+- `PutKeyInKeyRing()`: `interface/addons/blizzard_mainmenubarbagbuttons/camelot/mainmenubarbagbuttons.lua:43`
+
+## blizzard_majorfactions
+
+- `ToggleMajorFactionRenown(majorFactionID)`: `interface/addons/blizzard_majorfactions/blizzard_majorfactionslandingtemplates.lua:321`
+
+## blizzard_managedframesystem
+
+- `GetBottomManagedFrameContainer()`: `interface/addons/blizzard_managedframesystem/shared/managedframesystem.lua:1`
+- `GetPlayerBottomManagedFrameContainer()`: `interface/addons/blizzard_managedframesystem/shared/managedframesystem.lua:9`
+- `GetRightManagedFrameContainer()`: `interface/addons/blizzard_managedframesystem/shared/managedframesystem.lua:5`
+
+## blizzard_mapcanvas
+
+- `SquaredDistanceBetweenPoints(firstX, firstY, secondX, secondY)`: `interface/addons/blizzard_mapcanvas/blizzard_mapcanvas.lua:527`
+
+## blizzard_matchcelebrationpartyposeui
+
+- `MatchCelebrationPartyPose_LoadUI()`: `interface/addons/blizzard_matchcelebrationpartyposeui/blizzard_matchcelebrationpartyposeui_bootstrap.lua:3`
+- `ShowMatchCelebrationPartyPoseFrame(partyPoseID, won)`: `interface/addons/blizzard_matchcelebrationpartyposeui/blizzard_matchcelebrationpartyposeui_bootstrap.lua:7`
+
+## blizzard_mawbuffs
+
+- `ShouldShowMawBuffs()`: `interface/addons/blizzard_mawbuffs/blizzard_mawbuffs.lua:3`
+
+## blizzard_menu
+
+- `CreateCompositor(target)`: `interface/addons/blizzard_menu/compositor.lua:456`
+- `GetWowStyle1ArrowButtonShadowlessState(button)`: `interface/addons/blizzard_menu/mainline/menutemplates.lua:20`
+- `GetWowStyle1ArrowButtonState(button)`: `interface/addons/blizzard_menu/classic/menutemplates.lua:2`
+- `GetWowStyle1ArrowButtonState(button)`: `interface/addons/blizzard_menu/mainline/menutemplates.lua:2`
+- `IsDropdownButtonIntrinsic(frame)`: `interface/addons/blizzard_menu/dropdownbutton.lua:5`
+- `ValidateIsDropdownButtonIntrinsic(frame)`: `interface/addons/blizzard_menu/dropdownbutton.lua:9`
+
+## blizzard_micromenu
+
+- `CollectionsMicroButton_CanAlertBeShown()`: `interface/addons/blizzard_micromenu/camelot/mainmenubarmicrobuttonsoverrides.lua:1`
+- `CollectionsMicroButton_CanAlertBeShown()`: `interface/addons/blizzard_micromenu/mainline/mainmenubarmicrobuttons.lua:1624`
+- `CollectionsMicroButton_SetAlert(tabIndex)`: `interface/addons/blizzard_micromenu/mainline/mainmenubarmicrobuttons.lua:1619`
+- `CollectionsMicroButton_SetAlertShown(shown)`: `interface/addons/blizzard_micromenu/mainline/mainmenubarmicrobuttons.lua:1629`
+- `LoadMicroButtonTextures(self, name, color)`: `interface/addons/blizzard_micromenu/mainline/mainmenubarmicrobuttons.lua:32`
+- `MainMenuMicroButton_AreAlertsEnabled()`: `interface/addons/blizzard_micromenu/mainline/mainmenubarmicrobuttons.lua:289`
+- `MainMenuMicroButton_GetAlertPriority(microButton)`: `interface/addons/blizzard_micromenu/mainline/mainmenubarmicrobuttons.lua:293`
+- `MainMenuMicroButton_HideAlert(microButton)`: `interface/addons/blizzard_micromenu/mainline/mainmenubarmicrobuttons.lua:362`
+- `MainMenuMicroButton_Init()`: `interface/addons/blizzard_micromenu/mainline/mainmenubarmicrobuttons.lua:244`
+- `MainMenuMicroButton_SetAlertsEnabled(enabled, reason)`: `interface/addons/blizzard_micromenu/mainline/mainmenubarmicrobuttons.lua:248`
+- `MainMenuMicroButton_ShowAlert(microButton, text, tutorialIndex, cvarBitfield)`: `interface/addons/blizzard_micromenu/mainline/mainmenubarmicrobuttons.lua:313`
+- `MainMenuMicroButton_UpdateAlertsEnabled(microButtonToSkip)`: `interface/addons/blizzard_micromenu/mainline/mainmenubarmicrobuttons.lua:260`
+- `MicroButtonPulse(self, duration)`: `interface/addons/blizzard_micromenu/mainline/mainmenubarmicrobuttons.lua:223`
+- `MicroButtonPulseStop(self)`: `interface/addons/blizzard_micromenu/mainline/mainmenubarmicrobuttons.lua:234`
+- `MicroButtonTooltipText(text, action)`: `interface/addons/blizzard_micromenu/mainline/mainmenubarmicrobuttons.lua:56`
+- `MicroMenuBar_ClearFullScreenFrame()`: `interface/addons/blizzard_micromenu/mainline/mainmenubarmicrobuttons.lua:192`
+- `MicroMenuBar_SetFullScreenFrame(frame, buttonDisabledTooltip)`: `interface/addons/blizzard_micromenu/mainline/mainmenubarmicrobuttons.lua:185`
+- `SetKioskTooltip(frame)`: `interface/addons/blizzard_micromenu/mainline/mainmenubarmicrobuttons.lua:62`
+- `UpdateMicroButtons()`: `interface/addons/blizzard_micromenu/mainline/mainmenubarmicrobuttons.lua:197`
+
+## blizzard_minimap
+
+- `GameTimeFrame_SetDate()`: `interface/addons/blizzard_minimap/mainline/gametime.lua:160`
+- `GarrisonLandingPage_Toggle()`: `interface/addons/blizzard_minimap/mainline/minimap.lua:1310`
+- `GarrisonMinimap_CheckQueuedHelpTip(self)`: `interface/addons/blizzard_minimap/mainline/minimap.lua:1399`
+- `GarrisonMinimap_CheckShowCovenantCallingsNotification(self)`: `interface/addons/blizzard_minimap/mainline/minimap.lua:1354`
+- `GarrisonMinimap_ClearQueuedHelpTip(self)`: `interface/addons/blizzard_minimap/mainline/minimap.lua:1407`
+- `GarrisonMinimap_HideHelpTip(self)`: `interface/addons/blizzard_minimap/mainline/minimap.lua:1413`
+- `GarrisonMinimap_OnCallingsUpdated(self, callings, completedCount, availableCount)`: `interface/addons/blizzard_minimap/mainline/minimap.lua:1385`
+- `GarrisonMinimap_SetQueuedHelpTip(self, tipInfo)`: `interface/addons/blizzard_minimap/mainline/minimap.lua:1395`
+- `GarrisonMinimapBuilding_ShowPulse(self)`: `interface/addons/blizzard_minimap/mainline/minimap.lua:1318`
+- `GarrisonMinimapInvasion_ShowPulse(self)`: `interface/addons/blizzard_minimap/mainline/minimap.lua:1332`
+- `GarrisonMinimapMission_HidePulse(self, followerType)`: `interface/addons/blizzard_minimap/mainline/minimap.lua:1328`
+- `GarrisonMinimapMission_ShowPulse(self, followerType)`: `interface/addons/blizzard_minimap/mainline/minimap.lua:1323`
+- `GarrisonMinimapShipmentCreated_ShowPulse(self, isTroop)`: `interface/addons/blizzard_minimap/mainline/minimap.lua:1341`
+- `Minimap_OnUpdate(self)`: `interface/addons/blizzard_minimap/mainline/minimap.lua:279`
+- `Minimap_SetTooltip(pvpType, factionName)`: `interface/addons/blizzard_minimap/mainline/minimap.lua:190`
+- `Minimap_Update()`: `interface/addons/blizzard_minimap/mainline/minimap.lua:169`
+- `Minimap_ZoomIn()`: `interface/addons/blizzard_minimap/mainline/minimap.lua:333`
+- `Minimap_ZoomOut()`: `interface/addons/blizzard_minimap/mainline/minimap.lua:337`
+- `MinimapButton_OnMouseDown(self, mouseButton)`: `interface/addons/blizzard_minimap/shared/minimapbuttontemplate.lua:2`
+- `MinimapButton_OnMouseUp(self)`: `interface/addons/blizzard_minimap/shared/minimapbuttontemplate.lua:12`
+- `MiniMapIndicatorFrame_UpdatePosition()`: `interface/addons/blizzard_minimap/mainline/minimap.lua:490`
+- `MinimapMailFrameUpdate()`: `interface/addons/blizzard_minimap/mainline/minimap.lua:539`
+- `ToggleMinimap()`: `interface/addons/blizzard_minimap/mainline/minimap.lua:154`
+
+## blizzard_moneyframe
+
+- `AddMoneyTypeInfo(moneyType, info)`: `interface/addons/blizzard_moneyframe/shared/moneyframe.lua:24`
+- `AltCurrencyFrame_Update(frameName, texture, cost, canAfford)`: `interface/addons/blizzard_moneyframe/mainline/moneyframe.lua:425`
+- `GameTooltip_ClearMoney(self)`: `interface/addons/blizzard_moneyframe/shared/moneyframe.lua:660`
+- `GetDenominationsFromCopper(money)`: `interface/addons/blizzard_moneyframe/shared/moneyframe.lua:338`
+- `GetMoneyFrame(frameOrName)`: `interface/addons/blizzard_moneyframe/shared/moneyframe.lua:318`
+- `GetMoneyTypeInfoField(moneyType, field)`: `interface/addons/blizzard_moneyframe/shared/moneyframe.lua:20`
+- `MoneyFrame_OnEnter(moneyFrame)`: `interface/addons/blizzard_moneyframe/mainline/moneyframe.lua:82`
+- `MoneyFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_moneyframe/mainline/moneyframe.lua:54`
+- `MoneyFrame_OnHide(self)`: `interface/addons/blizzard_moneyframe/mainline/moneyframe.lua:99`
+- `MoneyFrame_OnLeave(moneyFrame)`: `interface/addons/blizzard_moneyframe/mainline/moneyframe.lua:92`
+- `MoneyFrame_OnLoad(self, moneyType)`: `interface/addons/blizzard_moneyframe/mainline/moneyframe.lua:29`
+- `MoneyFrame_OnLoadMoneyType(self, moneyType)`: `interface/addons/blizzard_moneyframe/mainline/moneyframe.lua:9`
+- `MoneyFrame_SetDisplayForced(frame, forceShow)`: `interface/addons/blizzard_moneyframe/mainline/moneyframe.lua:159`
+- `MoneyFrame_SetMaxDisplayWidth(moneyFrame, width)`: `interface/addons/blizzard_moneyframe/mainline/moneyframe.lua:129`
+- `MoneyFrame_SetType(self, type)`: `interface/addons/blizzard_moneyframe/mainline/moneyframe.lua:106`
+- `MoneyFrame_Update(frameName, money, forceShow)`: `interface/addons/blizzard_moneyframe/mainline/moneyframe.lua:221`
+- `MoneyFrame_UpdateMoney(moneyFrame)`: `interface/addons/blizzard_moneyframe/mainline/moneyframe.lua:134`
+- `MoneyFrame_UpdateTrialErrorButton(self)`: `interface/addons/blizzard_moneyframe/shared/moneyframe.lua:241`
+- `MoneyFrameButton_OnEnter(self)`: `interface/addons/blizzard_moneyframe/mainline/moneyframe.lua:463`
+- `MoneyFrameButton_OnLeave(self)`: `interface/addons/blizzard_moneyframe/mainline/moneyframe.lua:467`
+- `MoneyFrameEditBoxCopper_OnEnterPressed(self)`: `interface/addons/blizzard_moneyframe/mainline/moneyinputframe.lua:322`
+- `MoneyFrameEditBoxCopper_OnTabPressed(self)`: `interface/addons/blizzard_moneyframe/mainline/moneyinputframe.lua:309`
+- `MoneyFrameEditBoxGold_OnEnterPressed(self)`: `interface/addons/blizzard_moneyframe/mainline/moneyinputframe.lua:287`
+- `MoneyFrameEditBoxGold_OnTabPressed(self)`: `interface/addons/blizzard_moneyframe/mainline/moneyinputframe.lua:278`
+- `MoneyFrameEditBoxSilver_OnEnterPressed(self)`: `interface/addons/blizzard_moneyframe/mainline/moneyinputframe.lua:300`
+- `MoneyFrameEditBoxSilver_OnTabPressed(self)`: `interface/addons/blizzard_moneyframe/mainline/moneyinputframe.lua:291`
+- `MoneyInputFrame_ClearFocus(moneyFrame)`: `interface/addons/blizzard_moneyframe/mainline/moneyinputframe.lua:15`
+- `MoneyInputFrame_ClosePopup()`: `interface/addons/blizzard_moneyframe/mainline/moneyinputframe.lua:236`
+- `MoneyInputFrame_GetCopper(moneyFrame)`: `interface/addons/blizzard_moneyframe/mainline/moneyinputframe.lua:29`
+- `MoneyInputFrame_OnShow(moneyFrame)`: `interface/addons/blizzard_moneyframe/mainline/moneyinputframe.lua:176`
+- `MoneyInputFrame_OnTextChanged(self)`: `interface/addons/blizzard_moneyframe/mainline/moneyinputframe.lua:82`
+- `MoneyInputFrame_OpenPopup(moneyFrame)`: `interface/addons/blizzard_moneyframe/mainline/moneyinputframe.lua:218`
+- `MoneyInputFrame_PickupPlayerMoney(moneyFrame)`: `interface/addons/blizzard_moneyframe/mainline/moneyinputframe.lua:241`
+- `MoneyInputFrame_ResetMoney(moneyFrame)`: `interface/addons/blizzard_moneyframe/mainline/moneyinputframe.lua:9`
+- `MoneyInputFrame_SetCompact(frame, width, expandOnDigits, smallDenominationWidth)`: `interface/addons/blizzard_moneyframe/mainline/moneyinputframe.lua:130`
+- `MoneyInputFrame_SetCopper(moneyFrame, money)`: `interface/addons/blizzard_moneyframe/mainline/moneyinputframe.lua:53`
+- `MoneyInputFrame_SetCopperShown(moneyFrame, shown)`: `interface/addons/blizzard_moneyframe/shared/moneyinputframe.lua:2`
+- `MoneyInputFrame_SetEnabled(moneyFrame, enabled)`: `interface/addons/blizzard_moneyframe/mainline/moneyinputframe.lua:3`
+- `MoneyInputFrame_SetGoldOnly(moneyFrame, set)`: `interface/addons/blizzard_moneyframe/mainline/moneyinputframe.lua:21`
+- `MoneyInputFrame_SetNextFocus(moneyFrame, focus)`: `interface/addons/blizzard_moneyframe/mainline/moneyinputframe.lua:168`
+- `MoneyInputFrame_SetOnValueChangedFunc(moneyFrame, func)`: `interface/addons/blizzard_moneyframe/mainline/moneyinputframe.lua:172`
+- `MoneyInputFrame_SetPreviousFocus(moneyFrame, focus)`: `interface/addons/blizzard_moneyframe/mainline/moneyinputframe.lua:164`
+- `MoneyInputFrame_SetTextColor(moneyFrame, r, g, b)`: `interface/addons/blizzard_moneyframe/mainline/moneyinputframe.lua:47`
+- `MoneyInputFrameButton_OpenPopup(self)`: `interface/addons/blizzard_moneyframe/mainline/moneyframe.lua:471`
+- `SetMoneyFrameColor(frameName, color)`: `interface/addons/blizzard_moneyframe/shared/moneyframe.lua:329`
+- `SetMoneyFrameColorByFrame(moneyFrame, color)`: `interface/addons/blizzard_moneyframe/shared/moneyframe.lua:311`
+- `SetTooltipMoney(frame, money, type, prefixText, suffixText)`: `interface/addons/blizzard_moneyframe/shared/moneyframe.lua:609`
+- `SmallDenominationTemplate_OnEnter(self)`: `interface/addons/blizzard_moneyframe/mainline/moneyframe.lua:448`
+- `SmallDenominationTemplate_OnLeave(self)`: `interface/addons/blizzard_moneyframe/mainline/moneyframe.lua:456`
+- `SmallMoneyFrame_OnLoad(self, moneyType)`: `interface/addons/blizzard_moneyframe/mainline/moneyframe.lua:40`
+
+## blizzard_movepad
+
+- `MovePad_LoadUI()`: `interface/addons/blizzard_movepad/blizzard_movepad_bootstrap.lua:3`
+
+## blizzard_nameplates
+
+- `ClassNameplateManaBar_OnUpdate(self)`: `interface/addons/blizzard_nameplates/mainline/blizzard_classnameplatebar.lua:289`
+
+## blizzard_newplayerexperience
+
+- `KeyboardMouseConfirmButton_OnClick()`: `interface/addons/blizzard_newplayerexperience/blizzard_tutorialkeyboardmouseframe.lua:143`
+- `KeyboardMouseSkipTutorialButton_OnClick()`: `interface/addons/blizzard_newplayerexperience/blizzard_tutorialkeyboardmouseframe.lua:148`
+- `NPE_InitializeIfLoaded()`: `interface/addons/blizzard_newplayerexperience/blizzard_newplayerexperience_bootstrap.lua:13`
+- `NPE_LoadUI()`: `interface/addons/blizzard_newplayerexperience/blizzard_newplayerexperience_bootstrap.lua:3`
+
+## blizzard_notification
+
+- `NotificationUtil_AcquireLargeNotification(point, parent, relativePoint, offsetX, offsetY)`: `interface/addons/blizzard_notification/blizzard_notificationutil.lua:29`
+- `NotificationUtil_ReleaseNotification(frame)`: `interface/addons/blizzard_notification/blizzard_notificationutil.lua:33`
+
+## blizzard_objectapi
+
+- `CovenantCalling_AreCallingsUnlocked()`: `interface/addons/blizzard_objectapi/mainline/covenantcalling.lua:119`
+- `CovenantCalling_CheckCallings()`: `interface/addons/blizzard_objectapi/mainline/covenantcalling.lua:107`
+- `CovenantCalling_Create(bounty)`: `interface/addons/blizzard_objectapi/mainline/covenantcalling.lua:58`
+- `CovenantCalling_GetAvailableCount()`: `interface/addons/blizzard_objectapi/mainline/covenantcalling.lua:115`
+- `CovenantCalling_GetCompletedCount()`: `interface/addons/blizzard_objectapi/mainline/covenantcalling.lua:111`
+- `ObjectCache_Create(mixin)`: `interface/addons/blizzard_objectapi/mainline/objectcache.lua:1`
+
+## blizzard_obliterumui
+
+- `ObliterumForgeFrame_LoadUI()`: `interface/addons/blizzard_obliterumui/blizzard_obliterumui_bootstrap.lua:3`
+
+## blizzard_orderhallui
+
+- `OpenOrderHallTalentUI(garrisonType, garrTalentTreeID)`: `interface/addons/blizzard_orderhallui/blizzard_orderhallui_bootstrap.lua:13`
+- `OrderHall_LoadUI()`: `interface/addons/blizzard_orderhallui/blizzard_orderhallui_bootstrap.lua:3`
+- `OrderHallTalentFrame_ToggleFrame()`: `interface/addons/blizzard_orderhallui/blizzard_orderhalltalents.lua:11`
+- `ToggleOrderHallTalentUI()`: `interface/addons/blizzard_orderhallui/blizzard_orderhallui_bootstrap.lua:7`
+
+## blizzard_overrideactionbar
+
+- `OverrideActionBar_StatusBars_ShowTooltip(self)`: `interface/addons/blizzard_overrideactionbar/overrideactionbar.lua:225`
+
+## blizzard_partyposeui
+
+- `IslandsPartyPoseFrame_TryShow(mapID, winner)`: `interface/addons/blizzard_partyposeui/blizzard_partyposeui_bootstrap.lua:7`
+- `PartyPose_LoadUI()`: `interface/addons/blizzard_partyposeui/blizzard_partyposeui_bootstrap.lua:3`
+- `WarfrontsPartyPoseFrame_TryShow(mapID, winner)`: `interface/addons/blizzard_partyposeui/blizzard_partyposeui_bootstrap.lua:14`
+
+## blizzard_performancebar
+
+- `MainMenu_GetMovieDownloadProgress(id)`: `interface/addons/blizzard_performancebar/performancebar.lua:27`
+- `MainMenuBarPerformanceBarFrame_OnEnter(self)`: `interface/addons/blizzard_performancebar/performancebar.lua:52`
+- `MainMenuBarPerformanceBarFrame_UseDetailedTooltip(self)`: `interface/addons/blizzard_performancebar/classic/performancebaroverrides.lua:2`
+- `MainMenuBarPerformanceBarFrame_UseDetailedTooltip(self)`: `interface/addons/blizzard_performancebar/performancebar.lua:47`
+
+## blizzard_perksprogram
+
+- `PerksProgram_GetPlayerActorLabelTag(useAlternateForm)`: `interface/addons/blizzard_perksprogram/blizzard_perksprogrammodel.lua:20`
+- `PerksProgram_TranslateDisplayInfo(perksVendorCategoryID, displayInfo)`: `interface/addons/blizzard_perksprogram/blizzard_perksprogramproducts.lua:283`
+- `PerksProgramFrame_LoadUI()`: `interface/addons/blizzard_perksprogram/blizzard_perksprogram_bootstrap.lua:3`
+- `ShowPerksProgramFrame()`: `interface/addons/blizzard_perksprogram/blizzard_perksprogram_bootstrap.lua:7`
+
+## blizzard_petbattleui
+
+- `PetBattleAbilityButton_OnClick(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:419`
+- `PetBattleAbilityButton_OnEnter(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:915`
+- `PetBattleAbilityButton_OnLeave(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:934`
+- `PetBattleAbilityButton_OnLoad(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:839`
+- `PetBattleAbilityButton_UpdateBetterIcon(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:844`
+- `PetBattleAbilityButton_UpdateHotKey(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:938`
+- `PetBattleAbilityButton_UpdateIcons(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:877`
+- `PetBattleAbilityTooltip_SetAbility(petOwner, petIndex, abilityIndex)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1557`
+- `PetBattleAbilityTooltip_SetAbilityByID(petOwner, petIndex, abilityID, additionalText)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1565`
+- `PetBattleAbilityTooltip_SetAura(petOwner, petIndex, auraIndex)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1827`
+- `PetBattleAbilityTooltip_SetAuraID(petOwner, petIndex, auraID)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1917`
+- `PetBattleAbilityTooltip_Show(anchorPoint, anchorTo, relativePoint, xOffset, yOffset)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1927`
+- `PetBattleActionButton_Initialize(self, actionType, actionIndex)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:612`
+- `PetBattleActionButton_OnEvent(self, event, ...)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:621`
+- `PetBattleActionButton_UpdateState(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:630`
+- `PetBattleAura_OnEnter(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1724`
+- `PetBattleAura_OnLeave(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1735`
+- `PetBattleAuraHolder_OnEvent(self, event, ...)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1637`
+- `PetBattleAuraHolder_OnLoad(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1622`
+- `PetBattleAuraHolder_SetUnit(self, petOwner, petIndex)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1646`
+- `PetBattleAuraHolder_Update(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1652`
+- `PetBattleCatchButton_OnClick(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:538`
+- `PetBattleCatchButton_OnEnter(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:563`
+- `PetBattleCatchButton_OnShow(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:548`
+- `PetBattleForfeitButton_OnClick(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:529`
+- `PetBattleFrame_ButtonDown(id)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:378`
+- `PetBattleFrame_ButtonUp(id)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:404`
+- `PetBattleFrame_Display(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:163`
+- `PetBattleFrame_GetAbilityAtLevel(speciesID, targetLevel)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:573`
+- `PetBattleFrame_InitSpeedIndicators(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:213`
+- `PetBattleFrame_LoadXPTicks(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:270`
+- `PetBattleFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:100`
+- `PetBattleFrame_OnHide(self)`: `interface/addons/blizzard_petbattleui/classic/blizzard_petbattleui.lua:4`
+- `PetBattleFrame_OnHide(self)`: `interface/addons/blizzard_petbattleui/mainline/blizzard_petbattleui.lua:5`
+- `PetBattleFrame_OnHide(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:149`
+- `PetBattleFrame_OnLoad(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:64`
+- `PetBattleFrame_OnShow(self)`: `interface/addons/blizzard_petbattleui/classic/blizzard_petbattleui.lua:1`
+- `PetBattleFrame_OnShow(self)`: `interface/addons/blizzard_petbattleui/mainline/blizzard_petbattleui.lua:1`
+- `PetBattleFrame_OnShow(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:145`
+- `PetBattleFrame_PetSelectionFrameUpdateVisible(showFrame)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:181`
+- `PetBattleFrame_Remove(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:468`
+- `PetBattleFrame_ShowMultiWildNotification(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:362`
+- `PetBattleFrame_UpdateAbilityButtonHotKeys(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:290`
+- `PetBattleFrame_UpdateActionBarLayout(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:320`
+- `PetBattleFrame_UpdateActionButtonLevel(self, actionButton)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:286`
+- `PetBattleFrame_UpdateAllActionButtons(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:203`
+- `PetBattleFrame_UpdateAssignedUnitFrames(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:436`
+- `PetBattleFrame_UpdateInstructions(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:153`
+- `PetBattleFrame_UpdatePassButtonAndTimer(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:299`
+- `PetBattleFrame_UpdatePetSelectionFrame(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:193`
+- `PetBattleFrame_UpdateSpeedIndicators(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:225`
+- `PetBattleFrame_UpdateXpBar(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:256`
+- `PetBattleFrameTurnTimer_OnUpdate(self, elapsed)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:479`
+- `PetBattleFrameTurnTimer_UpdateValues(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:523`
+- `PetBattlePetSelectionFrame_Hide(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:604`
+- `PetBattlePetSelectionFrame_Show(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:587`
+- `PetBattleUnitFrame_OnClick(self, button)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:962`
+- `PetBattleUnitFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:999`
+- `PetBattleUnitFrame_OnLoad(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:951`
+- `PetBattleUnitFrame_SetUnit(self, petOwner, petIndex)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1018`
+- `PetBattleUnitFrame_UpdateDisplay(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1030`
+- `PetBattleUnitFrame_UpdateHealthInstant(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1150`
+- `PetBattleUnitFrame_UpdatePetType(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1202`
+- `PetBattleUnitTooltip_Attach(self, point, frame, relativePoint, xOffset, yOffset)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1457`
+- `PetBattleUnitTooltip_OnLoad(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1225`
+- `PetBattleUnitTooltip_UpdateForUnit(self, petOwner, petIndex)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1236`
+- `PetBattleUtil_GetOtherPlayer(player)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1936`
+- `PetBattleUtil_PetHasAura(petOwner, petIndex, auraID)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1944`
+- `PetBattleWeatherFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1582`
+- `PetBattleWeatherFrame_OnLoad(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1576`
+- `PetBattleWeatherFrame_Update(self)`: `interface/addons/blizzard_petbattleui/shared/blizzard_petbattleui.lua:1593`
+- `PetBattleXPBar_OnEnter(self)`: `interface/addons/blizzard_petbattleui/classic/blizzard_petbattleui.lua:11`
+- `PetBattleXPBar_OnEnter(self)`: `interface/addons/blizzard_petbattleui/mainline/blizzard_petbattleui.lua:13`
+- `PetBattleXPBar_OnLeave(self)`: `interface/addons/blizzard_petbattleui/classic/blizzard_petbattleui.lua:19`
+- `PetBattleXPBar_OnLeave(self)`: `interface/addons/blizzard_petbattleui/mainline/blizzard_petbattleui.lua:21`
+- `PetBattleXPBar_OnLoad(self)`: `interface/addons/blizzard_petbattleui/classic/blizzard_petbattleui.lua:7`
+- `PetBattleXPBar_OnLoad(self)`: `interface/addons/blizzard_petbattleui/mainline/blizzard_petbattleui.lua:9`
+
+## blizzard_photosharing
+
+- `PhotoSharingFrame_EscapePressed()`: `interface/addons/blizzard_photosharing/blizzard_photosharing.lua:5`
+
+## blizzard_pingui
+
+- `GetScaledCursorPosition_Insecure()`: `interface/addons/blizzard_pingui/blizzard_pingui.lua:2`
+
+## blizzard_playerchoice
+
+- `PlayerChoice_LoadUI()`: `interface/addons/blizzard_playerchoice/blizzard_playerchoice_bootstrap.lua:3`
+- `PlayerChoice_SetupWidgets(optionInfo, widgetContainer, widgetsLayout, widgetsInit)`: `interface/addons/blizzard_playerchoice/blizzard_playerchoiceoptionbase.lua:269`
+- `PlayerChoice_WidgetInit(widgetFrame, fontInfo)`: `interface/addons/blizzard_playerchoice/blizzard_playerchoiceoptionbase.lua:259`
+- `PlayerChoice_WidgetsLayout(widgetContainer, sortedWidgets, consolidateWidgets)`: `interface/addons/blizzard_playerchoice/blizzard_playerchoiceoptionbase.lua:192`
+- `PlayerChoiceFrame_TryShow()`: `interface/addons/blizzard_playerchoice/blizzard_playerchoice_bootstrap.lua:20`
+- `PlayerChoiceGetTextureKitInfo(textureKit)`: `interface/addons/blizzard_playerchoice/blizzard_playerchoice.lua:181`
+- `PlayerChoiceToggle_GetActiveToggle()`: `interface/addons/blizzard_playerchoice/blizzard_playerchoicetogglebutton.lua:257`
+- `PlayerChoiceToggle_ShouldShow()`: `interface/addons/blizzard_playerchoice/blizzard_playerchoicetogglebutton.lua:253`
+- `PlayerChoiceToggle_TryShow()`: `interface/addons/blizzard_playerchoice/blizzard_playerchoice_bootstrap.lua:26`
+- `ShowPendingPlayerChoiceResponseUI()`: `interface/addons/blizzard_playerchoice/blizzard_playerchoice_bootstrap.lua:43`
+
+## blizzard_playerspells
+
+- `OpenPlayerSpellsToGlyphTarget(event, ...)`: `interface/addons/blizzard_playerspells/blizzard_playerspells_bootstrap.lua:7`
+- `PlayerSpellsFrame_LoadUI()`: `interface/addons/blizzard_playerspells/blizzard_playerspells_bootstrap.lua:3`
+
+## blizzard_printhandler
+
+- `getprinthandler()`: `interface/addons/blizzard_printhandler/blizzard_printhandler.lua:82`
+- `print(...)`: `interface/addons/blizzard_printhandler/blizzard_printhandler.lua:93`
+- `setprinthandler(func)`: `interface/addons/blizzard_printhandler/blizzard_printhandler.lua:74`
+
+## blizzard_professions
+
+- `OpenProfessionUIToSkillLine(skillLineID)`: `interface/addons/blizzard_professions/blizzard_professions_bootstrap.lua:13`
+- `ProfessionDial_GetRelativeRotation(currRank, maxRank, inPct)`: `interface/addons/blizzard_professions/blizzard_professionsspecializationstemplates.lua:23`
+- `ProfessionsFrame_LoadUI()`: `interface/addons/blizzard_professions/blizzard_professions_bootstrap.lua:3`
+- `ShowProfessionEquipmentHelpTip(skillLineID)`: `interface/addons/blizzard_professions/blizzard_professions_bootstrap.lua:24`
+- `ShowProfessionsFrame()`: `interface/addons/blizzard_professions/blizzard_professions_bootstrap.lua:7`
+
+## blizzard_professionsbook
+
+- `ProfessionsBook_GetSpellBookItemSlot(spellButton)`: `interface/addons/blizzard_professionsbook/blizzard_professionsbook.lua:511`
+- `ProfessionsBook_LoadUI()`: `interface/addons/blizzard_professionsbook/blizzard_professionsbook_bootstrap.lua:3`
+- `ProfessionsBook_ToggleTutorial()`: `interface/addons/blizzard_professionsbook/blizzard_professionsbook.lua:547`
+- `ToggleProfessionsBook()`: `interface/addons/blizzard_professionsbook/blizzard_professionsbook_bootstrap.lua:7`
+
+## blizzard_professionscustomerorders
+
+- `HideProfessionsCustomerOrdersFrame()`: `interface/addons/blizzard_professionscustomerorders/blizzard_professionscustomerorders_bootstrap.lua:13`
+- `ProfessionsCustomerOrders_LoadUI()`: `interface/addons/blizzard_professionscustomerorders/blizzard_professionscustomerorders_bootstrap.lua:3`
+- `ShowProfessionsCustomerOrdersFrame()`: `interface/addons/blizzard_professionscustomerorders/blizzard_professionscustomerorders_bootstrap.lua:7`
+
+## blizzard_professionstemplates
+
+- `CloseProfessionsItemFlyout()`: `interface/addons/blizzard_professionstemplates/blizzard_professionsrecipeflyoutinstance.lua:7`
+- `CreateAllocation(reagent, quantity)`: `interface/addons/blizzard_professionstemplates/blizzard_professionstransaction.lua:58`
+- `CreateProfessionsEnchantFlyout(transaction)`: `interface/addons/blizzard_professionstemplates/blizzard_professionsrecipeflyout.lua:561`
+- `CreateProfessionsMCRFlyout(transaction, reagentSlotSchematic, slot)`: `interface/addons/blizzard_professionstemplates/blizzard_professionsrecipeflyout.lua:711`
+- `CreateProfessionsOrderMCRFlyout(transaction, reagentSlotSchematic, slot)`: `interface/addons/blizzard_professionstemplates/blizzard_professionsrecipeflyout.lua:813`
+- `CreateProfessionsOrderRecraftFlyout(transaction)`: `interface/addons/blizzard_professionstemplates/blizzard_professionsrecipeflyout.lua:740`
+- `CreateProfessionsRecipeLoader(recipeSchematic, callback)`: `interface/addons/blizzard_professionstemplates/blizzard_professionsrecipeloader.lua:83`
+- `CreateProfessionsRecipeTransaction(recipeSchematic)`: `interface/addons/blizzard_professionstemplates/blizzard_professionstransaction.lua:885`
+- `CreateProfessionsRecraftFlyout(transaction)`: `interface/addons/blizzard_professionstemplates/blizzard_professionsrecipeflyout.lua:527`
+- `IsProfessionsItemFlyoutOpen()`: `interface/addons/blizzard_professionstemplates/blizzard_professionsrecipeflyoutinstance.lua:3`
+- `OpenProfessionsItemFlyout(anchorTo, owner, behavior)`: `interface/addons/blizzard_professionstemplates/blizzard_professionsrecipeflyoutinstance.lua:12`
+
+## blizzard_ptrfeedback
+
+- `GetTimeSinceLastQuestProgress()`: `interface/addons/blizzard_ptrfeedback/blizzard_ptrfeedback_events.lua:210`
+
+## blizzard_pvpmatch
+
+- `ConstructPVPMatchTable(tableBuilder, useAlternateColor)`: `interface/addons/blizzard_pvpmatch/pvpmatchtable.lua:369`
+
+## blizzard_pvpui
+
+- `ConquestFrame_EvaluateSeasonState(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1241`
+- `ConquestFrame_GetSelectedModeRoleShortageBonus()`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1574`
+- `ConquestFrame_HasActiveSeason()`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1258`
+- `ConquestFrame_IsQueueingEnabled()`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1271`
+- `ConquestFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1222`
+- `ConquestFrame_OnHide(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1288`
+- `ConquestFrame_OnLoad(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1206`
+- `ConquestFrame_OnShow(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1275`
+- `ConquestFrame_SelectButton(button)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1564`
+- `ConquestFrame_SetPanelTierInfo(tierFrame, tierInfo, ranking)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1325`
+- `ConquestFrame_Update(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1355`
+- `ConquestFrame_UpdateJoinButton()`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1439`
+- `ConquestFrame_UpdateSeasonFrames(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1262`
+- `ConquestFrameButton_OnClick(self, button)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1581`
+- `ConquestFrameButton_OnEnter(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1620`
+- `ConquestFrameJoinButton_OnClick(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1595`
+- `DefaultBattlegroundReward_HideTooltip(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1616`
+- `DefaultBattlegroundReward_ShowTooltip(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1609`
+- `HonorFrame_GetSelectedModeRoleShortageBonus()`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:831`
+- `HonorFrame_InitSpecificButton(button, elementData)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:859`
+- `HonorFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:667`
+- `HonorFrame_OnLoad(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:603`
+- `HonorFrame_OnShow(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:662`
+- `HonorFrame_Queue()`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:838`
+- `HonorFrame_SetType(value)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:707`
+- `HonorFrame_SetTypeInternal(value)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:691`
+- `HonorFrame_UpdateQueueButtons()`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:712`
+- `HonorFrameBonusFrame_OnEvent(self, event)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:995`
+- `HonorFrameBonusFrame_OnHide(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:990`
+- `HonorFrameBonusFrame_OnShow(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:980`
+- `HonorFrameBonusFrame_SelectButton(button)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1149`
+- `HonorFrameBonusFrame_SetButtonState(button, enable, minLevel)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1159`
+- `HonorFrameBonusFrame_Update()`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1017`
+- `HonorFrameSpecificBattlegroundButton_OnClick(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:916`
+- `HonorFrameSpecificList_FindAndSelectBattleground(bgID)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:908`
+- `HonorFrameSpecificList_Update()`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:887`
+- `NextTier_OnEnter(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1306`
+- `PVPCasualActivityButton_OnEnter(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:959`
+- `PVPConquestLockTooltipShow(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:2101`
+- `PVPNewSeasonPopupOnClick(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:2230`
+- `PVPQueueFrame_GetSelection(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:481`
+- `PVPQueueFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:430`
+- `PVPQueueFrame_OnLoad(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:338`
+- `PVPQueueFrame_OnShow(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:489`
+- `PVPQueueFrame_SelectButton(index)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:564`
+- `PVPQueueFrame_SetCategoryButtonState(button, enabled)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:468`
+- `PVPQueueFrame_SetPrestige(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:533`
+- `PVPQueueFrame_ShowFrame(frame)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:543`
+- `PVPQueueFrame_Update(self, frame)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:485`
+- `PVPQueueFrame_UpdateAnchoringForAvailableModes(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:399`
+- `PVPQueueFrame_UpdateTitle()`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:523`
+- `PVPQueueFrameButton_OnClick(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:576`
+- `PVPQueueFrameButton_OnEnter(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:582`
+- `PVPQueueFrameButton_OnLeave(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:590`
+- `PVPRatedTier_OnEnter(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1292`
+- `PVPRewardEnlistmentBonus_OnEnter(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:1769`
+- `PVPUI_LoadUI()`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui_bootstrap.lua:3`
+- `PVPUIFrame_AddItemWait(itemid)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:184`
+- `PVPUIFrame_ConfigureRewardFrame(rewardFrame, honor, experience, itemRewards, currencyRewards, roleShortageBonus)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:269`
+- `PVPUIFrame_EvaluateHelpTips(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:202`
+- `PVPUIFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:159`
+- `PVPUIFrame_OnHide(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:151`
+- `PVPUIFrame_OnLoad(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:110`
+- `PVPUIFrame_OnShow(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:135`
+- `PVPUIFrame_RoleButtonClicked(self)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:216`
+- `PVPUIFrame_SetRoles(frame)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:220`
+- `PVPUIFrame_ToggleFrame(sidePanelName, selection)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:193`
+- `PVPUIFrame_UpdateAvailableRoles(tankButton, healButton, dpsButton)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:240`
+- `PVPUIFrame_UpdateRolesChangeable()`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:227`
+- `PVPUIFrame_UpdateRoleShortages(roleShortageBonus, roleButtons)`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:244`
+- `PVPUIFrame_UpdateSelectedRoles()`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.lua:254`
+- `TogglePVPUI()`: `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui_bootstrap.lua:7`
+
+## blizzard_queuestatusframe
+
+- `QueueStatus_InActiveBattlefield()`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:1357`
+- `QueueStatusDropdown_AcceptQueuedPVPMatch()`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:1321`
+- `QueueStatusDropdown_AddBattlefieldButtons(description, idx)`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:1105`
+- `QueueStatusDropdown_AddLFGButtons(description, category)`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:1184`
+- `QueueStatusDropdown_AddLFGListApplicationButtons(description, resultID)`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:1300`
+- `QueueStatusDropdown_AddLFGListButtons(description, queueStatusButton)`: `interface/addons/blizzard_queuestatusframe/camelot/queuestatusframeoverrides.lua:38`
+- `QueueStatusDropdown_AddLFGListButtons(description, queueStatusButton)`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:1283`
+- `QueueStatusDropdown_AddPetBattleButtons(description)`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:1331`
+- `QueueStatusDropdown_AddPlunderstormButtons(description)`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:1313`
+- `QueueStatusDropdown_AddPVPRoleCheckButtons(description)`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:1083`
+- `QueueStatusDropdown_AddWorldPvPButtons(description, idx)`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:1062`
+- `QueueStatusEntry_OnUpdate(self, elapsed)`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:1051`
+- `QueueStatusEntry_SetFullDisplay(entry, title, queuedTime, myWait, isTank, isHealer, isDPS, totalTanks, totalHealers, totalDPS, tankNeeds, healerNeeds, dpsNeeds, subTitle, extraText, assignedSpec)`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:941`
+- `QueueStatusEntry_SetMinimalDisplay(entry, title, status, subTitle, extraText, queuedTime)`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:892`
+- `QueueStatusEntry_SetUpActiveWorldPVP(entry)`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:857`
+- `QueueStatusEntry_SetUpBattlefield(entry, idx)`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:801`
+- `QueueStatusEntry_SetUpLFG(entry, category)`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:678`
+- `QueueStatusEntry_SetUpLFGListActiveEntry(entry)`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:780`
+- `QueueStatusEntry_SetUpLFGListApplication(entry, resultID)`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:794`
+- `QueueStatusEntry_SetUpPetBattlePvP(entry)`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:861`
+- `QueueStatusEntry_SetUpPlunderstorm(entry, queueType)`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:647`
+- `QueueStatusEntry_SetUpPvPReadyCheck(entry)`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:835`
+- `QueueStatusEntry_SetUpPVPRoleCheck(entry)`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:830`
+- `QueueStatusEntry_SetUpWorldPvP(entry, idx)`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:840`
+- `TogglePVPScoreboardOrResults()`: `interface/addons/blizzard_queuestatusframe/mainline/queuestatusframe.lua:1370`
+
+## blizzard_quickjoin
+
+- `QuickJoinToast_GetPriority(group, queues, players)`: `interface/addons/blizzard_quickjoin/quickjointoast.lua:544`
+- `QuickJoinToast_GetPriorityFromPlayers(players)`: `interface/addons/blizzard_quickjoin/quickjointoast.lua:647`
+- `QuickJoinToast_GetPriorityFromQueue(queue)`: `interface/addons/blizzard_quickjoin/quickjointoast.lua:561`
+
+## blizzard_raidframe
+
+- `ClaimRaidFrame(parent)`: `interface/addons/blizzard_raidframe/mainline/raidframe.lua:294`
+- `RaidFrame_ConvertToRaid()`: `interface/addons/blizzard_raidframe/mainline/raidframe.lua:128`
+- `RaidFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_raidframe/mainline/raidframe.lua:55`
+- `RaidFrame_OnLoad(self)`: `interface/addons/blizzard_raidframe/mainline/raidframe.lua:8`
+- `RaidFrame_OnShow(self)`: `interface/addons/blizzard_raidframe/mainline/raidframe.lua:40`
+- `RaidFrame_Update()`: `interface/addons/blizzard_raidframe/mainline/raidframe.lua:103`
+- `RaidFrameAllAssistCheckButton_UpdateAvailable(self)`: `interface/addons/blizzard_raidframe/mainline/raidframe.lua:278`
+- `RaidInfoExtendButton_OnClick(self)`: `interface/addons/blizzard_raidframe/mainline/raidframe.lua:270`
+- `RaidInfoFrame_InitButton(button, elementData)`: `interface/addons/blizzard_raidframe/mainline/raidframe.lua:142`
+- `RaidInfoFrame_SetButtonSelected(button, selected)`: `interface/addons/blizzard_raidframe/mainline/raidframe.lua:173`
+- `RaidInfoFrame_Update()`: `interface/addons/blizzard_raidframe/mainline/raidframe.lua:181`
+- `RaidInfoFrame_UpdateButtons()`: `interface/addons/blizzard_raidframe/mainline/raidframe.lua:247`
+- `RaidInfoInstance_OnClick(self)`: `interface/addons/blizzard_raidframe/mainline/raidframe.lua:206`
+- `RaidInfoInstance_OnEnter(self)`: `interface/addons/blizzard_raidframe/mainline/raidframe.lua:234`
+- `RaidInfoInstance_OnMouseDown(self)`: `interface/addons/blizzard_raidframe/mainline/raidframe.lua:196`
+- `RaidInfoInstance_OnMouseUp(self)`: `interface/addons/blizzard_raidframe/mainline/raidframe.lua:201`
+- `RaidParentFrame_OnLoad(self)`: `interface/addons/blizzard_raidframe/mainline/raidframe.lua:2`
+- `RaidParentFrame_SetView(tab)`: `interface/addons/blizzard_raidframe/mainline/raidframe.lua:89`
+- `UpdateRaidAndPartyFrames()`: `interface/addons/blizzard_raidframe/mainline/raidframe.lua:132`
+
+## blizzard_raidui
+
+- `RaidButton_OnClick(self, button)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:622`
+- `RaidClassButton_OnEnter(self)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:120`
+- `RaidClassButton_OnLoad(self)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:42`
+- `RaidClassButton_Update()`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:65`
+- `RaidFrame_LoadUI()`: `interface/addons/blizzard_raidui/blizzard_raidui_bootstrap.lua:3`
+- `RaidGroup_ResetSlotButtons()`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:194`
+- `RaidGroupButton_OnDragStart(raidButton)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:578`
+- `RaidGroupButton_OnDragStop(raidButton)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:588`
+- `RaidGroupButton_OnEnter(raidbutton)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:616`
+- `RaidGroupButton_OnLoad(self)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:568`
+- `RaidGroupButton_OpenMenu(self)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:556`
+- `RaidGroupFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:167`
+- `RaidGroupFrame_OnHide()`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:160`
+- `RaidGroupFrame_OnLoad()`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:145`
+- `RaidGroupFrame_OnUpdate(elapsed)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:530`
+- `RaidGroupFrame_ReadyCheckFinished()`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:548`
+- `RaidGroupFrame_Update()`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:217`
+- `RaidGroupFrame_UpdateHealth(id)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:502`
+- `RaidGroupFrame_UpdateLevel(id)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:495`
+- `RaidPullout_GeneratePulloutFrame(fileName, class)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:650`
+- `RaidPullout_GetFrame(filterID)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:1184`
+- `RaidPullout_MatchName(name)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:1172`
+- `RaidPullout_OnEvent(self, event, ...)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:627`
+- `RaidPullout_OnUpdate(self, elapsed)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:760`
+- `RaidPullout_ReadyCheckFinished(pulloutFrame)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:638`
+- `RaidPullout_ReadyCheckFinishFunc(pulloutButton)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:646`
+- `RaidPullout_RenewFrames()`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:1120`
+- `RaidPullout_SaveFrames(pullOutFrame)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:1068`
+- `RaidPullout_Update(pullOutFrame)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:795`
+- `RaidPullout_UpdateTarget(pullOutFrame, pullOutButton, unit, which)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:687`
+- `RaidPulloutButton_OnDragStart(frame)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:1037`
+- `RaidPulloutButton_OnEvent(self, event, ...)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:965`
+- `RaidPulloutButton_OnLoad(self)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:1031`
+- `RaidPulloutButton_UpdateDead(button, isDead, class)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:1015`
+- `RaidPulloutButton_UpdateSwapFrames(self, unit)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:995`
+- `RaidPulloutStopMoving(frame)`: `interface/addons/blizzard_raidui/mainline/blizzard_raidui.lua:1050`
+
+## blizzard_recruitafriend
+
+- `RecruitAFriend_TryCancelAutoClaim()`: `interface/addons/blizzard_recruitafriend/recruitafriendframe.lua:890`
+- `RecruitAFriend_TryPlayClaimRewardFanfare(rewardRAFVersion)`: `interface/addons/blizzard_recruitafriend/recruitafriendframe.lua:1411`
+- `RecruitAFriendFrameSocialViewInitializeAADC(tabData)`: `interface/addons/blizzard_recruitafriend/recruitafriendsocialview.lua:321`
+
+## blizzard_remixartifacttutorialui
+
+- `RemixArtifactTutorialUI_LoadUI()`: `interface/addons/blizzard_remixartifacttutorialui/blizzard_remixartifacttutorialui_bootstrap.lua:3`
+
+## blizzard_remixartifactui
+
+- `RemixArtifactUI_LoadUI()`: `interface/addons/blizzard_remixartifactui/blizzard_remixartifactui_bootstrap.lua:4`
+- `ShowRemixArtifactFrame()`: `interface/addons/blizzard_remixartifactui/blizzard_remixartifactui_bootstrap.lua:17`
+
+## blizzard_reportframe
+
+- `ReportFrame_EscapePressed()`: `interface/addons/blizzard_reportframe/reportframe.lua:37`
+
+## blizzard_restrictedaddonenvironment
+
+- `AddReferencedFrame(frame)`: `interface/addons/blizzard_restrictedaddonenvironment/restrictedexecution.lua:406`
+- `AddToAutoHide(frame, child)`: `interface/addons/blizzard_restrictedaddonenvironment/securehoverdriver.lua:275`
+- `CallRestrictedClosure(owningFrame, signature, workingEnv, ctrlHandle, body, ...)`: `interface/addons/blizzard_restrictedaddonenvironment/restrictedexecution.lua:444`
+- `GetFrameHandle(frame, protected)`: `interface/addons/blizzard_restrictedaddonenvironment/restrictedinfrastructure.lua:127`
+- `GetFrameHandleFrame(handle, protected, onlyProtected)`: `interface/addons/blizzard_restrictedaddonenvironment/restrictedinfrastructure.lua:94`
+- `GetManagedEnvironment(envKey, withCreate)`: `interface/addons/blizzard_restrictedaddonenvironment/restrictedinfrastructure.lua:621`
+- `GetReadonlyRestrictedTable(ref)`: `interface/addons/blizzard_restrictedaddonenvironment/restrictedinfrastructure.lua:303`
+- `InitFrameHandleNamespace(namespace)`: `interface/addons/blizzard_restrictedaddonenvironment/restrictedinfrastructure.lua:140`
+- `IsWritableRestrictedTable(ref)`: `interface/addons/blizzard_restrictedaddonenvironment/restrictedinfrastructure.lua:316`
+- `PropagateForbiddenToReferencedFrames()`: `interface/addons/blizzard_restrictedaddonenvironment/restrictedexecution.lua:397`
+- `RegisterAttributeDriver(frame, attribute, values)`: `interface/addons/blizzard_restrictedaddonenvironment/securestatedriver.lua:8`
+- `RegisterAutoHide(frame, ttl)`: `interface/addons/blizzard_restrictedaddonenvironment/securehoverdriver.lua:261`
+- `RegisterStateDriver(frame, state, values)`: `interface/addons/blizzard_restrictedaddonenvironment/securestatedriver.lua:26`
+- `RegisterUnitWatch(frame, asState)`: `interface/addons/blizzard_restrictedaddonenvironment/securestatedriver.lua:38`
+- `SecureAuraHeader_GetUnit(self)`: `interface/addons/blizzard_restrictedaddonenvironment/secureauraheader.lua:112`
+- `SecureAuraHeader_OnAttributeChanged(self, name, value)`: `interface/addons/blizzard_restrictedaddonenvironment/secureauraheader.lua:94`
+- `SecureAuraHeader_OnEvent(self, event, ...)`: `interface/addons/blizzard_restrictedaddonenvironment/secureauraheader.lua:86`
+- `SecureAuraHeader_OnHide(self)`: `interface/addons/blizzard_restrictedaddonenvironment/secureauraheader.lua:66`
+- `SecureAuraHeader_OnLoad(_self)`: `interface/addons/blizzard_restrictedaddonenvironment/secureauraheader.lua:57`
+- `SecureAuraHeader_OnShow(self)`: `interface/addons/blizzard_restrictedaddonenvironment/secureauraheader.lua:61`
+- `SecureAuraHeader_OnUpdate(self)`: `interface/addons/blizzard_restrictedaddonenvironment/secureauraheader.lua:70`
+- `SecureAuraHeader_Update(self)`: `interface/addons/blizzard_restrictedaddonenvironment/secureauraheader.lua:392`
+- `SecureAuraHeader_UpdateEventRegistrations(self)`: `interface/addons/blizzard_restrictedaddonenvironment/secureauraheader.lua:116`
+- `SecureGroupHeader_OnAttributeChanged(self, name, value)`: `interface/addons/blizzard_restrictedaddonenvironment/securegroupheaders.lua:66`
+- `SecureGroupHeader_OnEvent(self, event, ...)`: `interface/addons/blizzard_restrictedaddonenvironment/securegroupheaders.lua:60`
+- `SecureGroupHeader_OnLoad(self)`: `interface/addons/blizzard_restrictedaddonenvironment/securegroupheaders.lua:55`
+- `SecureGroupHeader_Update(self)`: `interface/addons/blizzard_restrictedaddonenvironment/securegroupheaders.lua:394`
+- `SecureGroupPetHeader_OnAttributeChanged(self, name, value)`: `interface/addons/blizzard_restrictedaddonenvironment/securegroupheaders.lua:518`
+- `SecureGroupPetHeader_OnEvent(self, event, ...)`: `interface/addons/blizzard_restrictedaddonenvironment/securegroupheaders.lua:512`
+- `SecureGroupPetHeader_OnLoad(self)`: `interface/addons/blizzard_restrictedaddonenvironment/securegroupheaders.lua:506`
+- `SecureGroupPetHeader_Update(self)`: `interface/addons/blizzard_restrictedaddonenvironment/securegroupheaders.lua:537`
+- `SecureHandler_AttributeOnAttributeChanged(self, name, value)`: `interface/addons/blizzard_restrictedaddonenvironment/securehandlers.lua:117`
+- `SecureHandler_OnClick(self, snippetAttr, button, down)`: `interface/addons/blizzard_restrictedaddonenvironment/securehandlers.lua:86`
+- `SecureHandler_OnDragEvent(self, snippetAttr, button)`: `interface/addons/blizzard_restrictedaddonenvironment/securehandlers.lua:161`
+- `SecureHandler_OnLoad(self)`: `interface/addons/blizzard_restrictedaddonenvironment/securehandlers.lua:752`
+- `SecureHandler_OnMouseUpDown(self, snippetAttr, button)`: `interface/addons/blizzard_restrictedaddonenvironment/securehandlers.lua:93`
+- `SecureHandler_OnMouseWheel(self, snippetAttr, delta)`: `interface/addons/blizzard_restrictedaddonenvironment/securehandlers.lua:100`
+- `SecureHandler_OnSimpleEvent(self, snippetAttr)`: `interface/addons/blizzard_restrictedaddonenvironment/securehandlers.lua:79`
+- `SecureHandler_StateOnAttributeChanged(self, name, value)`: `interface/addons/blizzard_restrictedaddonenvironment/securehandlers.lua:107`
+- `SecureHandlerExecute(frame, body)`: `interface/addons/blizzard_restrictedaddonenvironment/securehandlers.lua:680`
+- `SecureHandlerSetFrameRef(frame, label, refFrame)`: `interface/addons/blizzard_restrictedaddonenvironment/securehandlers.lua:702`
+- `SecureHandlerUnwrapScript(frame, script)`: `interface/addons/blizzard_restrictedaddonenvironment/securehandlers.lua:646`
+- `SecureHandlerWrapScript(frame, script, header, preBody, postBody)`: `interface/addons/blizzard_restrictedaddonenvironment/securehandlers.lua:602`
+- `UnitWatchRegistered(frame)`: `interface/addons/blizzard_restrictedaddonenvironment/securestatedriver.lua:69`
+- `UnregisterAttributeDriver(frame, attribute)`: `interface/addons/blizzard_restrictedaddonenvironment/securestatedriver.lua:16`
+- `UnregisterAutoHide(frame)`: `interface/addons/blizzard_restrictedaddonenvironment/securehoverdriver.lua:295`
+- `UnregisterStateDriver(frame, state)`: `interface/addons/blizzard_restrictedaddonenvironment/securestatedriver.lua:30`
+- `UnregisterUnitWatch(frame)`: `interface/addons/blizzard_restrictedaddonenvironment/securestatedriver.lua:47`
+
+## blizzard_runeforgeui
+
+- `RuneforgeFrame_LoadUI()`: `interface/addons/blizzard_runeforgeui/blizzard_runeforgeui_bootstrap.lua:3`
+- `ShowRuneforgeFrame(isUpgrade)`: `interface/addons/blizzard_runeforgeui/blizzard_runeforgeui_bootstrap.lua:7`
+
+## blizzard_savedsets
+
+- `SavedSet_Check(idOrTable)`: `interface/addons/blizzard_savedsets/blizzard_savedsets.lua:104`
+- `SavedSet_HasAny()`: `interface/addons/blizzard_savedsets/blizzard_savedsets.lua:96`
+- `SavedSet_IsLoaded()`: `interface/addons/blizzard_savedsets/blizzard_savedsets.lua:92`
+- `SavedSet_Set(idOrTable)`: `interface/addons/blizzard_savedsets/blizzard_savedsets.lua:100`
+
+## blizzard_scrappingmachineui
+
+- `ScrappingMachineFrame_LoadUI()`: `interface/addons/blizzard_scrappingmachineui/blizzard_scrappingmachineui_bootstrap.lua:3`
+
+## blizzard_scripterrors
+
+- `AddLuaErrorHandler(handler)`: `interface/addons/blizzard_scripterrors/blizzard_scripterrors.lua:66`
+
+## blizzard_scripterrorsframe
+
+- `SetHideErrorFramePredicate(predicate)`: `interface/addons/blizzard_scripterrorsframe/blizzard_scripterrorsframe.lua:19`
+
+## blizzard_securetransferui
+
+- `GetSecureMoneyString(money, separateThousands)`: `interface/addons/blizzard_securetransferui/blizzard_securetransferui.lua:24`
+- `GetSecureTradeRMTWarningString()`: `interface/addons/blizzard_securetransferui/blizzard_securetransferui.lua:76`
+- `GetSecureTradeWarningString()`: `interface/addons/blizzard_securetransferui/blizzard_securetransferui.lua:67`
+- `SecureTransferDialog_DelayedAccept(self)`: `interface/addons/blizzard_securetransferui/blizzard_securetransferui.lua:94`
+- `SecureTransferDialog_OnEvent(self, event, ...)`: `interface/addons/blizzard_securetransferui/blizzard_securetransferui.lua:353`
+- `SecureTransferDialog_OnHide(self)`: `interface/addons/blizzard_securetransferui/blizzard_securetransferui.lua:416`
+- `SecureTransferDialog_OnLoad(self)`: `interface/addons/blizzard_securetransferui/blizzard_securetransferui.lua:341`
+- `SecureTransferDialog_OnShow(self)`: `interface/addons/blizzard_securetransferui/blizzard_securetransferui.lua:408`
+- `SecureTransferDialog_Show(which, ...)`: `interface/addons/blizzard_securetransferui/blizzard_securetransferui.lua:243`
+- `SecureTransferDialog_TimerOnAccept(self)`: `interface/addons/blizzard_securetransferui/blizzard_securetransferui.lua:101`
+- `SecureTransferDialogButton_OnClick(self, button, down)`: `interface/addons/blizzard_securetransferui/blizzard_securetransferui.lua:450`
+
+## blizzard_settings_shared
+
+- `CreateCanvasLayout(frame)`: `interface/addons/blizzard_settings_shared/blizzard_settingslayouts.lua:81`
+- `CreateKeybindingEntryInitializer(bindingIndex, search)`: `interface/addons/blizzard_settings_shared/blizzard_keybindings.lua:532`
+- `CreateSettingsAddOnDisabledLabelInitializer()`: `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:1885`
+- `CreateSettingsButtonInitializer(name, buttonText, buttonClick, tooltip, addSearchTags, newTagID, gameDataFunc, gameDataEvent)`: `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:1014`
+- `CreateSettingsCheckboxDropdownInitializer(cbSetting, cbLabel, cbTooltip, dropdownSetting, dropdownOptions, dropDownLabel, dropDownTooltip)`: `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:1670`
+- `CreateSettingsCheckboxSliderInitializer(cbSetting, cbLabel, cbTooltip, sliderSetting, sliderOptions, sliderLabel, sliderTooltip, newTagID)`: `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:1477`
+- `CreateSettingsCheckboxWithButtonInitializer(setting, buttonText, buttonClick, evaluateState, clickRequiresSet, tooltip)`: `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:1284`
+- `CreateSettingsCheckboxWithColorSwatchInitializer(setting, checkboxTooltip, swatchClick, clickRequiresSet, invertClickRequiresSet, initialSwatchColorFn, swatchTooltipTitle, swatchTooltipText)`: `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:1829`
+- `CreateSettingsExpandableSectionInitializer(name)`: `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:1878`
+- `CreateSettingsListSearchCategoryInitializer(category)`: `interface/addons/blizzard_settings_shared/blizzard_settingslist.lua:36`
+- `CreateSettingsListSectionHeaderInitializer(name, tooltip, newTagID)`: `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:112`
+- `CreateVerticalLayout()`: `interface/addons/blizzard_settings_shared/blizzard_settingslayouts.lua:57`
+- `CreateVoicePushToTalkBindingHandler()`: `interface/addons/blizzard_settings_shared/blizzard_keybindings.lua:223`
+- `CurrentVersionHasNewUnseenSettings()`: `interface/addons/blizzard_settings_shared/newdefinitionsframework.lua:51`
+- `DisplayUniversalAccessDialogIfRequiredForVoiceChatKeybind(keys)`: `interface/addons/blizzard_settings_shared/blizzard_keybindings.lua:206`
+- `IsNewSettingInCurrentVersion(variable)`: `interface/addons/blizzard_settings_shared/newdefinitionsframework.lua:15`
+- `IsUnseenNewSettingInCurrentVersion(variable)`: `interface/addons/blizzard_settings_shared/newdefinitionsframework.lua:32`
+- `MarkNewSettingAsSeen(setting)`: `interface/addons/blizzard_settings_shared/newdefinitionsframework.lua:67`
+- `SaveAllCustomBindings(shouldSave)`: `interface/addons/blizzard_settings_shared/blizzard_keybindings.lua:200`
+- `SettingsPanel_EscapePressed()`: `interface/addons/blizzard_settings_shared/blizzard_settingspanel.lua:40`
+
+## blizzard_settingsdefinitions_frame
+
+- `CreateAutoLootInitializer(setting)`: `interface/addons/blizzard_settingsdefinitions_frame/controls.lua:21`
+- `CreateKeybindingSectionInitializer(name, bindingsCategories, requiredSettingName, expanded)`: `interface/addons/blizzard_settingsdefinitions_frame/keybindings.lua:165`
+- `IsMouseoverCastSupported()`: `interface/addons/blizzard_settingsdefinitions_frame/mainline/combatoverrides.lua:262`
+- `PingSystemInitializer(category)`: `interface/addons/blizzard_settingsdefinitions_frame/pingsystem.lua:143`
+- `UpdateFloatingCombatTextSafe()`: `interface/addons/blizzard_settingsdefinitions_frame/mainline/combatoverrides.lua:254`
+
+## blizzard_settingsdefinitions_shared
+
+- `AddTextOptionsWithPreview(optionContainer, onEnterCallback, optionsTable)`: `interface/addons/blizzard_settingsdefinitions_shared/mainline/text.lua:8`
+- `AddTextOptionWithPreview(optionContainer, onEnterCallback, ...)`: `interface/addons/blizzard_settingsdefinitions_shared/mainline/text.lua:3`
+- `CreateAdvancedQualitySectionInitializer(name, settings, raidSettings)`: `interface/addons/blizzard_settingsdefinitions_shared/graphics.lua:731`
+- `DefineGameSettingsMacOpenInputMonitoringDialog(dialogTable)`: `interface/addons/blizzard_settingsdefinitions_shared/mac.lua:44`
+- `DefineGameSettingsMacOpenUniversalAccessDialog(dialogTable)`: `interface/addons/blizzard_settingsdefinitions_shared/mac.lua:21`
+- `RegisterMacSettings()`: `interface/addons/blizzard_settingsdefinitions_shared/mac.lua:1`
+
+## blizzard_shakeutil
+
+- `ShakeFrame(frame, shake, maximumDuration, frequency)`: `interface/addons/blizzard_shakeutil/blizzard_shakeutil.lua:15`
+- `ShakeFrameRandom(frame, magnitude, duration, frequency)`: `interface/addons/blizzard_shakeutil/blizzard_shakeutil.lua:1`
+
+## blizzard_sharedmapdataproviders
+
+- `ClearCachedActivitiesForPlayer()`: `interface/addons/blizzard_sharedmapdataproviders/sharedmappoitemplates.lua:348`
+- `ClearCachedAreaPOIsForPlayer()`: `interface/addons/blizzard_sharedmapdataproviders/sharedmappoitemplates.lua:420`
+- `ClearCachedQuestsForPlayer()`: `interface/addons/blizzard_sharedmapdataproviders/sharedmappoitemplates.lua:402`
+- `GetAreaPOIsForPlayerByMapIDCached(mapID)`: `interface/addons/blizzard_sharedmapdataproviders/sharedmappoitemplates.lua:409`
+- `GetQuestsOnMapCached(mapID)`: `interface/addons/blizzard_sharedmapdataproviders/sharedmappoitemplates.lua:354`
+- `GetTasksOnMapCached(mapID)`: `interface/addons/blizzard_sharedmapdataproviders/sharedmappoitemplates.lua:390`
+- `MapPinHighlight_CheckHighlightPin(highlightType, parentPin, regionToHighlight, params)`: `interface/addons/blizzard_sharedmapdataproviders/sharedmappoitemplates.lua:336`
+- `MapPinHighlight_CreateAnimatedHighlightIfNeeded(parentPin, highlightType)`: `interface/addons/blizzard_sharedmapdataproviders/sharedmappoitemplates.lua:291`
+- `MapPinHighlight_UpdateAnimatedHighlight(highlightType, parentPin, regionToHighlight, params)`: `interface/addons/blizzard_sharedmapdataproviders/sharedmappoitemplates.lua:319`
+
+## blizzard_sharedxml
+
+- `AreColorsEqual(left, right)`: `interface/addons/blizzard_sharedxml/colorutil.lua:55`
+- `AreVector2DEqual(left, right)`: `interface/addons/blizzard_sharedxml/vector2d.lua:61`
+- `AreVector3DEqual(left, right)`: `interface/addons/blizzard_sharedxml/vector3d.lua:99`
+- `AreVector4DEqual(left, right)`: `interface/addons/blizzard_sharedxml/vector4d.lua:72`
+- `BaseExpandableDialogMixin_OnCloseClick(self)`: `interface/addons/blizzard_sharedxml/sharedbasiccontrols.lua:81`
+- `BaseNineSliceDialog_OnCloseClick(self)`: `interface/addons/blizzard_sharedxml/sharedbasiccontrols.lua:137`
+- `BindingButtonTemplate_IsSelected(keyBindingButton)`: `interface/addons/blizzard_sharedxml/bindingutil.lua:211`
+- `BindingButtonTemplate_SetSelected(keyBindingButton, isSelected)`: `interface/addons/blizzard_sharedxml/bindingutil.lua:194`
+- `BindingButtonTemplate_SetupBindingButton(binding, button)`: `interface/addons/blizzard_sharedxml/bindingutil.lua:215`
+- `BindingButtonTemplate_ToggleSelected(keyBindingButton)`: `interface/addons/blizzard_sharedxml/bindingutil.lua:207`
+- `BNet_GetBattleTagComponents(battleTag)`: `interface/addons/blizzard_sharedxml/accountutil.lua:92`
+- `BNet_GetBattleTagSelf()`: `interface/addons/blizzard_sharedxml/accountutil.lua:82`
+- `BNet_GetBNetAccountName(accountInfo)`: `interface/addons/blizzard_sharedxml/accountutil.lua:45`
+- `BNet_GetBNetIDAccount(name)`: `interface/addons/blizzard_sharedxml/accountutil.lua:41`
+- `BNet_GetBNetIDAccountFromCharacterName(name)`: `interface/addons/blizzard_sharedxml/accountutil.lua:59`
+- `BNet_GetBroadcastTextSelf()`: `interface/addons/blizzard_sharedxml/accountutil.lua:87`
+- `BNet_GetFriendLevelRank(friendLevel)`: `interface/addons/blizzard_sharedxml/accountutil.lua:131`
+- `BNet_GetTruncatedBattleTag(battleTag)`: `interface/addons/blizzard_sharedxml/accountutil.lua:69`
+- `BNet_GetValidatedCharacterName(characterName, battleTag, client, clientTextureSize)`: `interface/addons/blizzard_sharedxml/accountutil.lua:103`
+- `BNet_GetValidatedCharacterNameWithClientEmbeddedAtlas(characterName, battleTag, client, texWidth, texHeight, texXOffset, texYOffset)`: `interface/addons/blizzard_sharedxml/accountutil.lua:110`
+- `BNet_GetValidatedCharacterNameWithClientEmbeddedTexture(characterName, battleTag, texture, fileWidth, fileHeight, texWidth, texHeight, texXOffset, texYOffset)`: `interface/addons/blizzard_sharedxml/accountutil.lua:114`
+- `BNet_IsFriendLevelEqualOrHigher(friendLevel, comparisonLevel)`: `interface/addons/blizzard_sharedxml/accountutil.lua:135`
+- `ButtonFrameTemplate_HideAttic(self)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:74`
+- `ButtonFrameTemplate_HideButtonBar(self)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:66`
+- `ButtonFrameTemplate_HidePortrait(self)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:111`
+- `ButtonFrameTemplate_ShowAttic(self)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:82`
+- `ButtonFrameTemplate_ShowButtonBar(self)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:70`
+- `ButtonFrameTemplate_ShowPortrait(self)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:119`
+- `ButtonFrameTemplateMinimizable_HidePortrait(self)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:127`
+- `ButtonFrameTemplateMinimizable_ShowPortrait(self)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:132`
+- `CarouselLeftButton_OnClick(self)`: `interface/addons/blizzard_sharedxml/modelpreviewframe.lua:190`
+- `CarouselRightButton_OnClick(self)`: `interface/addons/blizzard_sharedxml/modelpreviewframe.lua:195`
+- `CatmullRom_Calculate2DPointOnCurve(t, p1x, p1y, p2x, p2y, p3x, p3y, p4x, p4y)`: `interface/addons/blizzard_sharedxml/spline.lua:16`
+- `CatmullRom_Calculate3DPointOnCurve(t, p1x, p1y, p1z, p2x, p2y, p2z, p3x, p3y, p3z, p4x, p4y, p4z)`: `interface/addons/blizzard_sharedxml/spline.lua:24`
+- `CatmullRom_Calculate4DPointOnCurve(t, p1x, p1y, p1z, p1w, p2x, p2y, p2z, p2w, p3x, p3y, p3z, p3w, p4x, p4y, p4z, p4w)`: `interface/addons/blizzard_sharedxml/spline.lua:33`
+- `CatmullRom_CalculatePointOnCurve(t, p1, p2, p3, p4)`: `interface/addons/blizzard_sharedxml/spline.lua:10`
+- `CloseDropDownMenus(level)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1288`
+- `ColumnDisplayButton_OnClick(self)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:911`
+- `ConcatinateServerNameToPlayerName(unitGUID)`: `interface/addons/blizzard_sharedxml/unitutil.lua:26`
+- `ConfirmationEditBoxMatches(editBox, expectedText)`: `interface/addons/blizzard_sharedxml/stringutil.lua:5`
+- `ConfirmationStringMatches(userInput, expectedText)`: `interface/addons/blizzard_sharedxml/stringutil.lua:1`
+- `ConvertPixelsToUI(pixels, frameScale)`: `interface/addons/blizzard_sharedxml/pixelutilsecure.lua:2`
+- `ConvertSecondsToUnits(timestamp)`: `interface/addons/blizzard_sharedxml/timeutil.lua:314`
+- `CreateButtonGroup()`: `interface/addons/blizzard_sharedxml/buttongroup.lua:183`
+- `CreateCatmullRomSpline(numDimensions)`: `interface/addons/blizzard_sharedxml/spline.lua:45`
+- `CreateCircularBuffer(maxElements)`: `interface/addons/blizzard_sharedxml/circularbuffer.lua:17`
+- `CreateColorFromBestRGBHexString(hexColor)`: `interface/addons/blizzard_sharedxml/colorutil.lua:40`
+- `CreateColorFromBytes(r, g, b, a)`: `interface/addons/blizzard_sharedxml/colorutil.lua:51`
+- `CreateColorFromHexString(hexColor)`: `interface/addons/blizzard_sharedxml/colorutil.lua:10`
+- `CreateColorFromRGBAHexString(hexColor)`: `interface/addons/blizzard_sharedxml/colorutil.lua:20`
+- `CreateColorFromRGBHexString(hexColor)`: `interface/addons/blizzard_sharedxml/colorutil.lua:30`
+- `CreateDataProvider(tbl)`: `interface/addons/blizzard_sharedxml/dataprovider.lua:277`
+- `CreateDataProviderByIndexCount(indexCount)`: `interface/addons/blizzard_sharedxml/dataprovider.lua:291`
+- `CreateDataProviderWithAssignedKey(tbl, key)`: `interface/addons/blizzard_sharedxml/dataprovider.lua:295`
+- `CreateDeselectableRadioButtonGroup()`: `interface/addons/blizzard_sharedxml/buttongroup.lua:234`
+- `CreateIndexRangeDataProvider(size)`: `interface/addons/blizzard_sharedxml/indexrangedataprovider.lua:75`
+- `CreateInterpolator(interpolateFunc)`: `interface/addons/blizzard_sharedxml/interpolator.lua:77`
+- `CreateKeyChordString(key, ...)`: `interface/addons/blizzard_sharedxml/bindingutil.lua:112`
+- `CreateKeyChordStringFromTable(keys, preventSort)`: `interface/addons/blizzard_sharedxml/bindingutil.lua:104`
+- `CreateKeyChordStringUsingMetaKeyState(key)`: `interface/addons/blizzard_sharedxml/bindingutil.lua:116`
+- `CreateLoopingSoundEffectEmitter(startingSound, loopingSound, endingSound, loopStartDelay, loopEndDelay, loopFadeTime)`: `interface/addons/blizzard_sharedxml/loopingsoundeffect.lua:4`
+- `CreateMinimalSliderFormatter(labelType, value)`: `interface/addons/blizzard_sharedxml/shared/slider/minimalslider.lua:18`
+- `CreatePredictedSetting(wrapTable)`: `interface/addons/blizzard_sharedxml/predictedsetting.lua:32`
+- `CreatePredictedToggle(wrapTable)`: `interface/addons/blizzard_sharedxml/predictedsetting.lua:54`
+- `CreateRadioButtonGroup()`: `interface/addons/blizzard_sharedxml/buttongroup.lua:230`
+- `CreateScrollBoxBiaxalPadding(top, bottom, left, right, horizontalSpacing, verticalSpacing)`: `interface/addons/blizzard_sharedxml/shared/scroll/scrollboxpadding.lua:85`
+- `CreateScrollBoxDragBehavior(scrollBox)`: `interface/addons/blizzard_sharedxml/shared/scroll/scrollutil.lua:1237`
+- `CreateScrollBoxLinearView(top, bottom, left, right, spacing)`: `interface/addons/blizzard_sharedxml/shared/scroll/scrollboxlinearview.lua:302`
+- `CreateScrollBoxListGridView(stride, top, bottom, left, right, horizontalSpacing, verticalSpacing)`: `interface/addons/blizzard_sharedxml/shared/scroll/scrollboxgridview.lua:103`
+- `CreateScrollBoxListLinearView(top, bottom, left, right, spacing)`: `interface/addons/blizzard_sharedxml/shared/scroll/scrollboxlinearview.lua:246`
+- `CreateScrollBoxListSequenceView(top, bottom, left, right, horizontalSpacing, verticalSpacing)`: `interface/addons/blizzard_sharedxml/shared/scroll/scrollboxsequenceview.lua:272`
+- `CreateScrollBoxListTreeListView(indent, top, bottom, left, right, spacing)`: `interface/addons/blizzard_sharedxml/shared/scroll/scrollboxtreeview.lua:164`
+- `CreateScrollBoxPadding(top, bottom, left, right, spacing)`: `interface/addons/blizzard_sharedxml/shared/scroll/scrollboxpadding.lua:57`
+- `CreateSequencer()`: `interface/addons/blizzard_sharedxml/sequencer.lua:44`
+- `CreateTabGroup(...)`: `interface/addons/blizzard_sharedxml/tabgroup.lua:74`
+- `CreateTableBuilder(rows, ...)`: `interface/addons/blizzard_sharedxml/tablebuilder.lua:496`
+- `CreateTreeDataProvider()`: `interface/addons/blizzard_sharedxml/treelistdataprovider.lua:479`
+- `CreateVector2D(x, y)`: `interface/addons/blizzard_sharedxml/vector2d.lua:55`
+- `CreateVector3D(x, y, z)`: `interface/addons/blizzard_sharedxml/vector3d.lua:93`
+- `CreateVector4D(x, y, z, w)`: `interface/addons/blizzard_sharedxml/vector4d.lua:66`
+- `CursorOnUpdate(region)`: `interface/addons/blizzard_sharedxml/inpututil.lua:235`
+- `CursorUpdate(region)`: `interface/addons/blizzard_sharedxml/inpututil.lua:225`
+- `DevTools_AddMessageHandler(callback)`: `interface/addons/blizzard_sharedxml/dump.lua:81`
+- `DevTools_CreateDumpContext(startKey)`: `interface/addons/blizzard_sharedxml/dump.lua:425`
+- `DevTools_Dump(value, startKey)`: `interface/addons/blizzard_sharedxml/dump.lua:440`
+- `DevTools_DumpCommand(msg, editBox)`: `interface/addons/blizzard_sharedxml/dump.lua:445`
+- `DevTools_RunDump(value, context)`: `interface/addons/blizzard_sharedxml/dump.lua:402`
+- `DrawLine(texture, canvasFrame, startX, startY, endX, endY, lineWidth, lineFactor, relPoint)`: `interface/addons/blizzard_sharedxml/mixinutil.lua:8`
+- `DynamicResizeButton_Resize(self)`: `interface/addons/blizzard_sharedxml/shared/button/uipanelbuttontemplates.lua:2`
+- `EditBox_ClearFocus(self)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:9`
+- `EditBox_ClearHighlight(self)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:17`
+- `EditBox_HandleTabbing(self, tabList)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:194`
+- `EditBox_HighlightText(self)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:13`
+- `EditBox_OnTabPressed(self)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:1`
+- `EditBox_SetFocus(self)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:219`
+- `enumerate_regions(frame)`: `interface/addons/blizzard_sharedxml/regionutil.lua:184`
+- `ExtractColorValueFromHex(str, index)`: `interface/addons/blizzard_sharedxml/colorutil.lua:6`
+- `ExtractHyperlinkString(linkString)`: `interface/addons/blizzard_sharedxml/linkutil.lua:114`
+- `ExtractQuestRewardID(linkString)`: `interface/addons/blizzard_sharedxml/linkutil.lua:119`
+- `FauxScrollFrame_GetChildFrames(frame)`: `interface/addons/blizzard_sharedxml/securescrolltemplates.lua:149`
+- `FauxScrollFrame_GetOffset(frame)`: `interface/addons/blizzard_sharedxml/securescrolltemplates.lua:236`
+- `FauxScrollFrame_OnVerticalScroll(self, value, itemHeight, updateFunction)`: `interface/addons/blizzard_sharedxml/securescrolltemplates.lua:227`
+- `FauxScrollFrame_SetOffset(frame, offset)`: `interface/addons/blizzard_sharedxml/securescrolltemplates.lua:240`
+- `FauxScrollFrame_Update(frame, numItems, numToDisplay, buttonHeight, button, smallWidth, bigWidth, highlightFrame, smallHighlightWidth, bigHighlightWidth, alwaysShowScrollBar)`: `interface/addons/blizzard_sharedxml/securescrolltemplates.lua:158`
+- `FormatBindingKeyIntoText(text, action, bindingAvailableFormat, keyStringFormat, useNotBound, useParentheses)`: `interface/addons/blizzard_sharedxml/bindingutil.lua:175`
+- `FormatDisplayCopper(checkGoldThreshold, gold, silver, copper)`: `interface/addons/blizzard_sharedxml/formattingutil.lua:119`
+- `FormatFraction(numerator, denominator)`: `interface/addons/blizzard_sharedxml/formattingutil.lua:138`
+- `FormatLargeNumber(amount)`: `interface/addons/blizzard_sharedxml/formattingutil.lua:41`
+- `FormatPercentage(percentage, roundToNearestInteger)`: `interface/addons/blizzard_sharedxml/formattingutil.lua:123`
+- `FormatPercentageRounded(value)`: `interface/addons/blizzard_sharedxml/formattingutil.lua:133`
+- `FormatShortDate(day, month, year)`: `interface/addons/blizzard_sharedxml/timeutil.lua:485`
+- `FormatUnreadMailTooltip(tooltip, headerText, senders)`: `interface/addons/blizzard_sharedxml/formattingutil.lua:181`
+- `FormatValueWithSign(value)`: `interface/addons/blizzard_sharedxml/formattingutil.lua:36`
+- `FrameTemplate_SetAtticHeight(self, atticHeight)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:49`
+- `FrameTemplate_SetButtonBarHeight(self, buttonBarHeight)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:57`
+- `GameLimitedMode_GetLevelLimit()`: `interface/addons/blizzard_sharedxml/accountutil.lua:14`
+- `GameLimitedMode_IsActive()`: `interface/addons/blizzard_sharedxml/accountutil.lua:6`
+- `GameLimitedMode_IsBankedXPActive()`: `interface/addons/blizzard_sharedxml/accountutil.lua:10`
+- `GameTooltip_AddBlankLinesToTooltip(tooltip, numLines)`: `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.lua:116`
+- `GameTooltip_AddBlankLineToTooltip(tooltip)`: `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.lua:124`
+- `GameTooltip_AddBodyLine(...)`: `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.lua:146`
+- `GameTooltip_AddColoredDoubleLine(tooltip, leftText, rightText, leftColor, rightColor, wrap, leftOffset)`: `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.lua:180`
+- `GameTooltip_AddColoredLine(tooltip, text, color, wrap, leftOffset)`: `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.lua:166`
+- `GameTooltip_AddDisabledLine(tooltip, text, wrap, leftOffset)`: `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.lua:162`
+- `GameTooltip_AddErrorLine(tooltip, text, wrap, leftOffset)`: `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.lua:158`
+- `GameTooltip_AddHighlightLine(tooltip, text, wrap, leftOffset)`: `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.lua:150`
+- `GameTooltip_AddInstructionLine(tooltip, text, wrap, leftOffset)`: `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.lua:154`
+- `GameTooltip_AddLineWithInputIcon(tooltip, text, color, inputKey, wrap, leftOffset)`: `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.lua:174`
+- `GameTooltip_AddNewbieTip(frame, normalText, r, g, b, newbieText, noNormalText)`: `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.lua:228`
+- `GameTooltip_AddNormalLine(tooltip, text, wrap, leftOffset)`: `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.lua:142`
+- `GameTooltip_InsertFrame(tooltipFrame, frame, verticalPadding)`: `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.lua:203`
+- `GameTooltip_SetDefaultAnchor(tooltip, parent)`: `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.lua:87`
+- `GameTooltip_SetTitle(tooltip, text, overrideColor, wrap)`: `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.lua:128`
+- `GameTooltip_ShowDisabledTooltip(tooltip, owner, text, tooltipAnchor, offsetX, offsetY)`: `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.lua:133`
+- `GameTooltip_ShowSimpleTooltip(tooltip, text, overrideColor, wrap, owner, point, offsetX, offsetY)`: `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.lua:197`
+- `GetAchievementInfoFromHyperlink(link)`: `interface/addons/blizzard_sharedxml/linkutil.lua:130`
+- `GetBackgroundTexCoordsForRole(role)`: `interface/addons/blizzard_sharedxml/shared/sharedutils.lua:34`
+- `GetBindingFromInput(input)`: `interface/addons/blizzard_sharedxml/keycommand.lua:97`
+- `GetBindingFullInput(input)`: `interface/addons/blizzard_sharedxml/keycommand.lua:9`
+- `GetBindingKeyForAction(action, useNotBound, useParentheses)`: `interface/addons/blizzard_sharedxml/bindingutil.lua:151`
+- `GetBindingName(binding)`: `interface/addons/blizzard_sharedxml/bindingutil.lua:142`
+- `GetBNPlayerLink(name, linkDisplayText, bnetIDAccount, lineID, chatType, chatTarget)`: `interface/addons/blizzard_sharedxml/linkutil.lua:163`
+- `GetBodyTypeAtlases(bodyTypeID)`: `interface/addons/blizzard_sharedxml/sharedconstants.lua:48`
+- `GetClampedCurrentExpansionLevel()`: `interface/addons/blizzard_sharedxml/accountutil.lua:27`
+- `GetClassAtlas(className)`: `interface/addons/blizzard_sharedxml/sharedconstants.lua:44`
+- `GetClassColor(classFilename)`: `interface/addons/blizzard_sharedxml/colorutil.lua:66`
+- `GetClassColoredTextForUnit(unit, text)`: `interface/addons/blizzard_sharedxml/colorutil.lua:80`
+- `GetClassColorObj(classFilename)`: `interface/addons/blizzard_sharedxml/colorutil.lua:75`
+- `GetConvertedKeyOrButton(keyOrButton)`: `interface/addons/blizzard_sharedxml/bindingutil.lua:66`
+- `GetCurrenciesString(currencies)`: `interface/addons/blizzard_sharedxml/formattingutil.lua:245`
+- `GetCurrencyString(currencyID, overrideAmount, colorCode, abbreviate)`: `interface/addons/blizzard_sharedxml/formattingutil.lua:233`
+- `GetFactionColor(factionGroupTag)`: `interface/addons/blizzard_sharedxml/colorutil.lua:86`
+- `GetHighlightedNumberDifferenceString(baseString, newString)`: `interface/addons/blizzard_sharedxml/formattingutil.lua:142`
+- `GetItemInfoFromHyperlink(link)`: `interface/addons/blizzard_sharedxml/linkutil.lua:123`
+- `GetMoneyString(money, separateThousands, checkGoldThreshold, showZeroAsGold, color)`: `interface/addons/blizzard_sharedxml/formattingutil.lua:72`
+- `GetNameAndServerNameFromGUID(unitGUID)`: `interface/addons/blizzard_sharedxml/unitutil.lua:21`
+- `GetPlayerActorLabelTag(forceAlternateForm, overrideRaceFilename, overrideGender)`: `interface/addons/blizzard_sharedxml/modelscenemixin.lua:165`
+- `GetPlayerGuid()`: `interface/addons/blizzard_sharedxml/unitutil.lua:1`
+- `GetPlayerLink(characterName, linkDisplayText, lineID, chatType, chatTarget)`: `interface/addons/blizzard_sharedxml/linkutil.lua:154`
+- `GetRaceAtlas(raceName, gender, useHiRez)`: `interface/addons/blizzard_sharedxml/shared/sharedutils.lua:9`
+- `GetTexCoordsForRole(role)`: `interface/addons/blizzard_sharedxml/shared/sharedutils.lua:17`
+- `GetTexCoordsForRoleSmall(role)`: `interface/addons/blizzard_sharedxml/shared/sharedutils.lua:61`
+- `GetTexCoordsForRoleSmallCircle(role)`: `interface/addons/blizzard_sharedxml/shared/sharedutils.lua:49`
+- `GetTimeStringFromSeconds(timeAmount, hasMS, dropZeroHours)`: `interface/addons/blizzard_sharedxml/timeutil.lua:342`
+- `GetURLIndexAndLoadURL(self, link)`: `interface/addons/blizzard_sharedxml/linkutil.lua:138`
+- `GetURLIndexAndLoadURLWithSound(self, link)`: `interface/addons/blizzard_sharedxml/linkutil.lua:148`
+- `HasTimePassed(testTime, amountOfTime)`: `interface/addons/blizzard_sharedxml/timeutil.lua:20`
+- `HideDropDownMenu(level)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1044`
+- `HideParentPanel(self)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:190`
+- `HybridScrollBar_Disable(scrollBar)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:326`
+- `HybridScrollFrame_CollapseButton(self)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:173`
+- `HybridScrollFrame_CreateButtons(self, buttonTemplate, initialOffsetX, initialOffsetY, initialPoint, initialRelative, offsetX, offsetY, point, relativePoint)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:226`
+- `HybridScrollFrame_ExpandButton(self, offset, height)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:167`
+- `HybridScrollFrame_GetButtonIndex(self, button)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:276`
+- `HybridScrollFrame_GetButtons(self)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:280`
+- `HybridScrollFrame_GetOffset(self)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:159`
+- `HybridScrollFrame_GetScrollPercentage(self)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:113`
+- `HybridScrollFrame_GetVisiblePercentage(self)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:104`
+- `HybridScrollFrame_OnLoad(self)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:13`
+- `HybridScrollFrame_OnMouseWheel(self, delta, stepSize)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:59`
+- `HybridScrollFrame_OnValueChanged(self, value)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:31`
+- `HybridScrollFrame_ScrollToIndex(self, index, getHeightFunc)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:293`
+- `HybridScrollFrame_SetDoNotHideScrollBar(self, doNotHide)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:284`
+- `HybridScrollFrame_SetOffset(self, offset)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:178`
+- `HybridScrollFrame_SetPercentageHeight(self, percentageHeight)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:99`
+- `HybridScrollFrame_Update(self, totalHeight, displayedHeight)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:122`
+- `HybridScrollFrame_UpdateButtonStates(self, currValue)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:36`
+- `HybridScrollFrameScrollButton_OnClick(self, button, down)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:86`
+- `HybridScrollFrameScrollButton_OnUpdate(self, elapsed)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:73`
+- `HybridScrollFrameScrollChild_OnLoad(self)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:163`
+- `HybridScrollFrameScrollDown_OnLoad(self)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:24`
+- `HybridScrollFrameScrollUp_OnLoad(self)`: `interface/addons/blizzard_sharedxml/hybridscrollframe.lua:17`
+- `InputBoxInstructions_OnDisable(self)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:141`
+- `InputBoxInstructions_OnEnable(self)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:145`
+- `InputBoxInstructions_OnEnter(self)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:149`
+- `InputBoxInstructions_OnLeave(self)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:155`
+- `InputBoxInstructions_OnTextChanged(self)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:131`
+- `InputBoxInstructions_ShowTooltipIfTruncated(self)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:163`
+- `InputBoxInstructions_UpdateColorForEnabledState(self, color)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:135`
+- `InputScrollFrame_OnEscapePressed(self)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:127`
+- `InputScrollFrame_OnLoad(self)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:82`
+- `InputScrollFrame_OnMouseDown(self)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:101`
+- `InputScrollFrame_OnTextChanged(self, _isUserChange)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:107`
+- `InputScrollFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:123`
+- `InputScrollFrame_SetInstructions(self, instructions)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:97`
+- `IsAnyIconSelectorPopupFrameShown()`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:2126`
+- `IsInitialSpec(specializationIndex)`: `interface/addons/blizzard_sharedxml/unitutil.lua:9`
+- `IsKeyPressIgnoredForBinding(key)`: `interface/addons/blizzard_sharedxml/bindingutil.lua:90`
+- `IsLeftMouseButton(button)`: `interface/addons/blizzard_sharedxml/bindingutil.lua:74`
+- `IsMetaKey(key)`: `interface/addons/blizzard_sharedxml/bindingutil.lua:86`
+- `IsMiddleMouseButton(button)`: `interface/addons/blizzard_sharedxml/bindingutil.lua:82`
+- `IsMouseButton(button)`: `interface/addons/blizzard_sharedxml/bindingutil.lua:70`
+- `IsPlayerGuid(guid)`: `interface/addons/blizzard_sharedxml/unitutil.lua:5`
+- `IsPlayerInitialSpec()`: `interface/addons/blizzard_sharedxml/unitutil.lua:17`
+- `IsRGBAEqualToColor(r, g, b, a, color)`: `interface/addons/blizzard_sharedxml/colorutil.lua:62`
+- `IsRightMouseButton(button)`: `interface/addons/blizzard_sharedxml/bindingutil.lua:78`
+- `IsScrollController(object)`: `interface/addons/blizzard_sharedxml/shared/scroll/scrollcontroller.lua:209`
+- `IsScrollingMessageFrame(object)`: `interface/addons/blizzard_sharedxml/scrollingmessageframe.lua:964`
+- `IsValidEmailAddress(address)`: `interface/addons/blizzard_sharedxml/accountutil.lua:31`
+- `KeybindFrames_InQuickKeybindMode()`: `interface/addons/blizzard_sharedxml/bindingutil.lua:166`
+- `KeyCommand_Create(command, runOnUp, key)`: `interface/addons/blizzard_sharedxml/keycommand.lua:195`
+- `KeyCommand_CreateKey(...)`: `interface/addons/blizzard_sharedxml/keycommand.lua:201`
+- `KeyCommand_Update(commands)`: `interface/addons/blizzard_sharedxml/keycommand.lua:205`
+- `LayoutIndexComparator(left, right)`: `interface/addons/blizzard_sharedxml/layoutframe.lua:44`
+- `LoadAddOnWithErrorHandling(name)`: `interface/addons/blizzard_sharedxml/addonutil.lua:3`
+- `LocalizeFrames()`: `interface/addons/blizzard_sharedxml/shared/localizationmachinery.lua:20`
+- `MagicButton_OnLoad(self)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:12`
+- `MarchingAnts_Create(parent, width, height, optTemplate, optAnchor, optParentKey)`: `interface/addons/blizzard_sharedxml/marchingants.lua:230`
+- `MarchingAnts_CreateAsChildOf(parent, optTemplate, optParentKey)`: `interface/addons/blizzard_sharedxml/marchingants.lua:215`
+- `MarchingAnts_CreateForTarget(target, optTemplate, optPaddingHorizontal, optPaddingVertical, optParentKey)`: `interface/addons/blizzard_sharedxml/marchingants.lua:244`
+- `MicroButtonTooltipText(text, action)`: `interface/addons/blizzard_sharedxml/bindingutil.lua:188`
+- `MinutesToSeconds(minutes)`: `interface/addons/blizzard_sharedxml/timeutil.lua:16`
+- `MinutesToTime(mins, hideDays)`: `interface/addons/blizzard_sharedxml/timeutil.lua:437`
+- `Model_ApplyUICamera(self, uiCameraID)`: `interface/addons/blizzard_sharedxml/mainline/modelframes.lua:73`
+- `Model_OnEvent(self, event, ...)`: `interface/addons/blizzard_sharedxml/mainline/modelframes.lua:24`
+- `Model_OnLoad(self, maxZoom, minZoom, defaultRotation, onMouseUp)`: `interface/addons/blizzard_sharedxml/mainline/modelframes.lua:11`
+- `Model_OnMouseDown(model, button)`: `interface/addons/blizzard_sharedxml/mainline/modelframes.lua:28`
+- `Model_OnMouseUp(model, button)`: `interface/addons/blizzard_sharedxml/mainline/modelframes.lua:35`
+- `Model_OnMouseWheel(self, delta, maxZoom, minZoom)`: `interface/addons/blizzard_sharedxml/mainline/modelframes.lua:41`
+- `Model_UpdateRotation(self, leftButton, rightButton, elapsedTime, rotationsPerSecond)`: `interface/addons/blizzard_sharedxml/mainline/modelframes.lua:52`
+- `ModelPreviewFrame_BuildCarousel(self)`: `interface/addons/blizzard_sharedxml/modelpreviewframe.lua:71`
+- `ModelPreviewFrame_MoveCarousel(self, backward)`: `interface/addons/blizzard_sharedxml/modelpreviewframe.lua:172`
+- `ModelPreviewFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_sharedxml/modelpreviewframe.lua:155`
+- `ModelPreviewFrame_OnHide(self)`: `interface/addons/blizzard_sharedxml/modelpreviewframe.lua:35`
+- `ModelPreviewFrame_OnLoad(self)`: `interface/addons/blizzard_sharedxml/modelpreviewframe.lua:2`
+- `ModelPreviewFrame_OnModelSceneReset()`: `interface/addons/blizzard_sharedxml/modelpreviewframe.lua:17`
+- `ModelPreviewFrame_OnShow(self)`: `interface/addons/blizzard_sharedxml/modelpreviewframe.lua:25`
+- `ModelPreviewFrame_RefreshCurrentDisplay()`: `interface/addons/blizzard_sharedxml/modelpreviewframe.lua:66`
+- `ModelPreviewFrame_SetCarouselIndex(self, index, allowZoom, forceUpdate)`: `interface/addons/blizzard_sharedxml/modelpreviewframe.lua:163`
+- `ModelPreviewFrame_SetStyle(self, style)`: `interface/addons/blizzard_sharedxml/modelpreviewframe.lua:53`
+- `ModelPreviewFrame_ShowModel(displayID, modelSceneID, allowZoom, forceUpdate)`: `interface/addons/blizzard_sharedxml/modelpreviewframe.lua:104`
+- `ModelPreviewFrame_ShowModelInternal(displayID, modelSceneID, allowZoom, forceUpdate, itemModifiedAppearanceIDs)`: `interface/addons/blizzard_sharedxml/modelpreviewframe.lua:113`
+- `ModelPreviewFrame_ShowModels(displayInfoEntries, allowZoom, forceUpdate)`: `interface/addons/blizzard_sharedxml/modelpreviewframe.lua:91`
+- `ModelPreviewFrame_TryHide()`: `interface/addons/blizzard_sharedxml/modelpreviewframe.lua:45`
+- `PanelTemplates_AnchorTabs(frame, numTabs)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:558`
+- `PanelTemplates_DeselectTab(tab)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:611`
+- `PanelTemplates_DisableTab(frame, index)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:574`
+- `PanelTemplates_EnableTab(frame, index)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:579`
+- `PanelTemplates_GetSelectedTab(frame)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:446`
+- `PanelTemplates_GetTabWidth(tab)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:470`
+- `PanelTemplates_HideTab(frame, index)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:587`
+- `PanelTemplates_ResizeTabsToFit(frame, maxWidthForAllTabs)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:511`
+- `PanelTemplates_SelectTab(tab)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:629`
+- `PanelTemplates_SetAllTabsShown(frame, shown)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:605`
+- `PanelTemplates_SetDisabledTabState(tab)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:653`
+- `PanelTemplates_SetNumTabs(frame, numTabs)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:542`
+- `PanelTemplates_SetTab(frame, id)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:441`
+- `PanelTemplates_SetTabEnabled(frame, index, enabled)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:566`
+- `PanelTemplates_SetTabShown(frame, index, shown)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:597`
+- `PanelTemplates_ShowTab(frame, index)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:592`
+- `PanelTemplates_Tab_OnClick(self, frame)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:437`
+- `PanelTemplates_TabResize(tab, padding, absoluteSize, minWidth, maxWidth, absoluteTextSize)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:477`
+- `PanelTemplates_UpdateTabs(frame)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:454`
+- `PrintToDebugWindow(msg)`: `interface/addons/blizzard_sharedxml/interfaceutil.lua:5`
+- `ReloadUI()`: `interface/addons/blizzard_sharedxml/interfaceutil.lua:1`
+- `ReplaceGenderTokens(string, gender)`: `interface/addons/blizzard_sharedxml/formattingutil.lua:268`
+- `RGBTableToColorCode(rgbTable)`: `interface/addons/blizzard_sharedxml/colorutil.lua:94`
+- `RGBToColorCode(r, g, b)`: `interface/addons/blizzard_sharedxml/colorutil.lua:90`
+- `ScrollFrame_OnLoad(self)`: `interface/addons/blizzard_sharedxml/secureuipaneltemplates.lua:1`
+- `ScrollFrame_OnScrollRangeChanged(self, xrange, yrange)`: `interface/addons/blizzard_sharedxml/securescrolltemplates.lua:64`
+- `ScrollFrame_OnVerticalScroll(self, offset)`: `interface/addons/blizzard_sharedxml/securescrolltemplates.lua:134`
+- `ScrollFrame_SetScrollOffset(self, scrollOffset)`: `interface/addons/blizzard_sharedxml/securescrolltemplates.lua:143`
+- `ScrollFrameTemplate_OnMouseWheel(self, value, scrollBar)`: `interface/addons/blizzard_sharedxml/securescrolltemplates.lua:54`
+- `ScrollingEdit_OnCursorChanged(self, x, y, w, h)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:36`
+- `ScrollingEdit_OnLoad(self)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:27`
+- `ScrollingEdit_OnTextChanged(self, scrollFrame)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:21`
+- `ScrollingEdit_OnUpdate(self, elapsed, scrollFrame)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:45`
+- `ScrollingEdit_SetCursorOffsets(self, offset, height)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:31`
+- `SearchBoxTemplate_ClearText(self)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:203`
+- `SearchBoxTemplate_OnEditFocusGained(self)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:187`
+- `SearchBoxTemplate_OnEditFocusLost(self)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:180`
+- `SearchBoxTemplate_OnLoad(self)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:175`
+- `SearchBoxTemplate_OnTextChanged(self)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:192`
+- `SearchBoxTemplateClearButton_OnClick(self)`: `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.lua:208`
+- `SecondsToClock(seconds, displayZeroHours)`: `interface/addons/blizzard_sharedxml/timeutil.lua:333`
+- `SecondsToMinutes(seconds)`: `interface/addons/blizzard_sharedxml/timeutil.lua:12`
+- `SecondsToTime(seconds, noSeconds, notAbbreviated, maxCount, roundUp)`: `interface/addons/blizzard_sharedxml/timeutil.lua:364`
+- `SecondsToTimeAbbrev(seconds, thresholdOverride)`: `interface/addons/blizzard_sharedxml/timeutil.lua:463`
+- `SelectionFrameCancelButton_OnClick(self, ...)`: `interface/addons/blizzard_sharedxml/secureuipaneltemplates.lua:107`
+- `SelectionFrameOkayButton_OnClick(self, ...)`: `interface/addons/blizzard_sharedxml/secureuipaneltemplates.lua:115`
+- `SetBasicMessageDialogText(text, force)`: `interface/addons/blizzard_sharedxml/sharedbasiccontrols.lua:141`
+- `SetGamepadBindingStrings(mainBinding, abbrBinding, name, opt_abbrName)`: `interface/addons/blizzard_sharedxml/sharedconstants.lua:55`
+- `SetupItemPreviewActor(actor, displayID)`: `interface/addons/blizzard_sharedxml/secureutil.lua:134`
+- `SetupLocalization(l10nTable)`: `interface/addons/blizzard_sharedxml/shared/localizationmachinery.lua:34`
+- `SetupPlayerForModelScene(modelScene, overrideActorName, itemModifiedAppearanceIDs, sheatheWeapons, autoDress, hideWeapons, useNativeForm, playerRaceName, playerGender)`: `interface/addons/blizzard_sharedxml/secureutil.lua:107`
+- `SharedTooltip_ClearInsertedFrames(self)`: `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.lua:38`
+- `SharedTooltip_OnHide(self)`: `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.lua:22`
+- `SharedTooltip_OnLoad(self)`: `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.lua:9`
+- `SharedTooltip_SetBackdropStyle(self, style, embedded)`: `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.lua:47`
+- `SharedTooltip_SetDefaultAnchor(tooltip, parent)`: `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.lua:33`
+- `ShowInspectCursor()`: `interface/addons/blizzard_sharedxml/inpututil.lua:5`
+- `Sound_MasterVolumeDown()`: `interface/addons/blizzard_sharedxml/mainline/sound.lua:70`
+- `Sound_MasterVolumeUp()`: `interface/addons/blizzard_sharedxml/mainline/sound.lua:66`
+- `Sound_ToggleAmbience()`: `interface/addons/blizzard_sharedxml/mainline/sound.lua:37`
+- `Sound_ToggleMusic()`: `interface/addons/blizzard_sharedxml/mainline/sound.lua:5`
+- `Sound_ToggleSound()`: `interface/addons/blizzard_sharedxml/mainline/sound.lua:19`
+- `SplitTextIntoHeaderAndNonHeader(text)`: `interface/addons/blizzard_sharedxml/formattingutil.lua:16`
+- `SplitTextIntoLines(text, delimiter)`: `interface/addons/blizzard_sharedxml/formattingutil.lua:1`
+- `StoreErrorData_GetMessage(errorCode)`: `interface/addons/blizzard_sharedxml/shared/vaserrorlookup.lua:382`
+- `StringSplitIntoTable(sep, string)`: `interface/addons/blizzard_sharedxml/stringutil.lua:17`
+- `StringToBoolean(stringToCheck, defaultReturn)`: `interface/addons/blizzard_sharedxml/typeutil.lua:16`
+- `ToggleDropDownMenu(level, value, dropDownFrame, anchorName, xOffset, yOffset, menuList, button, autoHideDelay, overrideDisplayMode)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1049`
+- `TruncatedButton_OnEnter(self)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:758`
+- `TruncatedButton_OnLeave(self)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:767`
+- `TruncatedButton_OnSizeChanged(self, width, height)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:753`
+- `TruncatedTooltipScript_OnEnter(self)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:776`
+- `TruncatedTooltipScript_OnLeave(self)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:786`
+- `UICheckButtonFontString_SetParentKeyAlias(fontString)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:1088`
+- `UIDropDownMenu_AddButton(info, level)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:414`
+- `UIDropDownMenu_AddSeparator(level)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:367`
+- `UIDropDownMenu_AddSpace(level)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:397`
+- `UIDropDownMenu_CheckAddCustomFrame(self, button, info)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:748`
+- `UIDropDownMenu_ClearAll(frame)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1414`
+- `UIDropDownMenu_ClearCustomFrames(self)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1357`
+- `UIDropDownMenu_CreateFrames(level, index)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:342`
+- `UIDropDownMenu_CreateInfo()`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:338`
+- `UIDropDownMenu_DisableButton(level, id)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1482`
+- `UIDropDownMenu_DisableDropDown(dropDown, disabledtooltip)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1523`
+- `UIDropDownMenu_EnableButton(level, id)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1486`
+- `UIDropDownMenu_EnableDropDown(dropDown)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1527`
+- `UIDropDownMenu_GetButtonWidth(button)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:778`
+- `UIDropDownMenu_GetCurrentDropDown()`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1457`
+- `UIDropDownMenu_GetMaxButtonWidth(self)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:766`
+- `UIDropDownMenu_GetSelectedID(frame)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:967`
+- `UIDropDownMenu_GetSelectedName(frame)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:963`
+- `UIDropDownMenu_GetSelectedValue(frame)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:995`
+- `UIDropDownMenu_GetText(frame)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1409`
+- `UIDropDownMenu_GetValue(id)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1584`
+- `UIDropDownMenu_HandleGlobalMouseEvent(button, event)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1308`
+- `UIDropDownMenu_Initialize(frame, initFunction, displayMode, level, menuList)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:77`
+- `UIDropDownMenu_InitializeHelper(frame)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:41`
+- `UIDropDownMenu_IsEnabled(dropDown)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1580`
+- `UIDropDownMenu_JustifyText(frame, justification, customXOffset, customYOffset)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1433`
+- `UIDropDownMenu_MatchTextWidth(frame, minWidth, maxWidth)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1367`
+- `UIDropDownMenu_OnHide(self)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1338`
+- `UIDropDownMenu_OnShow(self)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1316`
+- `UIDropDownMenu_OnUpdate(self, elapsed)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:146`
+- `UIDropDownMenu_Refresh(frame, useValue, dropdownLevel)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:823`
+- `UIDropDownMenu_RefreshAll(frame, useValue)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:910`
+- `UIDropDownMenu_RefreshDropDownSize(self)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:132`
+- `UIDropDownMenu_RegisterCustomFrame(self, customFrame)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:761`
+- `UIDropDownMenu_SetAnchor(dropdown, xOffset, yOffset, point, relativeTo, relativePoint)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1449`
+- `UIDropDownMenu_SetButtonClickable(level, id)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1511`
+- `UIDropDownMenu_SetButtonNotClickable(level, id)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1507`
+- `UIDropDownMenu_SetButtonText(level, id, text, colorCode)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1498`
+- `UIDropDownMenu_SetButtonWidth(frame, width)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1394`
+- `UIDropDownMenu_SetDisplayMode(frame, displayMode)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:105`
+- `UIDropDownMenu_SetDropdownButtonEnabled(button, enabled)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1490`
+- `UIDropDownMenu_SetDropDownEnabled(dropDown, enabled, disabledtooltip)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1515`
+- `UIDropDownMenu_SetDropDownEnabled(dropDown, enabled, disabledTooltip)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1531`
+- `UIDropDownMenu_SetFrameStrata(frame, frameStrata)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:128`
+- `UIDropDownMenu_SetIconImage(icon, texture, info)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:921`
+- `UIDropDownMenu_SetInitializeFunction(frame, initFunction)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:101`
+- `UIDropDownMenu_SetSelectedID(frame, id, useValue)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:956`
+- `UIDropDownMenu_SetSelectedName(frame, name, useValue)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:941`
+- `UIDropDownMenu_SetSelectedValue(frame, value, useValue)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:948`
+- `UIDropDownMenu_SetText(frame, text)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1404`
+- `UIDropDownMenu_SetWidth(frame, width, padding)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1378`
+- `UIDropDownMenuButton_GetChecked(self)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1465`
+- `UIDropDownMenuButton_GetName(self)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1469`
+- `UIDropDownMenuButton_OnClick(self, mouseButton)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:999`
+- `UIDropDownMenuButton_OnEnter(self)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:182`
+- `UIDropDownMenuButton_OnLeave(self)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:223`
+- `UIDropDownMenuButton_OpenColorPicker(self, button)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:1473`
+- `UIDropDownMenuButton_ShouldShowIconTooltip(self)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:238`
+- `UIDropDownMenuButtonIcon_OnEnter(self)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:245`
+- `UIDropDownMenuButtonIcon_OnLeave(self)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:272`
+- `UIDropDownMenuButtonInvisibleButton_OnEnter(self)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:153`
+- `UIDropDownMenuButtonInvisibleButton_OnLeave(self)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:178`
+- `UIDropDownMenuDelegate_OnAttributeChanged(self, attribute, value)`: `interface/addons/blizzard_sharedxml/mainline/uidropdownmenu.lua:29`
+- `UIPanelButton_OnDisable(self)`: `interface/addons/blizzard_sharedxml/secureuipaneltemplates.lua:69`
+- `UIPanelButton_OnEnable(self)`: `interface/addons/blizzard_sharedxml/secureuipaneltemplates.lua:75`
+- `UIPanelButton_OnLoad(self)`: `interface/addons/blizzard_sharedxml/secureuipaneltemplates.lua:36`
+- `UIPanelButton_OnMouseDown(self)`: `interface/addons/blizzard_sharedxml/secureuipaneltemplates.lua:44`
+- `UIPanelButton_OnMouseUp(self)`: `interface/addons/blizzard_sharedxml/secureuipaneltemplates.lua:52`
+- `UIPanelButton_OnShow(self)`: `interface/addons/blizzard_sharedxml/secureuipaneltemplates.lua:60`
+- `UIPanelCloseButton_OnClick(self)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:152`
+- `UIPanelCloseButton_SetBorderAtlas(self, atlas, xOffset, yOffset, textureKit)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:170`
+- `UIPanelCloseButton_SetBorderShown(self, shown)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:184`
+- `UIPanelInputScrollFrame_OnLoad(self)`: `interface/addons/blizzard_sharedxml/securescrolltemplates.lua:244`
+- `UIPanelInputScrollFrame_SetInstructions(self, instructions)`: `interface/addons/blizzard_sharedxml/securescrolltemplates.lua:263`
+- `UIPanelScrollBar_OnValueChanged(self, value)`: `interface/addons/blizzard_sharedxml/securescrolltemplates.lua:23`
+- `UIPanelScrollBarScrollDownButton_OnClick(self)`: `interface/addons/blizzard_sharedxml/securescrolltemplates.lua:16`
+- `UIPanelScrollBarScrollUpButton_OnClick(self)`: `interface/addons/blizzard_sharedxml/securescrolltemplates.lua:9`
+- `UIPanelScrollFrame_OnLoad(self)`: `interface/addons/blizzard_sharedxml/securescrolltemplates.lua:27`
+- `UIPanelStaticPopupSpecialCloseButton_OnClick(self)`: `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.lua:166`
+- `UserEditBoxNonEmpty(editBox)`: `interface/addons/blizzard_sharedxml/stringutil.lua:13`
+- `UserInputNonEmpty(userInput)`: `interface/addons/blizzard_sharedxml/stringutil.lua:9`
+- `ValueToBoolean(valueToCheck, defaultValue, defaultReturn)`: `interface/addons/blizzard_sharedxml/typeutil.lua:2`
+- `VASAssignErrorData_GetMessage(errorCode)`: `interface/addons/blizzard_sharedxml/shared/vaserrorlookup.lua:391`
+- `VASErrorData_GetCombinedMessage(characterGUID)`: `interface/addons/blizzard_sharedxml/shared/vaserrorlookup.lua:365`
+- `VASErrorData_GetMessage(errorCode, character)`: `interface/addons/blizzard_sharedxml/shared/vaserrorlookup.lua:352`
+- `VASErrorData_HasError(errorCode)`: `interface/addons/blizzard_sharedxml/shared/vaserrorlookup.lua:339`
+- `VASErrorData_IsUserFixableError(errorCode)`: `interface/addons/blizzard_sharedxml/shared/vaserrorlookup.lua:343`
+- `Vector2D_Add(leftX, leftY, rightX, rightY)`: `interface/addons/blizzard_sharedxml/vector2d.lua:15`
+- `Vector2D_CalculateAngleBetween(leftX, leftY, rightX, rightY)`: `interface/addons/blizzard_sharedxml/vector2d.lua:43`
+- `Vector2D_Cross(leftX, leftY, rightX, rightY)`: `interface/addons/blizzard_sharedxml/vector2d.lua:23`
+- `Vector2D_DivideBy(divisor, x, y)`: `interface/addons/blizzard_sharedxml/vector2d.lua:11`
+- `Vector2D_Dot(leftX, leftY, rightX, rightY)`: `interface/addons/blizzard_sharedxml/vector2d.lua:27`
+- `Vector2D_GetLength(x, y)`: `interface/addons/blizzard_sharedxml/vector2d.lua:35`
+- `Vector2D_GetLengthSquared(x, y)`: `interface/addons/blizzard_sharedxml/vector2d.lua:31`
+- `Vector2D_Normalize(x, y)`: `interface/addons/blizzard_sharedxml/vector2d.lua:39`
+- `Vector2D_RotateDirection(rotationRadians, x, y)`: `interface/addons/blizzard_sharedxml/vector2d.lua:47`
+- `Vector2D_ScaleBy(scalar, x, y)`: `interface/addons/blizzard_sharedxml/vector2d.lua:7`
+- `Vector2D_Subtract(leftX, leftY, rightX, rightY)`: `interface/addons/blizzard_sharedxml/vector2d.lua:19`
+- `Vector3D_Add(leftX, leftY, leftZ, rightX, rightY, rightZ)`: `interface/addons/blizzard_sharedxml/vector3d.lua:16`
+- `Vector3D_AddVector(left, right)`: `interface/addons/blizzard_sharedxml/vector3d.lua:44`
+- `Vector3D_CalculateNormalFromYawPitch(yaw, pitch)`: `interface/addons/blizzard_sharedxml/vector3d.lua:68`
+- `Vector3D_CalculateYawPitchFromNormal(x, y, z)`: `interface/addons/blizzard_sharedxml/vector3d.lua:74`
+- `Vector3D_CalculateYawPitchFromNormalVector(vector)`: `interface/addons/blizzard_sharedxml/vector3d.lua:82`
+- `Vector3D_CreateNormalVectorFromYawPitch(yawRadians, pitchRadians)`: `interface/addons/blizzard_sharedxml/vector3d.lua:87`
+- `Vector3D_Cross(leftX, leftY, leftZ, rightX, rightY, rightZ)`: `interface/addons/blizzard_sharedxml/vector3d.lua:24`
+- `Vector3D_DivideBy(divisor, x, y, z)`: `interface/addons/blizzard_sharedxml/vector3d.lua:12`
+- `Vector3D_Dot(leftX, leftY, leftZ, rightX, rightY, rightZ)`: `interface/addons/blizzard_sharedxml/vector3d.lua:28`
+- `Vector3D_GetLength(x, y, z)`: `interface/addons/blizzard_sharedxml/vector3d.lua:36`
+- `Vector3D_GetLengthSquared(x, y, z)`: `interface/addons/blizzard_sharedxml/vector3d.lua:32`
+- `Vector3D_Normalize(x, y, z)`: `interface/addons/blizzard_sharedxml/vector3d.lua:40`
+- `Vector3D_NormalizeVector(vector)`: `interface/addons/blizzard_sharedxml/vector3d.lua:56`
+- `Vector3D_ScaleBy(scalar, x, y, z)`: `interface/addons/blizzard_sharedxml/vector3d.lua:8`
+- `Vector3D_ScaleVector(scalar, vector)`: `interface/addons/blizzard_sharedxml/vector3d.lua:62`
+- `Vector3D_Subtract(leftX, leftY, leftZ, rightX, rightY, rightZ)`: `interface/addons/blizzard_sharedxml/vector3d.lua:20`
+- `Vector3D_SubtractVector(left, right)`: `interface/addons/blizzard_sharedxml/vector3d.lua:50`
+- `Vector4D_Add(leftX, leftY, leftZ, leftW, rightX, rightY, rightZ, rightW)`: `interface/addons/blizzard_sharedxml/vector4d.lua:16`
+- `Vector4D_AddVector(left, right)`: `interface/addons/blizzard_sharedxml/vector4d.lua:40`
+- `Vector4D_DivideBy(divisor, x, y, z, w)`: `interface/addons/blizzard_sharedxml/vector4d.lua:12`
+- `Vector4D_Dot(leftX, leftY, leftZ, leftW, rightX, rightY, rightZ, rightW)`: `interface/addons/blizzard_sharedxml/vector4d.lua:24`
+- `Vector4D_GetLength(x, y, z, w)`: `interface/addons/blizzard_sharedxml/vector4d.lua:32`
+- `Vector4D_GetLengthSquared(x, y, z, w)`: `interface/addons/blizzard_sharedxml/vector4d.lua:28`
+- `Vector4D_Normalize(x, y, z, w)`: `interface/addons/blizzard_sharedxml/vector4d.lua:36`
+- `Vector4D_NormalizeVector(vector)`: `interface/addons/blizzard_sharedxml/vector4d.lua:52`
+- `Vector4D_ScaleBy(scalar, x, y, z, w)`: `interface/addons/blizzard_sharedxml/vector4d.lua:8`
+- `Vector4D_ScaleVector(scalar, vector)`: `interface/addons/blizzard_sharedxml/vector4d.lua:58`
+- `Vector4D_Subtract(leftX, leftY, leftZ, leftW, rightX, rightY, rightZ, rightW)`: `interface/addons/blizzard_sharedxml/vector4d.lua:20`
+- `Vector4D_SubtractVector(left, right)`: `interface/addons/blizzard_sharedxml/vector4d.lua:46`
+- `ViewInDebugWindow(...)`: `interface/addons/blizzard_sharedxml/interfaceutil.lua:11`
+
+## blizzard_sharedxmlbase
+
+- `Accumulate(tbl)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:251`
+- `AccumulateOp(tbl, op)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:259`
+- `ActorPool_HideAndClearModel(actorPool, actor)`: `interface/addons/blizzard_sharedxmlbase/pools.lua:562`
+- `ApplyDefaultScale(frame, minScale, maxScale)`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:267`
+- `ApplySecureDelegatesToTable(tbl)`: `interface/addons/blizzard_sharedxmlbase/mixin.lua:50`
+- `ApproximatelyEqual(v1, v2, epsilon)`: `interface/addons/blizzard_sharedxmlbase/mathutil.lua:91`
+- `assertf(cond, msgStringOrFunction, ...)`: `interface/addons/blizzard_sharedxmlbase/errorutil.lua:32`
+- `assertsafe(cond, msgStringOrFunction, ...)`: `interface/addons/blizzard_sharedxmlbase/errorutil.lua:8`
+- `CalculateAngleBetween(x1, y1, x2, y2)`: `interface/addons/blizzard_sharedxmlbase/mathutil.lua:105`
+- `CalculateDistance(x1, y1, x2, y2)`: `interface/addons/blizzard_sharedxmlbase/mathutil.lua:101`
+- `CalculateDistanceSq(x1, y1, x2, y2)`: `interface/addons/blizzard_sharedxmlbase/mathutil.lua:95`
+- `CallErrorHandler(...)`: `interface/addons/blizzard_sharedxmlbase/errorutil.lua:1`
+- `CallMethodOnNearestAncestor(self, methodName, ...)`: `interface/addons/blizzard_sharedxmlbase/functionutil.lua:8`
+- `CheckSetAtlas(texture, atlasName, ...)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:442`
+- `ClampDegrees(value)`: `interface/addons/blizzard_sharedxmlbase/mathutil.lua:37`
+- `ClampedPercentageBetween(value, startValue, endValue)`: `interface/addons/blizzard_sharedxmlbase/mathutil.lua:56`
+- `ClampMod(value, mod)`: `interface/addons/blizzard_sharedxmlbase/mathutil.lua:41`
+- `ClearAlternateTopLevelParent()`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:298`
+- `ClearClampedTextureRotation(texture)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:109`
+- `CollectTableDifferences(actual, expected, path, differences, depth)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:540`
+- `ContainsIf(tbl, pred)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:322`
+- `CopyTable(settings, shallow)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:218`
+- `CopyTableSafe(settings, shallow)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:230`
+- `CopyTransformedValuesAsKeys(tbl, transformOp)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:403`
+- `CopyValuesAsKeys(tbl)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:395`
+- `CreateAccumulator(initialCount)`: `interface/addons/blizzard_sharedxmlbase/mathutil.lua:133`
+- `CreateAnchor(point, relativeTo, relativePoint, x, y)`: `interface/addons/blizzard_sharedxmlbase/anchorutil.lua:58`
+- `CreateAndInitFromMixin(mixin, ...)`: `interface/addons/blizzard_sharedxmlbase/mixin.lua:8`
+- `CreateAtlasMarkup(atlasName, width, height, offsetX, offsetY, rVertexColor, gVertexColor, bVertexColor)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:289`
+- `CreateAtlasMarkupWithAtlasSize(atlasName, offsetX, offsetY, rVertexColor, gVertexColor, bVertexColor, scale)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:313`
+- `CreateColor(r, g, b, a)`: `interface/addons/blizzard_sharedxmlbase/color.lua:3`
+- `CreateCounter(initialCount, step)`: `interface/addons/blizzard_sharedxmlbase/mathutil.lua:20`
+- `CreateCVarAccessor(cvar, variableType)`: `interface/addons/blizzard_sharedxmlbase/cvarutil.lua:107`
+- `CreateFlags(initialFlags)`: `interface/addons/blizzard_sharedxmlbase/flags.lua:110`
+- `CreateFrameFactory()`: `interface/addons/blizzard_sharedxmlbase/framefactory.lua:58`
+- `CreateFromSecureMixins(...)`: `interface/addons/blizzard_sharedxmlbase/mixin.lua:42`
+- `CreateObjectUpdater(data, updateFunc, isCompleteFunc, finishFunc)`: `interface/addons/blizzard_sharedxmlbase/objectupdater.lua:56`
+- `CreateRectangle(left, right, top, bottom)`: `interface/addons/blizzard_sharedxmlbase/rectangle.lua:3`
+- `CreateSecureActorPool(parent, template, resetFunc, capacity)`: `interface/addons/blizzard_sharedxmlbase/pools.lua:748`
+- `CreateSecureFontStringPool(parent, layer, subLayer, template, resetFunc, capacity)`: `interface/addons/blizzard_sharedxmlbase/pools.lua:744`
+- `CreateSecureFramePool(frameType, parent, template, resetFunc, forbidden, postCreate, capacity)`: `interface/addons/blizzard_sharedxmlbase/pools.lua:736`
+- `CreateSecureMaskTexturePool(parent, layer, subLayer, template, resetFunc, capacity)`: `interface/addons/blizzard_sharedxmlbase/pools.lua:752`
+- `CreateSecureMixinCopy(mixin)`: `interface/addons/blizzard_sharedxmlbase/mixin.lua:15`
+- `CreateSecureObjectPool(createFunc, resetFunc, capacity)`: `interface/addons/blizzard_sharedxmlbase/pools.lua:732`
+- `CreateSecureTexturePool(parent, layer, subLayer, template, resetFunc, capacity)`: `interface/addons/blizzard_sharedxmlbase/pools.lua:740`
+- `CreateSimpleTextureMarkup(file, width, height, xOffset, yOffset)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:279`
+- `CreateTableEnumerator(tbl, minIndex, maxIndex)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:36`
+- `CreateTableReverseEnumerator(tbl, minIndex, maxIndex)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:53`
+- `CreateTemplateInfoCache()`: `interface/addons/blizzard_sharedxmlbase/templateinfocache.lua:40`
+- `CreateTextureMarkup(file, fileWidth, fileHeight, width, height, left, right, top, bottom, xOffset, yOffset)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:263`
+- `CreateUnsecuredFontStringPool(parent, layer, subLayer, template, resetFunc, capacity)`: `interface/addons/blizzard_sharedxmlbase/pools.lua:824`
+- `CreateUnsecuredFramePool(frameType, parent, template, resetFunc, capacity)`: `interface/addons/blizzard_sharedxmlbase/pools.lua:832`
+- `CreateUnsecuredFramePoolCollection()`: `interface/addons/blizzard_sharedxmlbase/pools.lua:840`
+- `CreateUnsecuredMaskTexturePool(parent, layer, subLayer, template, resetFunc, capacity)`: `interface/addons/blizzard_sharedxmlbase/pools.lua:846`
+- `CreateUnsecuredObjectPool(createFunc, resetFunc, capacity)`: `interface/addons/blizzard_sharedxmlbase/pools.lua:810`
+- `CreateUnsecuredRegionPoolInstance(template, createFunc, resetFunc, capacity)`: `interface/addons/blizzard_sharedxmlbase/pools.lua:659`
+- `CreateUnsecuredTexturePool(parent, layer, subLayer, template, resetFunc, capacity)`: `interface/addons/blizzard_sharedxmlbase/pools.lua:816`
+- `DeltaLerp(startValue, endValue, amount, timeSec)`: `interface/addons/blizzard_sharedxmlbase/mathutil.lua:61`
+- `DoesAncestryInclude(ancestry, frame)`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:193`
+- `DoesAncestryIncludeAny(ancestry, frames)`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:206`
+- `ExecuteFrameScript(frame, scriptName, ...)`: `interface/addons/blizzard_sharedxmlbase/functionutil.lua:1`
+- `FindInTable(tbl, value)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:332`
+- `FindInTableIf(tbl, pred)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:342`
+- `FindSortedIndex(tbl, searchComparison)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:381`
+- `FindValueInTableIf(tbl, pred)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:352`
+- `FitToParent(parent, frame)`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:281`
+- `Flags_CreateMask(...)`: `interface/addons/blizzard_sharedxmlbase/flags.lua:2`
+- `Flags_CreateMaskFromTable(flagsTable)`: `interface/addons/blizzard_sharedxmlbase/flags.lua:11`
+- `FrameDeltaLerp(startValue, endValue, amount)`: `interface/addons/blizzard_sharedxmlbase/mathutil.lua:65`
+- `GenerateClosure(f, ...)`: `interface/addons/blizzard_sharedxmlbase/functionutil.lua:115`
+- `GenerateFlatClosure(f, ...)`: `interface/addons/blizzard_sharedxmlbase/functionutil.lua:122`
+- `GetAppropriateTooltip()`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:318`
+- `GetAppropriateTopLevelParent(optionalExcludedParent)`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:304`
+- `GetAtlasSize(atlasName)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:451`
+- `GetBackgroundForRole(role)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:218`
+- `GetBackgroundForRoleEnum(role)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:226`
+- `GetCVar(name)`: `interface/addons/blizzard_sharedxmlbase/cvarutil.lua:17`
+- `GetCVarBitfield(name, index)`: `interface/addons/blizzard_sharedxmlbase/cvarutil.lua:29`
+- `GetCVarBool(name)`: `interface/addons/blizzard_sharedxmlbase/cvarutil.lua:33`
+- `GetCVarDefault(name)`: `interface/addons/blizzard_sharedxmlbase/cvarutil.lua:37`
+- `GetCVarNumberOrDefault(name)`: `interface/addons/blizzard_sharedxmlbase/cvarutil.lua:41`
+- `GetCVarTable(name)`: `interface/addons/blizzard_sharedxmlbase/cvarutil.lua:47`
+- `GetCVarTableValue(name, key, default)`: `interface/addons/blizzard_sharedxmlbase/cvarutil.lua:57`
+- `GetFinalAtlasFromTextureKitIfExists(texture, textureKit)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:432`
+- `GetFinalNameFromTextureKit(fmt, textureKits)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:350`
+- `GetIconForRole(role, showDisabled)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:141`
+- `GetIconForRoleEnum(role, showDisabled)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:150`
+- `GetKeysArraySortedByValue(tbl)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:510`
+- `GetMicroIconForRole(role)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:193`
+- `GetMicroIconForRoleEnum(role)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:202`
+- `GetOrCreateTableEntry(table, key, defaultValue)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:441`
+- `GetOrCreateTableEntryByCallback(table, key, callback)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:456`
+- `GetOrCreateTableEntryByMethod(table, key, method, owner)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:467`
+- `GetPairsArray(tbl)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:495`
+- `GetRandomArrayEntry(array)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:478`
+- `GetRandomTableValue(tbl)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:482`
+- `GetScaledCenter(frame)`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:226`
+- `GetTexCoordsByGrid(xOffset, yOffset, textureWidth, textureHeight, gridWidth, gridHeight)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:257`
+- `GetTexCoordsForOldRoleSmallCircle(role)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:236`
+- `GetTexCoordsForOldRoleSmallCircleEnum(role)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:248`
+- `GetTextureInfo(obj)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:3`
+- `GetUnscaledFrameRect(frame, scale)`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:215`
+- `GetValueOrCallFunction(tbl, key, ...)`: `interface/addons/blizzard_sharedxmlbase/functionutil.lua:21`
+- `InGlue()`: `interface/addons/blizzard_sharedxmlbase/environmentutil.lua:1`
+- `ipairs_reverse(table)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:25`
+- `IteratePools(...)`: `interface/addons/blizzard_sharedxmlbase/functionutil.lua:65`
+- `IterateTables(iteratorFunction, ...)`: `interface/addons/blizzard_sharedxmlbase/functionutil.lua:75`
+- `LowerFrameLevel(frame)`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:181`
+- `MergeTable(destination, source)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:238`
+- `NegateIf(value, condition)`: `interface/addons/blizzard_sharedxmlbase/mathutil.lua:45`
+- `nop()`: `interface/addons/blizzard_sharedxmlbase/environmentutil.lua:5`
+- `PercentageBetween(value, startValue, endValue)`: `interface/addons/blizzard_sharedxmlbase/mathutil.lua:49`
+- `Pool_HideAndClearAnchors(pool, region)`: `interface/addons/blizzard_sharedxmlbase/pools.lua:519`
+- `Pool_HideAndSetToDefaults(pool, region)`: `interface/addons/blizzard_sharedxmlbase/pools.lua:524`
+- `RaiseFrameLevel(frame)`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:185`
+- `RaiseFrameLevelByTwo(frame)`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:189`
+- `RandomFloatInRange(minValue, maxValue)`: `interface/addons/blizzard_sharedxmlbase/mathutil.lua:69`
+- `RegisterCVar(name, value)`: `interface/addons/blizzard_sharedxmlbase/cvarutil.lua:1`
+- `ResetTestCvars()`: `interface/addons/blizzard_sharedxmlbase/cvarutil.lua:5`
+- `RoundToNearestMultiple(value, multiplier)`: `interface/addons/blizzard_sharedxmlbase/mathutil.lua:75`
+- `RunNextFrame(callback)`: `interface/addons/blizzard_sharedxmlbase/functionutil.lua:126`
+- `SafeLength(tbl)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:426`
+- `SafePack(...)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:414`
+- `SafeUnpack(tbl, startIndex)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:421`
+- `SecureMixin(object, ...)`: `interface/addons/blizzard_sharedxmlbase/mixin.lua:23`
+- `SecureOutboundUtil_TriggerEvent(event, ...)`: `interface/addons/blizzard_sharedxmlbase/globalcallbackregistry.lua:97`
+- `SetAlternateTopLevelParent(parent)`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:293`
+- `SetAppropriateTopLevelParent(frame)`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:312`
+- `SetClampedTextureRotation(texture, rotationDegrees)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:60`
+- `SetCVar(name, value)`: `interface/addons/blizzard_sharedxmlbase/cvarutil.lua:9`
+- `SetCVarBitfield(name, index, value, scriptCVar)`: `interface/addons/blizzard_sharedxmlbase/cvarutil.lua:21`
+- `SetCVarTable(name, tbl)`: `interface/addons/blizzard_sharedxmlbase/cvarutil.lua:52`
+- `SetCVarTableValue(name, key, value)`: `interface/addons/blizzard_sharedxmlbase/cvarutil.lua:62`
+- `SetCVarToDefault(name)`: `interface/addons/blizzard_sharedxmlbase/cvarutil.lua:25`
+- `SetTablePairsToTable(destination, source)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:246`
+- `SetTextureWithAddressModeOptions(region, asset, autoSize, addressModeU, addressModeV, resetTextureCoords)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:469`
+- `SetupAtlasesOnRegions(frame, regionsToAtlases, useAtlasSize)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:338`
+- `SetupTextureKitOnFrame(textureKit, frame, fmt, setVisibility, useAtlasSize)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:361`
+- `SetupTextureKitOnFrames(textureKit, frames, setVisibilityOfRegions, useAtlasSize)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:384`
+- `SetupTextureKitOnRegions(textureKit, frame, regions, setVisibilityOfRegions, useAtlasSize)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:397`
+- `SetupTextureKits(textureKitID, frame, regions, setVisibilityOfRegions, useAtlasSize)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:412`
+- `SetupTextureKitsFromRegionInfo(textureKit, frame, regionInfoList)`: `interface/addons/blizzard_sharedxmlbase/textureutil.lua:421`
+- `Square(value)`: `interface/addons/blizzard_sharedxmlbase/mathutil.lua:79`
+- `SwapTableEntries(lhsTable, rhsTable, key)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:504`
+- `TableHasAnyEntries(tbl)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:391`
+- `tAppendAll(table, addedArray)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:204`
+- `tCompare(lhsTable, rhsTable, depth)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:110`
+- `tFilter(tbl, pred, isIndexTable)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:182`
+- `tInsertUnique(tbl, item)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:210`
+- `tInvert(tbl)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:138`
+- `tInvertToArray(tbl)`: `interface/addons/blizzard_sharedxmlbase/tableutil.lua:146`
+- `UIFrameFade(frame, fadeInfo)`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:337`
+- `UIFrameFade_OnUpdate(self, elapsed)`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:410`
+- `UIFrameFadeIn(frame, timeToFade, startAlpha, endAlpha)`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:373`
+- `UIFrameFadeOut(frame, timeToFade, startAlpha, endAlpha)`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:383`
+- `UIFrameFadeRemoveFrame(frame)`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:392`
+- `UIFrameFlash(frame, fadeInTime, fadeOutTime, flashDuration, showWhenDone, flashInHoldTime, flashOutHoldTime, syncId)`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:463`
+- `UIFrameFlash_OnUpdate(self, elapsed)`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:507`
+- `UIFrameFlashStop(frame)`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:570`
+- `UIFrameIsFading(frame)`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:452`
+- `UIFrameIsFlashing(frame)`: `interface/addons/blizzard_sharedxmlbase/frameutil.lua:564`
+- `WithinRange(value, min, max)`: `interface/addons/blizzard_sharedxmlbase/mathutil.lua:83`
+- `WithinRangeExclusive(value, min, max)`: `interface/addons/blizzard_sharedxmlbase/mathutil.lua:87`
+- `Wrap(value, max)`: `interface/addons/blizzard_sharedxmlbase/mathutil.lua:32`
+- `WrapTextInColor(text, color)`: `interface/addons/blizzard_sharedxmlbase/color.lua:76`
+- `WrapTextInColorCode(text, colorHexString)`: `interface/addons/blizzard_sharedxmlbase/color.lua:72`
+
+## blizzard_sharedxmlgame
+
+- `AddTooltipDataAccessor(handler, accessor, getterName)`: `interface/addons/blizzard_sharedxmlgame/tooltip/tooltipdatahandler.lua:447`
+- `CreateBaseTooltipInfo(getterName, ...)`: `interface/addons/blizzard_sharedxmlgame/tooltip/tooltipdatahandler.lua:231`
+- `PrintLootSpecialization()`: `interface/addons/blizzard_sharedxmlgame/mainline/lootspecialization.lua:1`
+
+## blizzard_simplecheckout
+
+- `SimpleCheckout_EscapePressed()`: `interface/addons/blizzard_simplecheckout/blizzard_simplecheckout_inbound.lua:7`
+
+## blizzard_socialuishared
+
+- `SocialUIContactsFrameInitializeAADC(tabData)`: `interface/addons/blizzard_socialuishared/socialuisharedtemplates.lua:158`
+- `ToggleSocialUI()`: `interface/addons/blizzard_socialuishared/socialuicontrol.lua:1`
+
+## blizzard_soulbinds
+
+- `SoulbindConduitMixin_Create(conduitID)`: `interface/addons/blizzard_soulbinds/blizzard_soulbindsconduit.lua:31`
+- `SoulbindViewer_LoadUI()`: `interface/addons/blizzard_soulbinds/blizzard_soulbinds_bootstrap.lua:3`
+
+## blizzard_spectateframe
+
+- `LeaveMatchUtil_LeaveMatchPopup()`: `interface/addons/blizzard_spectateframe/spectateframe.lua:154`
+
+## blizzard_splashframe
+
+- `SplashFrame_EscapePressed()`: `interface/addons/blizzard_splashframe/mainline/splashframe.lua:103`
+
+## blizzard_staticpopup
+
+- `StaticPopup_AddDefinition(which, definition)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:28`
+- `StaticPopup_AddDialog(dialog)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:58`
+- `StaticPopup_AddShowCondition(func)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:24`
+- `StaticPopup_CheckQueuedDialogs()`: `interface/addons/blizzard_staticpopup/staticpopup.lua:285`
+- `StaticPopup_ClearFullScreenFrame()`: `interface/addons/blizzard_staticpopup/staticpopup.lua:135`
+- `StaticPopup_EscapePressed()`: `interface/addons/blizzard_staticpopup/staticpopup.lua:846`
+- `StaticPopup_FindVisible(which, data)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:156`
+- `StaticPopup_ForEachShownDialog(func)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:187`
+- `StaticPopup_Hide(which, data)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:450`
+- `StaticPopup_HideAll()`: `interface/addons/blizzard_staticpopup/staticpopup.lua:472`
+- `StaticPopup_HideAllExcept(which)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:464`
+- `StaticPopup_HideExclusive()`: `interface/addons/blizzard_staticpopup/staticpopup.lua:988`
+- `StaticPopup_HideNotification(systemPrefix, notificationType)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:220`
+- `StaticPopup_IsAnyDialogShown()`: `interface/addons/blizzard_staticpopup/staticpopup.lua:1051`
+- `StaticPopup_IsCustomGenericConfirmationShown(referenceKey)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:245`
+- `StaticPopup_IsLastDisplayedFrame(frame)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:982`
+- `StaticPopup_IsSpecial(dialog)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:183`
+- `StaticPopup_OnAcceptWithSpinner(onAcceptCallback, onEventCallback, events, beforeSpinnerWaitTime, dialog)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:1003`
+- `StaticPopup_OnClick(dialog, index)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:695`
+- `StaticPopup_OnCloseButtonClicked(closeButton, button)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:666`
+- `StaticPopup_OnHide(dialog)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:630`
+- `StaticPopup_OnHyperlinkClick(dialog, ...)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:683`
+- `StaticPopup_OnHyperlinkEnter(dialog, ...)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:687`
+- `StaticPopup_OnHyperlinkLeave(dialog, ...)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:691`
+- `StaticPopup_OnKeyDown(dialog, key)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:823`
+- `StaticPopup_OnShow(dialog)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:591`
+- `StaticPopup_OnUpdate(dialog, elapsed)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:481`
+- `StaticPopup_Queue(which, text_arg1, text_arg2, data, insertedFrame, customOnHideScript)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:274`
+- `StaticPopup_ReleaseInsertedFrame(dialog)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:583`
+- `StaticPopup_RemoveDialog(dialog)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:62`
+- `StaticPopup_ReparentDialogs()`: `interface/addons/blizzard_staticpopup/staticpopup.lua:974`
+- `StaticPopup_ResizeShownDialogs()`: `interface/addons/blizzard_staticpopup/staticpopup.lua:444`
+- `StaticPopup_SetButtonText(which, buttonIndex, text)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:32`
+- `StaticPopup_SetFullScreenFrame(frame)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:128`
+- `StaticPopup_SetProgressBarTime(dialog, duration, timeleft)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:437`
+- `StaticPopup_SetTimeLeft(dialog, timeleft)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:433`
+- `StaticPopup_SetUpPosition(dialog)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:896`
+- `StaticPopup_Show(which, text_arg1, text_arg2, data, insertedFrame, customOnHideScript)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:309`
+- `StaticPopup_ShowCustomGenericConfirmation(customData, insertedFrame)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:241`
+- `StaticPopup_ShowCustomGenericInputBox(customData, insertedFrame)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:265`
+- `StaticPopup_ShowGenericConfirmation(text, callback, insertedFrame)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:225`
+- `StaticPopup_ShowGenericDropdown(text, callback, options, requiresConfirmation, defaultOption)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:269`
+- `StaticPopup_ShowNotification(systemPrefix, notificationType, message)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:198`
+- `StaticPopup_StandardConfirmationTextHandler(editBox, expectedText)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:140`
+- `StaticPopup_StandardEditBoxOnEscapePressed(editBox)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:152`
+- `StaticPopup_StandardNonEmptyTextHandler(editBox)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:146`
+- `StaticPopup_UpdateAll(elapsed)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:571`
+- `StaticPopup_UpdateProgressBar(dialog, percent)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:557`
+- `StaticPopup_UpdateSubText(dialog, dialogInfo)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:119`
+- `StaticPopup_Visible(which)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:179`
+- `StaticPopupSpecial_Hide(dialog)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:957`
+- `StaticPopupSpecial_Show(dialog)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:945`
+- `StaticPopupSpecial_Toggle(dialog)`: `interface/addons/blizzard_staticpopup/staticpopup.lua:966`
+
+## blizzard_staticpopup_game
+
+- `ConfirmDisenchantRollDialog_Show(rollID, rollType)`: `interface/addons/blizzard_staticpopup_game/gamedialogdefs.lua:92`
+- `ConfirmLootRollDialog_Show(rollID, rollType)`: `interface/addons/blizzard_staticpopup_game/gamedialogdefs.lua:88`
+- `ConfirmTalentWipeDialog_Show(cost, talentType)`: `interface/addons/blizzard_staticpopup_game/gamedialogdefs.lua:96`
+- `GameDialog_MoneyFrameOnLoad(self)`: `interface/addons/blizzard_staticpopup_game/gamedialog.lua:915`
+- `GetBindWarning(itemLocation)`: `interface/addons/blizzard_staticpopup_game/camelot/gamedialogdefs.lua:3`
+- `GetBindWarning(itemLocation)`: `interface/addons/blizzard_staticpopup_game/mainline/gamedialogdefs.lua:425`
+- `GossipConfirmDialog_Show(optionID, text, cost)`: `interface/addons/blizzard_staticpopup_game/gamedialogdefs.lua:101`
+- `HideInstanceBootDialog()`: `interface/addons/blizzard_staticpopup_game/gamedialogdefs.lua:114`
+- `HideInstanceLockDialog()`: `interface/addons/blizzard_staticpopup_game/gamedialogdefs.lua:123`
+- `HideSummonConfirmationDialogs()`: `interface/addons/blizzard_staticpopup_game/gamedialogdefs.lua:141`
+- `InstanceLock_OnEnter(dialogTextLabel)`: `interface/addons/blizzard_staticpopup_game/gamedialogdefs.lua:2285`
+- `IsSummonConfirmationDialogVisible()`: `interface/addons/blizzard_staticpopup_game/gamedialogdefs.lua:127`
+- `ShowInstanceBootDialog()`: `interface/addons/blizzard_staticpopup_game/gamedialogdefs.lua:106`
+- `ShowInstanceLockDialog(enforceTime)`: `interface/addons/blizzard_staticpopup_game/gamedialogdefs.lua:119`
+- `ShowSummonConfirmationDialog(summonReason, skipStartingArea)`: `interface/addons/blizzard_staticpopup_game/gamedialogdefs.lua:131`
+- `UpdateQuestAcceptLogFullDialog()`: `interface/addons/blizzard_staticpopup_game/gamedialogdefs.lua:64`
+
+## blizzard_statustrackingbar
+
+- `ArtifactBarGetNumArtifactTraitsPurchasableFromXP(pointsSpent, artifactXP, artifactTier)`: `interface/addons/blizzard_statustrackingbar/mainline/artifactbar.lua:96`
+- `ShouldRestedXpBarDisplayWhenOverflowing()`: `interface/addons/blizzard_statustrackingbar/camelot/statustrackingbarconstants.lua:17`
+- `ShouldRestedXpBarDisplayWhenOverflowing()`: `interface/addons/blizzard_statustrackingbar/mainline/statustrackingbarconstants.lua:12`
+
+## blizzard_storeui
+
+- `BuildCharacterTransferConfirmationString(character)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1897`
+- `CheckActiveStoreForFree(event)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuitoggle.lua:51`
+- `FollowGuildCheckbox_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3741`
+- `GetSecureMoneyString(money, separateThousands, forceColorBlind)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:142`
+- `HidePreviewFrame()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuiinsecure.lua:24`
+- `ProductCardBuyButton_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_productcardtemplates.lua:625`
+- `ProductCardBuyButton_OnEnter(self)`: `interface/addons/blizzard_storeui/blizzard_shared_productcardtemplates.lua:632`
+- `ProductCardBuyButton_OnLeave(self)`: `interface/addons/blizzard_storeui/blizzard_shared_productcardtemplates.lua:637`
+- `RenameGuildCheckbox_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3643`
+- `ServicesLogoutPopup_OnLoad(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4198`
+- `ServicesLogoutPopup_SetShowReason(self, showReason, titleOverride, descriptionOverride)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4238`
+- `ServicesLogoutPopupCancelButton_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4279`
+- `ServicesLogoutPopupConfirmButton_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4252`
+- `SetStoreUIShown(shown)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuitoggle.lua:68`
+- `SplashSingleBuyButton_OnEnter(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1780`
+- `SplashSingleBuyButton_OnLeave(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1784`
+- `StoreAutoCompleteBox_OnHide(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3791`
+- `StoreAutoCompleteButton_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3469`
+- `StoreAutoCompleteDecrementSelection(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3589`
+- `StoreAutoCompleteGoBack_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3551`
+- `StoreAutoCompleteHasMore_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3562`
+- `StoreAutoCompleteIncrementSelection(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3573`
+- `StoreAutoCompleteSelectionEnterPressed(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3601`
+- `StoreButton_OnShow(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2860`
+- `StoreCardDetail_SetLayerAboveModelScene(self)`: `interface/addons/blizzard_storeui/blizzard_shared_productcardtemplates.lua:669`
+- `StoreCategoryFrame_SetGroupID(self, groupID)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1065`
+- `StoreConfirmationFinalBuy_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2149`
+- `StoreConfirmationFrame_Cancel(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2142`
+- `StoreConfirmationFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2042`
+- `StoreConfirmationFrame_OnHide(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2062`
+- `StoreConfirmationFrame_OnLoad(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1883`
+- `StoreConfirmationFrame_OnShow(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2057`
+- `StoreConfirmationFrame_SetNotice(self, icon, name, dollars, cents, walletName, productDecorator)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1947`
+- `StoreConfirmationFrame_Update(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2074`
+- `StoreDropdown_SetDropdown(frame, infoTable, callback)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2898`
+- `StoreDropdownMenu_NextOnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2922`
+- `StoreDropdownMenu_OnHide(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3015`
+- `StoreDropdownMenu_PreviousOnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2917`
+- `StoreDropdownMenu_SetUpButtons()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2927`
+- `StoreDropdownMenuMenuButton_OnClick(self, button)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3027`
+- `StoreDropdownMenuMenuButton_OnLoad(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3022`
+- `StoreEditBoxWithAutoCompleteTemplate_OnCursorChanged(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3768`
+- `StoreEditBoxWithAutoCompleteTemplate_OnTextChanged(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3775`
+- `StoreEscapePressed()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuitoggle.lua:76`
+- `StoreFrame_BeginPurchase(entryID)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1788`
+- `StoreFrame_CheckAndUpdateEntryID(isSplash)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:598`
+- `StoreFrame_CheckForFree(event)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuiinbound.lua:31`
+- `StoreFrame_CheckForFree(self, event)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1826`
+- `StoreFrame_CheckMarketPriceUpdates()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4291`
+- `StoreFrame_CurrencyFormatShort(...)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:473`
+- `StoreFrame_CurrencyInfo()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:450`
+- `StoreFrame_DoesProductGroupHavePurchasableItems(groupID)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1027`
+- `StoreFrame_DoesProductGroupShowOwnedAsDisabled(groupID)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1046`
+- `StoreFrame_EscapePressed()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuiinbound.lua:22`
+- `StoreFrame_FilterEntries(entries)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:657`
+- `StoreFrame_FindCardForBoost(boostType)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1009`
+- `StoreFrame_FindPageForBoost(boostType)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:987`
+- `StoreFrame_GetCellPixelSize(cardTemplate)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:564`
+- `StoreFrame_GetDefaultCategory()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1172`
+- `StoreFrame_GetDiscountInformation(data)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:580`
+- `StoreFrame_GetPageInfo(entries)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:728`
+- `StoreFrame_GetProductCardTemplate(cardType, flags)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:621`
+- `StoreFrame_GetProductPriceText(entryInfo, currencyFormat)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:189`
+- `StoreFrame_GetSelectedCategoryID()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1191`
+- `StoreFrame_GetSelectedEntryID()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4314`
+- `StoreFrame_GetSelectedPageNum()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:65`
+- `StoreFrame_GoToPageForBoost(boostType)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:998`
+- `StoreFrame_HasFreeBagSlots()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1811`
+- `StoreFrame_HasPriceData(productID)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:185`
+- `StoreFrame_HideAlert(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1670`
+- `StoreFrame_HidePurchaseSent(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1687`
+- `StoreFrame_IsCompletelyOwned(entryInfo)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:649`
+- `StoreFrame_IsLoading(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1589`
+- `StoreFrame_IsPartiallyOwned(entryInfo)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:653`
+- `StoreFrame_IsProductGroupDisabled(groupID)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1051`
+- `StoreFrame_IsShown()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuiinbound.lua:18`
+- `StoreFrame_LayoutCard(cardTemplate, createCard)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:934`
+- `StoreFrame_OnAttributeChanged(self, name, value)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1490`
+- `StoreFrame_OnCharacterBoostDelivered(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1369`
+- `StoreFrame_OnError(self, errorID, needsAck, internalErr)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1579`
+- `StoreFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1199`
+- `StoreFrame_OnHide(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1330`
+- `StoreFrame_OnLegionDelivered(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1389`
+- `StoreFrame_OnLoad(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1092`
+- `StoreFrame_OnMouseWheel(self, value)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1355`
+- `StoreFrame_OnShow(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1305`
+- `StoreFrame_OpenGamesCategory()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuiinbound.lua:39`
+- `StoreFrame_PreviewFrameIsShown(isShown)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuiinbound.lua:27`
+- `StoreFrame_SelectBoost(boostType, reason, guid)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuiinbound.lua:51`
+- `StoreFrame_SelectBoostForPurchase(boostType)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1019`
+- `StoreFrame_SelectGameTimeProduct()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuiinbound.lua:63`
+- `StoreFrame_SelectSubscriptionProduct()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuiinbound.lua:59`
+- `StoreFrame_SetAlert(self, title, desc)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1660`
+- `StoreFrame_SetCategory(forceModelUpdate)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:707`
+- `StoreFrame_SetCategoryProductCards(forceModelUpdate, entries)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:767`
+- `StoreFrame_SetGamesCategory()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuiinbound.lua:43`
+- `StoreFrame_SetPage(page)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1850`
+- `StoreFrame_SetSelectedCategoryID(categoryID)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1195`
+- `StoreFrame_SetSelectedEntryID(entryID)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4310`
+- `StoreFrame_SetSelectedPageNum(pageNum)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:61`
+- `StoreFrame_SetServicesCategory()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuiinbound.lua:47`
+- `StoreFrame_SetShown(shown, contextKey)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuiinbound.lua:5`
+- `StoreFrame_SetTokenCategory()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuiinbound.lua:35`
+- `StoreFrame_ShowError(self, title, desc, urlIndex, needsAck)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1713`
+- `StoreFrame_ShowPreviews(displayInfoEntries)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1821`
+- `StoreFrame_ShowPurchaseSent(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1674`
+- `StoreFrame_ShowUnrevokeConsumptionDialog()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1692`
+- `StoreFrame_UpdateActivePanel(self, fromVASPurchaseCompletion)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1608`
+- `StoreFrame_UpdateBuyButton()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1400`
+- `StoreFrame_UpdateCoverState()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1437`
+- `StoreFrame_UpdateMarketPrice()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4287`
+- `StoreFrame_UpdateSelectedCategory()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1187`
+- `StoreFrameBuyButton_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4318`
+- `StoreFrameCloseButton_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1776`
+- `StoreFrameErrorAcceptButton_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1764`
+- `StoreFrameErrorFrame_OnHide(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1759`
+- `StoreFrameErrorFrame_OnShow(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1751`
+- `StoreFrameErrorWebsiteButton_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1772`
+- `StoreFrameNextPageButton_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1856`
+- `StoreFramePrevPageButton_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1842`
+- `StoreFramePurchaseSentOkayButton_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:1699`
+- `StoreGetAutoCompleteEntries(self, text, cursorPosition)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3445`
+- `StoreGoldButton_OnShow(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2874`
+- `StorePreviewFrame_OnHide()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuiinsecure.lua:20`
+- `StorePreviewFrame_OnShow()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuiinsecure.lua:16`
+- `StoreProductCard_CheckShowStorePreviewOnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2696`
+- `StoreProductCard_HideModel(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2793`
+- `StoreProductCard_OnMouseDown(self, ...)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2713`
+- `StoreProductCard_OnMouseUp(self, ...)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2717`
+- `StoreProductCard_ShowModel(self, entryInfo, showShadows, forceModelUpdate)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2725`
+- `StoreProductCard_UpdateAllStates()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2690`
+- `StoreProductCardCheckmark_OnEnter(self)`: `interface/addons/blizzard_storeui/blizzard_shared_productcardtemplates.lua:642`
+- `StoreProductCardCheckmark_OnLeave(self)`: `interface/addons/blizzard_storeui/blizzard_shared_productcardtemplates.lua:661`
+- `StoreProductCardItem_OnEnter(self)`: `interface/addons/blizzard_storeui/blizzard_shared_productcardtemplates.lua:590`
+- `StoreProductCardItem_OnLeave(self)`: `interface/addons/blizzard_storeui/blizzard_shared_productcardtemplates.lua:604`
+- `StoreSetItemTooltip(itemID, left, top, point)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuiinsecure.lua:9`
+- `StoreShowPreviews(displayInfoEntries)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuiinsecure.lua:5`
+- `StoreSplashSingleProductCard_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2721`
+- `StoreTooltip_Show(name, description, isToken)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2804`
+- `StoreUpdateAutoComplete(self, text, cursorPosition)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3479`
+- `StoreVASValidationFrame_AppendError(desc, errorID, character, firstAppend)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2437`
+- `StoreVASValidationFrame_CheckForInstructions(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2370`
+- `StoreVASValidationFrame_GetProductInfo(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2235`
+- `StoreVASValidationFrame_Init(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2283`
+- `StoreVASValidationFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2504`
+- `StoreVASValidationFrame_OnHide(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2644`
+- `StoreVASValidationFrame_OnLoad(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2170`
+- `StoreVASValidationFrame_OnShow(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2639`
+- `StoreVASValidationFrame_OnVasProductComplete(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2620`
+- `StoreVASValidationFrame_SetErrors(errors)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2580`
+- `StoreVASValidationFrame_SetVASStart(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2422`
+- `StoreVASValidationFrame_SyncFontHeights(...)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2475`
+- `StoreVASValidationFrame_UpdateCharacterTransferValidationPosition()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2454`
+- `StoreVASValidationFrame_UpdateGuildFactionChangeValidationPosition()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2443`
+- `StoreVASValidationState_Lock()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2650`
+- `StoreVASValidationState_Unlock()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:2670`
+- `StripWoWAccountLicenseInfo(gameAccount)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4100`
+- `ToggleStoreUI(contextKey)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuitoggle.lua:60`
+- `TransferAccountCheckbox_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3796`
+- `TransferFactionCheckbox_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4090`
+- `VASCharacterSelection_CheckForValidName(self, nameToCheck, validNameCheckFunction)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3895`
+- `VASCharacterSelection_ClearStoreTooltip(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4053`
+- `VASCharacterSelection_GuildFactionChange_GatherAndValidateData()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3682`
+- `VASCharacterSelection_GuildTransfer_GatherAndValidateData()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3710`
+- `VASCharacterSelection_GuildVASEditbox_OnTextChanged(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3672`
+- `VASCharacterSelection_NewCharacterName_OnEnter(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4009`
+- `VASCharacterSelection_NewCharacterName_OnTextChanged(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3620`
+- `VASCharacterSelection_NewGuildMaster_OnEnter(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4037`
+- `VASCharacterSelection_NewGuildName_OnEnter(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4021`
+- `VASCharacterSelection_NewGuildName_OnTextChanged(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3631`
+- `VASCharacterSelection_OldGuildNewName_OnEnter(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4047`
+- `VASCharacterSelection_RenameGuildCheckbox_OnEnter(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4031`
+- `VASCharacterSelection_TransferRealmEditbox_OnEnter(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4015`
+- `VASCharacterSelectionCancelTimeout()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3884`
+- `VASCharacterSelectionChangeIconFrame_OnEnter(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3091`
+- `VASCharacterSelectionChangeIconFrame_OnLeave()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3123`
+- `VASCharacterSelectionChangeIconFrame_SetIcons(character, serviceType)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3127`
+- `VASCharacterSelectionCharacterSelector_Callback(value, guildFollowInfo)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3236`
+- `VASCharacterSelectionCharacterSelector_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3844`
+- `VASCharacterSelectionContinueButton_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3908`
+- `VASCharacterSelectionRealmSelector_Callback(value)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3043`
+- `VASCharacterSelectionRealmSelector_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3826`
+- `VASCharacterSelectionStartTimeout()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3879`
+- `VASCharacterSelectionTimeout()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3891`
+- `VASCharacterSelectionTransferAccountDropdown_Callback(value)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4080`
+- `VASCharacterSelectionTransferAccountDropdown_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4057`
+- `VASCharacterSelectionTransferBattlenetAccountEditbox_OnTextChanged(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3817`
+- `VASCharacterSelectionTransferBnetWoWAccountDropdown_Callback(value)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4124`
+- `VASCharacterSelectionTransferBnetWoWAccountDropdown_OnClick(self)`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4107`
+- `VASCharacterSelectionTransferCheckEditBoxes()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4131`
+- `VASCharacterSelectionTransferGatherAndValidateData()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:4180`
+- `VASRealmList_BuildAutoCompleteLists()`: `interface/addons/blizzard_storeui/blizzard_shared_storeuisecure.lua:3400`
+
+## blizzard_subscriptioninterstitialui
+
+- `SubscriptionInterstitial_LoadUI()`: `interface/addons/blizzard_subscriptioninterstitialui/blizzard_subscriptioninterstitialui_bootstrap.lua:1`
+
+## blizzard_timemanager
+
+- `Stopwatch_Clear()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:571`
+- `Stopwatch_FinishCountdown()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:580`
+- `Stopwatch_IsPlaying()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:567`
+- `Stopwatch_Pause()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:558`
+- `Stopwatch_Play()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:549`
+- `Stopwatch_StartCountdown(hour, minute, second)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:522`
+- `Stopwatch_Toggle()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:514`
+- `StopwatchCloseButton_OnClick()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:585`
+- `StopwatchFrame_OnDragStart(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:660`
+- `StopwatchFrame_OnDragStop(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:664`
+- `StopwatchFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:598`
+- `StopwatchFrame_OnHide(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:645`
+- `StopwatchFrame_OnLoad(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:590`
+- `StopwatchFrame_OnMouseDown(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:652`
+- `StopwatchFrame_OnMouseUp(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:656`
+- `StopwatchFrame_OnShow(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:641`
+- `StopwatchFrame_OnUpdate(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:627`
+- `StopwatchPlayPauseButton_OnClick(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:703`
+- `StopwatchResetButton_OnClick()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:698`
+- `StopwatchTicker_OnUpdate(self, elapsed)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:669`
+- `StopwatchTicker_Update()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:682`
+- `TimeManager_CheckAlarm(elapsed)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:426`
+- `TimeManager_FireAlarm()`: `interface/addons/blizzard_timemanager/camelot/blizzard_timemanageroverrides.lua:14`
+- `TimeManager_FireAlarm()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:461`
+- `TimeManager_FireAlarmWarning()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:455`
+- `TimeManager_IsAlarmFiring()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:489`
+- `TimeManager_LoadUI()`: `interface/addons/blizzard_timemanager/blizzard_timemanager_bootstrap.lua:3`
+- `TimeManager_ShouldCheckAlarm()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:402`
+- `TimeManager_StartCheckingAlarm()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:406`
+- `TimeManager_Toggle()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:93`
+- `TimeManager_ToggleLocalTime()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:334`
+- `TimeManager_ToggleTimeFormat()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:304`
+- `TimeManager_TurnOffAlarm()`: `interface/addons/blizzard_timemanager/camelot/blizzard_timemanageroverrides.lua:25`
+- `TimeManager_TurnOffAlarm()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:479`
+- `TimeManager_Update()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:249`
+- `TimeManager_UpdateAlarmTime()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:258`
+- `TimeManager_UpdateTimeTicker()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:266`
+- `TimeManagerAlarmEnabledButton_OnClick(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:282`
+- `TimeManagerAlarmMessageEditBox_OnEditFocusLost(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:278`
+- `TimeManagerAlarmMessageEditBox_OnEnterPressed(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:270`
+- `TimeManagerAlarmMessageEditBox_OnEscapePressed(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:274`
+- `TimeManagerClockButton_OnClick(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:377`
+- `TimeManagerClockButton_OnEnter(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:367`
+- `TimeManagerClockButton_OnLeave(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:372`
+- `TimeManagerClockButton_OnLoad(self)`: `interface/addons/blizzard_timemanager/camelot/blizzard_timemanageroverrides.lua:2`
+- `TimeManagerClockButton_OnLoad(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:340`
+- `TimeManagerClockButton_OnUpdate(self, elapsed)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:390`
+- `TimeManagerClockButton_OnUpdateWithTooltip(self, elapsed)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:397`
+- `TimeManagerClockButton_Update()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:363`
+- `TimeManagerClockButton_UpdateTooltip()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:493`
+- `TimeManagerCloseButton_OnClick()`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:236`
+- `TimeManagerFrame_OnHide(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:232`
+- `TimeManagerFrame_OnLoad(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:109`
+- `TimeManagerFrame_OnShow(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:224`
+- `TimeManagerFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:139`
+- `TimeManagerFrame_SetupAMPMDropdown(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:203`
+- `TimeManagerFrame_SetupHourDropdown(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:143`
+- `TimeManagerFrame_SetupMinuteDropdown(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:177`
+- `TimeManagerLocalTimeCheck_OnClick(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:323`
+- `TimeManagerMilitaryTimeCheck_OnClick(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:295`
+- `TimeManagerStopwatchCheck_OnClick(self)`: `interface/addons/blizzard_timemanager/mainline/blizzard_timemanager.lua:240`
+- `ToggleTimeManager()`: `interface/addons/blizzard_timemanager/blizzard_timemanager_bootstrap.lua:7`
+
+## blizzard_tokenui
+
+- `GetNumWatchedTokens()`: `interface/addons/blizzard_tokenui/camelot/blizzard_tokenui.lua:575`
+- `GetNumWatchedTokens()`: `interface/addons/blizzard_tokenui/mainline/blizzard_tokenui.lua:503`
+
+## blizzard_trainerui
+
+- `ClassTrainer_SelectNearestLearnableSkill()`: `interface/addons/blizzard_trainerui/mainline/blizzard_trainerui.lua:787`
+- `ClassTrainer_SetSelection(displayIndex)`: `interface/addons/blizzard_trainerui/mainline/blizzard_trainerui.lua:821`
+- `ClassTrainerFrame_InitCategoryButton(categoryButton, node)`: `interface/addons/blizzard_trainerui/mainline/blizzard_trainerui.lua:201`
+- `ClassTrainerFrame_InitServiceButton(skillButton, elementData)`: `interface/addons/blizzard_trainerui/mainline/blizzard_trainerui.lua:618`
+- `ClassTrainerFrame_LoadUI()`: `interface/addons/blizzard_trainerui/blizzard_trainerui_bootstrap.lua:3`
+- `ClassTrainerFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_trainerui/mainline/blizzard_trainerui.lua:292`
+- `ClassTrainerFrame_OnHide(self)`: `interface/addons/blizzard_trainerui/mainline/blizzard_trainerui.lua:283`
+- `ClassTrainerFrame_OnLoad(self)`: `interface/addons/blizzard_trainerui/mainline/blizzard_trainerui.lua:154`
+- `ClassTrainerFrame_OnShow(self)`: `interface/addons/blizzard_trainerui/mainline/blizzard_trainerui.lua:251`
+- `ClassTrainerFrame_SetTrainButtonEnabled(enabled, disableReason)`: `interface/addons/blizzard_trainerui/mainline/blizzard_trainerui.lua:313`
+- `ClassTrainerFrame_Update(retainScrollPosition)`: `interface/addons/blizzard_trainerui/mainline/blizzard_trainerui.lua:453`
+- `ClassTrainerFrame_UpdateTrainingPoints()`: `interface/addons/blizzard_trainerui/mainline/blizzard_trainerui.lua:603`
+- `ClassTrainerSkillButton_OnClick(self, button)`: `interface/addons/blizzard_trainerui/mainline/blizzard_trainerui.lua:880`
+- `ClassTrainerTrainButton_OnClick(self, button)`: `interface/addons/blizzard_trainerui/mainline/blizzard_trainerui.lua:886`
+- `TrainerUI_UseCategories()`: `interface/addons/blizzard_trainerui/mainline/blizzard_trainerui.lua:9`
+- `TrainerUI_UseCategories()`: `interface/addons/blizzard_trainerui/mainline/blizzard_trainerui_camelot.lua:9`
+
+## blizzard_transformtree
+
+- `CreateTransformFrameNodePool(frameType, parent, frameTemplate, resetFunc)`: `interface/addons/blizzard_transformtree/transformtreepools.lua:7`
+- `CreateTransformTreeNode(nodeMixin, parentTransform, localPosition, localRotationRadians, localScale, ...)`: `interface/addons/blizzard_transformtree/transformtreebasenodemixin.lua:3`
+- `CreateTransformTreeNodeFromWidget(widget, nodeMixin, parentTransform, localPosition, localRotationRadians, localScale, ...)`: `interface/addons/blizzard_transformtree/transformtreebasenodemixin.lua:9`
+- `TransformTreeFrameNode_Reset(transformTreeFramePool, frame)`: `interface/addons/blizzard_transformtree/transformtreepools.lua:1`
+
+## blizzard_transmog
+
+- `DressUpFrameLinkingSupported()`: `interface/addons/blizzard_transmog/classic/blizzard_transmogoverrides.lua:1`
+- `DressUpFrameLinkingSupported()`: `interface/addons/blizzard_transmog/mainline/blizzard_transmogoverrides.lua:1`
+- `Transmog_LoadUI()`: `interface/addons/blizzard_transmog/blizzard_transmog_bootstrap.lua:3`
+
+## blizzard_tutorialmanager
+
+- `DebugTutorials(value)`: `interface/addons/blizzard_tutorialmanager/blizzard_tutorialmanager.lua:241`
+
+## blizzard_tutorials
+
+- `AddDragonridingTutorials()`: `interface/addons/blizzard_tutorials/blizzard_tutorials_dragonriding.lua:1`
+- `AddEvokerTutorials()`: `interface/addons/blizzard_tutorials/blizzard_tutorials_dracthyr.lua:3`
+- `AddFrameTutorials()`: `interface/addons/blizzard_tutorials/blizzard_tutorials_frame_tutorials.lua:144`
+- `AddPerksProgramTutorials()`: `interface/addons/blizzard_tutorials/blizzard_tutorials_perksprogram.lua:2`
+- `AddRPETutorials()`: `interface/addons/blizzard_tutorials/blizzard_tutorials_rpe.lua:51`
+- `AddSpecAndTalentTutorials()`: `interface/addons/blizzard_tutorials/blizzard_tutorials_classes.lua:14`
+- `CanShowProfessionEquipmentTutorial()`: `interface/addons/blizzard_tutorials/blizzard_tutorials_professions.lua:11`
+- `PlayerHasPrimaryProfession()`: `interface/addons/blizzard_tutorials/blizzard_tutorials_professions.lua:570`
+
+## blizzard_uipanels_game
+
+- `_QuestLog_ToggleQuestWatch(questIndex)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:739`
+- `AddPvpRatingsToTable()`: `interface/addons/blizzard_uipanels_game/mainline/itemref.lua:212`
+- `AreAllBagsOpen()`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2188`
+- `AreAllStandardHeldBagsOpen()`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2193`
+- `AutoQuestWatch_CheckDeleted()`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:768`
+- `AutoQuestWatch_Insert(questIndex, watchTimer)`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:740`
+- `AutoQuestWatch_OnUpdate(self, elapsed)`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:803`
+- `AutoQuestWatch_Update(questIndex)`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:777`
+- `BankFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:250`
+- `BankFrame_OnHide(self)`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:307`
+- `BankFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:195`
+- `BankFrame_OnShow(self)`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:283`
+- `BankFrame_Open()`: `interface/addons/blizzard_uipanels_game/mainline/bankframetemplates.lua:111`
+- `BankFrame_ShowPanel(sidePanelName, selection)`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:393`
+- `BankFrame_TabOnClick(self)`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:387`
+- `BankFrame_UpdateCooldown(container, button)`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:134`
+- `BankFrameBagButton_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:29`
+- `BankFrameBagButton_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:23`
+- `BankFrameBaseButton_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:9`
+- `BankFrameItemButton_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:39`
+- `BankFrameItemButton_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:16`
+- `BankFrameItemButton_Update(button)`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:70`
+- `BankFrameItemButton_UpdateLocked(button)`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:150`
+- `BankFrameItemButtonBag_OnClick(self, button)`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:370`
+- `BankFrameItemButtonBag_Pickup(self)`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:381`
+- `BankFrameItemButtonGeneric_OnClick(self, button)`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:324`
+- `BankFrameItemButtonGeneric_OnModifiedClick(self, button)`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:333`
+- `BankSlotsFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:162`
+- `BankUtil_IsAccountBankDepositRefundable(itemLocation)`: `interface/addons/blizzard_uipanels_game/mainline/bankframetemplates.lua:428`
+- `BattlegroundShineFadeIn()`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:1227`
+- `BattlegroundShineFadeOut()`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:1237`
+- `BonusRollFrame_AdvanceLootSpinnerAnim(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:768`
+- `BonusRollFrame_CloseBonusRoll()`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:554`
+- `BonusRollFrame_FinishedFading(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:795`
+- `BonusRollFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:570`
+- `BonusRollFrame_OnHide(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:787`
+- `BonusRollFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:561`
+- `BonusRollFrame_OnShow(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:776`
+- `BonusRollFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:645`
+- `BonusRollFrame_StartBonusRoll(spellID, text, duration, currencyID, currencyCost, difficultyID, displayItemID, itemContext, treasureContextLevel)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:479`
+- `BonusRollLootWonFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:819`
+- `BonusRollMoneyWonFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:823`
+- `ButtonInventorySlot(self)`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:5`
+- `CallingPOI_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/mainline/worldmapframe.lua:151`
+- `CastingBarAnim_OnFadeOutFinish(self)`: `interface/addons/blizzard_uipanels_game/shared/castingbarframetemplates.lua:2`
+- `CastingBarAnim_OnInterruptSparkAnimFinish(self)`: `interface/addons/blizzard_uipanels_game/shared/castingbarframe.lua:669`
+- `CharacterAttackFrame_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2349`
+- `CharacterAttackFrame_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2077`
+- `CharacterCritChanceFrame_OnEnter(self, meleeCrit, rangedCrit, spellCrit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:556`
+- `CharacterDamageFrame_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2365`
+- `CharacterDamageFrame_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:724`
+- `CharacterDamageFrame_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2093`
+- `CharacterDefenseFrame_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:117`
+- `CharacterFrame_GetTab(tabID)`: `interface/addons/blizzard_uipanels_game/shared/characterframetabapi.lua:1`
+- `CharacterFrameCorruption_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/mainline/characterframe.lua:359`
+- `CharacterFrameCorruption_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/mainline/characterframe.lua:338`
+- `CharacterFrameCorruption_OnLeave(self)`: `interface/addons/blizzard_uipanels_game/mainline/characterframe.lua:408`
+- `CharacterFrameCorruption_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/mainline/characterframe.lua:332`
+- `CharacterFrameCorruption_UpdateVisibility(self)`: `interface/addons/blizzard_uipanels_game/mainline/characterframe.lua:351`
+- `CharacterHasteFrame_OnEnter(self, meleeHaste, rangedHaste, spellHaste)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:212`
+- `CharacterHitFrame_OnEnter(self, meleeHit, rangedHit, spellHit, hitLabel, offhandHit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:454`
+- `CharacterHitFrame_OnEnter(self, hitStats)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1374`
+- `CharacterSpellBonusDamage_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1472`
+- `CharacterSpellBonusDamage_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1570`
+- `CheckColorOverrideForPVPInactive(unit, timeNow, r, g, b)`: `interface/addons/blizzard_uipanels_game/mainline/unitpositionframetemplates.lua:73`
+- `CloseAllBags(frame, forceUpdate)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2225`
+- `CloseBackpack()`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:341`
+- `CloseBag(id)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:360`
+- `CloseBankBagFrames()`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:244`
+- `CloseSideDressUpFrame(parentFrame)`: `interface/addons/blizzard_uipanels_game/mainline/dressupframes.lua:454`
+- `ComputePetBonus(stat, value)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2519`
+- `ComputePetBonus(stat, value)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2247`
+- `ContainerFrame_AddButtons_BagCleanup(description, bagID)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:666`
+- `ContainerFrame_AddButtons_BagFilters(description, bagID)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:643`
+- `ContainerFrame_AllowedToOpenBags()`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:163`
+- `ContainerFrame_AnchorTutorialToItemButton(tutorialFrame, itemButton)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:452`
+- `ContainerFrame_CanContainerUseFilterMenu(id)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:112`
+- `ContainerFrame_CheckItemButtonForTutorials(itemButton, itemID)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:516`
+- `ContainerFrame_ClearFullScreenFrame()`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:157`
+- `ContainerFrame_ConsiderItemButtonForAzeriteTutorial(itemButton, itemID)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:478`
+- `ContainerFrame_ConsiderItemButtonForUpgradeTutorial(itemButton, itemID)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:487`
+- `ContainerFrame_ConsiderItemButtonForWarboundUntilEquipTutorial(itemButton, itemID)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:491`
+- `ContainerFrame_GenerateFrame(frame, size, id)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:1292`
+- `ContainerFrame_GetApproximateWidth()`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2905`
+- `ContainerFrame_GetContainerNumSlots(bagId)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:120`
+- `ContainerFrame_GetExtendedPriceString(itemButton, isEquipped, quantity)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:1415`
+- `ContainerFrame_GetOpenFrame(id)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:436`
+- `ContainerFrame_HasUnacknowledgedItemTutorial()`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:501`
+- `ContainerFrame_IsReagentBag(id)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:104`
+- `ContainerFrame_IsTutorialShown()`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:459`
+- `ContainerFrame_OnCloseButtonClicked(closeButton)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:853`
+- `ContainerFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:588`
+- `ContainerFrame_OnHide(self)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:796`
+- `ContainerFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:770`
+- `ContainerFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/vanilla/containerframe.lua:3`
+- `ContainerFrame_OnShow(self)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:824`
+- `ContainerFrame_SetFullScreenFrame(frame)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:149`
+- `ContainerFrame_ShouldDoTutorialChecks()`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:512`
+- `ContainerFrame_ShowTutorialForItemButton(itemButton, tutorialText, tutorialFlag, cvarBitfield)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:463`
+- `ContainerFrame_UpdateAll()`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:1266`
+- `ContainerFrame_UpdateLocked(frame)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:1272`
+- `ContainerFrame_UpdateLockedItem(bagID, slotID)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:1281`
+- `ContainerFrame_UpdatePortraitPosition(self)`: `interface/addons/blizzard_uipanels_game/camelot/containerframe.lua:1`
+- `ContainerFrame_UpdatePortraitPosition(self)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:849`
+- `ContainerFrame_UpdateQuestItem(frame, itemIndex, itemButton)`: `interface/addons/blizzard_uipanels_game/vanilla/containerframe.lua:12`
+- `ContainerFrame_UpdateSearchBox(id, frame)`: `interface/addons/blizzard_uipanels_game/vanilla/containerframe.lua:22`
+- `ContainerFrameExtendedItemButton_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:1633`
+- `ContainerFrameItemButton_CalculateItemTooltipAnchors(self, mainTooltip)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:1621`
+- `ContainerFrameItemButton_GetDebugReportInfo(self)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:1409`
+- `ContainerFrameItemButton_OnClick(self, button)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:1500`
+- `ContainerFrameItemButton_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:1686`
+- `ContainerFrameUtil_FindFirstItemButtonAndItemLocation(predicate)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2367`
+- `ContainerFrameUtil_GetItemButtonAndContainer(bagID, slot)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2259`
+- `ContainerFrameUtil_GetShownFrameForID(id)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2359`
+- `DisplayDungeonScoreLink(link)`: `interface/addons/blizzard_uipanels_game/mainline/itemref.lua:229`
+- `DisplayPvpRatingLink(link)`: `interface/addons/blizzard_uipanels_game/mainline/itemref.lua:166`
+- `DrawOneHopLines(self)`: `interface/addons/blizzard_uipanels_game/shared/taxiframe.lua:223`
+- `DressUpBattlePet(creatureID, displayID, speciesID, link, forcedFrame)`: `interface/addons/blizzard_uipanels_game/mainline/dressupframes.lua:199`
+- `DressUpBattlePetLink(link, forcedFrame)`: `interface/addons/blizzard_uipanels_game/mainline/dressupframes.lua:173`
+- `DressUpCollectionAppearance(appearanceID, transmogLocation, categoryID)`: `interface/addons/blizzard_uipanels_game/mainline/dressupframes.lua:110`
+- `DressUpFrame_Show(frame, itemModifiedAppearanceIDs, forcePlayerRefresh, fromLink)`: `interface/addons/blizzard_uipanels_game/mainline/dressupframes.lua:346`
+- `DressUpFrames_UsesClassBackgrounds()`: `interface/addons/blizzard_uipanels_game/camelot/dressupframesoverrides.lua:1`
+- `DressUpFrames_UsesClassBackgrounds()`: `interface/addons/blizzard_uipanels_game/mainline/dressupframes.lua:2`
+- `DressUpItemLink(link, forcedFrame)`: `interface/addons/blizzard_uipanels_game/mainline/dressupframes.lua:10`
+- `DressUpItemLocation(itemLocation, forcedFrame)`: `interface/addons/blizzard_uipanels_game/mainline/dressupframes.lua:26`
+- `DressUpItemTransmogInfo(itemTransmogInfo, forcedFrame)`: `interface/addons/blizzard_uipanels_game/mainline/dressupframes.lua:387`
+- `DressUpItemTransmogInfoList(itemTransmogInfoList, showCustomSetDetails, forcePlayerRefresh)`: `interface/addons/blizzard_uipanels_game/mainline/dressupframes.lua:400`
+- `DressUpLink(link, forcedFrame)`: `interface/addons/blizzard_uipanels_game/mainline/dressupframes.lua:6`
+- `DressUpMount(mountID, forcedFrame, shouldSetModelFromHyperlink, link)`: `interface/addons/blizzard_uipanels_game/mainline/dressupframes.lua:251`
+- `DressUpMountLink(link, forcedFrame)`: `interface/addons/blizzard_uipanels_game/mainline/dressupframes.lua:226`
+- `DressUpTexturePath(raceFileName)`: `interface/addons/blizzard_uipanels_game/mainline/dressupframes.lua:296`
+- `DressUpTransmogLink(link)`: `interface/addons/blizzard_uipanels_game/mainline/dressupframes.lua:37`
+- `DressUpTransmogSet(itemModifiedAppearanceIDs, forcedFrame)`: `interface/addons/blizzard_uipanels_game/mainline/dressupframes.lua:166`
+- `DressUpVisual(link, ...)`: `interface/addons/blizzard_uipanels_game/mainline/dressupframes.lua:88`
+- `DressUpVisualLink(forcedFrame, link, ...)`: `interface/addons/blizzard_uipanels_game/mainline/dressupframes.lua:92`
+- `DungeonScoreLinkAddDungeonsToTable()`: `interface/addons/blizzard_uipanels_game/mainline/itemref.lua:155`
+- `ExpectedSpellResistance(casterLevel, resistance)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:234`
+- `Expertise_OnEnter(statFrame)`: `interface/addons/blizzard_uipanels_game/cata/paperdollframestats.lua:1`
+- `FormatPaperDollTooltipStat(name, base, posBuff, negBuff)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2297`
+- `FormatPaperDollTooltipStat(name, base, posBuff, negBuff)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2027`
+- `FormatProfession(frame, index)`: `interface/addons/blizzard_uipanels_game/cata/spellbookprofessions.lua:63`
+- `GamepadGroupLootFrame_SetupGamepad(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:1257`
+- `GearSetButton_OnClick(self, button, down)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2693`
+- `GearSetButton_OnClick(self, button, down)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2396`
+- `GearSetButton_OnDoubleClick(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2718`
+- `GearSetButton_OnDrag(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2732`
+- `GearSetButton_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2725`
+- `GearSetButton_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2421`
+- `GearSetButton_OpenPopup(self, openedFromContextActionMenu)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2738`
+- `GearSetButton_OpenPopup(self, openedFromContextActionMenu)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2428`
+- `GearSetButton_SetSpecInfo(self, specID)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2662`
+- `GearSetButton_SetSpecInfo(self, specID)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2365`
+- `GearSetButton_UpdateSpecInfo(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2677`
+- `GearSetButton_UpdateSpecInfo(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2380`
+- `GearSetEditButton_OnMouseDown(self, button)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2593`
+- `GearSetEditButton_OnMouseDown(self, button)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2321`
+- `GetBackpackFrame()`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2251`
+- `GetBagIDFromBankTypeAndSlot(bankType, bagSlot)`: `interface/addons/blizzard_uipanels_game/camelot/bankframe.lua:26`
+- `GetBattlePetAbilityHyperlink(abilityID, maxHealth, power, speed)`: `interface/addons/blizzard_uipanels_game/mainline/itemref.lua:80`
+- `GetBNPlayerCommunityLink(playerName, linkDisplayText, bnetIDAccount, clubId, streamId, epoch, position)`: `interface/addons/blizzard_uipanels_game/mainline/itemref.lua:112`
+- `GetBonusRollEncounterJournalLinkDifficulty()`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:685`
+- `GetCalendarEventLink(monthOffset, monthDay, index)`: `interface/addons/blizzard_uipanels_game/mainline/itemref.lua:319`
+- `GetClubFinderLink(clubFinderId, clubName)`: `interface/addons/blizzard_uipanels_game/mainline/itemref.lua:140`
+- `GetClubTicketLink(ticketId, clubName, clubType)`: `interface/addons/blizzard_uipanels_game/mainline/itemref.lua:131`
+- `GetCommunityLink(clubId)`: `interface/addons/blizzard_uipanels_game/mainline/itemref.lua:328`
+- `GetDiscordUserCommunityLink(linkDisplayText, bnetIDAccount, discordUserID, clubId, streamId, epoch, position)`: `interface/addons/blizzard_uipanels_game/mainline/itemref.lua:126`
+- `GetDiscordUserLink(linkDisplayText, bnetIDAccount, discordUserID, lineID, chatGroup, chatTarget)`: `interface/addons/blizzard_uipanels_game/mainline/itemref.lua:122`
+- `GetDungeonScoreLink(dungeonScore, playerName)`: `interface/addons/blizzard_uipanels_game/mainline/itemref.lua:302`
+- `GetEnemyDodgeChance(levelOffset)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:546`
+- `GetEnemyDodgeChance(levelOffset)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:538`
+- `GetEnemyParryChance(levelOffset)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:576`
+- `GetEnemyParryChance(levelOffset)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:568`
+- `GetFixedLink(text, quality)`: `interface/addons/blizzard_uipanels_game/mainline/itemref.lua:29`
+- `GetGMLink(gmName, linkDisplayText, lineID)`: `interface/addons/blizzard_uipanels_game/mainline/itemref.lua:91`
+- `GetHolidayBGHonorCurrencyBonuses()`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:1128`
+- `GetIsPVPInactive(unit, timeNowSeconds)`: `interface/addons/blizzard_uipanels_game/mainline/unitpositionframetemplates.lua:53`
+- `GetKnownTitles()`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3306`
+- `GetKnownTitles()`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2835`
+- `GetPaperDollSideBarFrame(tabIndex)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:97`
+- `GetPaperDollSideBarFrame(tabIndex)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:97`
+- `GetPlayerCommunityLink(playerName, linkDisplayText, clubId, streamId, epoch, position)`: `interface/addons/blizzard_uipanels_game/mainline/itemref.lua:117`
+- `GetPvpRatingLink(playerName)`: `interface/addons/blizzard_uipanels_game/mainline/itemref.lua:311`
+- `GetQuestIDFromLogIndex(questIndex)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:596`
+- `GetQuestIDFromLogIndex(questIndex)`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:817`
+- `GetQuestLogIndexByName(name)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:584`
+- `GetQuestLogIndexByName(name)`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:728`
+- `GetRandomBGHonorCurrencyBonuses()`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:1102`
+- `GossipOptionSort(leftInfo, rightInfo)`: `interface/addons/blizzard_uipanels_game/shared/gossipframeshared.lua:187`
+- `GroupLootContainer_AddFrame(self, frame)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:58`
+- `GroupLootContainer_AddRoll(rollID, rollTime)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:156`
+- `GroupLootContainer_CalcMaxIndex(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:50`
+- `GroupLootContainer_InitGamepad(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:37`
+- `GroupLootContainer_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:12`
+- `GroupLootContainer_OpenNewFrame(rollID, rollTime)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:162`
+- `GroupLootContainer_RefreshRolls()`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:149`
+- `GroupLootContainer_RemoveAllRolls(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:139`
+- `GroupLootContainer_RemoveFrame(self, frame, cancellingAll)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:76`
+- `GroupLootContainer_ReplaceFrame(self, oldFrame, newFrame)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:101`
+- `GroupLootContainer_UninitGamepad(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:45`
+- `GroupLootContainer_Update(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:114`
+- `GroupLootFrame_DisableLootButton(button)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:182`
+- `GroupLootFrame_EnableLootButton(button)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:176`
+- `GroupLootFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:404`
+- `GroupLootFrame_OnHide(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:383`
+- `GroupLootFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:196`
+- `GroupLootFrame_OnShow(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:371`
+- `GroupLootFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:421`
+- `GroupLootFrame_Remove(self, cancellingAll)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:397`
+- `GroupLootFrame_SetupItemDisplay(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:312`
+- `GroupLootFrame_StartNeedAnimation(self, roll, isWinning)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:438`
+- `GroupLootFrame_StopNeedAnimation(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:455`
+- `GroupLootFrameIconFrame_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:468`
+- `GuildRegistrar_OnShow()`: `interface/addons/blizzard_uipanels_game/mainline/guildregistrarframe.lua:1`
+- `GuildRegistrar_PurchaseCharter(hasConfirmed)`: `interface/addons/blizzard_uipanels_game/mainline/guildregistrarframe.lua:23`
+- `GuildRegistrar_ShowPurchaseFrame()`: `interface/addons/blizzard_uipanels_game/mainline/guildregistrarframe.lua:8`
+- `HideGossipFrame()`: `interface/addons/blizzard_uipanels_game/mainline/gossipframeapi.lua:1`
+- `HonorFrame_GetCurrencyFrame()`: `interface/addons/blizzard_uipanels_game/cata/honorframe.lua:1`
+- `HonorFrame_GetCurrencyFrame()`: `interface/addons/blizzard_uipanels_game/vanilla/honorframe.lua:1`
+- `HonorFrame_InitSpecificButton(button, elementData)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:606`
+- `HonorFrameSpecificList_FindAndSelectBattleground(bgID)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:704`
+- `HonorFrameSpecificList_Update()`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:658`
+- `IsAlreadyInQueue(mapName)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:1217`
+- `IsAnyBagOpen()`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2178`
+- `IsAnyStandardHeldBagOpen()`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2183`
+- `IsBagOpen(id)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:368`
+- `ItemTextFrame_NextPageOnClick()`: `interface/addons/blizzard_uipanels_game/mainline/itemtextframe.lua:203`
+- `ItemTextFrame_PrevPageOnClick()`: `interface/addons/blizzard_uipanels_game/mainline/itemtextframe.lua:210`
+- `LootFrame_EscapePressed()`: `interface/addons/blizzard_uipanels_game/mainline/lootframe.lua:42`
+- `MasterLooterFrame_GiveMasterLoot()`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:1028`
+- `MasterLooterFrame_OnHide(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:867`
+- `MasterLooterFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:843`
+- `MasterLooterFrame_SelectLootRecipient(candidateId, candidateName)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:985`
+- `MasterLooterFrame_Show()`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:882`
+- `MasterLooterFrame_UpdatePlayers()`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:915`
+- `MasterLooterPlayerButton_OnClick(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:1024`
+- `MasterLooterPlayerButton_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:1001`
+- `MasterLooterPlayerButton_OnLeave(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:1009`
+- `MasterLooterPlayerButton_OnMouseDown(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:1016`
+- `MasterLooterPlayerButton_OnMouseUp(self)`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:1020`
+- `Mastery_OnEnter(statFrame)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1261`
+- `Mastery_OnEnter(statFrame)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1330`
+- `MerchantBuyBackButton_OnEnter(button)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:1160`
+- `MerchantBuyBackButton_OnLeave()`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:1166`
+- `MerchantFrame_CloseStackSplitFrame()`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:629`
+- `MerchantFrame_CloseStackSplitFrame()`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:496`
+- `MerchantFrame_ConfirmExtendedItemCost(itemButton, numToPurchase)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:790`
+- `MerchantFrame_ConfirmExtendedItemCost(itemButton, numToPurchase)`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:635`
+- `MerchantFrame_ConfirmHighCostItem(itemButton, quantity)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:920`
+- `MerchantFrame_ConfirmHighCostItem(itemButton, quantity)`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:720`
+- `MerchantFrame_ConfirmLimitedCurrencyPurchase(itemButton, currencyInfo, numToPurchase, totalCurrencyCost)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:939`
+- `MerchantFrame_GetLimitedCurrencyItemInfo(itemLink)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:930`
+- `MerchantFrame_GetProductInfo(itemButton)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:880`
+- `MerchantFrame_InitializeGamepad(self)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:1323`
+- `MerchantFrame_MerchantClosed()`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:79`
+- `MerchantFrame_MerchantClosed()`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:52`
+- `MerchantFrame_MerchantShow()`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:68`
+- `MerchantFrame_MerchantShow()`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:41`
+- `MerchantFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:96`
+- `MerchantFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:20`
+- `MerchantFrame_OnHide(self)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:163`
+- `MerchantFrame_OnHide(self)`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:96`
+- `MerchantFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:7`
+- `MerchantFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:7`
+- `MerchantFrame_OnMouseWheel(self, value)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:184`
+- `MerchantFrame_OnMouseWheel(self, value)`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:108`
+- `MerchantFrame_OnSellAllJunkButtonClicked()`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:1131`
+- `MerchantFrame_OnSellAllJunkButtonConfirmed()`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:1124`
+- `MerchantFrame_OnShow(self)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:147`
+- `MerchantFrame_OnShow(self)`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:84`
+- `MerchantFrame_OnUpdate(self, dt)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:120`
+- `MerchantFrame_OnUpdate(self, dt)`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:57`
+- `MerchantFrame_RegisterForQualityUpdates()`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:237`
+- `MerchantFrame_RegisterForQualityUpdates()`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:147`
+- `MerchantFrame_RegisterTransitions(self)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:1337`
+- `MerchantFrame_ResetRefundItem()`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:910`
+- `MerchantFrame_ResetRefundItem()`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:710`
+- `MerchantFrame_SetRefundItem(item, isEquipped)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:915`
+- `MerchantFrame_SetRefundItem(item, isEquipped)`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:715`
+- `MerchantFrame_SetupGamepad(self)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:1183`
+- `MerchantFrame_ShowCurrencyTooltip(self)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:1091`
+- `MerchantFrame_ShowCurrencyTooltip(self)`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:831`
+- `MerchantFrame_UninitializeGamepad(self)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:1329`
+- `MerchantFrame_UnregisterForQualityUpdates()`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:243`
+- `MerchantFrame_UnregisterForQualityUpdates()`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:153`
+- `MerchantFrame_Update()`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:192`
+- `MerchantFrame_Update()`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:120`
+- `MerchantFrame_UpdateAltCurrency(index, indexOnPage, canAfford)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:496`
+- `MerchantFrame_UpdateAltCurrency(index, indexOnPage, canAfford)`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:379`
+- `MerchantFrame_UpdateBuybackInfo()`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:532`
+- `MerchantFrame_UpdateBuybackInfo()`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:415`
+- `MerchantFrame_UpdateCanRepairAll()`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:959`
+- `MerchantFrame_UpdateCanRepairAll()`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:730`
+- `MerchantFrame_UpdateCurrencies()`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:1027`
+- `MerchantFrame_UpdateCurrencies()`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:767`
+- `MerchantFrame_UpdateCurrencyAmounts()`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:1096`
+- `MerchantFrame_UpdateCurrencyAmounts()`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:836`
+- `MerchantFrame_UpdateCurrencyButton(tokenButton)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:1107`
+- `MerchantFrame_UpdateGuildBankRepair()`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:976`
+- `MerchantFrame_UpdateItemQualityBorders(self)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:249`
+- `MerchantFrame_UpdateItemQualityBorders(self)`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:159`
+- `MerchantFrame_UpdateMerchantInfo()`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:274`
+- `MerchantFrame_UpdateMerchantInfo()`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:184`
+- `MerchantFrame_UpdateRepairButtons()`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:987`
+- `MerchantFrame_UpdateRepairButtons()`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:743`
+- `MerchantFrameItem_UpdateQuality(self, link, isBound)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:219`
+- `MerchantFrameItem_UpdateQuality(self, link)`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:134`
+- `MerchantItemButton_BuyMultipleStacks(self)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:713`
+- `MerchantItemButton_OnClick(self, button)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:674`
+- `MerchantItemButton_OnClick(self, button)`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:539`
+- `MerchantItemButton_OnEnter(button)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:756`
+- `MerchantItemButton_OnEnter(button)`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:617`
+- `MerchantItemButton_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:655`
+- `MerchantItemButton_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:520`
+- `MerchantItemButton_OnModifiedClick(self, button)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:741`
+- `MerchantItemButton_OnModifiedClick(self, button)`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:578`
+- `MerchantItemBuybackButton_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:641`
+- `MerchantItemBuybackButton_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:508`
+- `MerchantNextPageButton_OnClick()`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:617`
+- `MerchantNextPageButton_OnClick()`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:489`
+- `MerchantPrevPageButton_OnClick()`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:605`
+- `MerchantPrevPageButton_OnClick()`: `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.lua:482`
+- `MerchantRepairItemButton_OnClick()`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:1137`
+- `MovementSpeed_OnEnter(statFrame)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1407`
+- `MovementSpeed_OnEnter(statFrame)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1502`
+- `MovementSpeed_OnUpdate(statFrame, elapsedTime)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1423`
+- `MovementSpeed_OnUpdate(statFrame, elapsedTime)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1518`
+- `OpenAllBags(frame, forceUpdate)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2096`
+- `OpenAllBagsMatchingContext(frame)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2198`
+- `OpenBackpack()`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:378`
+- `OpenBag(id, force)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:313`
+- `OpenQuestLog(mapID)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2182`
+- `PaperDoll_IsEquippedSlot(slot)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:376`
+- `PaperDoll_IsEquippedSlot(slot)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:367`
+- `PaperDollAmmoSlotButton_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3652`
+- `PaperDollAmmoSlotButton_OnShow(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3658`
+- `PaperDollBgDesaturate(on)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3376`
+- `PaperDollBgDesaturate(on)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2922`
+- `PaperDollEquipmentManagerPane_InitButton(button, elementData)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3143`
+- `PaperDollEquipmentManagerPane_InitButton(button, elementData)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2636`
+- `PaperDollEquipmentManagerPane_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3084`
+- `PaperDollEquipmentManagerPane_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2577`
+- `PaperDollEquipmentManagerPane_OnHide(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3108`
+- `PaperDollEquipmentManagerPane_OnHide(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2601`
+- `PaperDollEquipmentManagerPane_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3002`
+- `PaperDollEquipmentManagerPane_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2531`
+- `PaperDollEquipmentManagerPane_OnShow(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3079`
+- `PaperDollEquipmentManagerPane_OnShow(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2572`
+- `PaperDollEquipmentManagerPane_OnUpdate(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3031`
+- `PaperDollEquipmentManagerPane_OnUpdate(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2546`
+- `PaperDollEquipmentManagerPane_SetButtonSelected(button, selected)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3135`
+- `PaperDollEquipmentManagerPane_SetButtonSelected(button, selected)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2628`
+- `PaperDollEquipmentManagerPane_Update(equipmentSetsDirty)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3189`
+- `PaperDollEquipmentManagerPane_Update(equipmentSetsDirty)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2706`
+- `PaperDollEquipmentManagerPaneEquipSet_OnClick(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3241`
+- `PaperDollEquipmentManagerPaneEquipSet_OnClick(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2762`
+- `PaperDollEquipmentManagerPaneNewSet_OnClick()`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3249`
+- `PaperDollEquipmentManagerPaneSaveSet_OnClick(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3230`
+- `PaperDollEquipmentManagerPaneSaveSet_OnClick(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2751`
+- `PaperDollFormatStat(name, base, posBuff, negBuff)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2319`
+- `PaperDollFormatStat(name, base, posBuff, negBuff)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2049`
+- `PaperDollFrame_ClearIgnoredSlots()`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1549`
+- `PaperDollFrame_ClearIgnoredSlots()`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1648`
+- `PaperDollFrame_ExpertiseOnEnter(statFrame)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:621`
+- `PaperDollFrame_FormatBonusValue(valueText, bonus)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:709`
+- `PaperDollFrame_GetArmorReduction(armor, attackerLevel)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2392`
+- `PaperDollFrame_GetArmorReduction(armor, attackerLevel)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2120`
+- `PaperDollFrame_GetArmorReductionAgainstTarget(armor)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2396`
+- `PaperDollFrame_GetArmorReductionAgainstTarget(armor)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2124`
+- `PaperDollFrame_GetDamage(unit, damageFunc, invType)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:881`
+- `PaperDollFrame_GetDamage(unit, damageFunc, invType)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:863`
+- `PaperDollFrame_HideInventoryFixupComplete(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3540`
+- `PaperDollFrame_HideInventoryFixupComplete(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:3083`
+- `PaperDollFrame_IgnoreSlot(slot)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1573`
+- `PaperDollFrame_IgnoreSlot(slot)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1672`
+- `PaperDollFrame_IgnoreSlotsForSet(setID)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1559`
+- `PaperDollFrame_IgnoreSlotsForSet(setID)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1658`
+- `PaperDollFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:397`
+- `PaperDollFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:388`
+- `PaperDollFrame_OnHide(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1538`
+- `PaperDollFrame_OnHide(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1637`
+- `PaperDollFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:313`
+- `PaperDollFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:308`
+- `PaperDollFrame_OnModelLoaded(frame, actor)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3459`
+- `PaperDollFrame_OnModelLoaded(frame, actor)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2975`
+- `PaperDollFrame_OnShow(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1511`
+- `PaperDollFrame_OnShow(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1609`
+- `PaperDollFrame_QueuedUpdate(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:392`
+- `PaperDollFrame_QueuedUpdate(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:383`
+- `PaperDollFrame_SetAlternateMana(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:657`
+- `PaperDollFrame_SetAlternateMana(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:640`
+- `PaperDollFrame_SetArmor(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:486`
+- `PaperDollFrame_SetArmor(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:741`
+- `PaperDollFrame_SetArmorPenetration(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:171`
+- `PaperDollFrame_SetAttackPower(statFrame, unit, rangedWeapon)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:372`
+- `PaperDollFrame_SetAttackPower(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1052`
+- `PaperDollFrame_SetAttackSpeed(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1051`
+- `PaperDollFrame_SetAttackSpeed(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1031`
+- `PaperDollFrame_SetAvoidance(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1342`
+- `PaperDollFrame_SetAvoidance(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1437`
+- `PaperDollFrame_SetBlock(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:809`
+- `PaperDollFrame_SetBlock(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:434`
+- `PaperDollFrame_SetBlock(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:791`
+- `PaperDollFrame_SetCritChance(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:596`
+- `PaperDollFrame_SetCritChance(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1186`
+- `PaperDollFrame_SetDamage(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1028`
+- `PaperDollFrame_SetDamage(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1008`
+- `PaperDollFrame_SetDefense(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:749`
+- `PaperDollFrame_SetDefense(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:341`
+- `PaperDollFrame_SetDefense(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:720`
+- `PaperDollFrame_SetDodge(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:787`
+- `PaperDollFrame_SetDodge(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:776`
+- `PaperDollFrame_SetDodgeTooltip(statFrame, dodgeChance)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:130`
+- `PaperDollFrame_SetDodgeTooltip(statFrame, dodgeChance)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframestats.lua:116`
+- `PaperDollFrame_SetDodgeTooltip2(statFrame, dodgeChance)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:134`
+- `PaperDollFrame_SetDodgeTooltip2(statFrame)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframestats.lua:120`
+- `PaperDollFrame_SetEnergyRegen(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1165`
+- `PaperDollFrame_SetEnergyRegen(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1236`
+- `PaperDollFrame_SetExpertise(statFrame, unit, usePercent)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:646`
+- `PaperDollFrame_SetExpertise(statFrame, unit, usePercent)`: `interface/addons/blizzard_uipanels_game/cata/paperdollframestats.lua:92`
+- `PaperDollFrame_SetFocusRegen(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1187`
+- `PaperDollFrame_SetFocusRegen(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1258`
+- `PaperDollFrame_SetHaste(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:186`
+- `PaperDollFrame_SetHaste(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframestats.lua:1`
+- `PaperDollFrame_SetHealth(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:611`
+- `PaperDollFrame_SetHealth(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:603`
+- `PaperDollFrame_SetHitChance(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:519`
+- `PaperDollFrame_SetHitChance(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1360`
+- `PaperDollFrame_SetItemLevel(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1378`
+- `PaperDollFrame_SetItemLevel(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1473`
+- `PaperDollFrame_SetLabelAndText(statFrame, label, text, isPercentage, numericValue)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2504`
+- `PaperDollFrame_SetLabelAndText(statFrame, label, text, isPercentage, numericValue)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2232`
+- `PaperDollFrame_SetLevel()`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:492`
+- `PaperDollFrame_SetLevel()`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:469`
+- `PaperDollFrame_SetLifesteal(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1324`
+- `PaperDollFrame_SetLifesteal(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1419`
+- `PaperDollFrame_SetMainhandDamage(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:974`
+- `PaperDollFrame_SetMainhandDamage(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:956`
+- `PaperDollFrame_SetManaRegen(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1231`
+- `PaperDollFrame_SetManaRegen(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1302`
+- `PaperDollFrame_SetMastery(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1291`
+- `PaperDollFrame_SetMastery(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1386`
+- `PaperDollFrame_SetMovementSpeed(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1461`
+- `PaperDollFrame_SetMovementSpeed(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1556`
+- `PaperDollFrame_SetOffhandDamage(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:990`
+- `PaperDollFrame_SetOffhandDamage(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:970`
+- `PaperDollFrame_SetOnEnter(statFrame, func)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2515`
+- `PaperDollFrame_SetOnEnter(statFrame, func)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2243`
+- `PaperDollFrame_SetParry(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:834`
+- `PaperDollFrame_SetParry(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:816`
+- `PaperDollFrame_SetParryTooltip(statFrame, parryChance)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:138`
+- `PaperDollFrame_SetParryTooltip(statFrame, parryChance)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframestats.lua:124`
+- `PaperDollFrame_SetParryTooltip2(statFrame, parryChance)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:142`
+- `PaperDollFrame_SetParryTooltip2(statFrame)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframestats.lua:128`
+- `PaperDollFrame_SetPet()`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3463`
+- `PaperDollFrame_SetPet()`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2979`
+- `PaperDollFrame_SetPetLevel()`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:522`
+- `PaperDollFrame_SetPetLevel()`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:510`
+- `PaperDollFrame_SetPlayer()`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1507`
+- `PaperDollFrame_SetPlayer()`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1605`
+- `PaperDollFrame_SetPower(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:634`
+- `PaperDollFrame_SetPower(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:621`
+- `PaperDollFrame_SetRangedAttackPower(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:430`
+- `PaperDollFrame_SetRangedDamage(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1009`
+- `PaperDollFrame_SetRangedDamage(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:989`
+- `PaperDollFrame_SetResilience(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:849`
+- `PaperDollFrame_SetResilience(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:831`
+- `PaperDollFrame_SetResistance(statFrame, unit, damageClass)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:717`
+- `PaperDollFrame_SetResistance(statFrame, unit, damageClass)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:690`
+- `PaperDollFrame_SetResistanceTooltips(statFrame, nameToken, effectiveResistance, unit, damageClass)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:239`
+- `PaperDollFrame_SetResistanceTooltips(statFrame, nameToken, effectiveResistance, unit, damageClass)`: `interface/addons/blizzard_uipanels_game/vanilla/paperdollframestats.lua:41`
+- `PaperDollFrame_SetRuneRegen(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1209`
+- `PaperDollFrame_SetRuneRegen(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1280`
+- `PaperDollFrame_SetSidebar(self, index)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3443`
+- `PaperDollFrame_SetSidebar(self, index)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2960`
+- `PaperDollFrame_SetSpeed(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1306`
+- `PaperDollFrame_SetSpeed(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1401`
+- `PaperDollFrame_SetSpellHealing(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1139`
+- `PaperDollFrame_SetSpellHealing(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1160`
+- `PaperDollFrame_SetSpellPenetration(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1119`
+- `PaperDollFrame_SetSpellPenetration(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1140`
+- `PaperDollFrame_SetSpellPower(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1072`
+- `PaperDollFrame_SetSpellPower(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1099`
+- `PaperDollFrame_SetStagger(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:770`
+- `PaperDollFrame_SetStagger(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:759`
+- `PaperDollFrame_SetStat(statFrame, unit, statIndex)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:682`
+- `PaperDollFrame_SetStat(statFrame, unit, statIndex)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:665`
+- `PaperDollFrame_SetStatTooltip(statFrame, statName, stat, effectiveStatDisplay, posBuff, negBuff)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframestats.lua:32`
+- `PaperDollFrame_SetStatTooltip(statFrame, statName, stat, effectiveStatDisplay, posBuff, negBuff)`: `interface/addons/blizzard_uipanels_game/vanilla/paperdollframestats.lua:1`
+- `PaperDollFrame_SetStatTooltip2(statFrame, statName, statIndex, effectiveStat, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:264`
+- `PaperDollFrame_SetStatTooltip2(statFrame, statName, statIndex, effectiveStat, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframestats.lua:55`
+- `PaperDollFrame_SetStatTooltip2(statFrame, statName, statIndex, effectiveStat, unit)`: `interface/addons/blizzard_uipanels_game/vanilla/paperdollframestats.lua:25`
+- `PaperDollFrame_SetVersatility(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1359`
+- `PaperDollFrame_SetVersatility(statFrame, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1454`
+- `PaperDollFrame_SetWarlockPetManaRegen(statFrame)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:146`
+- `PaperDollFrame_SetWeaponSkill(statFrame, unit, skillID)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:729`
+- `PaperDollFrame_SetWeaponSkill(statFrame, unit, skillID)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:700`
+- `PaperDollFrame_ShowFlightSpeed()`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframestats.lua:167`
+- `PaperDollFrame_ShowFlightSpeed()`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframestats.lua:132`
+- `PaperDollFrame_ShowSidebar(frame)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3484`
+- `PaperDollFrame_ShowSidebar(frame)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:3000`
+- `PaperDollFrame_UpdateCorruptedItemGlows(glow)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1579`
+- `PaperDollFrame_UpdateCorruptedItemGlows(glow)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1678`
+- `PaperDollFrame_UpdateSidebarTabLayout()`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3383`
+- `PaperDollFrame_UpdateSidebarTabs()`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3415`
+- `PaperDollFrame_UpdateSidebarTabs()`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2929`
+- `PaperDollFrame_UpdateStats()`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2403`
+- `PaperDollFrame_UpdateStats()`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2131`
+- `PaperDollFrame_UpdateStatsInternal()`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2416`
+- `PaperDollFrame_UpdateStatsInternal()`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2144`
+- `PaperDollFrameItemFlyout_GetItems(paperDollItemSlot, itemTable)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2573`
+- `PaperDollFrameItemFlyout_GetItems(paperDollItemSlot, itemTable)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2301`
+- `PaperDollFrameItemFlyout_PostGetItems(itemSlotButton, itemDisplayTable, numItems)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2577`
+- `PaperDollFrameItemFlyout_PostGetItems(itemSlotButton, itemDisplayTable, numItems)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2305`
+- `PaperDollFrameItemFlyoutButton_OnClick(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2539`
+- `PaperDollFrameItemFlyoutButton_OnClick(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2267`
+- `PaperDollItemSlotButton_GetSlotName(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1997`
+- `PaperDollItemSlotButton_GetSlotName(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1754`
+- `PaperDollItemSlotButton_OnClick(self, button)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2107`
+- `PaperDollItemSlotButton_OnClick(self, button)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1848`
+- `PaperDollItemSlotButton_OnDragStart(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2034`
+- `PaperDollItemSlotButton_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2255`
+- `PaperDollItemSlotButton_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1985`
+- `PaperDollItemSlotButton_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2050`
+- `PaperDollItemSlotButton_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1791`
+- `PaperDollItemSlotButton_OnHide(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2042`
+- `PaperDollItemSlotButton_OnHide(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1783`
+- `PaperDollItemSlotButton_OnLeave(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2274`
+- `PaperDollItemSlotButton_OnLeave(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2004`
+- `PaperDollItemSlotButton_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:1919`
+- `PaperDollItemSlotButton_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1688`
+- `PaperDollItemSlotButton_OnModifableClick(self, button)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2026`
+- `PaperDollItemSlotButton_OnModifiedClick(self, button)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2149`
+- `PaperDollItemSlotButton_OnModifiedClick(self, button)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1890`
+- `PaperDollItemSlotButton_OnReceiveDrag(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2038`
+- `PaperDollItemSlotButton_OnShow(self, isBag)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2015`
+- `PaperDollItemSlotButton_OnShow(self, isBag)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1772`
+- `PaperDollItemSlotButton_OnUpdate(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2247`
+- `PaperDollItemSlotButton_SetAutoEquipSlotIDs(...)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2098`
+- `PaperDollItemSlotButton_SetAutoEquipSlotIDs(...)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1839`
+- `PaperDollItemSlotButton_Update(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2177`
+- `PaperDollItemSlotButton_Update(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1918`
+- `PaperDollItemSlotButton_UpdateLock(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2243`
+- `PaperDollItemSlotButton_UpdateLock(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1981`
+- `PaperDollStatTooltip(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:2282`
+- `PaperDollStatTooltip(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2012`
+- `PaperDollTitlesPane_InitButton(button, elementData)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3280`
+- `PaperDollTitlesPane_InitButton(button, elementData)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2790`
+- `PaperDollTitlesPane_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3260`
+- `PaperDollTitlesPane_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2770`
+- `PaperDollTitlesPane_SetButtonSelected(button, selected)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3270`
+- `PaperDollTitlesPane_SetButtonSelected(button, selected)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2780`
+- `PaperDollTitlesPane_Update()`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3331`
+- `PaperDollTitlesPane_Update()`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2860`
+- `PaperDollTitlesPane_UpdateScrollBox()`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3296`
+- `PaperDollTitlesPane_UpdateScrollBox()`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2825`
+- `PetitionFrame_Update(self)`: `interface/addons/blizzard_uipanels_game/mainline/petitionframe.lua:2`
+- `PetitionFrameSignButton_OnClick(self)`: `interface/addons/blizzard_uipanels_game/mainline/petitionframe.lua:67`
+- `PetStable_GetPetSlot(buttonID, active)`: `interface/addons/blizzard_uipanels_game/cata/petstable.lua:164`
+- `PetStable_NextPage(self)`: `interface/addons/blizzard_uipanels_game/cata/petstable.lua:290`
+- `PetStable_NoPetsAllowed()`: `interface/addons/blizzard_uipanels_game/cata/petstable.lua:299`
+- `PetStable_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/cata/petstable.lua:69`
+- `PetStable_OnHide(self)`: `interface/addons/blizzard_uipanels_game/cata/petstable.lua:48`
+- `PetStable_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/cata/petstable.lua:15`
+- `PetStable_OnMouseWheel(self, value)`: `interface/addons/blizzard_uipanels_game/cata/petstable.lua:100`
+- `PetStable_OnShow(self)`: `interface/addons/blizzard_uipanels_game/cata/petstable.lua:44`
+- `PetStable_PrevPage(self)`: `interface/addons/blizzard_uipanels_game/cata/petstable.lua:281`
+- `PetStable_SetSelectedPetInfo(icon, name, level, family, talent)`: `interface/addons/blizzard_uipanels_game/cata/petstable.lua:142`
+- `PetStable_Update(updateModel)`: `interface/addons/blizzard_uipanels_game/cata/petstable.lua:172`
+- `PetStable_UpdatePetModelScene(self)`: `interface/addons/blizzard_uipanels_game/cata/petstable.lua:57`
+- `PetStable_UpdateSlot(button, petSlot)`: `interface/addons/blizzard_uipanels_game/cata/petstable.lua:112`
+- `PetStableSlot_Lock_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/cata/petstable.lua:318`
+- `PetStableSlot_OnReceiveDrag(self)`: `interface/addons/blizzard_uipanels_game/cata/petstable.lua:328`
+- `PlayerTitleButton_OnClick(self)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3347`
+- `PlayerTitleButton_OnClick(self)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2876`
+- `PVP_DisableRoleButton(button)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:252`
+- `PVP_EnableRoleButton(button)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:257`
+- `PVP_PermanentlyDisableRoleButton(button)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:243`
+- `PVP_UpdateAvailableRoleButton(button, canBeRole)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:228`
+- `PVP_UpdateAvailableRoles(tankButton, healButton, dpsButton)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:236`
+- `PVPConquestFrame_ButtonClicked(button)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:914`
+- `PVPConquestFrame_ConfigureConquestRewards(honor, experience, itemRewards, currencyRewards, roleShortageBonus)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:890`
+- `PVPConquestFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:739`
+- `PVPConquestFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:716`
+- `PVPConquestFrame_OnShow(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:905`
+- `PVPConquestFrame_Update(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:748`
+- `PVPFrame_ExpansionSpecificOnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:93`
+- `PVPFrame_ExpansionSpecificOnLoad(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:47`
+- `PVPFrame_JoinClicked(self, isParty, wargame)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:355`
+- `PVPFrame_OnHide()`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:87`
+- `PVPFrame_OnShow()`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:68`
+- `PVPFrame_RoleButtonClicked(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:212`
+- `PVPFrame_SetRoles(frame)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:221`
+- `PVPFrame_TabClicked(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:379`
+- `PVPFrame_UpdateCurrency(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:271`
+- `PVPFrame_UpdateSelectedRoles()`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:161`
+- `PVPFrame_UpdateTabs()`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:146`
+- `PVPFrameConquestBar_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:314`
+- `PVPFramePopup_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:979`
+- `PVPFramePopup_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:973`
+- `PVPFramePopup_OnResponse(accepted)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:1011`
+- `PVPFramePopup_OnUpdate(self, elasped)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:988`
+- `PVPFramePopup_SetupPopUp(event, challengerName, bgName, timeout)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:998`
+- `PVPHonor_ButtonClicked(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:456`
+- `PVPHonor_GetRandomBattlegroundInfo()`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:496`
+- `PVPHonor_Update()`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:950`
+- `PVPHonor_UpdateInfo()`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:472`
+- `PVPHonor_UpdateQueueStatus()`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:508`
+- `PVPHonor_UpdateRandomInfo()`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:504`
+- `PVPHonorFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:568`
+- `PVPHonorFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:551`
+- `PVPHonorFrame_OnShow(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:590`
+- `PVPHonorFrame_ResetInfo()`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:465`
+- `PVPHonorFrame_UpdateGroupAvailable()`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:596`
+- `PvPObjectiveBannerFrame_OnAnimFinished()`: `interface/addons/blizzard_uipanels_game/mainline/pvpbanner.lua:31`
+- `PvPObjectiveBannerFrame_PlayBanner(self, data)`: `interface/addons/blizzard_uipanels_game/mainline/pvpbanner.lua:2`
+- `PvPObjectiveBannerFrame_StopBanner(self)`: `interface/addons/blizzard_uipanels_game/mainline/pvpbanner.lua:26`
+- `PVPQueue_UpdateRandomInfo(base, infoFunc)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:1154`
+- `PVPRoleButtonTemplate_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:199`
+- `PVPRoleButtonTemplate_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:168`
+- `PVPTeamManagementFrame_ToggleSeasonal(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:937`
+- `PVPTimerFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:1022`
+- `QuestDetailAcceptButton_OnClick()`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:639`
+- `QuestDetailDeclineButton_OnClick()`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:651`
+- `QuestFrame_ActivateRewardsCursor(self)`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:698`
+- `QuestFrame_GeneralProgressAction(self)`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:704`
+- `QuestFrame_GetMaterial()`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:672`
+- `QuestFrame_HideQuestPortrait(optPortraitOwnerCheckFrame)`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:558`
+- `QuestFrame_HideQuestPortrait(optPortraitOwnerCheckFrame)`: `interface/addons/blizzard_uipanels_game/vanilla/questframe.lua:29`
+- `QuestFrame_InitializeGamepad(self)`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:851`
+- `QuestFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:24`
+- `QuestFrame_OnHide()`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:439`
+- `QuestFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:9`
+- `QuestFrame_OnShow()`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:426`
+- `QuestFrame_RegisterForTransitions(self)`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:871`
+- `QuestFrame_SelectFocusedButton(self)`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:717`
+- `QuestFrame_SetAsLastShown(frame, spacerFrame)`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:468`
+- `QuestFrame_SetMaterial(frame, material)`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:656`
+- `QuestFrame_SetPortrait()`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:116`
+- `QuestFrame_SetTextColor(fontString, material)`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:690`
+- `QuestFrame_SetTitleTextColor(fontString, material)`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:682`
+- `QuestFrame_SetupGamepad(self)`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:768`
+- `QuestFrame_ShowQuestPortrait(parentFrame, portraitDisplayID, mountPortraitDisplayID, modelSceneID, text, name, x, y, useCompactDescription)`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:503`
+- `QuestFrame_ShowQuestPortrait(parentFrame, portraitDisplayID, mountPortraitDisplayID, text, name, x, y)`: `interface/addons/blizzard_uipanels_game/vanilla/questframe.lua:4`
+- `QuestFrame_UninitializeGamepad(self)`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:861`
+- `QuestFrame_UpdatePortraitText(text)`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:481`
+- `QuestFrameDetailPanel_OnHide(self)`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:617`
+- `QuestFrameDetailPanel_OnShow()`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:566`
+- `QuestFrameDetailPanel_OnUpdate(self, elapsed)`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:622`
+- `QuestFrameGreetingPanel_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:315`
+- `QuestFrameGreetingPanel_OnShow()`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:319`
+- `QuestFrameProgressItems_Update()`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:230`
+- `QuestFrameProgressPanel_OnShow(self)`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:205`
+- `QuestFrameRewardPanel_OnShow()`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:126`
+- `QuestGoodbyeButton_OnClick()`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:178`
+- `QuestInfo_AdjustSpacerHeight(height)`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:405`
+- `QuestInfo_AdjustTitleWidth(delta)`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:148`
+- `QuestInfo_Display(template, parentFrame, acceptButton, material, mapView)`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:28`
+- `QuestInfo_Display(template, parentFrame, acceptButton, material, mapView)`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:48`
+- `QuestInfo_FadeInAlphaDependentText(parent, fadeTime)`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:1136`
+- `QuestInfo_FadeInAlphaDependentText(parent, fadeTime)`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:907`
+- `QuestInfo_GetNumRewardRows()`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:1065`
+- `QuestInfo_GetRewardButton(rewardsFrame, index)`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:446`
+- `QuestInfo_GetRewardButton(rewardsFrame, index)`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:380`
+- `QuestInfo_HideAlphaDependentText(parent)`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:1127`
+- `QuestInfo_HideAlphaDependentText(parent)`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:898`
+- `QuestInfo_OnHyperlinkEnter(self, link, text, region, left, bottom, width, height)`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:1070`
+- `QuestInfo_OnHyperlinkLeave(self)`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:1114`
+- `QuestInfo_ShowAlphaDependentText(parent)`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:1118`
+- `QuestInfo_ShowAlphaDependentText(parent)`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:889`
+- `QuestInfo_ShowAnchor()`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:409`
+- `QuestInfo_ShowAnchor()`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:344`
+- `QuestInfo_ShowDescriptionHeader()`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:380`
+- `QuestInfo_ShowDescriptionHeader()`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:320`
+- `QuestInfo_ShowDescriptionText()`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:182`
+- `QuestInfo_ShowDescriptionText()`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:157`
+- `QuestInfo_ShowGroupSize()`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:362`
+- `QuestInfo_ShowGroupSize()`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:302`
+- `QuestInfo_ShowObjectives()`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:194`
+- `QuestInfo_ShowObjectives()`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:169`
+- `QuestInfo_ShowObjectivesHeader()`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:384`
+- `QuestInfo_ShowObjectivesHeader()`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:324`
+- `QuestInfo_ShowObjectivesText()`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:388`
+- `QuestInfo_ShowObjectivesText()`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:328`
+- `QuestInfo_ShowRequiredMoney()`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:342`
+- `QuestInfo_ShowRequiredMoney()`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:282`
+- `QuestInfo_ShowRewards()`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:607`
+- `QuestInfo_ShowRewards()`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:445`
+- `QuestInfo_ShowRewardText()`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:413`
+- `QuestInfo_ShowRewardText()`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:348`
+- `QuestInfo_ShowSeal(parentFrame)`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:418`
+- `QuestInfo_ShowSeal(parentFrame)`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:353`
+- `QuestInfo_ShowSpacer()`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:400`
+- `QuestInfo_ShowSpacer()`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:340`
+- `QuestInfo_ShowSpecialObjectives()`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:274`
+- `QuestInfo_ShowSpecialObjectives()`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:213`
+- `QuestInfo_ShowTimer()`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:327`
+- `QuestInfo_ShowTimer()`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:267`
+- `QuestInfo_ShowTitle()`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:152`
+- `QuestInfo_ShowTitle()`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:126`
+- `QuestInfo_ShowType()`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:164`
+- `QuestInfo_ShowType()`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:144`
+- `QuestInfo_ToggleRewardElement(frame, value, anchor)`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:872`
+- `QuestInfoItem_IsSelected(self)`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:21`
+- `QuestInfoItem_OnClick(self)`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:13`
+- `QuestInfoItem_OnClick(self)`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:38`
+- `QuestInfoRewardItemCodeTemplate_OnClick(self, button)`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:1006`
+- `QuestInfoRewardItemCodeTemplate_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:985`
+- `QuestInfoTimerFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_uipanels_game/mainline/questinfo.lua:6`
+- `QuestInfoTimerFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_uipanels_game/vanilla/questinfo.lua:31`
+- `QuestLog_GetFirstSelectableQuest()`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:564`
+- `QuestLog_GetFirstSelectableQuest()`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:601`
+- `QuestLog_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:89`
+- `QuestLog_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:56`
+- `QuestLog_OnHide(self)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:154`
+- `QuestLog_OnHide(self)`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:97`
+- `QuestLog_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:73`
+- `QuestLog_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:43`
+- `QuestLog_OnShow(self)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:140`
+- `QuestLog_OnShow(self)`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:90`
+- `QuestLog_OnUpdate(self, elapsed)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:163`
+- `QuestLog_OnUpdate(self, elapsed)`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:102`
+- `QuestLog_OpenToQuest(questIndex, keepOpen)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:610`
+- `QuestLog_SetFirstValidSelection()`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:578`
+- `QuestLog_SetFirstValidSelection()`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:615`
+- `QuestLog_SetSelection(questIndex)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:359`
+- `QuestLog_SetSelection(questID)`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:314`
+- `QuestLog_Update(self)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:181`
+- `QuestLog_Update(self)`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:112`
+- `QuestLog_UpdateMapButton()`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:173`
+- `QuestLog_UpdatePartyInfoTooltip(questLogTitle)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:502`
+- `QuestLog_UpdatePartyInfoTooltip(self)`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:544`
+- `QuestLog_UpdatePortrait()`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:531`
+- `QuestLog_UpdateQuestDetails(doNotScroll)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:399`
+- `QuestLog_UpdateQuestDetails(doNotScroll)`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:354`
+- `QuestLogCollapseAllButton_OnClick(self)`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:590`
+- `QuestLogControlPanel_UpdatePosition()`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:670`
+- `QuestLogControlPanel_UpdateState()`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:689`
+- `QuestLogDetailFrame_AttachToQuestLog()`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:643`
+- `QuestLogDetailFrame_DetachFromQuestLog()`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:652`
+- `QuestLogDetailFrame_OnHide(self)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:637`
+- `QuestLogDetailFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:661`
+- `QuestLogDetailFrame_OnShow(self)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:631`
+- `QuestLogFrameTrackButton_OnClick(self)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:754`
+- `QuestLogListScrollFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:730`
+- `QuestLogQuests_GetQuestButton(questID)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:1800`
+- `QuestLogQuests_ShowQuestCount()`: `interface/addons/blizzard_uipanels_game/camelot/questmapframeutils.lua:7`
+- `QuestLogQuests_ShowQuestCount()`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2166`
+- `QuestLogQuests_Update()`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2103`
+- `QuestLogRewardItem_OnClick(self)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:544`
+- `QuestLogRewardItem_OnClick(self)`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:571`
+- `QuestLogShowMapPOI_UpdatePosition()`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:713`
+- `QuestLogTitleButton_OnClick(self, button)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:452`
+- `QuestLogTitleButton_OnClick(self, button)`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:475`
+- `QuestLogTitleButton_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:483`
+- `QuestLogTitleButton_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:523`
+- `QuestLogTitleButton_OnEvent(self, event)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:66`
+- `QuestLogTitleButton_OnEvent(self, event)`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:36`
+- `QuestLogTitleButton_OnLeave(self)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:493`
+- `QuestLogTitleButton_OnLeave(self)`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:531`
+- `QuestLogTitleButton_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:55`
+- `QuestLogTitleButton_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:29`
+- `QuestLogTitleButton_Resize(questLogTitle)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:413`
+- `QuestLogUpdateQuestCount(numQuests)`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:601`
+- `QuestMapFrame_AdjustPathButtons()`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:955`
+- `QuestMapFrame_CheckQuestCriteria(questID, criteriaID, description, fulfilled, required)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:1193`
+- `QuestMapFrame_CheckTutorials()`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:894`
+- `QuestMapFrame_Close(userAction)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:871`
+- `QuestMapFrame_CloseQuestDetails(optPortraitOwnerCheckFrame)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:1112`
+- `QuestMapFrame_GetDetailQuestID()`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:1181`
+- `QuestMapFrame_GetFocusedQuestID()`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:943`
+- `QuestMapFrame_Hide()`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:885`
+- `QuestMapFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:565`
+- `QuestMapFrame_OnHide(self)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:630`
+- `QuestMapFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:439`
+- `QuestMapFrame_OnShow(self)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:845`
+- `QuestMapFrame_Open(userAction)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:862`
+- `QuestMapFrame_OpenToQuestDetails(questID)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:1175`
+- `QuestMapFrame_ResetFilters()`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:927`
+- `QuestMapFrame_ReturnFromQuestDetails()`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:1167`
+- `QuestMapFrame_SetupSettingsDropdown(self)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:491`
+- `QuestMapFrame_Show()`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:878`
+- `QuestMapFrame_ShowQuestDetails(questID)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:1044`
+- `QuestMapFrame_ToggleShowDestination()`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:949`
+- `QuestMapFrame_UpdateAll(numPOIs)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:909`
+- `QuestMapFrame_UpdateAllQuestCriteria()`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:1185`
+- `QuestMapFrame_UpdateQuestDetailsButtons()`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:1138`
+- `QuestMapFrame_UpdateQuestSessionState(self)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:835`
+- `QuestMapFrame_UpdateSuperTrackedQuest(self)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:1130`
+- `QuestMapLog_GetCampaignTooltip()`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2520`
+- `QuestMapLog_GetStoryTooltip()`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2524`
+- `QuestMapLogHeaderButton_CreateContextMenu(self)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2471`
+- `QuestMapLogTitleButton_CreateContextMenu(self, parent)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2369`
+- `QuestMapLogTitleButton_OnClick(self, button)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2491`
+- `QuestMapLogTitleButton_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2192`
+- `QuestMapLogTitleButton_OnLeave(self)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2311`
+- `QuestMapLogTitleButton_OnMouseDown(self)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2510`
+- `QuestMapLogTitleButton_OnMouseUp(self)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2515`
+- `QuestMapQuestOptions_AbandonQuest(questID)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:1473`
+- `QuestMapQuestOptions_ShareQuest(questID)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:1446`
+- `QuestMapQuestOptions_TrackQuest(questID)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:1432`
+- `QuestMapWaypoint_CreateContextMenu(self, parent)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2429`
+- `QuestProgressCompleteButton_OnClick()`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:173`
+- `QuestRewardCancelButton_OnClick()`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:149`
+- `QuestRewardCompleteButton_OnClick()`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:154`
+- `QuestRewardItem_OnClick(self)`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:183`
+- `QuestSessionManagement_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:827`
+- `QuestSessionManagement_OnLeave(self)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:831`
+- `QuestSessionManagementExecute_OnClick(self, button, down)`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:823`
+- `QuestTitleButton_OnClick(self)`: `interface/addons/blizzard_uipanels_game/mainline/questframe.lua:472`
+- `QuestWatch_OnLogin()`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:621`
+- `QuestWatch_Update()`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:634`
+- `RegisterPlayerInteraction(interactionType, frameInfo)`: `interface/addons/blizzard_uipanels_game/shared/playerinteractionframemanager.lua:73`
+- `ReputationBar_OnClick(self)`: `interface/addons/blizzard_uipanels_game/vanilla/reputationframe.lua:140`
+- `ReputationFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/vanilla/reputationframe.lua:17`
+- `ReputationFrame_OnHide(self)`: `interface/addons/blizzard_uipanels_game/vanilla/reputationframe.lua:12`
+- `ReputationFrame_OnShow()`: `interface/addons/blizzard_uipanels_game/cata/reputationframe.lua:1`
+- `ReputationFrame_OnShow(self)`: `interface/addons/blizzard_uipanels_game/vanilla/reputationframe.lua:6`
+- `ReputationFrame_SetRowType(factionRow, rowType, hasRep)`: `interface/addons/blizzard_uipanels_game/cata/reputationframe.lua:6`
+- `ReputationFrame_Update()`: `interface/addons/blizzard_uipanels_game/vanilla/reputationframe.lua:23`
+- `ReputationParagonFrame_SetupParagonTooltip(frame)`: `interface/addons/blizzard_uipanels_game/camelot/reputationframe.lua:711`
+- `ReputationParagonFrame_SetupParagonTooltip(frame)`: `interface/addons/blizzard_uipanels_game/mainline/reputationframe.lua:701`
+- `ReputationParagonWatchBar_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/camelot/reputationframe.lua:717`
+- `ReputationParagonWatchBar_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/mainline/reputationframe.lua:707`
+- `ReputationParagonWatchBar_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/vanilla/reputationframe.lua:150`
+- `ReputationParagonWatchBar_OnLeave(self)`: `interface/addons/blizzard_uipanels_game/camelot/reputationframe.lua:728`
+- `ReputationParagonWatchBar_OnLeave(self)`: `interface/addons/blizzard_uipanels_game/mainline/reputationframe.lua:718`
+- `ReputationParagonWatchBar_OnLeave(self)`: `interface/addons/blizzard_uipanels_game/vanilla/reputationframe.lua:154`
+- `SearchBagsForFirstItem(itemID)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:411`
+- `SearchBagsForItem(itemID)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:399`
+- `SearchBagsForItemLink(itemLink)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:423`
+- `SelectGossipOption(index)`: `interface/addons/blizzard_uipanels_game/shared/gossipframeshared.lua:300`
+- `SetDressUpBackground(frame, raceFilename, classFilename)`: `interface/addons/blizzard_uipanels_game/mainline/dressupframes.lua:306`
+- `SetItemRef(link, text, button, frame)`: `interface/addons/blizzard_uipanels_game/mainline/itemref.lua:6`
+- `SetPaperDollBackground(model, unit)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3367`
+- `SetPaperDollBackground(model, unit)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2896`
+- `SetPlayerInteractionConditions(interactionType, conditions)`: `interface/addons/blizzard_uipanels_game/shared/playerinteractionframemanager.lua:92`
+- `SetPVPAFKQueryDelaySeconds(seconds)`: `interface/addons/blizzard_uipanels_game/mainline/unitpositionframetemplates.lua:49`
+- `SetTitleByName(name)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3352`
+- `SetTitleByName(name)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2881`
+- `SetUpSideDressUpFrame(parentFrame, closedWidth, openWidth, point, relativePoint, offsetX, offsetY)`: `interface/addons/blizzard_uipanels_game/mainline/dressupframes.lua:436`
+- `SetUpTransmogAndMountDressupFrame(parentFrame, transmogSetID, mountID, width, height, point, relativePoint, offsetX, offsetY, removeWeapons)`: `interface/addons/blizzard_uipanels_game/mainline/dressupframes.lua:460`
+- `ShouldShowQuestSessionAlert()`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:796`
+- `ShowCharacterFrameIfMatchesContext()`: `interface/addons/blizzard_uipanels_game/camelot/characterframe.lua:32`
+- `ShowCharacterFrameIfMatchesContext()`: `interface/addons/blizzard_uipanels_game/mainline/characterframe.lua:28`
+- `ShowTaxiMapFrame()`: `interface/addons/blizzard_uipanels_game/shared/taxiframe.lua:4`
+- `SocialQueueUtil_GetHeaderName(groupGUID)`: `interface/addons/blizzard_uipanels_game/shared/socialqueue.lua:79`
+- `SocialQueueUtil_GetQueueName(queue, nameFormatter)`: `interface/addons/blizzard_uipanels_game/shared/socialqueue.lua:14`
+- `SocialQueueUtil_GetRelationshipInfo(guid, missingNameFallback, clubId)`: `interface/addons/blizzard_uipanels_game/shared/socialqueue.lua:177`
+- `SocialQueueUtil_HasRelationshipWithLeader(partyGuid)`: `interface/addons/blizzard_uipanels_game/shared/socialqueue.lua:240`
+- `SocialQueueUtil_SetTooltip(tooltip, tooltipTitle, queues, canJoin, hasRelationshipWithLeader)`: `interface/addons/blizzard_uipanels_game/shared/socialqueue.lua:106`
+- `SocialQueueUtil_SortGroupMembers(members)`: `interface/addons/blizzard_uipanels_game/shared/socialqueue.lua:223`
+- `SortEquipmentSetIDs(equipmentSetIDs)`: `interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3116`
+- `SortEquipmentSetIDs(equipmentSetIDs)`: `interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2609`
+- `SpellBook_GetSpellBookSlot(spellButton)`: `interface/addons/blizzard_uipanels_game/cata/spellbookframe.lua:419`
+- `SpellBook_GetSpellBookSlot(spellButton)`: `interface/addons/blizzard_uipanels_game/vanilla/spellbookframe.lua:307`
+- `SpellBook_UpdateProfTab()`: `interface/addons/blizzard_uipanels_game/cata/spellbookprofessions.lua:181`
+- `TabardCustomization_Left(id)`: `interface/addons/blizzard_uipanels_game/mainline/tabardframe.lua:71`
+- `TabardCustomization_Right(id)`: `interface/addons/blizzard_uipanels_game/mainline/tabardframe.lua:77`
+- `TabardFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/mainline/tabardframe.lua:62`
+- `TabardFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/mainline/tabardframe.lua:5`
+- `TabardFrame_Open()`: `interface/addons/blizzard_uipanels_game/mainline/tabardframe.lua:21`
+- `TabardFrame_UpdateButtons()`: `interface/addons/blizzard_uipanels_game/mainline/tabardframe.lua:90`
+- `TabardFrame_UpdateTextures()`: `interface/addons/blizzard_uipanels_game/mainline/tabardframe.lua:83`
+- `TaskPOI_OnEnter(self, skipSetOwner)`: `interface/addons/blizzard_uipanels_game/mainline/worldmapframe.lua:167`
+- `TaskPOI_OnLeave(self)`: `interface/addons/blizzard_uipanels_game/mainline/worldmapframe.lua:189`
+- `TaxiFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/shared/taxiframe.lua:128`
+- `TaxiFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/shared/taxiframe.lua:38`
+- `TaxiFrame_OnShow(self)`: `interface/addons/blizzard_uipanels_game/shared/taxiframe.lua:44`
+- `TaxiNodeOnButtonEnter(button)`: `interface/addons/blizzard_uipanels_game/shared/taxiframe.lua:135`
+- `TaxiNodeOnButtonLeave(button)`: `interface/addons/blizzard_uipanels_game/shared/taxiframe.lua:211`
+- `ToggleAllBags()`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2116`
+- `ToggleBackpack()`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:189`
+- `ToggleBackpack_Combined()`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:172`
+- `ToggleBackpack_Individual()`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:180`
+- `ToggleBag(id)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:237`
+- `ToggleBag_Combined(id)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:232`
+- `ToggleBag_Individual(id)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:201`
+- `ToggleCharacter(tab, onlyShow)`: `interface/addons/blizzard_uipanels_game/camelot/characterframe.lua:3`
+- `ToggleCharacter(tab, onlyShow)`: `interface/addons/blizzard_uipanels_game/mainline/characterframe.lua:1`
+- `ToggleLootRollFrame()`: `interface/addons/blizzard_uipanels_game/mainline/grouplootframe.lua:1054`
+- `TogglePVPFrame()`: `interface/addons/blizzard_uipanels_game/cata/pvpframehelpers.lua:1`
+- `ToggleQuestLog()`: `interface/addons/blizzard_uipanels_game/cata/questlogframe.lua:45`
+- `ToggleQuestLog()`: `interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2170`
+- `ToggleQuestLog()`: `interface/addons/blizzard_uipanels_game/vanilla/questlogframe.lua:21`
+- `TradeFrame_AlertItemIfChanged(tradeItemButton, itemID, name, numItems, enchantment)`: `interface/addons/blizzard_uipanels_game/mainline/tradeframe.lua:196`
+- `TradeFrame_GetAvailableSlot()`: `interface/addons/blizzard_uipanels_game/mainline/tradeframe.lua:274`
+- `TradeFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/mainline/tradeframe.lua:34`
+- `TradeFrame_OnHide()`: `interface/addons/blizzard_uipanels_game/mainline/tradeframe.lua:238`
+- `TradeFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/mainline/tradeframe.lua:5`
+- `TradeFrame_OnMouseUp()`: `interface/addons/blizzard_uipanels_game/mainline/tradeframe.lua:247`
+- `TradeFrame_OnShow(self)`: `interface/addons/blizzard_uipanels_game/mainline/tradeframe.lua:24`
+- `TradeFrame_SetAcceptState(playerState, targetState)`: `interface/addons/blizzard_uipanels_game/mainline/tradeframe.lua:210`
+- `TradeFrame_Update(self)`: `interface/addons/blizzard_uipanels_game/mainline/tradeframe.lua:72`
+- `TradeFrame_UpdateMoney()`: `interface/addons/blizzard_uipanels_game/mainline/tradeframe.lua:260`
+- `TradeFrame_UpdatePlayerItem(id)`: `interface/addons/blizzard_uipanels_game/mainline/tradeframe.lua:100`
+- `TradeFrame_UpdateTargetItem(id)`: `interface/addons/blizzard_uipanels_game/mainline/tradeframe.lua:149`
+- `TradeFrame_UpdateWarnings()`: `interface/addons/blizzard_uipanels_game/mainline/tradeframe.lua:89`
+- `TradeFrameCancelButton_OnClick()`: `interface/addons/blizzard_uipanels_game/mainline/tradeframe.lua:230`
+- `TradeFrameTradeButton_Disable()`: `interface/addons/blizzard_uipanels_game/mainline/tradeframe.lua:294`
+- `TradeFrameTradeButton_Enable()`: `interface/addons/blizzard_uipanels_game/mainline/tradeframe.lua:285`
+- `TradeFrameTradeButton_SetToEnabledState()`: `interface/addons/blizzard_uipanels_game/mainline/tradeframe.lua:303`
+- `UpdateBagButtonHighlight(id)`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:353`
+- `UpdateBagSlotStatus()`: `interface/addons/blizzard_uipanels_game/vanilla/bankframe.lua:206`
+- `UpdateContainerFrameAnchors()`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:1377`
+- `UpdateCursorAfterBuyBack(buybackButton)`: `interface/addons/blizzard_uipanels_game/mainline/merchantframe.lua:1171`
+- `UpdateNewItemList(containerFrame)`: `interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:393`
+- `UpdateProfessionButton(self)`: `interface/addons/blizzard_uipanels_game/cata/spellbookprofessions.lua:23`
+- `WarGameButton_OnClick(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:1402`
+- `WarGameButton_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:1390`
+- `WarGameButton_OnLeave(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:1395`
+- `WarGameButtonHeader_OnClick(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:1379`
+- `WarGamesFrame_FindAndSelectBattleground(bgID)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:1356`
+- `WarGamesFrame_InitButton(button, elementData)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:1277`
+- `WarGamesFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:1364`
+- `WarGamesFrame_OnLoad(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:1244`
+- `WarGamesFrame_OnShow(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:1370`
+- `WarGamesFrame_Update()`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:1334`
+- `WarGameStartButton_GetErrorTooltip()`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:1425`
+- `WarGameStartButton_OnClick(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:1449`
+- `WarGameStartButton_OnEnter(self)`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:1417`
+- `WarGameStartButton_Update()`: `interface/addons/blizzard_uipanels_game/cata/pvpframe.lua:1408`
+- `WorldMap_DoesWorldQuestInfoPassFilters(info, ignoreTypeFilters)`: `interface/addons/blizzard_uipanels_game/mainline/worldmapframe.lua:76`
+- `WorldMap_GetQuestTimeForTooltip(questID)`: `interface/addons/blizzard_uipanels_game/mainline/worldmapframe.lua:142`
+- `WorldMap_GetWorldQuestRewardType(questID)`: `interface/addons/blizzard_uipanels_game/mainline/worldmapframe.lua:24`
+- `WorldMap_IsWorldQuestEffectivelyTracked(questID)`: `interface/addons/blizzard_uipanels_game/mainline/worldmapframe.lua:11`
+
+## blizzard_uipaneltemplates
+
+- `BagSearch_OnChar(self, text)`: `interface/addons/blizzard_uipaneltemplates/shared/uipaneltemplatesshared.lua:33`
+- `BagSearch_OnHide(self)`: `interface/addons/blizzard_uipaneltemplates/shared/uipaneltemplatesshared.lua:7`
+- `BagSearch_OnTextChanged(self, userChanged)`: `interface/addons/blizzard_uipaneltemplates/shared/uipaneltemplatesshared.lua:21`
+- `CapProgressBar_SetNotches(capBar, count)`: `interface/addons/blizzard_uipaneltemplates/shared/uipaneltemplatesshared.lua:65`
+- `CapProgressBar_Update(capBar, cap1Quantity, cap1Limit, cap2Quantity, cap2Limit, totalQuantity, totalLimit, hasNoSharedStats)`: `interface/addons/blizzard_uipaneltemplates/shared/uipaneltemplatesshared.lua:88`
+- `InlineHyperlinkFrame_OnClick(self, link, text, button)`: `interface/addons/blizzard_uipaneltemplates/shared/uipaneltemplatesshared.lua:198`
+- `InlineHyperlinkFrame_OnEnter(self, link, text, fontString, left, bottom, width, height)`: `interface/addons/blizzard_uipaneltemplates/shared/uipaneltemplatesshared.lua:179`
+- `InlineHyperlinkFrame_OnLeave(self)`: `interface/addons/blizzard_uipaneltemplates/shared/uipaneltemplatesshared.lua:186`
+- `SetCheckButtonIsRadio(button, isRadio)`: `interface/addons/blizzard_uipaneltemplates/shared/uipaneltemplatesshared.lua:145`
+- `SquareButton_SetIcon(self, name)`: `interface/addons/blizzard_uipaneltemplates/shared/uipaneltemplatesshared.lua:58`
+
+## blizzard_uiparentpanelmanager
+
+- `AreAllPanelsDisallowed()`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:1079`
+- `CanOpenPanels()`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:1059`
+- `CanShowCenterUIPanel(frame)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:1027`
+- `CanShowRightUIPanel(frame)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:1021`
+- `CanShowUIPanels(leftFrame, centerFrame, rightFrame)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:1033`
+- `ClampUIPanelY(frame, yOffset, minYOffset, bottomClampOverride)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:1007`
+- `CloseAllWindows(ignoreCenter, context)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:1175`
+- `CloseAllWindows_WithExceptions()`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:1186`
+- `CloseChildWindows()`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:1094`
+- `CloseSpecialWindows()`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:1106`
+- `CloseWindows(ignoreCenter, frameToIgnore, context)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:1134`
+- `GetMaxUIPanelsWidth()`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:994`
+- `GetUIPanel(key)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:946`
+- `GetUIPanelHeight(frame, extraHeight)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:982`
+- `GetUIPanelHeightUnscaled(frame, extraHeight)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:968`
+- `GetUIPanelLayoutAttribute(name)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uipanellayoutframe.lua:21`
+- `GetUIPanelLayoutFrame()`: `interface/addons/blizzard_uiparentpanelmanager/shared/uipanellayoutframe.lua:17`
+- `GetUIPanelWidth(frame, extraWidth)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:977`
+- `GetUIPanelWidthUnscaled(frame, extraWidth)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:950`
+- `HideUIPanel(frame, skipSetPoint, skipShownCheck)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:905`
+- `IsOptionFrameOpen()`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:1211`
+- `ManageFramePositions()`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:836`
+- `MaximizeUIPanel(currentFrame, maximizePoint)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:1201`
+- `PassClickToParent(self, ...)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:1219`
+- `RegisterUIPanel(frame, attributes)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:92`
+- `RestoreUIPanelArea(currentFrame)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:1206`
+- `SetUIPanelAttribute(frame, name, value)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:111`
+- `SetUIPanelLayoutAttribute(name, value)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uipanellayoutframe.lua:25`
+- `SetUIPanelShown(frame, shown, force)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:938`
+- `ShowUIPanel(frame, force, contextKey)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:871`
+- `ToggleFrame(frame)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:841`
+- `ToggleUIPanel(frame)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:863`
+- `UIPanelUpdateScaleForFit(frame, extraWidth, extraHeight)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:987`
+- `UIPanelWindows_Initialize()`: `interface/addons/blizzard_uiparentpanelmanager/mainline/uipanelwindows.lua:2`
+- `UpdateScaleForFitForOpenPanels()`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:1197`
+- `UpdateUIPanelPositions(currentFrame)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:1192`
+- `ValidateFramePosition(frame, offscreenPadding, returnOffscreen)`: `interface/addons/blizzard_uiparentpanelmanager/shared/uiparentpanelmanager.lua:1224`
+
+## blizzard_uiparentutil
+
+- `UpdateUIParentPosition()`: `interface/addons/blizzard_uiparentutil/uiparentutil.lua:13`
+
+## blizzard_uiwidgets
+
+- `DefaultWidgetLayout(widgetContainerFrame, sortedWidgets, skipContainerLayout, skipHorizontalRowPoolClear)`: `interface/addons/blizzard_uiwidgets/blizzard_uiwidgetmanager.lua:100`
+- `UIWidgetBaseCurrencyPoolOnReset(currencyPool)`: `interface/addons/blizzard_uiwidgets/blizzard_uiwidgettemplatebase.lua:338`
+- `UIWidgetBaseSpellPoolOnReset(spellPool)`: `interface/addons/blizzard_uiwidgets/blizzard_uiwidgettemplatebase.lua:460`
+
+## blizzard_unitframe
+
+- `BossTargetFrame_OpenMenu(self)`: `interface/addons/blizzard_unitframe/mainline/targetframe.lua:1062`
+- `BuilderSpender_OnUpdateFeedback(self)`: `interface/addons/blizzard_unitframe/mainline/builderspenderframe.lua:99`
+- `BuilderSpender_OnUpdateFeedbackGain(self)`: `interface/addons/blizzard_unitframe/mainline/builderspenderframe.lua:29`
+- `BuilderSpender_OnUpdateFeedbackLoss(self)`: `interface/addons/blizzard_unitframe/mainline/builderspenderframe.lua:71`
+- `CompactArenaFrame_Generate()`: `interface/addons/blizzard_unitframe/mainline/compactarenaframe.lua:57`
+- `CompactPartyFrame_Generate()`: `interface/addons/blizzard_unitframe/shared/compactpartyframe.lua:1`
+- `CompactRaidGroup_ApplyFunctionToAllFrames(frame, updateSpecifier, func, ...)`: `interface/addons/blizzard_unitframe/shared/compactraidgroup.lua:19`
+- `CompactRaidGroup_GenerateForGroup(groupIndex)`: `interface/addons/blizzard_unitframe/shared/compactraidgroup.lua:30`
+- `CompactRaidGroup_InitializeForGroup(frame, groupIndex)`: `interface/addons/blizzard_unitframe/shared/compactraidgroup.lua:42`
+- `CompactRaidGroup_OnEvent(self, event, ...)`: `interface/addons/blizzard_unitframe/shared/compactraidgroup.lua:13`
+- `CompactRaidGroup_OnLoad(self)`: `interface/addons/blizzard_unitframe/shared/compactraidgroup.lua:1`
+- `CompactRaidGroup_UpdateBorder(frame)`: `interface/addons/blizzard_unitframe/shared/compactraidgroup.lua:162`
+- `CompactRaidGroup_UpdateLayout(frame)`: `interface/addons/blizzard_unitframe/shared/compactraidgroup.lua:95`
+- `CompactRaidGroup_UpdateUnits(frame)`: `interface/addons/blizzard_unitframe/shared/compactraidgroup.lua:53`
+- `CompactUnitFrame_CheckNeedsUpdate(self)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:201`
+- `CompactUnitFrame_CheckReadyCheckDecay(frame, elapsed)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1392`
+- `CompactUnitFrame_ClearWidgetSet(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1576`
+- `CompactUnitFrame_FinishReadyCheck(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1376`
+- `CompactUnitFrame_GetCenterStatusIconState(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1448`
+- `CompactUnitFrame_GetHealthValuesActual(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1185`
+- `CompactUnitFrame_GetOptionCustomHealthBarColorBG(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1637`
+- `CompactUnitFrame_GetOptionCustomHealthBarColors(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1633`
+- `CompactUnitFrame_GetOptionDispelIndicatorAnimatedBorder(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1697`
+- `CompactUnitFrame_GetOptionDispelIndicatorOverlayAnimation(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1693`
+- `CompactUnitFrame_GetOptionDispelIndicatorOverlayType(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1689`
+- `CompactUnitFrame_GetOptionDispelIndicatorType(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1681`
+- `CompactUnitFrame_GetOptionDisplayBuffs(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1649`
+- `CompactUnitFrame_GetOptionDisplayDebuffs(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1653`
+- `CompactUnitFrame_GetOptionDisplayDispelDebuffs(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1657`
+- `CompactUnitFrame_GetOptionDisplayLargerRoleSpecificDebuffs(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1673`
+- `CompactUnitFrame_GetOptionDisplayOnlyDispellableDebuffs(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1665`
+- `CompactUnitFrame_GetOptionHealthText(frame, options)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1641`
+- `CompactUnitFrame_GetOptionShowBigDefensive(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1701`
+- `CompactUnitFrame_GetOptionUseClassColors(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1619`
+- `CompactUnitFrame_GetRangeAlpha(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1056`
+- `CompactUnitFrame_IsOnThreatListWithPlayer(unit)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:568`
+- `CompactUnitFrame_IsPartyFrame(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1599`
+- `CompactUnitFrame_IsPvpFrame(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1595`
+- `CompactUnitFrame_IsTapDenied(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:560`
+- `CompactUnitFrame_IsWithinDistanceThreshold(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1080`
+- `CompactUnitFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:65`
+- `CompactUnitFrame_OnHide(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:390`
+- `CompactUnitFrame_OnLoad(self)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:23`
+- `CompactUnitFrame_OnShow(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:379`
+- `CompactUnitFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:213`
+- `CompactUnitFrame_OnVisiblityChanged(unitFrame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:538`
+- `CompactUnitFrame_OpenMenu(frame, unit, button, isKeyPress)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1744`
+- `CompactUnitFrame_RegisterEvents(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:323`
+- `CompactUnitFrame_SetAurasDirty(self)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:186`
+- `CompactUnitFrame_SetHealPredictionDirty(self)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:196`
+- `CompactUnitFrame_SetHealthDirty(self)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:191`
+- `CompactUnitFrame_SetMaxBuffs(frame, numBuffs)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:411`
+- `CompactUnitFrame_SetMaxDebuffs(frame, numDebuffs)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:415`
+- `CompactUnitFrame_SetMaxDispelDebuffs(frame, numDispelDebuffs)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:419`
+- `CompactUnitFrame_SetOptionTable(frame, optionTable)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:318`
+- `CompactUnitFrame_SetUnit(frame, unit)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:240`
+- `CompactUnitFrame_SetUpClicks(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:395`
+- `CompactUnitFrame_SetUpdateAllEvent(frame, updateAllEvent, updateAllFilter)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:423`
+- `CompactUnitFrame_SetUpdateAllOnUpdate(self, doUpdate)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:289`
+- `CompactUnitFrame_SetUpFrame(frame, func, ...)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:313`
+- `CompactUnitFrame_SubscribeToVisibilityChanged(unitFrame, subscribingFrame, visibilityChangedCallback)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:546`
+- `CompactUnitFrame_UnitExists(unitToken)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1705`
+- `CompactUnitFrame_UnregisterEvents(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:374`
+- `CompactUnitFrame_UnsubscribeToVisibilityChanged(unitFrame, unsubscribingFrame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:553`
+- `CompactUnitFrame_UpdateAggroFlash(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1030`
+- `CompactUnitFrame_UpdateAggroHighlight(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:920`
+- `CompactUnitFrame_UpdateAll(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:435`
+- `CompactUnitFrame_UpdateAllFromEditMode(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:478`
+- `CompactUnitFrame_UpdateCenterStatusIcon(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1492`
+- `CompactUnitFrame_UpdateDistance(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1068`
+- `CompactUnitFrame_UpdateHealPrediction(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1201`
+- `CompactUnitFrame_UpdateHealth(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:724`
+- `CompactUnitFrame_UpdateHealthBorder(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:952`
+- `CompactUnitFrame_UpdateHealthColor(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:644`
+- `CompactUnitFrame_UpdateInRange(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1043`
+- `CompactUnitFrame_UpdateInVehicle(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:484`
+- `CompactUnitFrame_UpdateLevel(frame, activePlayerLevel)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1713`
+- `CompactUnitFrame_UpdateLootFrame(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1561`
+- `CompactUnitFrame_UpdateMaxHealth(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:713`
+- `CompactUnitFrame_UpdateMaxPower(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:749`
+- `CompactUnitFrame_UpdateName(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:826`
+- `CompactUnitFrame_UpdatePlayerLevelDiff(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1521`
+- `CompactUnitFrame_UpdatePower(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:755`
+- `CompactUnitFrame_UpdatePowerColor(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:761`
+- `CompactUnitFrame_UpdateReadyCheck(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1366`
+- `CompactUnitFrame_UpdateRoleIcon(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1362`
+- `CompactUnitFrame_UpdateSelectionHighlight(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:893`
+- `CompactUnitFrame_UpdateStatusText(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1084`
+- `CompactUnitFrame_UpdateTempMaxHPLoss(frame, value)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1785`
+- `CompactUnitFrame_UpdateUnitEvents(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:332`
+- `CompactUnitFrame_UpdateVisible(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:520`
+- `CompactUnitFrame_UpdateWidgetSet(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1552`
+- `CompactUnitFrameLayoutTemplates_LayoutFrameElement(frame, element, templateType, containerTypeKey)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1848`
+- `CompactUnitFrameUtil_UpdateFillBar(frame, previousTexture, bar, amount, barOffsetXPercent)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1332`
+- `CounterBar_GetDigit(count, isFirstDigit)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:682`
+- `CounterBar_GetNumberCoord(digit)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:672`
+- `CounterBar_OnUpdate(self, elapsed)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:749`
+- `CounterBar_SetNumbers(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:693`
+- `CounterBar_SetStyle(self, useFractional, animNumbers, maxValue)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:612`
+- `CounterBar_SetStyleForUnit(self, unit, maxValue)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:607`
+- `CounterBar_SetUp(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:599`
+- `CounterBar_UpdateCount(self, newCount, ignoreAnim)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:708`
+- `DefaultCompactMiniFrameSetup(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1997`
+- `DefaultCompactUnitFrameSetup(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:1864`
+- `FocusFrame_OpenMenu(self)`: `interface/addons/blizzard_unitframe/mainline/targetframe.lua:1155`
+- `FullResourcePulse_OnEvent(self, event)`: `interface/addons/blizzard_unitframe/mainline/builderspenderframe.lua:218`
+- `GetBossPortraitFrameData(unit, classification)`: `interface/addons/blizzard_unitframe/camelot/targetframeutils.lua:9`
+- `GetBossPortraitFrameData(unit, classification)`: `interface/addons/blizzard_unitframe/mainline/targetframeutils.lua:9`
+- `GetPowerBarColor(powerType)`: `interface/addons/blizzard_unitframe/mainline/powerbarcolorutil.lua:67`
+- `GetUnitName(unit, showSurname)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:1094`
+- `GetUnitSecondaryPowerInfo(unit)`: `interface/addons/blizzard_unitframe/mainline/alternatepowerbar.lua:17`
+- `LocalizePlayerFrame_zhCN()`: `interface/addons/blizzard_unitframe/camelot/localization.lua:1`
+- `LocalizePlayerFrame_zhCN()`: `interface/addons/blizzard_unitframe/shared/localization.lua:11`
+- `LocalizePlayerFrame_zhTW()`: `interface/addons/blizzard_unitframe/camelot/localization.lua:5`
+- `LocalizePlayerFrame_zhTW()`: `interface/addons/blizzard_unitframe/shared/localization.lua:15`
+- `PlayerBuffTimer_OnUpdate(self, elapsed)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:844`
+- `PlayerBuffTimerManager_GetTimer(barType)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:812`
+- `PlayerBuffTimerManager_OnEvent(self, event, ...)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:802`
+- `PlayerBuffTimerManager_OnLoad(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:795`
+- `PlayerBuffTimerManager_UpdateTimers(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:859`
+- `PlayerFrame_AdjustAttachments()`: `interface/addons/blizzard_unitframe/shared/playerframe.lua:65`
+- `PlayerFrame_AttachCastBar()`: `interface/addons/blizzard_unitframe/shared/playerframe.lua:34`
+- `PlayerFrame_CanPlayPVPUpdateSound()`: `interface/addons/blizzard_unitframe/camelot/playerframe.lua:25`
+- `PlayerFrame_CanPlayPVPUpdateSound()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:343`
+- `PlayerFrame_DetachCastBar()`: `interface/addons/blizzard_unitframe/shared/playerframe.lua:50`
+- `PlayerFrame_GetAlternatePowerBar()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:285`
+- `PlayerFrame_GetHealthBar()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:269`
+- `PlayerFrame_GetHealthBarContainer()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:273`
+- `PlayerFrame_GetLevelRGBA()`: `interface/addons/blizzard_unitframe/camelot/playerframe.lua:21`
+- `PlayerFrame_GetLevelRGBA()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:315`
+- `PlayerFrame_GetManaBar()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:281`
+- `PlayerFrame_GetPlayerFrameContentContextual()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:255`
+- `PlayerFrame_GetPvPIndicatorElements()`: `interface/addons/blizzard_unitframe/camelot/playerframe.lua:35`
+- `PlayerFrame_GetPvPIndicatorElements()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:260`
+- `PlayerFrame_GetTempMaxHealthLossBar()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:277`
+- `PlayerFrame_HidePvPFrames()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:411`
+- `PlayerFrame_OnAlternatePowerBarDisabled(alternatePowerBar)`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:814`
+- `PlayerFrame_OnAlternatePowerBarEnabled(alternatePowerBar)`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:809`
+- `PlayerFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:115`
+- `PlayerFrame_OnLoad(self)`: `interface/addons/blizzard_unitframe/camelot/playerframe.lua:1`
+- `PlayerFrame_OnLoad(self)`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:111`
+- `PlayerFrame_OnLoadBase(self)`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:3`
+- `PlayerFrame_OnReceiveDrag()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:245`
+- `PlayerFrame_OnUpdate(self, elapsed)`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:211`
+- `PlayerFrame_ShowPrestigeWithAtlas(atlas, factionGroup, honorRewardInfo)`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:377`
+- `PlayerFrame_ShowPvPIcon(factionGroup)`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:391`
+- `PlayerFrame_ShowRoleIconInsideInstances()`: `interface/addons/blizzard_unitframe/camelot/playerframe.lua:31`
+- `PlayerFrame_ShowRoleIconInsideInstances()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:424`
+- `PlayerFrame_ToPlayerArt(self)`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:642`
+- `PlayerFrame_ToVehicleArt(self, vehicleType)`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:579`
+- `PlayerFrame_Update()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:305`
+- `PlayerFrame_UpdateArt(self)`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:453`
+- `PlayerFrame_UpdateFlashTextureVisuals()`: `interface/addons/blizzard_unitframe/camelot/playerframe.lua:56`
+- `PlayerFrame_UpdateFlashTextureVisuals()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:717`
+- `PlayerFrame_UpdateGroupIndicator()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:533`
+- `PlayerFrame_UpdateHealthBarVisuals()`: `interface/addons/blizzard_unitframe/camelot/playerframe.lua:75`
+- `PlayerFrame_UpdateHealthBarVisuals()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:749`
+- `PlayerFrame_UpdateLevel()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:319`
+- `PlayerFrame_UpdateManaBarVisuals()`: `interface/addons/blizzard_unitframe/camelot/playerframe.lua:91`
+- `PlayerFrame_UpdateManaBarVisuals()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:785`
+- `PlayerFrame_UpdatePartyLeader()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:332`
+- `PlayerFrame_UpdatePlayerNameTextAnchor()`: `interface/addons/blizzard_unitframe/camelot/playerframe.lua:50`
+- `PlayerFrame_UpdatePlayerNameTextAnchor()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:293`
+- `PlayerFrame_UpdatePlayerRestLoop(state)`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:521`
+- `PlayerFrame_UpdatePlaytime()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:557`
+- `PlayerFrame_UpdatePvPStatus()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:349`
+- `PlayerFrame_UpdatePvPTimerText(displayInfo, elements)`: `interface/addons/blizzard_unitframe/camelot/playerframe.lua:43`
+- `PlayerFrame_UpdatePvPTimerText(displayInfo, elements)`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:361`
+- `PlayerFrame_UpdateReadyCheck()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:471`
+- `PlayerFrame_UpdateRolesAssigned()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:428`
+- `PlayerFrame_UpdateStatus()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:487`
+- `PlayerFrame_UpdateStatusTextureVisuals()`: `interface/addons/blizzard_unitframe/camelot/playerframe.lua:68`
+- `PlayerFrame_UpdateStatusTextureVisuals()`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:737`
+- `PlayerFrame_UpdateVoiceStatus(status)`: `interface/addons/blizzard_unitframe/mainline/playerframe.lua:467`
+- `SetRaidTargetIcon(unit, index)`: `interface/addons/blizzard_unitframe/mainline/targetframe.lua:700`
+- `SetRaidTargetIconTexture(texture, raidTargetIconIndex)`: `interface/addons/blizzard_unitframe/mainline/targetframe.lua:696`
+- `ShouldShowArenaParty()`: `interface/addons/blizzard_unitframe/shared/groupframevisibility.lua:1`
+- `ShouldShowBattlePetIcon()`: `interface/addons/blizzard_unitframe/camelot/targetframeutils.lua:21`
+- `ShouldShowBattlePetIcon()`: `interface/addons/blizzard_unitframe/mainline/targetframeutils.lua:21`
+- `ShouldShowName(frame)`: `interface/addons/blizzard_unitframe/shared/compactunitframe.lua:795`
+- `ShouldShowPartyFrames()`: `interface/addons/blizzard_unitframe/shared/groupframevisibility.lua:5`
+- `ShouldShowRaidFrames()`: `interface/addons/blizzard_unitframe/shared/groupframevisibility.lua:9`
+- `ShouldShowStar(classification)`: `interface/addons/blizzard_unitframe/camelot/targetframeutils.lua:5`
+- `ShouldShowStar(classification)`: `interface/addons/blizzard_unitframe/mainline/targetframeutils.lua:5`
+- `ShouldShowTargetFrame(targetFrame)`: `interface/addons/blizzard_unitframe/shared/targetframe.lua:1`
+- `ShouldUseSilverUnitFrame(classification)`: `interface/addons/blizzard_unitframe/camelot/targetframeutils.lua:1`
+- `ShouldUseSilverUnitFrame(classification)`: `interface/addons/blizzard_unitframe/mainline/targetframeutils.lua:1`
+- `ShowNumericThreat()`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:1098`
+- `TargetFrame_OpenMenu(self)`: `interface/addons/blizzard_unitframe/mainline/targetframe.lua:627`
+- `TargetHealthCheck(self)`: `interface/addons/blizzard_unitframe/mainline/targetframe.lua:753`
+- `UnitFrame_Initialize(self, unit, name, frameType, portrait, healthbar, healthtext, manabar, manatext, threatIndicator, threatFeedbackUnit, threatNumericIndicator, myHealPredictionBar, otherHealPredictionBar, totalAbsorbBar, overAbsorbGlow, overHealAbsorbGlow, healAbsorbBar, myManaCostPredictionBar, tempMaxHealthLossBar)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:28`
+- `UnitFrame_OnEnter(self)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:387`
+- `UnitFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:199`
+- `UnitFrame_OnLeave(self)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:391`
+- `UnitFrame_SetUnit(self, unit, healthbar, manabar)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:109`
+- `UnitFrame_ShouldReplacePortrait(self)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:1060`
+- `UnitFrame_Update(self, isParty)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:144`
+- `UnitFrame_UpdateReplacePortraitSettingRegistration(self)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:1073`
+- `UnitFrame_UpdateThreatIndicator(indicator, numericIndicator, unit)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:1007`
+- `UnitFrame_UpdateTooltip(self)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:396`
+- `UnitFrameHealPredictionBars_Update(frame)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:243`
+- `UnitFrameHealPredictionBars_UpdateMax(self)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:232`
+- `UnitFrameHealPredictionBars_UpdateSize(self)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:236`
+- `UnitFrameHealthBar_Initialize(unit, statusbar, statustext, frequentUpdates)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:610`
+- `UnitFrameHealthBar_OnEvent(self, event, ...)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:653`
+- `UnitFrameHealthBar_OnUpdate(self)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:779`
+- `UnitFrameHealthBar_OnValueChanged(self, value)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:846`
+- `UnitFrameHealthBar_RefreshUpdateEvent(self)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:638`
+- `UnitFrameHealthBar_SetUnit(self, unit)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:648`
+- `UnitFrameHealthBar_Update(statusbar, unit)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:804`
+- `UnitFrameManaBar_Initialize(unit, statusbar, statustext, frequentUpdates)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:859`
+- `UnitFrameManaBar_OnEvent(self, event, ...)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:888`
+- `UnitFrameManaBar_OnUpdate(self)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:911`
+- `UnitFrameManaBar_RegisterDefaultEvents(self)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:855`
+- `UnitFrameManaBar_SetOverrideInfo(statusbar, overrideInfo)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:977`
+- `UnitFrameManaBar_UnregisterDefaultEvents(self)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:851`
+- `UnitFrameManaBar_Update(statusbar, unit)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:939`
+- `UnitFrameManaBar_UpdateType(manaBar)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:497`
+- `UnitFrameManaBar_UpdateTypeOld(manaBar)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:416`
+- `UnitFrameManaCostPredictionBars_Update(frame, isStarting, startTime, endTime, spellID)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:360`
+- `UnitFramePortrait_Update(self)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:182`
+- `UnitFrameThreatIndicator_Initialize(unit, unitFrame, feedbackUnit)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:982`
+- `UnitFrameThreatIndicator_OnEvent(self, event, ...)`: `interface/addons/blizzard_unitframe/mainline/unitframe.lua:998`
+- `UnitPowerBarAlt_ApplyTextures(frame, unit)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:123`
+- `UnitPowerBarAlt_Circular_SetUp(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:375`
+- `UnitPowerBarAlt_Circular_UpdateFill(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:389`
+- `UnitPowerBarAlt_HidePills(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:142`
+- `UnitPowerBarAlt_HideTextures(frame)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:132`
+- `UnitPowerBarAlt_Horizontal_SetUp(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:311`
+- `UnitPowerBarAlt_Horizontal_UpdateFill(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:332`
+- `UnitPowerBarAlt_Initialize(self, unit, scale, updateAllEvent)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:31`
+- `UnitPowerBarAlt_OnEnter(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:53`
+- `UnitPowerBarAlt_OnEvent(self, event, ...)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:71`
+- `UnitPowerBarAlt_OnFlashFinished(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:261`
+- `UnitPowerBarAlt_OnFlashOutFinished(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:265`
+- `UnitPowerBarAlt_OnFlashPlay(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:257`
+- `UnitPowerBarAlt_OnLeave(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:66`
+- `UnitPowerBarAlt_OnUpdate(self, elapsed)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:117`
+- `UnitPowerBarAlt_Pill_CreatePillFrame(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:460`
+- `UnitPowerBarAlt_Pill_OnFlashAwayFinished(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:482`
+- `UnitPowerBarAlt_Pill_SetUp(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:401`
+- `UnitPowerBarAlt_Pill_UpdateFill(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:414`
+- `UnitPowerBarAlt_SetDisplayedPower(self, value)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:297`
+- `UnitPowerBarAlt_SetMinMaxPower(self, minPower, maxPower)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:303`
+- `UnitPowerBarAlt_SetPower(self, value, instantUpdate)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:269`
+- `UnitPowerBarAlt_SetTooltipAnchor(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:45`
+- `UnitPowerBarAlt_SetUp(self, barID)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:150`
+- `UnitPowerBarAlt_SetUpdateAllEvent(self, event)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:112`
+- `UnitPowerBarAlt_TearDown(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:215`
+- `UnitPowerBarAlt_UpdateAll(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:224`
+- `UnitPowerBarAlt_Vertical_SetUp(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:343`
+- `UnitPowerBarAlt_Vertical_UpdateFill(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:364`
+- `UnitPowerBarAltStatus_OnEvent(self, event, ...)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:496`
+- `UnitPowerBarAltStatus_ToggleFrame(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:505`
+- `UnitPowerBarAltStatus_UpdateText(self)`: `interface/addons/blizzard_unitframe/mainline/unitpowerbaralt.lua:489`
+
+## blizzard_unitpopup
+
+- `CheckToggleDifficulty(toggleDifficultyID, difficultyID)`: `interface/addons/blizzard_unitpopup/mainline/unitpopup.lua:64`
+- `NormalizeLegacyDifficultyID(difficultyID)`: `interface/addons/blizzard_unitpopup/mainline/unitpopup.lua:7`
+- `SetRaidDifficulties(primaryRaid, difficultyID)`: `interface/addons/blizzard_unitpopup/mainline/unitpopup.lua:29`
+
+## blizzard_unitpopupshared
+
+- `DisplayUnitPopupTooltip(button, tooltipParams)`: `interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2`
+- `UnitPopup_OpenMenu(which, contextData)`: `interface/addons/blizzard_unitpopupshared/unitpopupshared.lua:156`
+
+## blizzard_visualalerts
+
+- `VisualAlert_GetTypeTemplate(visualAlertType)`: `interface/addons/blizzard_visualalerts/visualalerttemplates.lua:108`
+- `VisualAlert_GetTypeText(visualAlertType)`: `interface/addons/blizzard_visualalerts/visualalerttemplates.lua:103`
+- `VisualAlertData_ForEach(callback)`: `interface/addons/blizzard_visualalerts/visualalerttemplates.lua:113`
+- `VisualAlerts_RegisterAll(manager)`: `interface/addons/blizzard_visualalerts/visualalerttemplates.lua:119`
+
+## blizzard_voicetogglebutton
+
+- `VoiceChat_ToggleDeafenedFromUserAction()`: `interface/addons/blizzard_voicetogglebutton/voicetogglebutton.lua:43`
+- `VoiceChat_ToggleMutedFromUserAction()`: `interface/addons/blizzard_voicetogglebutton/voicetogglebutton.lua:33`
+
+## blizzard_warfrontspartyposeui
+
+- `WarfrontsPartyPose_LoadUI()`: `interface/addons/blizzard_warfrontspartyposeui/blizzard_warfrontspartyposeui_bootstrap.lua:3`
+
+## blizzard_weeklyrewards
+
+- `WeeklyRewards_LoadUI()`: `interface/addons/blizzard_weeklyrewards/blizzard_weeklyrewards_bootstrap.lua:3`
+- `WeeklyRewards_ShowUI()`: `interface/addons/blizzard_weeklyrewards/blizzard_weeklyrewards_bootstrap.lua:7`
+
+## blizzard_worldmap
+
+- `OpenMapToEventPoi(areaPoiID)`: `interface/addons/blizzard_worldmap/blizzard_worldmap.lua:1449`
+- `OpenMapToUserWaypoint()`: `interface/addons/blizzard_worldmap/blizzard_worldmap.lua:1461`
+- `OpenQuestLog(mapID)`: `interface/addons/blizzard_worldmap/blizzard_worldmap.lua:1441`
+- `OpenWorldMap(mapID)`: `interface/addons/blizzard_worldmap/blizzard_worldmap.lua:1433`
+- `ToggleQuestLog()`: `interface/addons/blizzard_worldmap/blizzard_worldmap.lua:1417`
+- `ToggleWorldMap()`: `interface/addons/blizzard_worldmap/blizzard_worldmap.lua:1425`
+
+## blizzard_wowsurveyui
+
+- `AddWowSurveyStatusFrameToStatusFrames(statusFrames)`: `interface/addons/blizzard_wowsurveyui/blizzard_wowsurveyui_bootstrap.lua:13`
+- `WowSurvey_LoadUI()`: `interface/addons/blizzard_wowsurveyui/blizzard_wowsurveyui_bootstrap.lua:3`
+- `WowSurveyStatusFrame_OnSurveyDelivered(event)`: `interface/addons/blizzard_wowsurveyui/blizzard_wowsurveyui_bootstrap.lua:7`
+
+## blizzard_wowtokenui
+
+- `GetBalanceRedemptionString()`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:229`
+- `GetBalanceString(amount)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:97`
+- `GetGameTimeRedemptionString()`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:214`
+- `GetSecureMoneyString(money, separateThousands)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:332`
+- `GetTimeLeftMinuteString(minutes)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:180`
+- `GetTimeLeftString()`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:375`
+- `RedeemFailed(result)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenuiinsecure.lua:5`
+- `SecureFormatShortDate(day, month, year)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:78`
+- `WowToken_IsWowTokenAuctionDialogShown()`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenuiinbound.lua:6`
+- `WoWTokenButton_OnShow(self)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:946`
+- `WowTokenDialog_HideDialog(dialogName)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:829`
+- `WowTokenDialog_OnEvent(self, event, ...)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:869`
+- `WowTokenDialog_OnHide(self)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:854`
+- `WowTokenDialog_OnLoad(self)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:840`
+- `WowTokenDialog_OnShow(self)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:848`
+- `WowTokenDialog_SetDialog(self, dialogName, dialogData)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:578`
+- `WowTokenDialogButton_OnClick(self)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:922`
+- `WowTokenRedemptionFrame_DisableBalance(self)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:169`
+- `WowTokenRedemptionFrame_EnableBalance(self)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:157`
+- `WowTokenRedemptionFrame_EscapePressed()`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenuiinbound.lua:10`
+- `WowTokenRedemptionFrame_GetBalanceString()`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenuiinbound.lua:15`
+- `WowTokenRedemptionFrame_OnAttributeChanged(self, name, value)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:286`
+- `WowTokenRedemptionFrame_OnEvent(self, event, ...)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:247`
+- `WowTokenRedemptionFrame_OnHide(self)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:243`
+- `WowTokenRedemptionFrame_OnLoad(self)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:86`
+- `WowTokenRedemptionFrame_OnShow(self)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:238`
+- `WowTokenRedemptionFrame_ShowDialog(dialogName, dialogData)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenuiinbound.lua:20`
+- `WowTokenRedemptionFrame_Update(self)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:122`
+- `WowTokenRedemptionFrame_UpdateRedeemBalance(self)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:135`
+- `WowTokenRedemptionFrameCloseButton_OnClick(self)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:319`
+- `WowTokenRedemptionRedeemButton_OnClick(self)`: `interface/addons/blizzard_wowtokenui/blizzard_wowtokenui.lua:306`
+
+## middleclass
+
+- `class(name, super, ...)`: `interface/addons/middleclass/middleclass.lua:122`
+- `includes(mixin, aClass)`: `interface/addons/middleclass/middleclass.lua:138`
+- `instanceOf(aClass, obj)`: `interface/addons/middleclass/middleclass.lua:127`
+- `subclassOf(other, aClass)`: `interface/addons/middleclass/middleclass.lua:133`
