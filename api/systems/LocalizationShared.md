@@ -21,7 +21,7 @@ Values:
 
 ### NamePartType
 
-*Enumeration* · 2 values, 0..1
+*Enumeration* · 3 values, 0..2
 
 Access values as `Enum.NamePartType.<Name>`.
 
@@ -31,6 +31,7 @@ Values:
 |---|---|---|
 | `Firstname` | `NamePartType` | = 0 |
 | `Surname` | `NamePartType` | = 1 |
+| `Combined` | `NamePartType` | = 2 |
 
 ### NumberAbbreviationBreakpoint
 

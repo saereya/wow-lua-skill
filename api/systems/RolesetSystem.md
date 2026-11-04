@@ -10,9 +10,9 @@ Namespace `C_Roleset` · environment All · source `interface/addons/blizzard_ap
 C_Roleset.ApplyRolesetFilters(blockedRolesets: string[], allowedRolesets: string[])
 ```
 
-Sets or clears both blocklist and allowlist filters atomically with a single visibility reevaluation. Pass an empty table to clear the corresponding filter.
+Sets or clears both blocklist and allowlist filters atomically with a single visibility reevaluation. Pass an empty table to clear the corresponding filter. Blocked for tainted callers while in combat lockdown.
 
-`SecretArguments=AllowedWhenUntainted`
+`SecretArguments=AllowedWhenUntainted` `HasRestrictions`
 
 ### GetActiveAllowedRolesets
 

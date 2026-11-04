@@ -202,7 +202,7 @@ Values:
 
 ### SubscriptionInterstitialType
 
-*Enumeration* · 3 values, 0..2
+*Enumeration* · 4 values, 0..3
 
 Access values as `Enum.SubscriptionInterstitialType.<Name>`.
 
@@ -213,6 +213,7 @@ Values:
 | `Standard` | `SubscriptionInterstitialType` | = 0 |
 | `LeftNpeArea` | `SubscriptionInterstitialType` | = 1 |
 | `MaxLevel` | `SubscriptionInterstitialType` | = 2 |
+| `SubscriptionPeriod` | `SubscriptionInterstitialType` | = 3 |
 
 ### CreditsDisplayInfo
 

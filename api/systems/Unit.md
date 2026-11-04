@@ -2567,6 +2567,16 @@ UNIT_COMBAT(unitTarget: UnitTokenVariant, event: cstring, flagText: cstring, amo
 
 `SynchronousEvent`
 
+Payload:
+
+| Name | Type | Notes |
+|---|---|---|
+| `unitTarget` | `UnitTokenVariant` |  |
+| `event` | `cstring` |  |
+| `flagText` | `cstring` |  |
+| `amount` | `number` | `SecretValue` |
+| `schoolMask` | `number` |  |
+
 ### UNIT_CONNECTION
 
 ```lua

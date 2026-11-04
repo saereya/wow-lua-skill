@@ -708,10 +708,11 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `ActionButtonUtil.AddPlayerActionBarsContainingSlots(slots, bars, excludeNonPlayerBars)`
 - `ActionButtonUtil.GetActionButtonBySpellID(spellID, excludeNonPlayerBars, excludeSpecialPlayerBars)`
 - `ActionButtonUtil.GetActionBarStatusForSpell(spellID, excludeNonPlayerBars, excludeSpecialPlayerBars)`
+- `ActionButtonUtil.OverrideStatusForUnplacedSpell(status, spellID, barsWithSpell)`
 - `ActionButtonUtil.GetActionBarStatusForPetAction(petActionID)`
 - `ActionButtonUtil.GetActionBarStatusForFlyout(flyoutActionID)`
 - `ActionButtonUtil.GetActionBarStatusFromMkbBars(barsWithAction)`
-- `ActionButtonUtil.GetActionBarStatusForSpellFromGamepadBars(spellID, excludeSpecialPlayerBars)`
+- `ActionButtonUtil.GetActionBarStatusForSpellFromGamepadBars(spellID, excludeSpecialPlayerBars, gamepadButtonsWithSpell)`
 - `ActionButtonUtil.GetActionBarStatusForPetActionFromGamepadBars(petActionID)`
 - `ActionButtonUtil.GetActionBarStatusForFlyoutFromGamepadBars(flyoutActionID)`
 
@@ -4735,7 +4736,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## BagBarExpandToggleMixin
 
-`interface/addons/blizzard_mainmenubarbagbuttons/shared/mainmenubarbagbuttons.lua:491`
+`interface/addons/blizzard_mainmenubarbagbuttons/shared/mainmenubarbagbuttons.lua:576`
 
 - `BagBarExpandToggleMixin:OnClick()`
 - `BagBarExpandToggleMixin:GetRotation()`
@@ -5301,8 +5302,6 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `BaseBagSlotButtonMixin:SetItemButtonTexture(texture)`
 - `BaseBagSlotButtonMixin:SetItemButtonQuality()`
 - `BaseBagSlotButtonMixin:SetBarExpanded(isExpanded)`
-- `BaseBagSlotButtonMixin:UpdateHighlightForItemButton(itemButton)`
-- `BaseBagSlotButtonMixin:ClearHighlight()`
 
 ## BaseButtonTrayMixin
 
@@ -5956,13 +5955,13 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## BossSpellBarMixin
 
-`interface/addons/blizzard_unitframe/mainline/targetframe.lua:858` · mixes in `TargetSpellBarMixin`
+`interface/addons/blizzard_unitframe/mainline/targetframe.lua:861` · mixes in `TargetSpellBarMixin`
 
 - `BossSpellBarMixin:AdjustPosition()`
 
 ## BossTargetFrameContainerMixin
 
-`interface/addons/blizzard_unitframe/mainline/targetframe.lua:1073`
+`interface/addons/blizzard_unitframe/mainline/targetframe.lua:1076`
 
 - `BossTargetFrameContainerMixin:OnLoad()`
 - `BossTargetFrameContainerMixin:OnEvent(event, ...)`
@@ -5973,7 +5972,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## BossTargetFrameMixin
 
-`interface/addons/blizzard_unitframe/mainline/targetframe.lua:968`
+`interface/addons/blizzard_unitframe/mainline/targetframe.lua:971`
 
 - `BossTargetFrameMixin:OnLoad()`
 - `BossTargetFrameMixin:OnShow()`
@@ -7555,13 +7554,13 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterBoostMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect.lua:2046`
+`interface/addons/blizzard_gluexml/mainline/characterselect.lua:2058`
 
 - `CharacterBoostMixin:OnClick()`
 
 ## CharacterCreateClassButtonMixin
 
-`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:970` · mixes in `CustomizationMaskedButtonMixin`
+`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:974` · mixes in `CustomizationMaskedButtonMixin`
 
 - `CharacterCreateClassButtonMixin:SetClass(classData, selectedClassID)`
 - `CharacterCreateClassButtonMixin:OnClick()`
@@ -7583,7 +7582,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterCreateClassTrialSpecsMixin
 
-`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2363`
+`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2367`
 
 - `CharacterCreateClassTrialSpecsMixin:OnLoad()`
 - `CharacterCreateClassTrialSpecsMixin:UpdateNavBlocker()`
@@ -7609,7 +7608,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterCreateEditBoxMixin
 
-`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2142` · mixes in `NarrationEditBoxMixin`
+`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2146` · mixes in `NarrationEditBoxMixin`
 
 - `CharacterCreateEditBoxMixin:OnLoad()`
 - `CharacterCreateEditBoxMixin:NarrationGetName()`
@@ -7630,7 +7629,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterCreateEditBoxSurnameMixin
 
-`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2184`
+`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2188`
 
 - `CharacterCreateEditBoxSurnameMixin:OnLoad()`
 - `CharacterCreateEditBoxSurnameMixin:OnEscapePressed()`
@@ -7651,7 +7650,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterCreateFactionHeaderMixin
 
-`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:1958`
+`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:1962`
 
 - `CharacterCreateFactionHeaderMixin:OnLoad()`
 - `CharacterCreateFactionHeaderMixin:SetupAnchors(tooltip)`
@@ -7660,7 +7659,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterCreateFrameRacialAbilityMixin
 
-`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2034`
+`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2038`
 
 - `CharacterCreateFrameRacialAbilityMixin:SetRacialAbility(racialAbilityData, index)`
 
@@ -7808,7 +7807,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterCreateNameAvailabilityStateMixin
 
-`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2213` · mixes in `TimedCallbackMixin`, `NarrationSkipTooltipsMixin`
+`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2217` · mixes in `TimedCallbackMixin`, `NarrationSkipTooltipsMixin`
 
 - `CharacterCreateNameAvailabilityStateMixin:OnLoad()`
 - `CharacterCreateNameAvailabilityStateMixin:SetupAnchors(tooltip)`
@@ -7834,7 +7833,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterCreateNavButtonMixin
 
-`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:903`
+`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:907`
 
 - `CharacterCreateNavButtonMixin:GetAppropriateTooltip()`
 - `CharacterCreateNavButtonMixin:OnEnter()`
@@ -7849,7 +7848,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterCreateNavForwardButtonMixin
 
-`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:940`
+`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:944`
 
 - `CharacterCreateNavForwardButtonMixin:OnLoad_NavForward()`
 - `CharacterCreateNavForwardButtonMixin:NarrationShouldIgnoreFocus()`
@@ -7862,7 +7861,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterCreateRaceAndClassMixin
 
-`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:1384`
+`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:1388`
 
 - `CharacterCreateRaceAndClassMixin:OnLoad()`
 - `CharacterCreateRaceAndClassMixin:GetCreateCharacterFaction()`
@@ -7956,7 +7955,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterCreateRaceButtonMixin
 
-`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:1127` · mixes in `CustomizationMaskedButtonMixin`, `CustomizationFrameWithExpandableTooltipMixin`
+`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:1131` · mixes in `CustomizationMaskedButtonMixin`, `CustomizationFrameWithExpandableTooltipMixin`
 
 - `CharacterCreateRaceButtonMixin:GetAppropriateTooltip()`
 - `CharacterCreateRaceButtonMixin:SetRace(raceData, selectedRaceID, selectedFaction, layoutIndex)`
@@ -7975,14 +7974,14 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterCreateRacialAbilityListMixin
 
-`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2046`
+`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2050`
 
 - `CharacterCreateRacialAbilityListMixin:OnLoad()`
 - `CharacterCreateRacialAbilityListMixin:SetupRacialAbilties(racialAbilities)`
 
 ## CharacterCreateRandomNameButtonMixin
 
-`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2311` · mixes in `NarrationSkipTooltipsMixin`
+`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2315` · mixes in `NarrationSkipTooltipsMixin`
 
 - `CharacterCreateRandomNameButtonMixin:OnClick()`
 - `CharacterCreateRandomNameButtonMixin:NarrationGetName()`
@@ -7991,7 +7990,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterCreateSelfFoundButtonMixin
 
-`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2329`
+`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2333`
 
 - `CharacterCreateSelfFoundButtonMixin:OnClick()`
 - `CharacterCreateSelfFoundButtonMixin:OnEnter()`
@@ -8006,7 +8005,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterCreateSpecButtonMixin
 
-`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:1242` · mixes in `CustomizationMaskedButtonMixin`
+`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:1246` · mixes in `CustomizationMaskedButtonMixin`
 
 - `CharacterCreateSpecButtonMixin:SetSpec(specData, selectedSpecID, layoutIndex)`
 - `CharacterCreateSpecButtonMixin:GetAppropriateTooltip()`
@@ -8019,7 +8018,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterCreateStartingZoneArtMixin
 
-`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2512`
+`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2516`
 
 - `CharacterCreateStartingZoneArtMixin:OnEnter()`
 - `CharacterCreateStartingZoneArtMixin:OnLeave()`
@@ -8030,21 +8029,21 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterCreateStartingZoneButtonMixin
 
-`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2526`
+`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2530`
 
 - `CharacterCreateStartingZoneButtonMixin:OnCheckButtonClick()`
 - `CharacterCreateStartingZoneButtonMixin:OnCheckButtonClick()`
 
 ## CharacterCreateStartingZoneMixin
 
-`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2505`
+`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2509`
 
 - `CharacterCreateStartingZoneMixin:SetZoneInfo(zoneName, zoneAtlas)`
 - `CharacterCreateStartingZoneMixin:SetZoneInfo(zoneName, zoneAtlas)`
 
 ## CharacterCreateZoneChoiceMixin
 
-`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2415`
+`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2419`
 
 - `CharacterCreateZoneChoiceMixin:OnLoad()`
 - `CharacterCreateZoneChoiceMixin:NarrationGetName()`
@@ -8067,7 +8066,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterDeletionDialogMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect/characterselectui.lua:777`
+`interface/addons/blizzard_gluexml/mainline/characterselect/characterselectui.lua:784`
 
 - `CharacterDeletionDialogMixin:OnLoad()`
 - `CharacterDeletionDialogMixin:OnShow()`
@@ -8089,7 +8088,6 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 `interface/addons/blizzard_uipanels_game/mainline/characterframe.lua:50`
 
 - `CharacterFrameMixin:GetTab(tabID)`
-- `CharacterFrameMixin:GetJumpHintLabel()`
 - `CharacterFrameMixin:ToggleTokenFrame()`
 - `CharacterFrameMixin:ShowSubFrame(frameName)`
 - `CharacterFrameMixin:OnLoad()`
@@ -8153,7 +8151,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterFrameRightPaneToggleButtonMixin
 
-`interface/addons/blizzard_uipanels_game/camelot/characterframe.lua:351`
+`interface/addons/blizzard_uipanels_game/camelot/characterframe.lua:339`
 
 - `CharacterFrameRightPaneToggleButtonMixin:OnClick()`
 - `CharacterFrameRightPaneToggleButtonMixin:OnEnter()`
@@ -8161,7 +8159,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterFrameSidePaneMixin
 
-`interface/addons/blizzard_uipanels_game/camelot/characterframe.lua:841`
+`interface/addons/blizzard_uipanels_game/camelot/characterframe.lua:827`
 
 - `CharacterFrameSidePaneMixin:OnLoad()`
 - `CharacterFrameSidePaneMixin:SetPaneTitle(title, subtitle)`
@@ -8187,7 +8185,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterListEditGroupFrameMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect/characterselectui.lua:924`
+`interface/addons/blizzard_gluexml/mainline/characterselect/characterselectui.lua:931`
 
 - `CharacterListEditGroupFrameMixin:OnLoad()`
 - `CharacterListEditGroupFrameMixin:OnShow()`
@@ -8233,13 +8231,13 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterModeTabButtonMixin
 
-`interface/addons/blizzard_uipanels_game/camelot/characterframe.lua:968` · mixes in `SidePanelTabButtonMixin`
+`interface/addons/blizzard_uipanels_game/camelot/characterframe.lua:954` · mixes in `SidePanelTabButtonMixin`
 
 - `CharacterModeTabButtonMixin:OnLoad()`
 
 ## CharacterReagentBagMixin
 
-`interface/addons/blizzard_mainmenubarbagbuttons/shared/mainmenubarbagbuttons.lua:465`
+`interface/addons/blizzard_mainmenubarbagbuttons/shared/mainmenubarbagbuttons.lua:546`
 
 - `CharacterReagentBagMixin:GetSlotAtlases()`
 - `CharacterReagentBagMixin:GetSlotAtlases()`
@@ -8264,7 +8262,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterSelectBackButtonMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect.lua:1385`
+`interface/addons/blizzard_gluexml/mainline/characterselect.lua:1397`
 
 - `CharacterSelectBackButtonMixin:OnLoad()`
 - `CharacterSelectBackButtonMixin:OnEnable()`
@@ -8331,6 +8329,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 `interface/addons/blizzard_gluexml/mainline/characterselect.lua:19`
 
+- `CharacterSelectFrameMixin:ConfigureCharacterListSearchBoxGamepad()`
 - `CharacterSelectFrameMixin:OnLoad()`
 - `CharacterSelectFrameMixin:OnShow()`
 - `CharacterSelectFrameMixin:OnHide()`
@@ -8367,13 +8366,14 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `CharacterSelectFrameMixin:OnSmartNavButtonSelected(inButton)`
 - `CharacterSelectFrameMixin:OnSmartNavFocus()`
 - `CharacterSelectFrameMixin:SetUpGamepad()`
+- `CharacterSelectFrameMixin:ConfigureCharacterListSearchBoxGamepad()`
 - `CharacterSelectFrameMixin:InitializeGamepad()`
 - `CharacterSelectFrameMixin:UninitializeGamepad()`
 - `CharacterSelectFrameMixin:RegisterForTransitions()`
 
 ## CharacterSelectHeaderMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect/characterselectui.lua:624`
+`interface/addons/blizzard_gluexml/mainline/characterselect/characterselectui.lua:631`
 
 - `CharacterSelectHeaderMixin:OnEnter()`
 - `CharacterSelectHeaderMixin:OnLeave()`
@@ -8388,7 +8388,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterSelectInfoButtonMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect.lua:1323`
+`interface/addons/blizzard_gluexml/mainline/characterselect.lua:1335`
 
 - `CharacterSelectInfoButtonMixin:OnClick()`
 
@@ -8470,14 +8470,14 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterSelectListEmptyCharacterGlowFadeAnimMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect/characterselectlistelements.lua:1126`
+`interface/addons/blizzard_gluexml/mainline/characterselect/characterselectlistelements.lua:1133`
 
 - `CharacterSelectListEmptyCharacterGlowFadeAnimMixin:OnPlay()`
 - `CharacterSelectListEmptyCharacterGlowFadeAnimMixin:OnFinished()`
 
 ## CharacterSelectListEmptyCharacterMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect/characterselectlistelements.lua:1085`
+`interface/addons/blizzard_gluexml/mainline/characterselect/characterselectlistelements.lua:1092`
 
 - `CharacterSelectListEmptyCharacterMixin:OnEnter()`
 - `CharacterSelectListEmptyCharacterMixin:OnLeave()`
@@ -8535,6 +8535,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 `interface/addons/blizzard_gluexml/mainline/characterselect/characterselectlist.lua:7`
 
 - `CharacterSelectListMixin:OnShow()`
+- `CharacterSelectListMixin:AdjustSearchBox()`
 - `CharacterSelectListMixin:AdjustElements()`
 - `CharacterSelectListMixin:OnLoad()`
 - `CharacterSelectListMixin:AdjustElements()`
@@ -8560,6 +8561,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `CharacterSelectListMixin:ClearCharacterSelection()`
 - `CharacterSelectListMixin:ScrollToCharacter(characterGUID)`
 - `CharacterSelectListMixin:SetScrollEnabled(enabled)`
+- `CharacterSelectListMixin:AdjustSearchBox()`
 - `CharacterSelectListMixin:EvaluateHelptips()`
 - `CharacterSelectListMixin:ClearSearch()`
 
@@ -8578,7 +8580,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterSelectListNotificationButtonMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect/characterselectlistelements.lua:1137`
+`interface/addons/blizzard_gluexml/mainline/characterselect/characterselectlistelements.lua:1144`
 
 - `CharacterSelectListNotificationButtonMixin:OnLoad()`
 - `CharacterSelectListNotificationButtonMixin:OnEnter()`
@@ -8636,7 +8638,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterSelectMapSceneMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect/characterselectui.lua:582`
+`interface/addons/blizzard_gluexml/mainline/characterselect/characterselectui.lua:589`
 
 - `CharacterSelectMapSceneMixin:OnLoad()`
 - `CharacterSelectMapSceneMixin:OnUpdate()`
@@ -8644,7 +8646,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterSelectModelFFXMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect/characterselectui.lua:610`
+`interface/addons/blizzard_gluexml/mainline/characterselect/characterselectui.lua:617`
 
 - `CharacterSelectModelFFXMixin:OnLoad()`
 - `CharacterSelectModelFFXMixin:OnUpdate()`
@@ -8697,20 +8699,20 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterSelectRewardsButtonMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect.lua:1330`
+`interface/addons/blizzard_gluexml/mainline/characterselect.lua:1342`
 
 - `CharacterSelectRewardsButtonMixin:OnClick()`
 
 ## CharacterSelectRotateButtonMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect.lua:1374`
+`interface/addons/blizzard_gluexml/mainline/characterselect.lua:1386`
 
 - `CharacterSelectRotateButtonMixin:OnLoad()`
 - `CharacterSelectRotateButtonMixin:NarrationGetName()`
 
 ## CharacterSelectServerAlertFrameMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect.lua:1078`
+`interface/addons/blizzard_gluexml/mainline/characterselect.lua:1090`
 
 - `CharacterSelectServerAlertFrameMixin:OnLoad()`
 - `CharacterSelectServerAlertFrameMixin:OnEvent(event, ...)`
@@ -8774,8 +8776,9 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterSelectUtil
 
-`interface/addons/blizzard_gluexml/camelot/characterselect/characterselectutil.lua:1`
+`interface/addons/blizzard_gluexml/camelot/characterselect/characterselectutil.lua:3`
 
+- `CharacterSelectUtil.UpdateShowDebugTooltipInfo(state)`
 - `CharacterSelectUtil.SetTooltipForCharacterInfo(characterInfo, characterID)`
 - `CharacterSelectUtil.GetConfig()`
 - `CharacterSelectUtil.ShouldExpandCharacterList()`
@@ -8805,7 +8808,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterSelectVisibilityToggleButtonMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect.lua:2513`
+`interface/addons/blizzard_gluexml/mainline/characterselect.lua:2531`
 
 - `CharacterSelectVisibilityToggleButtonMixin:NarrationGetName()`
 - `CharacterSelectVisibilityToggleButtonMixin:NarrationGetName()`
@@ -8903,7 +8906,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterStatFrameCategoryMixin
 
-`interface/addons/blizzard_uipanels_game/camelot/characterframe.lua:1027`
+`interface/addons/blizzard_uipanels_game/camelot/characterframe.lua:1013`
 
 - `CharacterStatFrameCategoryMixin:OnLoad()`
 
@@ -8932,7 +8935,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterStatFrameScrollBoxIconElementMixin
 
-`interface/addons/blizzard_uipanels_game/camelot/characterframe.lua:1291` · mixes in `CharacterStatFrameScrollBoxBaseElementMixin`
+`interface/addons/blizzard_uipanels_game/camelot/characterframe.lua:1277` · mixes in `CharacterStatFrameScrollBoxBaseElementMixin`
 
 - `CharacterStatFrameScrollBoxIconElementMixin:Init(elementData)`
 
@@ -8946,7 +8949,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterStatsPaneScrollBoxBaseMixin
 
-`interface/addons/blizzard_uipanels_game/camelot/characterframe.lua:1050`
+`interface/addons/blizzard_uipanels_game/camelot/characterframe.lua:1036`
 
 - `CharacterStatsPaneScrollBoxBaseMixin:OnLoad()`
 
@@ -8999,7 +9002,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharacterVASMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect.lua:1980`
+`interface/addons/blizzard_gluexml/mainline/characterselect.lua:1992`
 
 - `CharacterVASMixin:OnClick()`
 - `CharacterVASMixin:OnEnter()`
@@ -9010,7 +9013,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharCreateSDToggleMixin
 
-`interface/addons/blizzard_charactercreate/camelot/blizzard_charactercreate.lua:3267`
+`interface/addons/blizzard_charactercreate/camelot/blizzard_charactercreate.lua:3271`
 
 - `CharCreateSDToggleMixin:OnLoad()`
 - `CharCreateSDToggleMixin:OnShow()`
@@ -9203,7 +9206,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharSelectEnterWorldButtonMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect.lua:1341`
+`interface/addons/blizzard_gluexml/mainline/characterselect.lua:1353`
 
 - `CharSelectEnterWorldButtonMixin:OnClick()`
 - `CharSelectEnterWorldButtonMixin:NarrationGetName()`
@@ -9219,7 +9222,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CharSelectServicesFlowFrameMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect.lua:2531`
+`interface/addons/blizzard_gluexml/mainline/characterselect.lua:2549`
 
 - `CharSelectServicesFlowFrameMixin:OnLoad()`
 - `CharSelectServicesFlowFrameMixin:OnShow()`
@@ -9611,7 +9614,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CircularGiantItemButtonMixin
 
-`interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:421`
+`interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:426`
 
 - `CircularGiantItemButtonMixin:SetItemButtonQuality(quality, itemIDOrLink, suppressOverlays, isBound, ignoreColorOverrides)`
 
@@ -11068,7 +11071,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## ClassTalentActiveSpecMixin
 
-`interface/addons/blizzard_playerspells/camelot/classtalents/blizzard_classtalentsframe.lua:358`
+`interface/addons/blizzard_playerspells/camelot/classtalents/blizzard_classtalentsframe.lua:346`
 
 - `ClassTalentActiveSpecMixin:OnLoad()`
 - `ClassTalentActiveSpecMixin:OnShow()`
@@ -11339,7 +11342,6 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 `interface/addons/blizzard_playerspells/classtalents/blizzard_classtalentsframe.lua:37` · mixes in `TalentFrameBaseMixin`, `ClassTalentImportExportMixin`, `ClassTalentSearchMixin`
 
-- `ClassTalentsFrameMixin:GetJumpHintLabel()`
 - `ClassTalentsFrameMixin:InitializeTreeHeaders()`
 - `ClassTalentsFrameMixin:HasCopyButton()`
 - `ClassTalentsFrameMixin:OnShow()`
@@ -11499,7 +11501,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## ClassTalentsFrameTabMixin
 
-`interface/addons/blizzard_playerspells/camelot/classtalents/blizzard_classtalentsframe.lua:21`
+`interface/addons/blizzard_playerspells/camelot/classtalents/blizzard_classtalentsframe.lua:9`
 
 - `ClassTalentsFrameTabMixin:SetIsActive(isActive)`
 - `ClassTalentsFrameTabMixin:IsActive()`
@@ -11508,7 +11510,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## ClassTalentTreeHeaderMixin
 
-`interface/addons/blizzard_playerspells/camelot/classtalents/blizzard_classtalentsframe.lua:341`
+`interface/addons/blizzard_playerspells/camelot/classtalents/blizzard_classtalentsframe.lua:329`
 
 - `ClassTalentTreeHeaderMixin:Setup(displayInfo, groupInfo)`
 
@@ -11529,7 +11531,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## ClassTrainerCategoryButtonMixin
 
-`interface/addons/blizzard_trainerui/mainline/blizzard_trainerui.lua:863`
+`interface/addons/blizzard_trainerui/mainline/blizzard_trainerui.lua:847`
 
 - `ClassTrainerCategoryButtonMixin:OnSmartNavSelect()`
 
@@ -11537,7 +11539,6 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 `interface/addons/blizzard_trainerui/mainline/blizzard_trainerui.lua:53`
 
-- `ClassTrainerFrameMixin:GetJumpHintLabel()`
 - `ClassTrainerFrameMixin:SetUpGamepad()`
 - `ClassTrainerFrameMixin:InitializeGamepad()`
 - `ClassTrainerFrameMixin:UninitializeGamepad()`
@@ -11547,7 +11548,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## ClassTrainerSkillButtonMixin
 
-`interface/addons/blizzard_trainerui/mainline/blizzard_trainerui.lua:870`
+`interface/addons/blizzard_trainerui/mainline/blizzard_trainerui.lua:854`
 
 - `ClassTrainerSkillButtonMixin:UpdateNameWidth()`
 - `ClassTrainerSkillButtonMixin:OnSmartNavSelect()`
@@ -11555,7 +11556,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## ClassTrialCheckButtonMixin
 
-`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:1976`
+`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:1980`
 
 - `ClassTrialCheckButtonMixin:OnShow()`
 - `ClassTrialCheckButtonMixin:OnCheckButtonClick()`
@@ -12056,7 +12057,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CollapsableUpgradeFrameMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect.lua:2657`
+`interface/addons/blizzard_gluexml/mainline/characterselect.lua:2675`
 
 - `CollapsableUpgradeFrameMixin:OnLoad()`
 - `CollapsableUpgradeFrameMixin:OnShow()`
@@ -12254,7 +12255,6 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `ColorPickerFrameMixin:OnLoad()`
 - `ColorPickerFrameMixin:OnShow()`
 - `ColorPickerFrameMixin:OnHide()`
-- `ColorPickerFrameMixin:GamepadOnHide()`
 - `ColorPickerFrameMixin:OnEvent(event, ...)`
 - `ColorPickerFrameMixin:OnKeyDown(key)`
 - `ColorPickerFrameMixin:GetColorRGB()`
@@ -12263,14 +12263,20 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `ColorPickerFrameMixin:GetPreviousValues()`
 - `ColorPickerFrameMixin:SetupColorPickerAndShow(info)`
 - `ColorPickerFrameMixin:SetUpGamepadCursorAndShow()`
-- `ColorPickerFrameMixin:RegisterForTransitions()`
+- `ColorPickerFrameMixin:AdjustOpacity(direction, down)`
+- `ColorPickerFrameMixin:OpacityDecrease(down)`
+- `ColorPickerFrameMixin:OpacityIncrease(down)`
+- `ColorPickerFrameMixin:OnLeftStick()`
+- `ColorPickerFrameMixin:AdjustBrightness(x, y)`
 - `ColorPickerFrameMixin:SetupGamepad()`
 - `ColorPickerFrameMixin:InitializeGamepad()`
-- `ColorPickerFrameMixin:UninitializeGamepad()`
+- `ColorPickerFrameMixin:RegisterForTransitions()`
+- `ColorPickerFrameMixin:FocusGamepad()`
+- `ColorPickerFrameMixin:UnfocusGamepad()`
 
 ## ColorPickerHexBoxMixin
 
-`interface/addons/blizzard_colorpickerframe/mainline/colorpickerframe.lua:120`
+`interface/addons/blizzard_colorpickerframe/mainline/colorpickerframe.lua:112`
 
 - `ColorPickerHexBoxMixin:OnLoad()`
 - `ColorPickerHexBoxMixin:OnTextChanged()`
@@ -13610,7 +13616,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CompactUnitFrameDispelOverlayMixin
 
-`interface/addons/blizzard_privateaurasui/blizzard_privateaurasui.lua:1351`
+`interface/addons/blizzard_privateaurasui/blizzard_privateaurasui.lua:1353`
 
 - `CompactUnitFrameDispelOverlayMixin:SetDispelType(dispelType, containerSettings)`
 - `CompactUnitFrameDispelOverlayMixin:SetOrientation(orientation, additionalXOffset, additionalYOffset)`
@@ -13864,7 +13870,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## ContactsMenuMixin
 
-`interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:2781`
+`interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:2783`
 
 - `ContactsMenuMixin:OnShow()`
 - `ContactsMenuMixin:Refresh()`
@@ -13898,7 +13904,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## ContainerFrameBackpackMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2730` · mixes in `ContainerFrameTokenWatcherMixin`
+`interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2790` · mixes in `ContainerFrameTokenWatcherMixin`
 
 - `ContainerFrameBackpackMixin:IsBackpack()`
 - `ContainerFrameBackpackMixin:CanUseForBagID(id)`
@@ -13909,9 +13915,8 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## ContainerFrameCombinedBagsMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2762` · mixes in `ContainerFrameTokenWatcherMixin`
+`interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2822` · mixes in `ContainerFrameTokenWatcherMixin`
 
-- `ContainerFrameCombinedBagsMixin:GetJumpHintLabel()`
 - `ContainerFrameCombinedBagsMixin:OnLoad()`
 - `ContainerFrameCombinedBagsMixin:OnShow()`
 - `ContainerFrameCombinedBagsMixin:OnHide()`
@@ -13946,6 +13951,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `ContainerFrameCombinedBagsMixin:UninitializeGamepad()`
 - `ContainerFrameCombinedBagsMixin:SetUpSearchGamepad()`
 - `ContainerFrameCombinedBagsMixin:SetupGamepad()`
+- `ContainerFrameCombinedBagsMixin:ApplySmartNavOverrideForLeftmostButton()`
 - `ContainerFrameCombinedBagsMixin:SmartNavPanelInfoAdded(panelInfo)`
 - `ContainerFrameCombinedBagsMixin:SetFocusByItemID(itemID)`
 - `ContainerFrameCombinedBagsMixin:SetFocusByItemLink(itemLink)`
@@ -13955,15 +13961,16 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## ContainerFrameCurrencyBorderMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:3532`
+`interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:3651`
 
 - `ContainerFrameCurrencyBorderMixin:OnLoad()`
 - `ContainerFrameCurrencyBorderMixin:SetupPiece(piece, atlas)`
 
 ## ContainerFrameItemButtonMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:1640`
+`interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:1643`
 
+- `ContainerFrameItemButtonMixin:ShouldUseBagIconForEmptySlot()`
 - `ContainerFrameItemButtonMixin:GetItemContextMatchResult()`
 - `ContainerFrameItemButtonMixin:OnLoad()`
 - `ContainerFrameItemButtonMixin:OnClick(button)`
@@ -13978,10 +13985,16 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `ContainerFrameItemButtonMixin:SetBagID(id)`
 - `ContainerFrameItemButtonMixin:GetBagID()`
 - `ContainerFrameItemButtonMixin:GetSlotAndBagID()`
-- `ContainerFrameItemButtonMixin:Initialize(bag, slot)`
+- `ContainerFrameItemButtonMixin:IsCombined()`
+- `ContainerFrameItemButtonMixin:Initialize(containerFrame, bag, slot)`
 - `ContainerFrameItemButtonMixin:UpdateQuestItem(isQuestItem, questID, isActive)`
 - `ContainerFrameItemButtonMixin:UpdateNewItem(quality)`
 - `ContainerFrameItemButtonMixin:UpdateJunkItem(quality, noValue)`
+- `ContainerFrameItemButtonMixin:GetBagIcon()`
+- `ContainerFrameItemButtonMixin:ShouldUseBagIconForEmptySlot()`
+- `ContainerFrameItemButtonMixin:SetAppearanceToEmptyBagSlot()`
+- `ContainerFrameItemButtonMixin:GetItemButtonBackgroundTexture()`
+- `ContainerFrameItemButtonMixin:SyncAppearanceWithHasItem()`
 - `ContainerFrameItemButtonMixin:SetHasItem(hasItem)`
 - `ContainerFrameItemButtonMixin:HasItem()`
 - `ContainerFrameItemButtonMixin:SetReadable(readable)`
@@ -13995,7 +14008,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## ContainerFrameMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:857` · mixes in `BaseContainerFrameMixin`
+`interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:846` · mixes in `BaseContainerFrameMixin`
 
 - `ContainerFrameMixin:OnCloseClicked()`
 - `ContainerFrameMixin:UpdateMoneyFrame()`
@@ -14038,7 +14051,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## ContainerFramePortraitButtonMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2001`
+`interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2058`
 
 - `ContainerFramePortraitButtonMixin:OnMouseDown()`
 - `ContainerFramePortraitButtonMixin:OnEnter()`
@@ -14049,7 +14062,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## ContainerFrameSettingsManager
 
-`interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2382`
+`interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2439`
 
 - `ContainerFrameSettingsManager:Init()`
 - `ContainerFrameSettingsManager:OnAddonLoaded(addonName)`
@@ -14079,7 +14092,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## ContainerFrameTokenWatcherMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2670` · mixes in `ContainerFrameMixin`
+`interface/addons/blizzard_uipanels_game/mainline/containerframe.lua:2730` · mixes in `ContainerFrameMixin`
 
 - `ContainerFrameTokenWatcherMixin:OnShow()`
 - `ContainerFrameTokenWatcherMixin:OnHide()`
@@ -15138,7 +15151,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CovenantCallingsHeaderMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:1995`
+`interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:1993`
 
 - `CovenantCallingsHeaderMixin:GetButtonType()`
 - `CovenantCallingsHeaderMixin:OnLoadCovenantCallings()`
@@ -15586,7 +15599,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CRFM_DifficultyDropdownMixin
 
-`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:890` · mixes in `CRFM_ToolbarButtonMixin`
+`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:889` · mixes in `CRFM_ToolbarButtonMixin`
 
 - `CRFM_DifficultyDropdownMixin:OnMenuOpened(menu)`
 - `CRFM_DifficultyDropdownMixin:OnMenuClosed(menu, closeReason)`
@@ -15608,7 +15621,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CRFManagerFilterGroupButtonMixin
 
-`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1189`
+`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1188`
 
 - `CRFManagerFilterGroupButtonMixin:OnClick()`
 - `CRFManagerFilterGroupButtonMixin:OnEnter()`
@@ -15616,7 +15629,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CRFManagerFilterRoleButtonMixin
 
-`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1174`
+`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1173`
 
 - `CRFManagerFilterRoleButtonMixin:OnClick()`
 - `CRFManagerFilterRoleButtonMixin:OnEnter()`
@@ -15624,13 +15637,13 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CRFManagerMarkerTabMixin
 
-`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1325`
+`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1324`
 
 - `CRFManagerMarkerTabMixin:OnClick()`
 
 ## CRFManagerRaidIconButtonMixin
 
-`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1210`
+`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1209`
 
 - `CRFManagerRaidIconButtonMixin:GetMarker()`
 - `CRFManagerRaidIconButtonMixin:OnShow()`
@@ -15643,13 +15656,13 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## CRFManagerRoleMarkerCheckMixin
 
-`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1204`
+`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1203`
 
 - `CRFManagerRoleMarkerCheckMixin:OnLoad()`
 
 ## CRFRaidMarkersMixin
 
-`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1332`
+`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1331`
 
 - `CRFRaidMarkersMixin:SetTab(frame)`
 - `CRFRaidMarkersMixin:OnLoad()`
@@ -18233,7 +18246,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeArchaeologyBarSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2876`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2890`
 
 - `EditModeArchaeologyBarSystemMixin:OnEditModeExit()`
 - `EditModeArchaeologyBarSystemMixin:UpdateSystemSettingSize()`
@@ -18241,14 +18254,14 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeArenaUnitFrameSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:1722`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:1736`
 
 - `EditModeArenaUnitFrameSystemMixin:SetIsInEditMode(isInEditMode)`
 - `EditModeArenaUnitFrameSystemMixin:AddExtraButtons(extraButtonPool)`
 
 ## EditModeAuraFrameSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:1962`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:1976`
 
 - `EditModeAuraFrameSystemMixin:OnEditModeExit()`
 - `EditModeAuraFrameSystemMixin:AnchorSelectionFrame()`
@@ -18267,7 +18280,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeBagsSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2514`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2528`
 
 - `EditModeBagsSystemMixin:UpdateSystem(systemInfo)`
 - `EditModeBagsSystemMixin:UpdateDisplayInfoOptions(displayInfo)`
@@ -18315,7 +18328,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeBossUnitFrameSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:1691`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:1705`
 
 - `EditModeBossUnitFrameSystemMixin:OnEditModeExit()`
 - `EditModeBossUnitFrameSystemMixin:ShouldAnyBossFrameShow()`
@@ -18323,7 +18336,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeCastBarSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:1823`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:1837`
 
 - `EditModeCastBarSystemMixin:OnDragStart()`
 - `EditModeCastBarSystemMixin:OnEditModeExit()`
@@ -18340,14 +18353,14 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeChatFrameResizeButtonMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2287`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2301`
 
 - `EditModeChatFrameResizeButtonMixin:OnMouseDown()`
 - `EditModeChatFrameResizeButtonMixin:OnMouseUp()`
 
 ## EditModeChatFrameSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2184`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2198`
 
 - `EditModeChatFrameSystemMixin:UpdateSystem(systemInfo)`
 - `EditModeChatFrameSystemMixin:MarkSystemPositionDirty()`
@@ -18376,7 +18389,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeCooldownViewerSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2903` · mixes in `EditModeSystemMixin`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2917` · mixes in `EditModeSystemMixin`
 
 - `EditModeCooldownViewerSystemMixin:OnEditModeExit()`
 - `EditModeCooldownViewerSystemMixin:ShouldShowSetting(setting)`
@@ -18400,7 +18413,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeDamageMeterSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:3569` · mixes in `EditModeSystemMixin`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:3583` · mixes in `EditModeSystemMixin`
 
 - `EditModeDamageMeterSystemMixin:OnSystemLoad()`
 - `EditModeDamageMeterSystemMixin:OnEditModeEnter()`
@@ -18423,7 +18436,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeDurabilityFrameSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2658`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2672`
 
 - `EditModeDurabilityFrameSystemMixin:OnEditModeExit()`
 - `EditModeDurabilityFrameSystemMixin:UpdateSystemSettingSize()`
@@ -18431,13 +18444,13 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeEncounterBarSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:1946`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:1960`
 
 - `EditModeEncounterBarSystemMixin:ApplySystemAnchor()`
 
 ## EditModeEncounterEventsSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:3100` · mixes in `EditModeSystemMixin`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:3114` · mixes in `EditModeSystemMixin`
 
 - `EditModeEncounterEventsSystemMixin:OnEditModeExit()`
 - `EditModeEncounterEventsSystemMixin:UpdateSystemSettingViewType()`
@@ -18460,7 +18473,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeExtraAbilitiesSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:1953`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:1967`
 
 - `EditModeExtraAbilitiesSystemMixin:OnEditModeExit()`
 
@@ -18469,6 +18482,8 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 `interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:1236`
 
 - `EditModeGamepadMainActionBarSystemMixin:UpdateSystemSetting(setting, entireSystemUpdate)`
+- `EditModeGamepadMainActionBarSystemMixin:OnEditModeEnter()`
+- `EditModeGamepadMainActionBarSystemMixin:OnEditModeExit()`
 - `EditModeGamepadMainActionBarSystemMixin:UpdateSystemSettingCompact()`
 - `EditModeGamepadMainActionBarSystemMixin:UpdateSystemSettingShowEmptyBars()`
 - `EditModeGamepadMainActionBarSystemMixin:UpdateSystemSettingShowButtonPrompts()`
@@ -18501,7 +18516,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeGroupFinderSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:3792`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:3806`
 
 - `EditModeGroupFinderSystemMixin:ApplySystemAnchor()`
 - `EditModeGroupFinderSystemMixin:OnDragStop()`
@@ -18552,7 +18567,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeLootFrameSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2323`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2337`
 
 - `EditModeLootFrameSystemMixin:OnEditModeExit()`
 - `EditModeLootFrameSystemMixin:OnDragStart()`
@@ -18560,7 +18575,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeLossOfControlSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:3827`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:3841`
 
 - `EditModeLossOfControlSystemMixin:OnEditModeExit()`
 - `EditModeLossOfControlSystemMixin:UpdateSystemSettingSize()`
@@ -18593,7 +18608,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeMainActionBarEndCapSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:3753`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:3767`
 
 - `EditModeMainActionBarEndCapSystemMixin:AnchorSelectionFrame()`
 - `EditModeMainActionBarEndCapSystemMixin:UpdateSystemSettingVisibility()`
@@ -18769,7 +18784,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeMicroMenuSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2434`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2448`
 
 - `EditModeMicroMenuSystemMixin:OnEditModeEnter()`
 - `EditModeMicroMenuSystemMixin:OnEditModeExit()`
@@ -18784,7 +18799,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeMinimapSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:1778`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:1792`
 
 - `EditModeMinimapSystemMixin:UpdateSystemSettingHeaderUnderneath()`
 - `EditModeMinimapSystemMixin:UpdateSystemSettingRotateMinimap()`
@@ -18794,7 +18809,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeObjectiveTrackerSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2345`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2359`
 
 - `EditModeObjectiveTrackerSystemMixin:OnEditModeEnter()`
 - `EditModeObjectiveTrackerSystemMixin:OnEditModeExit()`
@@ -18810,7 +18825,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModePersonalResourceDisplaySystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:3432`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:3446`
 
 - `EditModePersonalResourceDisplaySystemMixin:ShouldShowSetting(setting)`
 - `EditModePersonalResourceDisplaySystemMixin:OnEditModeExit()`
@@ -18833,14 +18848,14 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModePetFrameSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2716`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2730`
 
 - `EditModePetFrameSystemMixin:OnEditModeExit()`
 - `EditModePetFrameSystemMixin:UpdateSystemSettingFrameSize()`
 
 ## EditModePlayerFrameSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2699`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2713`
 
 - `EditModePlayerFrameSystemMixin:ApplySystemAnchor()`
 - `EditModePlayerFrameSystemMixin:UpdateSystemSettingFrameSize()`
@@ -18865,7 +18880,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeRaidWarningSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:3745`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:3759`
 
 - `EditModeRaidWarningSystemMixin:OnEditModeExit()`
 
@@ -18907,7 +18922,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeStatusTrackingBar1SystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2636`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2650`
 
 - `EditModeStatusTrackingBar1SystemMixin:OnEditModeEnter()`
 - `EditModeStatusTrackingBar1SystemMixin:GetSystemName()`
@@ -18920,7 +18935,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeStatusTrackingBarSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2597`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2611`
 
 - `EditModeStatusTrackingBarSystemMixin:OnEditModeExit()`
 - `EditModeStatusTrackingBarSystemMixin:OnSystemPositionChange()`
@@ -18929,7 +18944,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeSwingTimerSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2756`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2770`
 
 - `EditModeSwingTimerSystemMixin:OnEditModeExit()`
 - `EditModeSwingTimerSystemMixin:UpdateFramePositions()`
@@ -19044,7 +19059,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeSystemSelectionBaseMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:3303`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:3317`
 
 - `EditModeSystemSelectionBaseMixin:OnLoad()`
 - `EditModeSystemSelectionBaseMixin:SetSystem(system)`
@@ -19065,14 +19080,14 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeSystemSelectionDoubleLabelMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:3415` · mixes in `EditModeSystemSelectionBaseMixin`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:3429` · mixes in `EditModeSystemSelectionBaseMixin`
 
 - `EditModeSystemSelectionDoubleLabelMixin:SetVerticalState(vertical)`
 - `EditModeSystemSelectionDoubleLabelMixin:UpdateLabelVisibility()`
 
 ## EditModeSystemSelectionMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:3408` · mixes in `EditModeSystemSelectionBaseMixin`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:3422` · mixes in `EditModeSystemSelectionBaseMixin`
 
 - `EditModeSystemSelectionMixin:UpdateLabelVisibility()`
 
@@ -19102,13 +19117,13 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeTalkingHeadFrameSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2175`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2189`
 
 - `EditModeTalkingHeadFrameSystemMixin:OnEditModeExit()`
 
 ## EditModeTimerBarsSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2729`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2743`
 
 - `EditModeTimerBarsSystemMixin:OnEditModeExit()`
 - `EditModeTimerBarsSystemMixin:UpdateSystemSettingSize()`
@@ -19116,14 +19131,14 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeTotemActionBarSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2857`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2871`
 
 - `EditModeTotemActionBarSystemMixin:OnEditModeExit()`
 - `EditModeTotemActionBarSystemMixin:UpdateSystemSetting(setting, entireSystemUpdate)`
 
 ## EditModeUnitFrameSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:1304`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:1318`
 
 - `EditModeUnitFrameSystemMixin:AddExtraButtons(extraButtonPool)`
 - `EditModeUnitFrameSystemMixin:ShouldResetSettingsDialogAnchors(oldSelectedSystemFrame)`
@@ -19202,7 +19217,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeVehicleLeaveButtonSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2306`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2320`
 
 - `EditModeVehicleLeaveButtonSystemMixin:OnEditModeExit()`
 - `EditModeVehicleLeaveButtonSystemMixin:EditModeVehicleLeaveButtonSystem_OnShow()`
@@ -19210,7 +19225,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EditModeVehicleSeatIndicatorSystemMixin
 
-`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2830`
+`interface/addons/blizzard_editmode/shared/editmodesystemtemplates.lua:2844`
 
 - `EditModeVehicleSeatIndicatorSystemMixin:OnEditModeExit()`
 - `EditModeVehicleSeatIndicatorSystemMixin:UpdateSystemSettingSize()`
@@ -19255,7 +19270,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## EnchantingItemButtonAnimMixin
 
-`interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:445`
+`interface/addons/blizzard_itembutton/mainline/itembuttontemplate.lua:450`
 
 - `EnchantingItemButtonAnimMixin:OnLoad()`
 - `EnchantingItemButtonAnimMixin:OnShow()`
@@ -20916,16 +20931,17 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## ExperiencePresetButtonMixin
 
-`interface/addons/blizzard_gluexml/mainline/experiencepreset.lua:20` · mixes in `NarrationStaticNameMixin`, `NarrationStaticDescriptionMixin`
+`interface/addons/blizzard_gluexml/mainline/experiencepreset.lua:65` · mixes in `NarrationStaticNameMixin`, `NarrationStaticDescriptionMixin`
 
 - `ExperiencePresetButtonMixin:OnClick()`
 - `ExperiencePresetButtonMixin:OnLoad()`
+- `ExperiencePresetButtonMixin:OnSmartNavSelect()`
 - `ExperiencePresetButtonMixin:OnShow()`
 - `ExperiencePresetButtonMixin:NarrationGetContext()`
 
 ## ExperiencePresetCancelButtonMixin
 
-`interface/addons/blizzard_gluexml/mainline/experiencepreset.lua:97`
+`interface/addons/blizzard_gluexml/mainline/experiencepreset.lua:146`
 
 - `ExperiencePresetCancelButtonMixin:OnClick()`
 
@@ -20936,10 +20952,16 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `ExperiencePresetMixin:OnLoad()`
 - `ExperiencePresetMixin:OnShow()`
 - `ExperiencePresetMixin:NarrationShouldIgnoreFocus()`
+- `ExperiencePresetMixin:FocusGamepad()`
+- `ExperiencePresetMixin:UnfocusGamepad()`
+- `ExperiencePresetMixin:SetupGamepad()`
+- `ExperiencePresetMixin:InitializeGamepad()`
+- `ExperiencePresetMixin:UninitializeGamepad()`
+- `ExperiencePresetMixin:RegisterForTransitions()`
 
 ## ExperiencePresetSelectButtonMixin
 
-`interface/addons/blizzard_gluexml/mainline/experiencepreset.lua:82`
+`interface/addons/blizzard_gluexml/mainline/experiencepreset.lua:131`
 
 - `ExperiencePresetSelectButtonMixin:OnShow()`
 - `ExperiencePresetSelectButtonMixin:OnClick()`
@@ -21273,7 +21295,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## FlowErrorContainerMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect.lua:2641`
+`interface/addons/blizzard_gluexml/mainline/characterselect.lua:2659`
 
 - `FlowErrorContainerMixin:OnEnter()`
 - `FlowErrorContainerMixin:OnLeave()`
@@ -21336,7 +21358,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## FocusFrameMixin
 
-`interface/addons/blizzard_unitframe/mainline/targetframe.lua:1153`
+`interface/addons/blizzard_unitframe/mainline/targetframe.lua:1156`
 
 - `FocusFrameMixin:IsLocked()`
 - `FocusFrameMixin:SetLock(locked)`
@@ -21626,7 +21648,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## FriendsFrameAddFriendButtonMixin
 
-`interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:2814`
+`interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:2809`
 
 - `FriendsFrameAddFriendButtonMixin:OnClick()`
 - `FriendsFrameAddFriendButtonMixin:OnEnter()`
@@ -21683,7 +21705,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## FriendsIgnoreListMixin
 
-`interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:2745`
+`interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:2747`
 
 - `FriendsIgnoreListMixin:OnLoad()`
 - `FriendsIgnoreListMixin:OnShow()`
@@ -22678,7 +22700,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `GamepadActionBarEditFrameMixin:UpdateSelectedMoveDisplay_Outfit(selectedActionInfo)`
 - `GamepadActionBarEditFrameMixin:UpdateSelectedMoveDisplay_Macro(selectedActionInfo)`
 - `GamepadActionBarEditFrameMixin:SetDisplayedActionPickupInfo(actionPickupFunc, ...)`
-- `GamepadActionBarEditFrameMixin:UnFocusGamepad()`
+- `GamepadActionBarEditFrameMixin:UnfocusGamepad()`
 - `GamepadActionBarEditFrameMixin:TryClearHeldAction()`
 - `GamepadActionBarEditFrameMixin:SwitchFromBindingModeToEditMode()`
 - `GamepadActionBarEditFrameMixin:ExitActiveMode()`
@@ -22798,7 +22820,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## GamepadActionBarPetButtonMixin
 
-`interface/addons/blizzard_gamepadactionbars/actionbarbutton.lua:1152` · mixes in `PetActionButtonMixin`, `GamepadActionBarButtonMixin`
+`interface/addons/blizzard_gamepadactionbars/actionbarbutton.lua:1156` · mixes in `PetActionButtonMixin`, `GamepadActionBarButtonMixin`
 
 - `GamepadActionBarPetButtonMixin:HasAction()`
 - `GamepadActionBarPetButtonMixin:OnLoad()`
@@ -22822,7 +22844,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## GamepadActionBarStyleUtil
 
-`interface/addons/blizzard_gamepadactionbars/actionbarstyles.lua:98`
+`interface/addons/blizzard_gamepadactionbars/actionbarstyles.lua:103`
 
 - `GamepadActionBarStyleUtil.ApplyCollapsedActionBarStyle(actionBar, style)`
 - `GamepadActionBarStyleUtil.ApplyExpandedActionBarStyle(actionBar, style)`
@@ -22833,28 +22855,35 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## GamepadBackpackButtonMixin
 
-`interface/addons/blizzard_mainmenubarbagbuttons/shared/mainmenubarbagbuttons.lua:436` · mixes in `MainMenuBarBackpackMixin`
+`interface/addons/blizzard_mainmenubarbagbuttons/shared/mainmenubarbagbuttons.lua:519` · mixes in `MainMenuBarBackpackMixin`
 
+- `GamepadBackpackButtonMixin:SetCountShown()`
 - `GamepadBackpackButtonMixin:BagSlotOnLoad()`
 - `GamepadBackpackButtonMixin:BagSlotOnClick(button, down)`
-- `GamepadBackpackButtonMixin:BagSlotOnShow()`
-- `GamepadBackpackButtonMixin:BagSlotOnHide()`
 
 ## GamepadBagBarMixin
 
-`interface/addons/blizzard_mainmenubarbagbuttons/shared/mainmenubarbagbuttons.lua:209`
+`interface/addons/blizzard_mainmenubarbagbuttons/shared/mainmenubarbagbuttons.lua:289`
 
 - `GamepadBagBarMixin:GetBagButton(bagID)`
 - `GamepadBagBarMixin:OnLoad()`
 
 ## GamepadBagSlotButtonMixin
 
-`interface/addons/blizzard_mainmenubarbagbuttons/shared/mainmenubarbagbuttons.lua:251` · mixes in `BaseBagSlotButtonMixin`
+`interface/addons/blizzard_mainmenubarbagbuttons/shared/mainmenubarbagbuttons.lua:348` · mixes in `BaseBagSlotButtonMixin`
 
 - `GamepadBagSlotButtonMixin:BagSlotOnLoad()`
 - `GamepadBagSlotButtonMixin:BagSlotOnClick(button, down)`
-- `GamepadBagSlotButtonMixin:BagSlotOnShow()`
-- `GamepadBagSlotButtonMixin:BagSlotOnHide()`
+
+## GamepadBagSlotMixin
+
+`interface/addons/blizzard_mainmenubarbagbuttons/shared/mainmenubarbagbuttons.lua:222`
+
+- `GamepadBagSlotMixin:HasBag()`
+- `GamepadBagSlotMixin:UpdateBorderAtlases()`
+- `GamepadBagSlotMixin:IsAmmunitionBag()`
+- `GamepadBagSlotMixin:UpdateItemCount()`
+- `GamepadBagSlotMixin:TryOpenBagMenu(button)`
 
 ## GamepadBaseDialogMixin
 
@@ -22884,7 +22913,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## GamepadCharacterReagentBagMixin
 
-`interface/addons/blizzard_mainmenubarbagbuttons/shared/mainmenubarbagbuttons.lua:471` · mixes in `CharacterReagentBagMixin`
+`interface/addons/blizzard_mainmenubarbagbuttons/shared/mainmenubarbagbuttons.lua:552` · mixes in `CharacterReagentBagMixin`
 
 - `GamepadCharacterReagentBagMixin:BagSlotOnLoad()`
 - `GamepadCharacterReagentBagMixin:BagSlotOnClick(button, down)`
@@ -22937,7 +22966,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## GamepadFrameControlsManagerMixin
 
-`interface/addons/blizzard_gamepadsharedutility/framecontrolsmanager.lua:11`
+`interface/addons/blizzard_gamepadsharedutility/framecontrolsmanager.lua:13`
 
 - `GamepadFrameControlsManagerMixin:ResetVars()`
 - `GamepadFrameControlsManagerMixin:Init()`
@@ -22980,11 +23009,8 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `GamepadFrameControlsManagerMixin:DisableReturnToPlayerControl(focusedFrame)`
 - `GamepadFrameControlsManagerMixin:UseCustomNavigation(focusedFrame)`
 - `GamepadFrameControlsManagerMixin:DisableCustomNavigation(focusedFrame)`
-- `GamepadFrameControlsManagerMixin:ClearSmartNavReturnFrame(focusedFrame)`
 - `GamepadFrameControlsManagerMixin:ToggleFrameControls(enable)`
 - `GamepadFrameControlsManagerMixin:RefreshGamepadCursorHovering()`
-- `GamepadFrameControlsManagerMixin:RegisterJumpHintRightBinding(frame, promptedBinding)`
-- `GamepadFrameControlsManagerMixin:RegisterJumpHintLeftBinding(frame, promptedBinding)`
 - `GamepadFrameControlsManagerMixin:ClearAllJumpHints()`
 - `GamepadFrameControlsManagerMixin:RefreshJumpHints()`
 - `GamepadFrameControlsManagerMixin:RefreshFocus()`
@@ -23160,12 +23186,14 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## GamepadKeyRingMixin
 
-`interface/addons/blizzard_mainmenubarbagbuttons/camelot/mainmenubarbagbuttons.lua:217` · mixes in `KeyRingMixin`
+`interface/addons/blizzard_mainmenubarbagbuttons/camelot/mainmenubarbagbuttons.lua:221` · mixes in `KeyRingMixin`
 
 - `GamepadKeyRingMixin:BagSlotOnLoad()`
 - `GamepadKeyRingMixin:GetBagID()`
 - `GamepadKeyRingMixin:BagSlotOnClick(button, down)`
 - `GamepadKeyRingMixin:OnClick(button, down)`
+- `GamepadKeyRingMixin:BagSlotOnEnter()`
+- `GamepadKeyRingMixin:BagSlotOnLeave()`
 - `GamepadKeyRingMixin:UpdateOrientation(isHorizontal)`
 
 ## GamepadMainActionBarFrameMixin
@@ -23197,6 +23225,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `GamepadMainActionBarFrameMixin:UpdateInteractIcons()`
 - `GamepadMainActionBarFrameMixin:OnEvent(event, ...)`
 - `GamepadMainActionBarFrameMixin:RefreshAttackFlash()`
+- `GamepadMainActionBarFrameMixin:UpdateBackIcons()`
 - `GamepadMainActionBarFrameMixin:UpdateShoulderHighlight(flag, down)`
 - `GamepadMainActionBarFrameMixin:ResetShoulderIcons()`
 - `GamepadMainActionBarFrameMixin:SetShoulderIcons(leftIcon, rightIcon)`
@@ -23405,7 +23434,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## GamepadRadialContextMenuMixin
 
-`interface/addons/blizzard_gamepad/ui/radials/gamepadradial.lua:1152`
+`interface/addons/blizzard_gamepad/ui/radials/gamepadradial.lua:1158`
 
 - `GamepadRadialContextMenuMixin:Init(radial)`
 - `GamepadRadialContextMenuMixin:SetMenuOptions(options)`
@@ -23436,7 +23465,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## GamepadRadialSegmentMixin
 
-`interface/addons/blizzard_gamepad/ui/radials/gamepadradial.lua:1063`
+`interface/addons/blizzard_gamepad/ui/radials/gamepadradial.lua:1069`
 
 - `GamepadRadialSegmentMixin:Activate()`
 - `GamepadRadialSegmentMixin:Deactivate()`
@@ -23533,6 +23562,9 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `GamepadShortcutsActionBarMixin:SetUpFaceLeft()`
 - `GamepadShortcutsActionBarMixin:SetUpFaceTop()`
 - `GamepadShortcutsActionBarMixin:SetUpFaceRight()`
+- `GamepadShortcutsActionBarMixin:ResetFaceBottom()`
+- `GamepadShortcutsActionBarMixin:SetUpFaceBottom()`
+- `GamepadShortcutsActionBarMixin:RefreshFocusButton()`
 
 ## GamepadSpellFlyoutMixin
 
@@ -24172,7 +24204,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## GearManagerPopupFrameMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2436`
+`interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2441`
 
 - `GearManagerPopupFrameMixin:OnShow()`
 - `GearManagerPopupFrameMixin:OnHide()`
@@ -24185,7 +24217,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## GearSetButtonMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2363`
+`interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2368`
 
 - `GearSetButtonMixin:OnLoad()`
 - `GearSetButtonMixin:OnSmartNavSelect()`
@@ -24613,7 +24645,6 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `GraphicsOverrides.CreateAdvancedRaidSettingsTable(category, addFunc)`
 - `GraphicsOverrides.AdjustAdvancedQualityControls(parentElement, settings, raid, initDropdownFunc, addOptionFunc, addRecommendedFunc)`
 - `GraphicsOverrides.GetTextureResolutionOptions(settingTextureResolution, addValidatedSettingOptionFunc, addRecommendedFunc)`
-- `GraphicsOverrides.CreateHDSDToggleOptions(category, layout)`
 - `GraphicsOverrides.CreateHiResOptions(category, layout)`
 - `GraphicsOverrides.RunSettingsCallback(callback)`
 
@@ -28283,7 +28314,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## InspectPaperDollFrameTalentsButtonMixin
 
-`interface/addons/blizzard_inspectui/mainline/inspectpaperdollframe.lua:278`
+`interface/addons/blizzard_inspectui/mainline/inspectpaperdollframe.lua:284`
 
 - `InspectPaperDollFrameTalentsButtonMixin:OnClick()`
 - `InspectPaperDollFrameTalentsButtonMixin:OnEnter()`
@@ -28390,6 +28421,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `InterfaceOverrides.HasSwingTimer()`
 - `InterfaceOverrides.CanResetTutorials()`
 - `InterfaceOverrides.AdjustDisplaySettings(category)`
+- `InterfaceOverrides.SetupToastSettings(category)`
 - `InterfaceOverrides.AdjustDisplaySettings(category)`
 - `InterfaceOverrides.HasAssistedCombat()`
 - `InterfaceOverrides.HasBossWarnings()`
@@ -28406,6 +28438,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `InterfaceOverrides.CreateQuestSettings(category, layout)`
 - `InterfaceOverrides.AdjustInGameNavigationSettings(category)`
 - `InterfaceOverrides.RegisterOutlineSettings(category)`
+- `InterfaceOverrides.SetupToastSettings(category)`
 
 ## InterpolatorMixin
 
@@ -28534,6 +28567,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `ItemButtonMixin:SetItemButtonBorderVertexColor(r, g, b)`
 - `ItemButtonMixin:GetItemButtonBackgroundTexture()`
 - `ItemButtonMixin:OnItemContextChanged()`
+- `ItemButtonMixin:PostOnLoad()`
 - `ItemButtonMixin:PostOnShow()`
 - `ItemButtonMixin:PostOnHide()`
 - `ItemButtonMixin:PostOnEvent(event, ...)`
@@ -29102,7 +29136,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## KeyRingMixin
 
-`interface/addons/blizzard_mainmenubarbagbuttons/camelot/mainmenubarbagbuttons.lua:90`
+`interface/addons/blizzard_mainmenubarbagbuttons/camelot/mainmenubarbagbuttons.lua:94`
 
 - `KeyRingMixin:BagSlotOnShow()`
 - `KeyRingMixin:BagSlotOnHide()`
@@ -29246,7 +29280,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## LeaveInstanceGroupButtonMixin
 
-`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1501`
+`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1500`
 
 - `LeaveInstanceGroupButtonMixin:OnLoad()`
 - `LeaveInstanceGroupButtonMixin:OnUpdate()`
@@ -29254,7 +29288,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## LeavePartyButtonMixin
 
-`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1491`
+`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1490`
 
 - `LeavePartyButtonMixin:OnClick()`
 
@@ -29566,7 +29600,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## LevelTextMixin
 
-`interface/addons/blizzard_inspectui/mainline/inspectpaperdollframe.lua:303`
+`interface/addons/blizzard_inspectui/mainline/inspectpaperdollframe.lua:309`
 
 - `LevelTextMixin:OnEnter()`
 - `LevelTextMixin:OnLeave()`
@@ -29617,7 +29651,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## LFGBrowseActivityDropdownMixin
 
-`interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:1104`
+`interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:1110`
 
 - `LFGBrowseActivityDropdownMixin:OnLoad()`
 - `LFGBrowseActivityDropdownMixin:SetupDropdown()`
@@ -29632,7 +29666,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## LFGBrowseCategoryDropdownMixin
 
-`interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:1039`
+`interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:1045`
 
 - `LFGBrowseCategoryDropdownMixin:OnLoad()`
 - `LFGBrowseCategoryDropdownMixin:SetupDropdown()`
@@ -29642,13 +29676,13 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## LFGBrowseDelistButtonMixin
 
-`interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:1287`
+`interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:1293`
 
 - `LFGBrowseDelistButtonMixin:OnClick(button)`
 
 ## LFGBrowseGroupInviteButtonMixin
 
-`interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:1301`
+`interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:1307`
 
 - `LFGBrowseGroupInviteButtonMixin:OnClick(button)`
 
@@ -29673,7 +29707,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## LFGBrowseSendMessageButtonMixin
 
-`interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:1310`
+`interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_browse.lua:1316`
 
 - `LFGBrowseSendMessageButtonMixin:OnClick(button)`
 
@@ -29823,7 +29857,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## LFGOptionsButton
 
-`interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_parentframe.lua:292`
+`interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_parentframe.lua:280`
 
 - `LFGOptionsButton:OnEnter()`
 - `LFGOptionsButton:OnLeave()`
@@ -29834,7 +29868,6 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 `interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_parentframe.lua:11`
 
-- `LFGParentFrameMixin:GetJumpHintLabel()`
 - `LFGParentFrameMixin:OnLoad()`
 - `LFGParentFrameMixin:OnShow()`
 - `LFGParentFrameMixin:OnHide()`
@@ -29844,7 +29877,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## LFGParentFrameRightTabMixin
 
-`interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_parentframe.lua:104` · mixes in `SidePanelTabButtonMixin`
+`interface/addons/blizzard_groupfinder_vanillastyle/blizzard_lfgvanilla_parentframe.lua:92` · mixes in `SidePanelTabButtonMixin`
 
 - `LFGParentFrameRightTabMixin:OnLoad()`
 
@@ -30411,7 +30444,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## MainMenuBarBackpackMixin
 
-`interface/addons/blizzard_mainmenubarbagbuttons/shared/mainmenubarbagbuttons.lua:280` · mixes in `BaseBagSlotButtonMixin`
+`interface/addons/blizzard_mainmenubarbagbuttons/shared/mainmenubarbagbuttons.lua:369` · mixes in `BaseBagSlotButtonMixin`
 
 - `MainMenuBarBackpackMixin:GetSlotAtlases()`
 - `MainMenuBarBackpackMixin:BagSlotOnShow()`
@@ -30450,6 +30483,8 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 `interface/addons/blizzard_actionbar/camelot/mainmenubarendcaps.lua:2`
 
 - `MainMenuBarEndCapMixin:OnLoad()`
+- `MainMenuBarEndCapMixin:OnEvent(event, ...)`
+- `MainMenuBarEndCapMixin:DoesFitOnScreen()`
 - `MainMenuBarEndCapMixin:UpdateVisibility()`
 - `MainMenuBarEndCapMixin:SetVisibilitySetting(visible)`
 
@@ -31437,6 +31472,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `MenuMixin:ToDebugString()`
 - `MenuMixin:Open(menuDescription, onElementMouseDown, onElementEnter, onElementLeave)`
 - `MenuMixin:MeasureFrameExtents()`
+- `MenuMixin:FinalizeGridLayout(columns, rows)`
 - `MenuMixin:PerformLayout()`
 - `MenuMixin:ReinitializeAll()`
 - `MenuMixin:DiscardChildFrames()`
@@ -31446,7 +31482,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## MenuProxyMixin
 
-`interface/addons/blizzard_menu/menu.lua:1749`
+`interface/addons/blizzard_menu/menu.lua:1790`
 
 - `MenuProxyMixin:OnLoad()`
 - `MenuProxyMixin:RegisterForTransitions()`
@@ -32517,7 +32553,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## NameChoiceMixin
 
-`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2064`
+`interface/addons/blizzard_charactercreate/mainline/blizzard_charactercreate.lua:2068`
 
 - `NameChoiceMixin:OnLoad()`
 - `NameChoiceMixin:OnShow()`
@@ -32535,16 +32571,11 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 `interface/addons/blizzard_nameplates/blizzard_nameplateauras.lua:2`
 
 - `NamePlateAuraItemMixin:OnLoad()`
-- `NamePlateAuraItemMixin:OnEnter()`
-- `NamePlateAuraItemMixin:OnLeave()`
-- `NamePlateAuraItemMixin:RefreshTooltip()`
-- `NamePlateAuraItemMixin:UpdateTooltip()`
 - `NamePlateAuraItemMixin:SetAura(aura)`
-- `NamePlateAuraItemMixin:SetUnit(unitToken)`
 
 ## NamePlateAurasMixin
 
-`interface/addons/blizzard_nameplates/blizzard_nameplateauras.lua:72` · mixes in `NamePlateComponentMixin`
+`interface/addons/blizzard_nameplates/blizzard_nameplateauras.lua:38` · mixes in `NamePlateComponentMixin`
 
 - `NamePlateAurasMixin:OnLoad()`
 - `NamePlateAurasMixin:OnEvent(event, ...)`
@@ -32768,21 +32799,19 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `NameplatesOverrides.GetNPCNamesOptionDefault()`
 - `NameplatesOverrides.GetNameplateStyleOptions()`
 - `NameplatesOverrides.ShowHighlightImportantCastsOption()`
-- `NameplatesOverrides.ShowRarityIconInfoDisplayOption()`
 - `NameplatesOverrides.ShowClassColorSetting()`
 - `NameplatesOverrides.ShowRealmOption()`
 - `NameplatesOverrides.AdjustNameplateSettings(category)`
 - `NameplatesOverrides.GetNPCNamesOptionDefault()`
 - `NameplatesOverrides.GetNameplateStyleOptions()`
 - `NameplatesOverrides.ShowHighlightImportantCastsOption()`
-- `NameplatesOverrides.ShowRarityIconInfoDisplayOption()`
 - `NameplatesOverrides.ShowClassColorSetting()`
 - `NameplatesOverrides.ShowRealmOption()`
 - `NameplatesOverrides.AdjustNameplateSettings(category)`
 
 ## NamePlatesTutorialMixin
 
-`interface/addons/blizzard_settingsdefinitions_frame/nameplates.lua:872`
+`interface/addons/blizzard_settingsdefinitions_frame/nameplates.lua:870`
 
 - `NamePlatesTutorialMixin:OnLoad()`
 - `NamePlatesTutorialMixin:OnHide()`
@@ -32980,13 +33009,6 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `NarrationUtil.NarrateCurrentScreen(text)`
 - `NarrationUtil.SetStaticName(region, name)`
 - `NarrationUtil.SetStaticDescription(region, description)`
-
-## NavButtonMixin
-
-`interface/addons/blizzard_framexml/mainline/navigationbar.lua:321`
-
-- `NavButtonMixin:OnLoad()`
-- `NavButtonMixin:RefreshReturnFrameGamepadNavButtonFocus(dropdown, menu, closeReason)`
 
 ## NavigationBarButtonMixin
 
@@ -34276,7 +34298,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## PaidServiceButtonMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect/characterselectlistelements.lua:1340`
+`interface/addons/blizzard_gluexml/mainline/characterselect/characterselectlistelements.lua:1347`
 
 - `PaidServiceButtonMixin:OnClick()`
 - `PaidServiceButtonMixin:OnEnter()`
@@ -34362,7 +34384,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## PaperDollEquipmentManagerPaneMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2529`
+`interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:2534`
 
 - `PaperDollEquipmentManagerPaneMixin:RegisterForInterfaceTransitions()`
 - `PaperDollEquipmentManagerPaneMixin:InitializeGamepad()`
@@ -34372,7 +34394,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## PaperDollFrameMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1686`
+`interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:1691`
 
 - `PaperDollFrameMixin:RepairSingleItemContextAction()`
 - `PaperDollFrameMixin:IsRepairSingleItemButtonContextActionValid()`
@@ -34396,28 +34418,28 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## PaperDollItemSlotButtonBaseMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:3088`
+`interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:3093`
 
 - `PaperDollItemSlotButtonBaseMixin:SetTooltipAnchor(tooltip)`
 - `PaperDollItemSlotButtonBaseMixin:SetTooltipAnchor(tooltip)`
 
 ## PaperDollItemSlotButtonMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:3094` · mixes in `PaperDollItemSlotButtonBaseMixin`
+`interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:3099` · mixes in `PaperDollItemSlotButtonBaseMixin`
 
 - `PaperDollItemSlotButtonMixin:GetItemContextMatchResult()`
 - `PaperDollItemSlotButtonMixin:GetItemContextMatchResult()`
 
 ## PaperDollItemSocketDisplayMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:3100` · mixes in `PaperDollItemSlotButtonBaseMixin`
+`interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:3105` · mixes in `PaperDollItemSlotButtonBaseMixin`
 
 - `PaperDollItemSocketDisplayMixin:SetItem(item)`
 - `PaperDollItemSocketDisplayMixin:SetItem(item)`
 
 ## PaperDollSidebarTabMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:3140`
+`interface/addons/blizzard_uipanels_game/mainline/paperdollframe.lua:3145`
 
 - `PaperDollSidebarTabMixin:OnLoad()`
 - `PaperDollSidebarTabMixin:OnClick()`
@@ -34436,7 +34458,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## PaperDollTertiaryButtonMixin
 
-`interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3663` · mixes in `ButtonStateBehaviorMixin`
+`interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3680` · mixes in `ButtonStateBehaviorMixin`
 
 - `PaperDollTertiaryButtonMixin:OnButtonStateChanged()`
 
@@ -35238,7 +35260,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## PetExpColoredProgressBarMixin
 
-`interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3680` · mixes in `ColoredProgressBarMixin`
+`interface/addons/blizzard_uipanels_game/camelot/paperdollframe.lua:3697` · mixes in `ColoredProgressBarMixin`
 
 - `PetExpColoredProgressBarMixin:OnLoad()`
 - `PetExpColoredProgressBarMixin:GetPetExperience()`
@@ -36050,17 +36072,18 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `PlayerSpellsFrameMixin:InitializeGamepad()`
 - `PlayerSpellsFrameMixin:UninitializeGamepad()`
 - `PlayerSpellsFrameMixin:RegisterForTransitions()`
-- `PlayerSpellsFrameMixin:GetJumpHintLabel()`
 - `PlayerSpellsFrameMixin:GetAssociatedMicroButtons()`
 - `PlayerSpellsFrameMixin:GetDesiredMaximizedWidth(tabID)`
 - `PlayerSpellsFrameMixin:GetDesiredMaximizedHeight(tabID)`
 - `PlayerSpellsFrameMixin:GetDesiredMinimizedWidth(tabID)`
 - `PlayerSpellsFrameMixin:GetDesiredMinimizedHeight(tabID)`
 - `PlayerSpellsFrameMixin:IsTabSystemAvailable()`
+- `PlayerSpellsFrameMixin:AreaAttributeForTab(frameTab)`
 - `PlayerSpellsFrameMixin:UpdatePortrait()`
 - `PlayerSpellsFrameMixin:SetSpellBookPortrait()`
 - `PlayerSpellsFrameMixin:SetTalentPortrait()`
-- `PlayerSpellsFrameMixin:AreaAttributeForTab(frameTab)`
+- `PlayerSpellsFrameMixin:SetTabMinimized(tabID, shouldBeMinimized)`
+- `PlayerSpellsFrameMixin:SetTab(tabID)`
 
 ## PlayerSpellsMicroButtonMixin
 
@@ -36610,7 +36633,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## PrivateAuraAnchorContainerMixin
 
-`interface/addons/blizzard_privateaurasui/blizzard_privateaurasui.lua:327`
+`interface/addons/blizzard_privateaurasui/blizzard_privateaurasui.lua:329`
 
 - `PrivateAuraAnchorContainerMixin:ReadContainerSettings()`
 - `PrivateAuraAnchorContainerMixin:OnAnchorAdded(watcher)`
@@ -36678,7 +36701,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## PrivateAuraAnchorSingleMixin
 
-`interface/addons/blizzard_privateaurasui/blizzard_privateaurasui.lua:1070`
+`interface/addons/blizzard_privateaurasui/blizzard_privateaurasui.lua:1072`
 
 - `PrivateAuraAnchorSingleMixin:OnAnchorAdded(watcher)`
 - `PrivateAuraAnchorSingleMixin:OnAnchorRemoved()`
@@ -36729,7 +36752,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## PrivateRaidBossEmoteFrameMixin
 
-`interface/addons/blizzard_privateaurasui/blizzard_privateaurasui.lua:1322` · mixes in `RaidWarningFrameMixin`
+`interface/addons/blizzard_privateaurasui/blizzard_privateaurasui.lua:1324` · mixes in `RaidWarningFrameMixin`
 
 - `PrivateRaidBossEmoteFrameMixin:RegisterMessageEvents()`
 - `PrivateRaidBossEmoteFrameMixin:OnLoad()`
@@ -37583,7 +37606,6 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `ProfessionsMixin:RefreshRightTabs()`
 - `ProfessionsMixin:RecastSelectedProfession()`
 - `ProfessionsMixin:RefreshBookPageSmartNavJumps()`
-- `ProfessionsMixin:UpdateGamepadUnlearnIcons()`
 - `ProfessionsMixin:SetUpGamepadBookPageFooter()`
 - `ProfessionsMixin:GetRecipeMoreOptions()`
 - `ProfessionsMixin:GetReagentMoreOptions()`
@@ -37594,7 +37616,6 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `ProfessionsMixin:FocusGamepad()`
 - `ProfessionsMixin:UnfocusGamepad()`
 - `ProfessionsMixin:UpdateSmartNavFocus()`
-- `ProfessionsMixin:GetJumpHintLabel()`
 - `ProfessionsMixin:RefreshRightTabs()`
 - `ProfessionsMixin:RefreshRightTab(frame, skillIndex)`
 - `ProfessionsMixin:RightTabSelected(frame)`
@@ -38237,7 +38258,6 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `PromptedBindingFooterMixin:AddFunctionBinding(key, func)`
 - `PromptedBindingFooterMixin:AddStandardSelectPrompt(optionalLabel)`
 - `PromptedBindingFooterMixin:AddNonFallbackSelectPrompt(optionalLabel)`
-- `PromptedBindingFooterMixin:AddStandardFrameControlManagerBindings(focusedFrame)`
 - `PromptedBindingFooterMixin:AddStandardBackPrompt(optionalLabel)`
 - `PromptedBindingFooterMixin:SetParentFrame(parentFrame)`
 - `PromptedBindingFooterMixin:SetAnchorOffsets(xOffset, yOffset)`
@@ -38735,7 +38755,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## PVPMatchStyle
 
-`interface/addons/blizzard_pvpmatch/pvpmatchutil.lua:173`
+`interface/addons/blizzard_pvpmatch/pvpmatchutil.lua:174`
 
 - `PVPMatchStyle.GetTeamColor(factionIndex, useAlternateColor)`
 - `PVPMatchStyle.GetLocalPlayerFactionTheme()`
@@ -39252,7 +39272,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## QuestLogObjectiveMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2363`
+`interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2361`
 
 - `QuestLogObjectiveMixin:GetButtonType()`
 
@@ -39289,7 +39309,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## QuestLogPopupDetailMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2532`
+`interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2530`
 
 - `QuestLogPopupDetailMixin:OnLoad()`
 - `QuestLogPopupDetailMixin:OnHide()`
@@ -39320,7 +39340,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## QuestLogScrollFrameMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:1213`
+`interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:1217`
 
 - `QuestLogScrollFrameMixin:OnLoad()`
 - `QuestLogScrollFrameMixin:OnSizeChanged()`
@@ -39334,7 +39354,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## QuestLogSearchBoxMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2790`
+`interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2788`
 
 - `QuestLogSearchBoxMixin:OnTextChanged()`
 - `QuestLogSearchBoxMixin:Clear()`
@@ -39342,14 +39362,14 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## QuestLogSettingsButtonMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2813`
+`interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2811`
 
 - `QuestLogSettingsButtonMixin:OnMouseDown()`
 - `QuestLogSettingsButtonMixin:OnMouseUp(button, upInside)`
 
 ## QuestLogTitleMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2334`
+`interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2332`
 
 - `QuestLogTitleMixin:OnLoad()`
 - `QuestLogTitleMixin:OnCheckboxMouseUp(o, button, upInside)`
@@ -40117,20 +40137,20 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## RaidFrameCountdownMixin
 
-`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1441` · mixes in `CRFM_ToolbarButtonMixin`
+`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1440` · mixes in `CRFM_ToolbarButtonMixin`
 
 - `RaidFrameCountdownMixin:OnClick()`
 
 ## RaidFrameEditModeMixin
 
-`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1370` · mixes in `CRFM_ToolbarButtonMixin`
+`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1369` · mixes in `CRFM_ToolbarButtonMixin`
 
 - `RaidFrameEditModeMixin:OnShow()`
 - `RaidFrameEditModeMixin:OnClick()`
 
 ## RaidFrameEveryoneIsAssistMixin
 
-`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1395` · mixes in `CRFM_ToolbarButtonMixin`
+`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1394` · mixes in `CRFM_ToolbarButtonMixin`
 
 - `RaidFrameEveryoneIsAssistMixin:OnLoad()`
 - `RaidFrameEveryoneIsAssistMixin:OnEvent()`
@@ -40139,31 +40159,31 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## RaidFrameFilterRoleDamagerMixin
 
-`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1363` · mixes in `CRFManagerFilterRoleButtonMixin`
+`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1362` · mixes in `CRFManagerFilterRoleButtonMixin`
 
 - `RaidFrameFilterRoleDamagerMixin:OnLoad()`
 
 ## RaidFrameFilterRoleHealerMixin
 
-`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1356` · mixes in `CRFManagerFilterRoleButtonMixin`
+`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1355` · mixes in `CRFManagerFilterRoleButtonMixin`
 
 - `RaidFrameFilterRoleHealerMixin:OnLoad()`
 
 ## RaidFrameFilterRoleTankMixin
 
-`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1349` · mixes in `CRFManagerFilterRoleButtonMixin`
+`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1348` · mixes in `CRFManagerFilterRoleButtonMixin`
 
 - `RaidFrameFilterRoleTankMixin:OnLoad()`
 
 ## RaidFrameHiddenModeToggleMixin
 
-`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1388` · mixes in `CRFM_ToolbarButtonMixin`
+`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1387` · mixes in `CRFM_ToolbarButtonMixin`
 
 - `RaidFrameHiddenModeToggleMixin:OnClick()`
 
 ## RaidFrameManagerRestrictPingsButtonMixin
 
-`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1448`
+`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1447`
 
 - `RaidFrameManagerRestrictPingsButtonMixin:OnShow()`
 - `RaidFrameManagerRestrictPingsButtonMixin:OnHide()`
@@ -40181,19 +40201,19 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## RaidFrameReadyCheckMixin
 
-`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1427` · mixes in `CRFM_ToolbarButtonMixin`
+`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1426` · mixes in `CRFM_ToolbarButtonMixin`
 
 - `RaidFrameReadyCheckMixin:OnClick()`
 
 ## RaidFrameRolePollMixin
 
-`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1434` · mixes in `CRFM_ToolbarButtonMixin`
+`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1433` · mixes in `CRFM_ToolbarButtonMixin`
 
 - `RaidFrameRolePollMixin:OnClick()`
 
 ## RaidFrameSettingsMixin
 
-`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1381` · mixes in `CRFM_ToolbarButtonMixin`
+`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:1380` · mixes in `CRFM_ToolbarButtonMixin`
 
 - `RaidFrameSettingsMixin:OnClick()`
 
@@ -40260,7 +40280,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## RaidFrameToggleButtonMixin
 
-`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:521`
+`interface/addons/blizzard_compactraidframes/mainline/blizzard_compactraidframemanager.lua:520`
 
 - `RaidFrameToggleButtonMixin:OnLoad()`
 - `RaidFrameToggleButtonMixin:OnClick()`
@@ -41397,7 +41417,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## RestoreCharacterServiceButtonMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect/characterselectlistelements.lua:1376`
+`interface/addons/blizzard_gluexml/mainline/characterselect/characterselectlistelements.lua:1383`
 
 - `RestoreCharacterServiceButtonMixin:OnClick()`
 - `RestoreCharacterServiceButtonMixin:OnEnter()`
@@ -43710,7 +43730,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SettingsButtonControlMixin
 
-`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:918` · mixes in `SettingsListElementMixin`, `SettingsNewTagMixin`
+`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:944` · mixes in `SettingsListElementMixin`, `SettingsNewTagMixin`
 
 - `SettingsButtonControlMixin:OnLoad()`
 - `SettingsButtonControlMixin:EvaluateName()`
@@ -43721,7 +43741,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SettingsButtonNarrationContextMixin
 
-`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:490`
+`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:509`
 
 - `SettingsButtonNarrationContextMixin:NarrationGetContext()`
 
@@ -43804,7 +43824,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SettingsCheckboxControlMixin
 
-`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:587` · mixes in `SettingsControlMixin`, `SettingsCheckboxNarrationContextMixin`
+`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:606` · mixes in `SettingsControlMixin`, `SettingsCheckboxNarrationContextMixin`
 
 - `SettingsCheckboxControlMixin:OnLoad()`
 - `SettingsCheckboxControlMixin:Init(initializer)`
@@ -43816,7 +43836,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SettingsCheckboxDropdownControlMixin
 
-`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:1496` · mixes in `SettingsListElementMixin`, `SettingsCheckboxNarrationContextMixin`
+`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:1522` · mixes in `SettingsListElementMixin`, `SettingsCheckboxNarrationContextMixin`
 
 - `SettingsCheckboxDropdownControlMixin:OnLoad()`
 - `SettingsCheckboxDropdownControlMixin:OnSmartNavSelect()`
@@ -43830,7 +43850,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SettingsCheckboxMixin
 
-`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:557` · mixes in `CallbackRegistryMixin`, `DefaultTooltipMixin`
+`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:576` · mixes in `CallbackRegistryMixin`, `DefaultTooltipMixin`
 
 - `SettingsCheckboxMixin:OnLoad()`
 - `SettingsCheckboxMixin:Init(value, initTooltip)`
@@ -43839,13 +43859,13 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SettingsCheckboxNarrationContextMixin
 
-`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:458`
+`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:477`
 
 - `SettingsCheckboxNarrationContextMixin:NarrationGetContext()`
 
 ## SettingsCheckboxSliderControlMixin
 
-`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:1297` · mixes in `SettingsListElementMixin`
+`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:1323` · mixes in `SettingsListElementMixin`
 
 - `SettingsCheckboxSliderControlMixin:OnLoad()`
 - `SettingsCheckboxSliderControlMixin:OnSmartNavSelect()`
@@ -43861,7 +43881,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SettingsCheckboxWithButtonControlMixin
 
-`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:1162` · mixes in `SettingsControlMixin`, `SettingsCheckboxNarrationContextMixin`
+`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:1188` · mixes in `SettingsControlMixin`, `SettingsCheckboxNarrationContextMixin`
 
 - `SettingsCheckboxWithButtonControlMixin:OnLoad()`
 - `SettingsCheckboxWithButtonControlMixin:Init(initializer)`
@@ -43875,7 +43895,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SettingsCheckboxWithColorSwatchControlMixin
 
-`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:1686` · mixes in `SettingsControlMixin`, `SettingsCheckboxNarrationContextMixin`
+`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:1710` · mixes in `SettingsControlMixin`, `SettingsCheckboxNarrationContextMixin`
 
 - `SettingsCheckboxWithColorSwatchControlMixin:OnLoad()`
 - `SettingsCheckboxWithColorSwatchControlMixin:OnSmartNavSelect()`
@@ -43890,7 +43910,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SettingsColorSwatchControlMixin
 
-`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:1095` · mixes in `SettingsControlMixin`
+`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:1121` · mixes in `SettingsControlMixin`
 
 - `SettingsColorSwatchControlMixin:OnLoad()`
 - `SettingsColorSwatchControlMixin:Init(initializer)`
@@ -43903,7 +43923,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SettingsColorSwatchMixin
 
-`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:1028` · mixes in `CallbackRegistryMixin`, `DefaultTooltipMixin`, `ColorSwatchMixin`
+`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:1054` · mixes in `CallbackRegistryMixin`, `DefaultTooltipMixin`, `ColorSwatchMixin`
 
 - `SettingsColorSwatchMixin:OnLoad()`
 - `SettingsColorSwatchMixin:Init(value, initTooltip, initialSwatchColorFn)`
@@ -43915,7 +43935,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SettingsControlMixin
 
-`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:497` · mixes in `SettingsListElementMixin`
+`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:516` · mixes in `SettingsListElementMixin`
 
 - `SettingsControlMixin:OnLoad()`
 - `SettingsControlMixin:Init(initializer)`
@@ -43929,10 +43949,11 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SettingsDropdownControlMixin
 
-`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:774` · mixes in `SettingsControlMixin`
+`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:793` · mixes in `SettingsControlMixin`
 
 - `SettingsDropdownControlMixin:OnLoad()`
 - `SettingsDropdownControlMixin:Init(initializer)`
+- `SettingsDropdownControlMixin:OnEvent(event, ...)`
 - `SettingsDropdownControlMixin:InitDropdown()`
 - `SettingsDropdownControlMixin:SetupDropdownMenu(button, setting, options, initTooltip, initializer)`
 - `SettingsDropdownControlMixin:Release()`
@@ -43945,13 +43966,13 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SettingsDropdownNarrationContextMixin
 
-`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:475`
+`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:494`
 
 - `SettingsDropdownNarrationContextMixin:NarrationGetContext()`
 
 ## SettingsElementHierarchyMixin
 
-`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:117`
+`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:136`
 
 - `SettingsElementHierarchyMixin:SetParentInitializer(parentInitializer, modifyPredicate)`
 - `SettingsElementHierarchyMixin:GetParentInitializer()`
@@ -43965,7 +43986,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SettingsExpandableSectionMixin
 
-`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:1841`
+`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:1865`
 
 - `SettingsExpandableSectionMixin:OnLoad()`
 - `SettingsExpandableSectionMixin:OnExpandedChanged(expanded)`
@@ -44032,7 +44053,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SettingsListElementInitializer
 
-`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:186`
+`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:205`
 
 - `SettingsListElementInitializer:Init(frameTemplate, data)`
 - `SettingsListElementInitializer:Indent()`
@@ -44054,7 +44075,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SettingsListElementMixin
 
-`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:284` · mixes in `NarrationSkipTooltipsMixin`
+`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:303` · mixes in `NarrationSkipTooltipsMixin`
 
 - `SettingsListElementMixin:OnLoad()`
 - `SettingsListElementMixin:DisplayEnabled(enabled)`
@@ -44098,6 +44119,8 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:79` · mixes in `DefaultTooltipMixin`, `SettingsNewTagMixin`
 
 - `SettingsListSectionHeaderMixin:OnLoad()`
+- `SettingsListSectionHeaderMixin:OnEvent(event, ...)`
+- `SettingsListSectionHeaderMixin:EvaluateState()`
 - `SettingsListSectionHeaderMixin:NarrationGetName()`
 - `SettingsListSectionHeaderMixin:NarrationGetIndexInfo()`
 - `SettingsListSectionHeaderMixin:Init(initializer)`
@@ -44211,7 +44234,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SettingsSliderControlMixin
 
-`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:671` · mixes in `SettingsControlMixin`
+`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:690` · mixes in `SettingsControlMixin`
 
 - `SettingsSliderControlMixin:OnLoad()`
 - `SettingsSliderControlMixin:OnSmartNavSelect()`
@@ -44226,7 +44249,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SettingsSliderNarrationContextMixin
 
-`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:466`
+`interface/addons/blizzard_settings_shared/blizzard_settingcontrols.lua:485`
 
 - `SettingsSliderNarrationContextMixin:NarrationGetContext()`
 
@@ -44709,7 +44732,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SmartNavigationMixin
 
-`interface/addons/blizzard_gamepadsmartnavigation/smartnavigation.lua:70` · mixes in `CallbackRegistryMixin`
+`interface/addons/blizzard_gamepadsmartnavigation/smartnavigation.lua:90` · mixes in `CallbackRegistryMixin`
 
 - `SmartNavigationMixin:ResetVars()`
 - `SmartNavigationMixin:OnLoad()`
@@ -44754,13 +44777,12 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `SmartNavigationMixin:SetTargetButtonForFrame(inFrame, inTargetButton)`
 - `SmartNavigationMixin:SetScrollFrameForFrame(inFrame, inScrollFrame)`
 - `SmartNavigationMixin:GetParentPanelInfo(frame)`
-- `SmartNavigationMixin:SetNavigationFunction(inFrame, inFunc)`
 - `SmartNavigationMixin:ClearLastTarget(inFrame)`
 - `SmartNavigationMixin:SetWrapping(inFrame, shouldWrap)`
+- `SmartNavigationMixin:SetGridHeightCompensation(inFrame, shouldCompensate)`
 - `SmartNavigationMixin:SetUseGridNavigation(inFrame, inUseGrid)`
 - `SmartNavigationMixin:HandleScroll(nextButton, buttonScrollFrame)`
 - `SmartNavigationMixin:GetCurrentDirection()`
-- `SmartNavigationMixin:CanNavigateToButton(inButton)`
 - `SmartNavigationMixin:IsButtonValid(inButton, inScrollFrame)`
 - `SmartNavigationMixin:GetButtonInfoInDirection(inButton, inDirection, inOffset)`
 - `SmartNavigationMixin:UpdateGrid(inPanelInfo)`
@@ -44788,7 +44810,6 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `SmartNavigationMixin:GetCurrentButtonContext()`
 - `SmartNavigationMixin:FindButton(inMatchFunc)`
 - `SmartNavigationMixin:GetActiveFrame()`
-- `SmartNavigationMixin:SetIsHandlingInputEvents(handleInputEvents)`
 - `SmartNavigationMixin:EnterFocusGroup(inFocusKey, optionalFocusGroupOwner, button, scrollFrame)`
 - `SmartNavigationMixin:LeaveFocusGroup(button, scrollFrame)`
 - `SmartNavigationMixin:IsInFocusGroup()`
@@ -44868,9 +44889,11 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 `interface/addons/blizzard_settingsdefinitions_frame/camelot/socialoverrides.lua:2`
 
 - `SocialOverrides.CreateBlockNeighborhoodInvitesSetting(category)`
+- `SocialOverrides.SetupToastWindowSetting(category)`
 - `SocialOverrides.AdjustSocialSettings(category)`
 - `SocialOverrides.CreateCensorMessagesSetting(category)`
 - `SocialOverrides.CreateBlockNeighborhoodInvitesSetting(category)`
+- `SocialOverrides.SetupToastWindowSetting(category)`
 
 ## SocialRaidInfoMixin
 
@@ -44922,7 +44945,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SocialUIBattleNetBroadcastEditBoxMixin
 
-`interface/addons/blizzard_socialui/mainline/socialuitemplates.lua:586`
+`interface/addons/blizzard_socialui/mainline/socialuitemplates.lua:576`
 
 - `SocialUIBattleNetBroadcastEditBoxMixin:OnTextChanged()`
 - `SocialUIBattleNetBroadcastEditBoxMixin:RefreshPromptTextVisibility()`
@@ -44930,7 +44953,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SocialUIBattleNetBroadcastFrameMixin
 
-`interface/addons/blizzard_socialui/mainline/socialuitemplates.lua:505`
+`interface/addons/blizzard_socialui/mainline/socialuitemplates.lua:495`
 
 - `SocialUIBattleNetBroadcastFrameMixin:OnLoad()`
 - `SocialUIBattleNetBroadcastFrameMixin:InitializeBroadcastFrameElements()`
@@ -44944,7 +44967,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SocialUIBattleNetControlsContainerMixin
 
-`interface/addons/blizzard_socialui/mainline/socialuitemplates.lua:389`
+`interface/addons/blizzard_socialui/mainline/socialuitemplates.lua:379`
 
 - `SocialUIBattleNetControlsContainerMixin:OnLoad()`
 - `SocialUIBattleNetControlsContainerMixin:OnShow()`
@@ -44966,19 +44989,18 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `SocialUIBattleNetMenuButtonMixin:OnEnter()`
 - `SocialUIBattleNetMenuButtonMixin:ShowTooltip()`
 - `SocialUIBattleNetMenuButtonMixin:OnLeave()`
-- `SocialUIBattleNetMenuButtonMixin:ShouldShowBroadcastMenuOption()`
 - `SocialUIBattleNetMenuButtonMixin:ShouldShowIgnoreListMenuOption()`
 - `SocialUIBattleNetMenuButtonMixin:HasAnyAvailableMenuOptions()`
 
 ## SocialUIBattleNetUnavailableNoticeButtonMixin
 
-`interface/addons/blizzard_socialui/mainline/socialuitemplates.lua:383` · mixes in `SocialUISystemMixin`
+`interface/addons/blizzard_socialui/mainline/socialuitemplates.lua:373` · mixes in `SocialUISystemMixin`
 
 - `SocialUIBattleNetUnavailableNoticeButtonMixin:OnClick()`
 
 ## SocialUIBattleNetUnavailableNoticeFrameMixin
 
-`interface/addons/blizzard_socialui/mainline/socialuitemplates.lua:486`
+`interface/addons/blizzard_socialui/mainline/socialuitemplates.lua:476`
 
 - `SocialUIBattleNetUnavailableNoticeFrameMixin:OnShow()`
 - `SocialUIBattleNetUnavailableNoticeFrameMixin:OnHide()`
@@ -45005,7 +45027,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SocialUICopyBattleTagToClipboardButtonMixin
 
-`interface/addons/blizzard_socialui/mainline/socialuitemplates.lua:344` · mixes in `ButtonStateBehaviorMixin`
+`interface/addons/blizzard_socialui/mainline/socialuitemplates.lua:334` · mixes in `ButtonStateBehaviorMixin`
 
 - `SocialUICopyBattleTagToClipboardButtonMixin:OnLoad()`
 - `SocialUICopyBattleTagToClipboardButtonMixin:OnEnter()`
@@ -45091,7 +45113,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SocialUIIgnoreListEntryMixin
 
-`interface/addons/blizzard_socialui/mainline/socialuitemplates.lua:839`
+`interface/addons/blizzard_socialui/mainline/socialuitemplates.lua:829`
 
 - `SocialUIIgnoreListEntryMixin:Initialize(elementData)`
 - `SocialUIIgnoreListEntryMixin:GetBlockType()`
@@ -45103,14 +45125,14 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SocialUIIgnoreListHeaderMixin
 
-`interface/addons/blizzard_socialui/mainline/socialuitemplates.lua:827`
+`interface/addons/blizzard_socialui/mainline/socialuitemplates.lua:817`
 
 - `SocialUIIgnoreListHeaderMixin:Initialize(elementData)`
 - `SocialUIIgnoreListHeaderMixin:RefreshText()`
 
 ## SocialUIIgnoreListMixin
 
-`interface/addons/blizzard_socialui/mainline/socialuitemplates.lua:601` · mixes in `SocialUIScrollableElementExtentPreviewerMixin`
+`interface/addons/blizzard_socialui/mainline/socialuitemplates.lua:591` · mixes in `SocialUIScrollableElementExtentPreviewerMixin`
 
 - `SocialUIIgnoreListMixin:OnLoad()`
 - `SocialUIIgnoreListMixin:InitializeUserScaledSizing()`
@@ -45145,7 +45167,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SocialUIPersonalBattleTagDisplayMixin
 
-`interface/addons/blizzard_socialui/mainline/socialuitemplates.lua:295`
+`interface/addons/blizzard_socialui/mainline/socialuitemplates.lua:285`
 
 - `SocialUIPersonalBattleTagDisplayMixin:ShowBestDisplayTextAndButton()`
 - `SocialUIPersonalBattleTagDisplayMixin:ShowBattleNetUnavailableNotice()`
@@ -45715,7 +45737,11 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 `interface/addons/blizzard_playerspells/spellbook/blizzard_spellbookframe.lua:36` · mixes in `SpellBookFrameTutorialsMixin`, `SpellBookSearchMixin`
 
+- `SpellBookFrameMixin:ApplyInputModeSizing()`
+- `SpellBookFrameMixin:OnLoad()`
 - `SpellBookFrameMixin:OnShow()`
+- `SpellBookFrameMixin:UpdateAttic()`
+- `SpellBookFrameMixin:ResizeSearchBox()`
 - `SpellBookFrameMixin:SetupSettingsDropdown()`
 - `SpellBookFrameMixin:CreateCategoryMixins()`
 - `SpellBookFrameMixin:HandleSpellsChanged()`
@@ -46929,51 +46955,45 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## StoryHeaderMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2704`
+`interface/addons/blizzard_uipanels_game/mainline/questmapframe.lua:2702`
 
 - `StoryHeaderMixin:GetButtonType()`
 - `StoryHeaderMixin:ShowTooltip()`
 - `StoryHeaderMixin:OnEnter()`
 - `StoryHeaderMixin:OnLeave()`
 
-## SubscriptionInterstitialCloseButtonMixin
-
-`interface/addons/blizzard_subscriptioninterstitialui/blizzard_subscriptioninterstitialui.lua:93`
-
-- `SubscriptionInterstitialCloseButtonMixin:OnClick()`
-
 ## SubscriptionInterstitialFrameMixin
 
-`interface/addons/blizzard_subscriptioninterstitialui/blizzard_subscriptioninterstitialui.lua:101`
+`interface/addons/blizzard_subscriptioninterstitialui/blizzard_subscriptioninterstitialui.lua:88`
 
 - `SubscriptionInterstitialFrameMixin:OnLoad()`
+- `SubscriptionInterstitialFrameMixin:CreateShadowOverlay()`
 - `SubscriptionInterstitialFrameMixin:OnShow()`
 - `SubscriptionInterstitialFrameMixin:OnHide()`
 - `SubscriptionInterstitialFrameMixin:OnEvent(event, ...)`
+- `SubscriptionInterstitialFrameMixin:ShowInterstitial(interstitialType)`
+- `SubscriptionInterstitialFrameMixin:HideInterstitial()`
 - `SubscriptionInterstitialFrameMixin:OnCinematicStarting()`
 - `SubscriptionInterstitialFrameMixin:OnCinematicStopped()`
 - `SubscriptionInterstitialFrameMixin:SetInterstitialType(interstitialType)`
+- `SubscriptionInterstitialFrameMixin:CreateShadowOverlay()`
 - `SubscriptionInterstitialFrameMixin:OnLoad()`
 
 ## SubscriptionInterstitialSubscribeButtonBaseMixin
 
-`interface/addons/blizzard_subscriptioninterstitialui/blizzard_subscriptioninterstitialui.lua:8`
+`interface/addons/blizzard_subscriptioninterstitialui/blizzard_subscriptioninterstitialui.lua:29` · mixes in `SmartNavigationClickTrackingMixin`
 
 - `SubscriptionInterstitialSubscribeButtonBaseMixin:OnLoad()`
-- `SubscriptionInterstitialSubscribeButtonBaseMixin:OnShow()`
-- `SubscriptionInterstitialSubscribeButtonBaseMixin:OnClick()`
-- `SubscriptionInterstitialSubscribeButtonBaseMixin:WasClicked()`
-- `SubscriptionInterstitialSubscribeButtonBaseMixin:ClearClickState()`
 
 ## SubscriptionInterstitialSubscribeButtonMixin
 
-`interface/addons/blizzard_subscriptioninterstitialui/blizzard_subscriptioninterstitialui.lua:44`
+`interface/addons/blizzard_subscriptioninterstitialui/blizzard_subscriptioninterstitialui.lua:39`
 
 - `SubscriptionInterstitialSubscribeButtonMixin:OnLoad()`
 
 ## SubscriptionInterstitialUpgradeButtonMixin
 
-`interface/addons/blizzard_subscriptioninterstitialui/blizzard_subscriptioninterstitialui.lua:62`
+`interface/addons/blizzard_subscriptioninterstitialui/blizzard_subscriptioninterstitialui.lua:57`
 
 - `SubscriptionInterstitialUpgradeButtonMixin:OnLoad()`
 - `SubscriptionInterstitialUpgradeButtonMixin:OnLoad()`
@@ -47014,7 +47034,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SuperDistrictButtonMixin
 
-`interface/addons/blizzard_gluexml/mainline/superdistrict.lua:121` · mixes in `SelectableButtonMixin`, `DisabledTooltipButtonMixin`
+`interface/addons/blizzard_gluexml/mainline/superdistrict.lua:172` · mixes in `SelectableButtonMixin`, `DisabledTooltipButtonMixin`
 
 - `SuperDistrictButtonMixin:SetDisabledVisuals(disabled)`
 - `SuperDistrictButtonMixin:SetupSuperDistrictButton(superDistrictID)`
@@ -47022,6 +47042,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `SuperDistrictButtonMixin:NarrationGetName()`
 - `SuperDistrictButtonMixin:NarrationGetContext()`
 - `SuperDistrictButtonMixin:NarrationGetDescription()`
+- `SuperDistrictButtonMixin:OnSmartNavSelect()`
 
 ## SuperDistrictMixin
 
@@ -47037,6 +47058,12 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 - `SuperDistrictMixin:UpdateSelection(superDistrictID)`
 - `SuperDistrictMixin:ConfirmSuperDistrict()`
 - `SuperDistrictMixin:OnCancel()`
+- `SuperDistrictMixin:FocusGamepad()`
+- `SuperDistrictMixin:UnfocusGamepad()`
+- `SuperDistrictMixin:SetupGamepad()`
+- `SuperDistrictMixin:InitializeGamepad()`
+- `SuperDistrictMixin:UninitializeGamepad()`
+- `SuperDistrictMixin:RegisterForTransitions()`
 
 ## SuperDistrictSelectorMixin
 
@@ -47164,7 +47191,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SwingTimerManagerMixin
 
-`interface/addons/blizzard_swingtimer/blizzard_swingtimer.lua:15`
+`interface/addons/blizzard_swingtimer/blizzard_swingtimer.lua:16`
 
 - `SwingTimerManagerMixin:OnLoad()`
 - `SwingTimerManagerMixin:RegisterFrame(frame)`
@@ -47176,7 +47203,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## SwingTimerMixin
 
-`interface/addons/blizzard_swingtimer/blizzard_swingtimer.lua:91`
+`interface/addons/blizzard_swingtimer/blizzard_swingtimer.lua:92`
 
 - `SwingTimerMixin:GetBackground()`
 - `SwingTimerMixin:GetBorder()`
@@ -48571,14 +48598,14 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## TargetFrameHealthBarMixin
 
-`interface/addons/blizzard_unitframe/mainline/targetframe.lua:783` · mixes in `TargetFrameStatusBarMixin`
+`interface/addons/blizzard_unitframe/mainline/targetframe.lua:786` · mixes in `TargetFrameStatusBarMixin`
 
 - `TargetFrameHealthBarMixin:OnValueChanged(value)`
 - `TargetFrameHealthBarMixin:OnSizeChanged()`
 
 ## TargetFrameInstanceMixin
 
-`interface/addons/blizzard_unitframe/mainline/targetframe.lua:1226`
+`interface/addons/blizzard_unitframe/mainline/targetframe.lua:1229`
 
 - `TargetFrameInstanceMixin:OnLoad_TargetFrameInstance()`
 
@@ -48623,13 +48650,13 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## TargetFrameStatusBarMixin
 
-`interface/addons/blizzard_unitframe/mainline/targetframe.lua:772`
+`interface/addons/blizzard_unitframe/mainline/targetframe.lua:775`
 
 - `TargetFrameStatusBarMixin:OnLoad()`
 
 ## TargetOfTargetMixin
 
-`interface/addons/blizzard_unitframe/mainline/targetframe.lua:879`
+`interface/addons/blizzard_unitframe/mainline/targetframe.lua:882`
 
 - `TargetOfTargetMixin:OnLoad()`
 - `TargetOfTargetMixin:OnLoadBase()`
@@ -48643,7 +48670,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## TargetSpellBarMixin
 
-`interface/addons/blizzard_unitframe/mainline/targetframe.lua:794` · mixes in `CastingBarMixin`
+`interface/addons/blizzard_unitframe/mainline/targetframe.lua:797` · mixes in `CastingBarMixin`
 
 - `TargetSpellBarMixin:OnEvent(event, ...)`
 - `TargetSpellBarMixin:AdjustPosition()`
@@ -49369,14 +49396,14 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## TradeFrameTradeButtonMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/tradeframe.lua:312`
+`interface/addons/blizzard_uipanels_game/mainline/tradeframe.lua:313`
 
 - `TradeFrameTradeButtonMixin:OnLoad()`
 - `TradeFrameTradeButtonMixin:OnEnter()`
 
 ## TradeItemAlertTemplateMixin
 
-`interface/addons/blizzard_uipanels_game/mainline/tradeframe.lua:327`
+`interface/addons/blizzard_uipanels_game/mainline/tradeframe.lua:328`
 
 - `TradeItemAlertTemplateMixin:OnShow()`
 - `TradeItemAlertTemplateMixin:OnHide()`
@@ -51119,7 +51146,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupAchievementButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3469` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3488` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupAchievementButtonMixin:GetText(contextData)`
 - `UnitPopupAchievementButtonMixin:GetInteractDistance()`
@@ -51140,7 +51167,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupAddBtagFriendButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2420` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2439` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupAddBtagFriendButtonMixin:GetText(contextData)`
 - `UnitPopupAddBtagFriendButtonMixin:IsDisabledInKioskMode()`
@@ -51149,7 +51176,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupAddCharacterFriendButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2348` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2367` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupAddCharacterFriendButtonMixin:CanShow(contextData)`
 - `UnitPopupAddCharacterFriendButtonMixin:GetText(contextData)`
@@ -51159,7 +51186,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupAddFriendButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2270` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2289` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupAddFriendButtonMixin:GetText(contextData)`
 - `UnitPopupAddFriendButtonMixin:IsDisabledInKioskMode()`
@@ -51168,7 +51195,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupAddFriendMenuButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2309` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2328` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupAddFriendMenuButtonMixin:GetButtons()`
 - `UnitPopupAddFriendMenuButtonMixin:GetText(contextData)`
@@ -51178,7 +51205,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupAddGuildBtagFriendButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2463` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2482` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupAddGuildBtagFriendButtonMixin:CanShow(contextData)`
 - `UnitPopupAddGuildBtagFriendButtonMixin:CanShow(contextData)`
@@ -51191,7 +51218,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupAddRecentAllyBattleTagFriendButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3836` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3855` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupAddRecentAllyBattleTagFriendButtonMixin:GetText(contextData)`
 - `UnitPopupAddRecentAllyBattleTagFriendButtonMixin:CanShow(contextData)`
@@ -51201,7 +51228,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupAddRecentAllyTitleFriendButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3858` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3877` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupAddRecentAllyTitleFriendButtonMixin:GetText(_contextData)`
 - `UnitPopupAddRecentAllyTitleFriendButtonMixin:CanShow(_contextData)`
@@ -51210,7 +51237,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupAddTitleFriendButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2491` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2510` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupAddTitleFriendButtonMixin:CanShow(_contextData)`
 - `UnitPopupAddTitleFriendButtonMixin:IsEnabled(_contextData)`
@@ -51388,7 +51415,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupChatDemoteButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2826` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2845` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupChatDemoteButtonMixin:GetText(contextData)`
 - `UnitPopupChatDemoteButtonMixin:CanShow(contextData)`
@@ -51396,7 +51423,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupChatOwnerButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2857` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2876` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupChatOwnerButtonMixin:GetText(contextData)`
 - `UnitPopupChatOwnerButtonMixin:CanShow(contextData)`
@@ -51404,7 +51431,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupChatPromoteButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2795` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2814` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupChatPromoteButtonMixin:GetText(contextData)`
 - `UnitPopupChatPromoteButtonMixin:CanShow(contextData)`
@@ -51418,21 +51445,22 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupClearCommunityNotificationButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3244` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3263` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupClearCommunityNotificationButtonMixin:GetText(contextData)`
 - `UnitPopupClearCommunityNotificationButtonMixin:OnClick(contextData)`
 
 ## UnitPopupClearFocusButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2260` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2272` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupClearFocusButtonMixin:GetText(contextData)`
 - `UnitPopupClearFocusButtonMixin:OnClick(contextData)`
+- `UnitPopupClearFocusButtonMixin:CanShow(contextData)`
 
 ## UnitPopupCommunitiesBtagFriendButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3025` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3044` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupCommunitiesBtagFriendButtonMixin:GetText(contextData)`
 - `UnitPopupCommunitiesBtagFriendButtonMixin:CanShow(contextData)`
@@ -51440,14 +51468,14 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupCommunitiesFavoriteButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3202` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3221` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupCommunitiesFavoriteButtonMixin:GetText(contextData)`
 - `UnitPopupCommunitiesFavoriteButtonMixin:OnClick(contextData)`
 
 ## UnitPopupCommunitiesKickFriendButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3055` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3074` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupCommunitiesKickFriendButtonMixin:GetText(contextData)`
 - `UnitPopupCommunitiesKickFriendButtonMixin:CanShow(contextData)`
@@ -51455,7 +51483,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupCommunitiesLeaveButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2995` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3014` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupCommunitiesLeaveButtonMixin:GetText(contextData)`
 - `UnitPopupCommunitiesLeaveButtonMixin:GetText(contextData)`
@@ -51466,7 +51494,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupCommunitiesMemberNoteButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3086` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3105` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupCommunitiesMemberNoteButtonMixin:GetText(contextData)`
 - `UnitPopupCommunitiesMemberNoteButtonMixin:CanShow(contextData)`
@@ -51474,7 +51502,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupCommunitiesRoleButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3130` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3149` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupCommunitiesRoleButtonMixin:GetText(contextData)`
 - `UnitPopupCommunitiesRoleButtonMixin:GetEntries()`
@@ -51482,14 +51510,14 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupCommunitiesRoleLeaderButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3182` · mixes in `UnitPopupCommunitiesRoleMemberButtonMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3201` · mixes in `UnitPopupCommunitiesRoleMemberButtonMixin`
 
 - `UnitPopupCommunitiesRoleLeaderButtonMixin:GetText(contextData)`
 - `UnitPopupCommunitiesRoleLeaderButtonMixin:GetRoleIdentifier()`
 
 ## UnitPopupCommunitiesRoleMemberButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3149` · mixes in `UnitPopupRadioButtonMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3168` · mixes in `UnitPopupRadioButtonMixin`
 
 - `UnitPopupCommunitiesRoleMemberButtonMixin:GetText(contextData)`
 - `UnitPopupCommunitiesRoleMemberButtonMixin:GetRoleIdentifier()`
@@ -51499,21 +51527,21 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupCommunitiesRoleModeratorButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3172` · mixes in `UnitPopupCommunitiesRoleMemberButtonMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3191` · mixes in `UnitPopupCommunitiesRoleMemberButtonMixin`
 
 - `UnitPopupCommunitiesRoleModeratorButtonMixin:GetText(contextData)`
 - `UnitPopupCommunitiesRoleModeratorButtonMixin:GetRoleIdentifier()`
 
 ## UnitPopupCommunitiesRoleOwnerButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3192` · mixes in `UnitPopupCommunitiesRoleMemberButtonMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3211` · mixes in `UnitPopupCommunitiesRoleMemberButtonMixin`
 
 - `UnitPopupCommunitiesRoleOwnerButtonMixin:GetText(contextData)`
 - `UnitPopupCommunitiesRoleOwnerButtonMixin:GetRoleIdentifier()`
 
 ## UnitPopupCommunitiesSettingButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3213` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3232` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupCommunitiesSettingButtonMixin:GetText(contextData)`
 - `UnitPopupCommunitiesSettingButtonMixin:OnClick(contextData)`
@@ -51521,7 +51549,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupCommunityInviteButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3254` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3273` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupCommunityInviteButtonMixin:GetText(contextData)`
 - `UnitPopupCommunityInviteButtonMixin:OnClick(contextData)`
@@ -51529,7 +51557,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupCommunityNotificationButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3234` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3253` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupCommunityNotificationButtonMixin:GetText(contextData)`
 - `UnitPopupCommunityNotificationButtonMixin:OnClick(contextData)`
@@ -51567,7 +51595,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupDeleteCommunityMessageButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3288` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3307` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupDeleteCommunityMessageButtonMixin:GetText(contextData)`
 - `UnitPopupDeleteCommunityMessageButtonMixin:OnClick(contextData)`
@@ -51575,7 +51603,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupDeleteDiscordMessageButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3788` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3807` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupDeleteDiscordMessageButtonMixin:GetText(contextData)`
 - `UnitPopupDeleteDiscordMessageButtonMixin:OnClick(contextData)`
@@ -51651,7 +51679,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupEnterEditModeMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3553` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3572` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupEnterEditModeMixin:GetText(contextData)`
 - `UnitPopupEnterEditModeMixin:CanShow(contextData)`
@@ -51684,7 +51712,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupGamepadInteractButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3908` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3927` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupGamepadInteractButtonMixin:GetText(contextData)`
 - `UnitPopupGamepadInteractButtonMixin:OnClick(contextData)`
@@ -51693,7 +51721,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupGarrisonVisitButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2884` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2903` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupGarrisonVisitButtonMixin:CanShow(contextData)`
 - `UnitPopupGarrisonVisitButtonMixin:CanShow(contextData)`
@@ -51860,7 +51888,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupItemQuality2DescButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3370` · mixes in `UnitPopupRadioButtonMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3389` · mixes in `UnitPopupRadioButtonMixin`
 
 - `UnitPopupItemQuality2DescButtonMixin:GetText(contextData)`
 - `UnitPopupItemQuality2DescButtonMixin:GetColor()`
@@ -51870,14 +51898,14 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupItemQuality3DescButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3396` · mixes in `UnitPopupItemQuality2DescButtonMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3415` · mixes in `UnitPopupItemQuality2DescButtonMixin`
 
 - `UnitPopupItemQuality3DescButtonMixin:GetText(contextData)`
 - `UnitPopupItemQuality3DescButtonMixin:GetID()`
 
 ## UnitPopupItemQuality4DescButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3406` · mixes in `UnitPopupItemQuality2DescButtonMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3425` · mixes in `UnitPopupItemQuality2DescButtonMixin`
 
 - `UnitPopupItemQuality4DescButtonMixin:GetText(contextData)`
 - `UnitPopupItemQuality4DescButtonMixin:GetID()`
@@ -51926,7 +51954,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupLootPromoteButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3501` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3520` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupLootPromoteButtonMixin:CanShow(contextData)`
 
@@ -51978,7 +52006,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupLootThresholdButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3339` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3358` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupLootThresholdButtonMixin:GetText(contextData)`
 - `UnitPopupLootThresholdButtonMixin:GetColor()`
@@ -52121,7 +52149,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupNeighborhoodEvictButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3721` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3740` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupNeighborhoodEvictButtonMixin:OnClick(contextData)`
 - `UnitPopupNeighborhoodEvictButtonMixin:GetText(contextData)`
@@ -52129,7 +52157,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupOptOutLootDisableMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3453` · mixes in `UnitPopupRadioButtonMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3472` · mixes in `UnitPopupRadioButtonMixin`
 
 - `UnitPopupOptOutLootDisableMixin:GetText(contextData)`
 - `UnitPopupOptOutLootDisableMixin:IsChecked(contextData)`
@@ -52137,7 +52165,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupOptOutLootEnableMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3438` · mixes in `UnitPopupRadioButtonMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3457` · mixes in `UnitPopupRadioButtonMixin`
 
 - `UnitPopupOptOutLootEnableMixin:GetText(contextData)`
 - `UnitPopupOptOutLootEnableMixin:IsChecked(contextData)`
@@ -52145,7 +52173,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupOptOutLootTitleMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3416` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3435` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupOptOutLootTitleMixin:GetText(contextData)`
 - `UnitPopupOptOutLootTitleMixin:GetTooltipText()`
@@ -52262,7 +52290,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupPromoteDemoteNeighborhoodManagerButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3764` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3783` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupPromoteDemoteNeighborhoodManagerButtonMixin:OnClick(contextData)`
 - `UnitPopupPromoteDemoteNeighborhoodManagerButtonMixin:GetText(contextData)`
@@ -52348,7 +52376,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupRafGrantLevelButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3485` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3504` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupRafGrantLevelButtonMixin:GetText(contextData)`
 - `UnitPopupRafGrantLevelButtonMixin:CanShow(contextData)`
@@ -52443,7 +52471,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupRaidTarget1ButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2620` · mixes in `UnitPopupRaidTargetBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2639` · mixes in `UnitPopupRaidTargetBaseMixin`
 
 - `UnitPopupRaidTarget1ButtonMixin:GetText(contextData)`
 - `UnitPopupRaidTarget1ButtonMixin:GetIcon()`
@@ -52452,7 +52480,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupRaidTarget2ButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2638` · mixes in `UnitPopupRaidTarget1ButtonMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2657` · mixes in `UnitPopupRaidTarget1ButtonMixin`
 
 - `UnitPopupRaidTarget2ButtonMixin:GetText(contextData)`
 - `UnitPopupRaidTarget2ButtonMixin:GetRaidTargetIndex()`
@@ -52460,7 +52488,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupRaidTarget3ButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2652` · mixes in `UnitPopupRaidTarget1ButtonMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2671` · mixes in `UnitPopupRaidTarget1ButtonMixin`
 
 - `UnitPopupRaidTarget3ButtonMixin:GetText(contextData)`
 - `UnitPopupRaidTarget3ButtonMixin:GetRaidTargetIndex()`
@@ -52468,7 +52496,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupRaidTarget4ButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2666` · mixes in `UnitPopupRaidTarget1ButtonMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2685` · mixes in `UnitPopupRaidTarget1ButtonMixin`
 
 - `UnitPopupRaidTarget4ButtonMixin:GetText(contextData)`
 - `UnitPopupRaidTarget4ButtonMixin:GetRaidTargetIndex()`
@@ -52476,7 +52504,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupRaidTarget5ButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2680` · mixes in `UnitPopupRaidTarget1ButtonMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2699` · mixes in `UnitPopupRaidTarget1ButtonMixin`
 
 - `UnitPopupRaidTarget5ButtonMixin:GetText(contextData)`
 - `UnitPopupRaidTarget5ButtonMixin:GetRaidTargetIndex()`
@@ -52484,7 +52512,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupRaidTarget6ButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2694` · mixes in `UnitPopupRaidTarget1ButtonMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2713` · mixes in `UnitPopupRaidTarget1ButtonMixin`
 
 - `UnitPopupRaidTarget6ButtonMixin:GetText(contextData)`
 - `UnitPopupRaidTarget6ButtonMixin:GetRaidTargetIndex()`
@@ -52492,7 +52520,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupRaidTarget7ButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2708` · mixes in `UnitPopupRaidTarget1ButtonMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2727` · mixes in `UnitPopupRaidTarget1ButtonMixin`
 
 - `UnitPopupRaidTarget7ButtonMixin:GetText(contextData)`
 - `UnitPopupRaidTarget7ButtonMixin:GetRaidTargetIndex()`
@@ -52500,7 +52528,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupRaidTarget8ButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2722` · mixes in `UnitPopupRaidTarget1ButtonMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2741` · mixes in `UnitPopupRaidTarget1ButtonMixin`
 
 - `UnitPopupRaidTarget8ButtonMixin:GetText(contextData)`
 - `UnitPopupRaidTarget8ButtonMixin:GetRaidTargetIndex()`
@@ -52508,7 +52536,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupRaidTargetBaseMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2563` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2582` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupRaidTargetBaseMixin:IsChecked(contextData)`
 - `UnitPopupRaidTargetBaseMixin:OnClick(contextData)`
@@ -52517,7 +52545,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupRaidTargetButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2539` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2558` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupRaidTargetButtonMixin:IsEnabled(contextData)`
 - `UnitPopupRaidTargetButtonMixin:GetText(contextData)`
@@ -52525,14 +52553,14 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupRaidTargetNoneButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2610` · mixes in `UnitPopupRaidTargetBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2629` · mixes in `UnitPopupRaidTargetBaseMixin`
 
 - `UnitPopupRaidTargetNoneButtonMixin:GetText(contextData)`
 - `UnitPopupRaidTargetNoneButtonMixin:GetRaidTargetIndex()`
 
 ## UnitPopupRecentAllyNoteButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3805` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3824` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupRecentAllyNoteButtonMixin:GetText(contextData)`
 - `UnitPopupRecentAllyNoteButtonMixin:CanShow(contextData)`
@@ -52540,7 +52568,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupRecentAllyPinButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3821` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3840` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupRecentAllyPinButtonMixin:GetText(contextData)`
 - `UnitPopupRecentAllyPinButtonMixin:CanShow(contextData)`
@@ -52634,7 +52662,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupReportRecentAllyButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3884` · mixes in `UnitPopupReportButtonMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3903` · mixes in `UnitPopupReportButtonMixin`
 
 - `UnitPopupReportRecentAllyButtonMixin:GetText(contextData)`
 - `UnitPopupReportRecentAllyButtonMixin:GetReportType()`
@@ -52650,7 +52678,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupResetChallengeButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3685` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3704` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupResetChallengeButtonMixin:GetText(contextData)`
 - `UnitPopupResetChallengeButtonMixin:OnClick(contextData)`
@@ -52686,7 +52714,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupSelectRoleButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3560` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3579` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupSelectRoleButtonMixin:CanShow(contextData)`
 - `UnitPopupSelectRoleButtonMixin:GetText(contextData)`
@@ -52695,14 +52723,14 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupSelfHighlightCircleButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2775` · mixes in `UnitPopupSelfHighlightCommonMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2794` · mixes in `UnitPopupSelfHighlightCommonMixin`
 
 - `UnitPopupSelfHighlightCircleButtonMixin:GetText(contextData)`
 - `UnitPopupSelfHighlightCircleButtonMixin:GetCVarName()`
 
 ## UnitPopupSelfHighlightCommonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2749` · mixes in `UnitPopupCheckboxButtonMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2768` · mixes in `UnitPopupCheckboxButtonMixin`
 
 - `UnitPopupSelfHighlightCommonMixin:SetFindSelfAnywhere()`
 - `UnitPopupSelfHighlightCommonMixin:OnClick(contextData)`
@@ -52711,14 +52739,14 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupSelfHighlightIconButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2785` · mixes in `UnitPopupSelfHighlightCommonMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2804` · mixes in `UnitPopupSelfHighlightCommonMixin`
 
 - `UnitPopupSelfHighlightIconButtonMixin:GetText(contextData)`
 - `UnitPopupSelfHighlightIconButtonMixin:GetCVarName()`
 
 ## UnitPopupSelfHighlightSelectButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2736` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2755` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupSelfHighlightSelectButtonMixin:GetText(contextData)`
 - `UnitPopupSelfHighlightSelectButtonMixin:GetEntries()`
@@ -52739,10 +52767,11 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupSetFocusButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2250` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2255` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupSetFocusButtonMixin:GetText(contextData)`
 - `UnitPopupSetFocusButtonMixin:OnClick(contextData)`
+- `UnitPopupSetFocusButtonMixin:CanShow(contextData)`
 
 ## UnitPopupSetNoteButtonMixin
 
@@ -52801,7 +52830,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupSetRoleDpsButton
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3649`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3668`
 
 - `UnitPopupSetRoleDpsButton:GetText(contextData)`
 - `UnitPopupSetRoleDpsButton:GetRole()`
@@ -52809,7 +52838,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupSetRoleHealerButton
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3668`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3687`
 
 - `UnitPopupSetRoleHealerButton:GetText(contextData)`
 - `UnitPopupSetRoleHealerButton:GetRole()`
@@ -52817,7 +52846,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupSetRoleNoneButton
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3606`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3625`
 
 - `UnitPopupSetRoleNoneButton:GetText(contextData)`
 - `UnitPopupSetRoleNoneButton:GetTextHeight()`
@@ -52827,7 +52856,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupSetRoleTankButton
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3630`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3649`
 
 - `UnitPopupSetRoleTankButton:GetText(contextData)`
 - `UnitPopupSetRoleTankButton:GetRole()`
@@ -52882,13 +52911,13 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupSubsectionSeperatorMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3517` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3536` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupSubsectionSeperatorMixin:IsDivider()`
 
 ## UnitPopupSubsectionTitleMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3507` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3526` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupSubsectionTitleMixin:IsTitle()`
 - `UnitPopupSubsectionTitleMixin:ShouldQueueDivider()`
@@ -52956,7 +52985,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupTransferNeighborhoodOwnerButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3747` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3766` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupTransferNeighborhoodOwnerButtonMixin:OnClick(contextData)`
 - `UnitPopupTransferNeighborhoodOwnerButtonMixin:GetText(contextData)`
@@ -52996,14 +53025,14 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupViewHousesButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3699` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3718` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupViewHousesButtonMixin:OnClick(contextData)`
 - `UnitPopupViewHousesButtonMixin:GetText(contextData)`
 
 ## UnitPopupVoiceChatButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2899` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2918` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupVoiceChatButtonMixin:GetText(contextData)`
 - `UnitPopupVoiceChatButtonMixin:CanShow(contextData)`
@@ -53011,14 +53040,14 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupVoiceChatMicrophoneVolumeButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2930` · mixes in `UnitPopupAttachFrameMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2949` · mixes in `UnitPopupAttachFrameMixin`
 
 - `UnitPopupVoiceChatMicrophoneVolumeButtonMixin:GetFrameTemplate()`
 - `UnitPopupVoiceChatMicrophoneVolumeButtonMixin:CanShow(contextData)`
 
 ## UnitPopupVoiceChatSettingsButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2981` · mixes in `UnitPopupButtonBaseMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:3000` · mixes in `UnitPopupButtonBaseMixin`
 
 - `UnitPopupVoiceChatSettingsButtonMixin:GetText(contextData)`
 - `UnitPopupVoiceChatSettingsButtonMixin:CanShow(contextData)`
@@ -53026,14 +53055,14 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UnitPopupVoiceChatSpeakerVolumeButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2944` · mixes in `UnitPopupAttachFrameMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2963` · mixes in `UnitPopupAttachFrameMixin`
 
 - `UnitPopupVoiceChatSpeakerVolumeButtonMixin:GetFrameTemplate()`
 - `UnitPopupVoiceChatSpeakerVolumeButtonMixin:CanShow(contextData)`
 
 ## UnitPopupVoiceChatUserVolumeButtonMixin
 
-`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2958` · mixes in `UnitPopupAttachFrameMixin`
+`interface/addons/blizzard_unitpopupshared/unitpopupsharedbuttonmixins.lua:2977` · mixes in `UnitPopupAttachFrameMixin`
 
 - `UnitPopupVoiceChatUserVolumeButtonMixin:GetFrameTemplate()`
 - `UnitPopupVoiceChatUserVolumeButtonMixin:CanShow(contextData)`
@@ -53160,7 +53189,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## UpgradePopupFrameMixin
 
-`interface/addons/blizzard_gluexml/mainline/characterselect.lua:1851` · mixes in `BaseExpandableDialogMixin`
+`interface/addons/blizzard_gluexml/mainline/characterselect.lua:1863` · mixes in `BaseExpandableDialogMixin`
 
 - `UpgradePopupFrameMixin:OnCloseClick()`
 
@@ -54549,7 +54578,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## WhoFrameColumnHeaderMixin
 
-`interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:2725`
+`interface/addons/blizzard_friendsframe/mainline/friendsframe.lua:2727`
 
 - `WhoFrameColumnHeaderMixin:OnClick()`
 - `WhoFrameColumnHeaderMixin:OnEnter()`
@@ -54830,7 +54859,6 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 `interface/addons/blizzard_worldmap/blizzard_worldmap.lua:6`
 
-- `WorldMapMixin:GetJumpHintLabel()`
 - `WorldMapMixin:SetupTitle()`
 - `WorldMapMixin:SynchronizeDisplayState()`
 - `WorldMapMixin:Minimize()`
@@ -55032,7 +55060,7 @@ Global tables defined by Blizzard's UI code. Mixins are applied with `Mixin(obj,
 
 ## WorldMapTutorialMixin
 
-`interface/addons/blizzard_worldmap/blizzard_worldmap.lua:1319`
+`interface/addons/blizzard_worldmap/blizzard_worldmap.lua:1299`
 
 - `WorldMapTutorialMixin:OnLoad()`
 - `WorldMapTutorialMixin:OnHide()`

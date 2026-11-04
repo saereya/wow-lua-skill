@@ -537,6 +537,7 @@ From [Expansion](systems/Expansion.md).
 - `Standard` = 0
 - `LeftNpeArea` = 1
 - `MaxLevel` = 2
+- `SubscriptionPeriod` = 3
 
 ## Enum.TableSecurityOption
 
@@ -609,7 +610,7 @@ From [GamepadUI](systems/GamepadUI.md).
 From [GameRules](systems/GameRules.md).
 
 - `Classic` = 0
-- `Modern` = 1
+- `Enhanced` = 1
 
 ## Enum.SdToggleUsageLocationUI
 
@@ -2529,7 +2530,8 @@ From [BattlepayConstants](systems/BattlepayConstants.md).
 - `ProxyCharacterHasWoWToken` = 53
 - `ProxyTooBusyBackOff` = 54
 - `ProxyAccountDataTooBig` = 55
-- `EndProxyErrors` = 56
+- `ProxyNoMixedAlliance` = 56
+- `EndProxyErrors` = 57
 - `BeginDbErrors` = 20010
 - `DbRealmNotEligible` = 20011
 - `DbCannotMoveGuildmaster` = 20012
@@ -7196,11 +7198,11 @@ From [LegendaryCraftingTypes](systems/LegendaryCraftingTypes.md).
 - `Unavailable` = 1
 - `Invalid` = 2
 
-## LevelConstsExposed (constants)
+## LevelConstsExposed_Camelot (constants)
 
 From [LevelConstants](systems/LevelConstants.md).
 
-- `MIN_RES_SICKNESS_LEVEL` = `10`
+- `MIN_RES_SICKNESS_LEVEL` = `11`
 - `MIN_ACHIEVEMENT_LEVEL` = `10`
 - `MIN_TALENT_LEVEL` = `10`
 
@@ -7325,6 +7327,7 @@ From [LocalizationShared](systems/LocalizationShared.md).
 
 - `Firstname` = 0
 - `Surname` = 1
+- `Combined` = 2
 
 ## Enum.LogPriority
 

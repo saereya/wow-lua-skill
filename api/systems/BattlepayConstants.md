@@ -182,7 +182,7 @@ Values:
 
 ### VasTransactionPurchaseResult
 
-*Enumeration* · 145 values, 0..20097
+*Enumeration* · 146 values, 0..20097
 
 Access values as `Enum.VasTransactionPurchaseResult.<Name>`.
 
@@ -246,7 +246,8 @@ Values:
 | `ProxyCharacterHasWoWToken` | `VasTransactionPurchaseResult` | = 53 |
 | `ProxyTooBusyBackOff` | `VasTransactionPurchaseResult` | = 54 |
 | `ProxyAccountDataTooBig` | `VasTransactionPurchaseResult` | = 55 |
-| `EndProxyErrors` | `VasTransactionPurchaseResult` | = 56 |
+| `ProxyNoMixedAlliance` | `VasTransactionPurchaseResult` | = 56 |
+| `EndProxyErrors` | `VasTransactionPurchaseResult` | = 57 |
 | `BeginDbErrors` | `VasTransactionPurchaseResult` | = 20010 |
 | `DbRealmNotEligible` | `VasTransactionPurchaseResult` | = 20011 |
 | `DbCannotMoveGuildmaster` | `VasTransactionPurchaseResult` | = 20012 |

@@ -10,7 +10,7 @@ Namespace `C_LossOfControl` · environment All · source `interface/addons/blizz
 C_LossOfControl.GetActiveLossOfControlData(index: luaIndex) -> event: LossOfControlData?
 ```
 
-`SecretArguments=AllowedWhenUntainted`
+`SecretArguments=AllowedWhenUntainted` `SecretWhenLossOfControlRestricted`
 
 ### GetActiveLossOfControlDataByUnit
 
@@ -18,7 +18,7 @@ C_LossOfControl.GetActiveLossOfControlData(index: luaIndex) -> event: LossOfCont
 C_LossOfControl.GetActiveLossOfControlDataByUnit(unitToken: UnitToken, index: luaIndex) -> event: LossOfControlData?
 ```
 
-`SecretArguments=AllowedWhenUntainted` `SecretWhenLossOfControlInfoRestricted`
+`SecretArguments=AllowedWhenUntainted` `SecretWhenLossOfControlRestricted`
 
 ### GetActiveLossOfControlDataCount
 

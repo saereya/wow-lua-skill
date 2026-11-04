@@ -992,6 +992,7 @@ See [GameRules](systems/GameRules.md).
 - `GAME_MODE_DISPLAY_INFO_UPDATED`
 - `GAME_MODE_DISPLAY_MODE_TOGGLE_DISABLED`: gameModeRecordID: number, disabled: bool
 - `GAME_RULES_CHANGED`
+- `SETTINGS_HEADER_TEXT_UPDATE`
 
 ## GarrisonInfo
 
@@ -1885,6 +1886,7 @@ See [PetInfo](systems/PetInfo.md).
 - `PET_BAR_UPDATE_COOLDOWN`
 - `PET_DISMISS_START`: delay: number
 - `PET_FORCE_NAME_DECLENSION`: name: cstring, petNumber: number?, declinedName1: cstring?, declinedName2: cstring?, declinedName3: cstring?, declinedName4: cstring?, declinedName5: cstring?
+- `PET_ORDER_MOVE_TO_PENDING_CHANGED`: isPetOrderMoveToPending: bool
 - `PET_UI_CLOSE`
 - `RAISED_AS_GHOUL`
 - `UPDATE_POSSESS_BAR`

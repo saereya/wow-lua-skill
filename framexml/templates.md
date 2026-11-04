@@ -134,7 +134,7 @@ Virtual frames that Blizzard's UI defines. Inherit one with `CreateFrame("Button
 | `ActionButtonTemplate` | CheckButton | ActionButtonSpellFXTemplate, FlyoutButtonTemplate, PingableActionButtonTemplate | BaseActionButtonMixin | `interface/addons/blizzard_actionbar/mainline/actionbuttontemplate.xml:4` |
 | `ActionButtonTemplate` | Button |  |  | `interface/addons/blizzard_gluestubs/gluestubs.xml:3` |
 | `ActionButtonTextureOverlayTemplate` | Frame |  |  | `interface/addons/blizzard_actionbar/shared/actionbuttoncomponenttemplate.xml:124` |
-| `AddExtendedSlotsButtonTemplate` | Button |  |  | `interface/addons/blizzard_uipanels_game/mainline/containerframe.xml:40` |
+| `AddExtendedSlotsButtonTemplate` | Button |  |  | `interface/addons/blizzard_uipanels_game/mainline/containerframe.xml:36` |
 | `AddFriendButtonTemplate` | Button |  |  | `interface/addons/blizzard_addfriend/addfriendtemplates.xml:89` |
 | `AddFriendIconHolderTemplate` | Frame |  | AddFriendIconHolderMixin | `interface/addons/blizzard_addfriend/addfriendtemplates.xml:61` |
 | `AddonListBaseTemplate` | Button |  |  | `interface/addons/blizzard_addonlist/addonlist.xml:4` |
@@ -945,15 +945,15 @@ Virtual frames that Blizzard's UI defines. Inherit one with `CreateFrame("Button
 | `ConsoleFontSmall` | Font | NumberFont_Shadow_Small |  | `interface/addons/blizzard_fonts_shared/shared/fonts.xml:1377` |
 | `ContainedAlertFrame` | Button (intrinsic) |  | ContainedAlertFrameMixin | `interface/addons/blizzard_sharedxml/alertframeintrinsic.xml:4` |
 | `ContainedCompactUnitFrameTemplate` | Button | CompactUnitFrameTemplate |  | `interface/addons/blizzard_unitframe/shared/compactunitframecontainer.xml:4` |
-| `ContainerFrameBackpackTemplate` | Frame | ContainerFrameTemplate | ContainerFrameBackpackMixin | `interface/addons/blizzard_uipanels_game/mainline/containerframe.xml:287` |
-| `ContainerFrameCurrencyBorderTemplate` | Frame |  | ContainerFrameCurrencyBorderMixin | `interface/addons/blizzard_uipanels_game/mainline/containerframe.xml:173` |
-| `ContainerFrameExtendedItemButtonTemplate` | Frame |  |  | `interface/addons/blizzard_uipanels_game/mainline/containerframe.xml:23` |
-| `ContainerFrameItemButtonTemplate` | ItemButton | EnchantingItemButtonAnimTemplate | ContainerFrameItemButtonMixin | `interface/addons/blizzard_uipanels_game/mainline/containerframe.xml:81` |
-| `ContainerFramePortraitButtonRouterTemplate` | Button |  | DropdownButtonProxyMixin | `interface/addons/blizzard_uipanels_game/mainline/containerframe.xml:7` |
-| `ContainerFramePortraitButtonTemplate` | DropdownButton |  | ContainerFramePortraitButtonMixin | `interface/addons/blizzard_uipanels_game/mainline/containerframe.xml:59` |
-| `ContainerFrameReagentBagTemplate` | Frame | ContainerFrameTemplate |  | `interface/addons/blizzard_uipanels_game/mainline/containerframe.xml:281` |
-| `ContainerFrameTemplate` | Frame | PortraitFrameFlatTemplate | ContainerFrameMixin | `interface/addons/blizzard_uipanels_game/mainline/containerframe.xml:231` |
-| `ContainerMoneyFrameTemplate` | Frame | SmallMoneyFrameTemplate |  | `interface/addons/blizzard_uipanels_game/mainline/containerframe.xml:202` |
+| `ContainerFrameBackpackTemplate` | Frame | ContainerFrameTemplate | ContainerFrameBackpackMixin | `interface/addons/blizzard_uipanels_game/mainline/containerframe.xml:285` |
+| `ContainerFrameCurrencyBorderTemplate` | Frame |  | ContainerFrameCurrencyBorderMixin | `interface/addons/blizzard_uipanels_game/mainline/containerframe.xml:171` |
+| `ContainerFrameExtendedItemButtonTemplate` | Frame |  |  | `interface/addons/blizzard_uipanels_game/mainline/containerframe.xml:19` |
+| `ContainerFrameItemButtonTemplate` | ItemButton | EnchantingItemButtonAnimTemplate | ContainerFrameItemButtonMixin | `interface/addons/blizzard_uipanels_game/mainline/containerframe.xml:77` |
+| `ContainerFramePortraitButtonRouterTemplate` | Button |  | DropdownButtonProxyMixin | `interface/addons/blizzard_uipanels_game/mainline/containerframe.xml:3` |
+| `ContainerFramePortraitButtonTemplate` | DropdownButton |  | ContainerFramePortraitButtonMixin | `interface/addons/blizzard_uipanels_game/mainline/containerframe.xml:55` |
+| `ContainerFrameReagentBagTemplate` | Frame | ContainerFrameTemplate |  | `interface/addons/blizzard_uipanels_game/mainline/containerframe.xml:279` |
+| `ContainerFrameTemplate` | Frame | PortraitFrameFlatTemplate | ContainerFrameMixin | `interface/addons/blizzard_uipanels_game/mainline/containerframe.xml:229` |
+| `ContainerMoneyFrameTemplate` | Frame | SmallMoneyFrameTemplate |  | `interface/addons/blizzard_uipanels_game/mainline/containerframe.xml:200` |
 | `ContentTrackingCheckmarkTemplate` | Texture |  | ContentTrackingCheckmarkMixin | `interface/addons/blizzard_contenttracking/contenttrackingelement.xml:5` |
 | `ContentTrackingElementTemplate` | Frame |  | ContentTrackingElementMixin | `interface/addons/blizzard_contenttracking/contenttrackingelement.xml:13` |
 | `ContentTrackingPinTemplate` | Button | POIButtonTemplate | ContentTrackingPinMixin | `interface/addons/blizzard_sharedmapdataproviders/contenttrackingdataprovider.xml:5` |
@@ -1366,7 +1366,7 @@ Virtual frames that Blizzard's UI defines. Inherit one with `CreateFrame("Button
 | `ExpansionTrialCheckPointLevelHeaderTemplate` | Frame | ResizeLayoutFrame |  | `interface/addons/blizzard_expansiontrial/mainline/blizzard_expansiontrial.xml:3` |
 | `ExpBar-Divider` | Texture |  |  | `interface/addons/blizzard_collections/classic/blizzard_petcollection.xml:3` |
 | `ExpBar-Divider` | Texture |  |  | `interface/addons/blizzard_collections/shared/blizzard_petcollection.xml:4` |
-| `ExperienceButtonTemplate` | CheckButton |  | ExperiencePresetButtonMixin | `interface/addons/blizzard_gluexml/mainline/experiencepreset.xml:21` |
+| `ExperienceButtonTemplate` | CheckButton |  | ExperiencePresetButtonMixin | `interface/addons/blizzard_gluexml/mainline/experiencepreset.xml:24` |
 | `ExpStatusBarTemplate` | Frame | StatusTrackingBarTemplate | ExpBarMixin | `interface/addons/blizzard_statustrackingbar/mainline/expbar.xml:3` |
 | `ExternalEventURLMinimapButtonTemplate` | Button |  | ExternalEventURLMinimapButtonMixin | `interface/addons/blizzard_minimap/shared/externaleventurlminimapbutton.xml:3` |
 | `ExtraActionButtonTemplate` | CheckButton | ActionBarButtonCodeTemplate, PingableActionButtonTemplate | ExtraActionButtonMixin | `interface/addons/blizzard_actionbar/shared/extraactionbar.xml:3` |
@@ -1637,7 +1637,7 @@ Virtual frames that Blizzard's UI defines. Inherit one with `CreateFrame("Button
 | `GamepadActionBarPageUnitTemplate` | Frame |  | GamepadActionBarPageUnitMixin | `interface/addons/blizzard_gamepadactionbars/actionbartemplates.xml:597` |
 | `GamepadActionBarPetButtonTemplate` | CheckButton | QuickKeybindButtonTemplate, SecureFrameTemplate, ActionButtonTemplate | GamepadActionBarPetButtonMixin | `interface/addons/blizzard_gamepadactionbars/actionbarbutton.xml:111` |
 | `GamepadActionBarTemplate` | Frame |  | GamepadActionBarMixin | `interface/addons/blizzard_gamepadactionbars/actionbartemplates.xml:147` |
-| `GamepadBagSlotButtonTemplate` | ItemButton |  |  | `interface/addons/blizzard_mainmenubarbagbuttons/camelot/mainmenubarbagbuttons.xml:24` |
+| `GamepadBagSlotButtonTemplate` | ItemButton |  | GamepadBagSlotMixin | `interface/addons/blizzard_mainmenubarbagbuttons/camelot/mainmenubarbagbuttons.xml:25` |
 | `GamepadBaseDialogTemplate` | Frame |  | GamepadBaseDialogMixin | `interface/addons/blizzard_gamepadsharedutility/templates/basedialog.xml:4` |
 | `GamepadButtonIconWithTextTemplate` | Button |  | GamepadButtonIconWithTextMixin | `interface/addons/blizzard_gamepad/ui/consolehud/consoletemplates.xml:4` |
 | `GamepadClassActionButtonTemplate` | CheckButton | GamepadActionBarButtonTemplate |  | `interface/addons/blizzard_gamepadactionbars/classactionflyout.xml:4` |
@@ -2157,7 +2157,6 @@ Virtual frames that Blizzard's UI defines. Inherit one with `CreateFrame("Button
 | `ItemBeltButtonTemplate` | ItemButton | HUDInventoryButtonTemplate | ItemBeltButtonMixin | `interface/addons/blizzard_itembeltframe/itembeltframe.xml:4` |
 | `ItemButton` | Button (intrinsic) |  | ItemButtonMixin | `interface/addons/blizzard_itembutton/shared/itembuttontemplate.xml:4` |
 | `ItemQualityColorOverrides` | Frame |  | ItemQualityColorOverrideMixin | `interface/addons/blizzard_settingsdefinitions_frame/mainline/colorblind.xml:26` |
-| `ItemSlotBackgroundCombinedBagsTemplate` | Texture |  |  | `interface/addons/blizzard_uipanels_game/mainline/containerframe.xml:3` |
 | `ItemTextFontNormal` | Font | QuestFont_Large |  | `interface/addons/blizzard_fonts_shared/shared/gamefontstyles.xml:98` |
 | `ItemUpgradeCostIconTemplate` | Frame | CurrencyLayoutFrameIconTemplate | ItemUpgradeCostIconMixin | `interface/addons/blizzard_itemupgradeui/mainline/blizzard_itemupgradeui.xml:14` |
 | `ItemUpgradeCostQuantityTemplate` | FontString | GameFontHighlight | ItemUpgradeCostQuantityMixin | `interface/addons/blizzard_itemupgradeui/mainline/blizzard_itemupgradeui.xml:7` |
@@ -2396,7 +2395,7 @@ Virtual frames that Blizzard's UI defines. Inherit one with `CreateFrame("Button
 | `MerchantItemTemplate` | Frame |  |  | `interface/addons/blizzard_uipanels_game/vanilla/merchantframe.xml:3` |
 | `MetaCriteriaTemplate` | Button |  |  | `interface/addons/blizzard_achievementui/cata/blizzard_achievementui.xml:480` |
 | `MetaCriteriaTemplate` | Button |  | AchievementMetaCriteriaMixin | `interface/addons/blizzard_achievementui/mainline/blizzard_achievementui.xml:464` |
-| `Metal2DropdownWithSteppersAndLabelTemplate` | Frame | DropdownWithSteppersTemplate | DropdownWithSteppersAndLabelMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:169` |
+| `Metal2DropdownWithSteppersAndLabelTemplate` | Frame | DropdownWithSteppersTemplate | DropdownWithSteppersAndLabelMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:171` |
 | `MetallicSoftCursorPointerTemplate` | Frame |  |  | `interface/addons/blizzard_gamepadsoftcursor/softcursor.xml:34` |
 | `MicroMenuTemplate` | Frame | GridLayoutFrame | MicroMenuMixin | `interface/addons/blizzard_micromenu/mainline/mainmenubarmicromenutemplate.xml:3` |
 | `MidnightLandingOverlayTemplate` | Frame | LandingPageExpansionOverlayTemplate | MidnightLandingOverlayMixin | `interface/addons/blizzard_expansionlandingpage/blizzard_midnightlandingpage.xml:3` |
@@ -2479,7 +2478,7 @@ Virtual frames that Blizzard's UI defines. Inherit one with `CreateFrame("Button
 | `MythicPlusSeasonChangesNoticeTemplate` | Frame |  |  | `interface/addons/blizzard_challengesui/mainline/blizzard_challengesui.xml:3` |
 | `NameChangeEditBoxTemplate` | EditBox | InputBoxTemplate |  | `interface/addons/blizzard_communities/guildnamechange.xml:95` |
 | `NameplateAuraItemTemplate` | Frame |  | NamePlateAuraItemMixin | `interface/addons/blizzard_nameplates/blizzard_nameplateauras.xml:4` |
-| `NamePlateAuraListTemplate` | Frame | GridLayoutFrame |  | `interface/addons/blizzard_nameplates/blizzard_nameplateauras.xml:53` |
+| `NamePlateAuraListTemplate` | Frame | GridLayoutFrame |  | `interface/addons/blizzard_nameplates/blizzard_nameplateauras.xml:51` |
 | `NamePlateCastingBarTemplate` | StatusBar | CastingBarFrameAnimsTemplate | NamePlateCastingBarMixin | `interface/addons/blizzard_nameplates/blizzard_nameplatecastingbar.xml:4` |
 | `NamePlateFullBorderTemplate` | Frame |  | NamePlateBorderTemplateMixin | `interface/addons/blizzard_nameplates/blizzard_nameplates.xml:11` |
 | `NameplateLevelFrame` | Frame |  | NameplateLevelFrameMixin | `interface/addons/blizzard_nameplates/blizzard_nameplatelevelframe.xml:4` |
@@ -2489,8 +2488,8 @@ Virtual frames that Blizzard's UI defines. Inherit one with `CreateFrame("Button
 | `NamePlateSecondaryBarBorderTemplate` | Frame |  | NamePlateBorderTemplateMixin | `interface/addons/blizzard_nameplates/blizzard_nameplates.xml:57` |
 | `NamePlateUnitFrameTemplate` | Button | BaseNamePlateUnitFrameTemplate |  | `interface/addons/blizzard_nameplates/blizzard_nameplates.xml:367` |
 | `NarratableTooltipTemplate` | Frame |  | NarratableTooltipMixin | `interface/addons/blizzard_sharedxml/sharedtooltiptemplates.xml:88` |
-| `NavBarTemplate` | Frame |  |  | `interface/addons/blizzard_framexml/mainline/navigationbar.xml:248` |
-| `NavButtonTemplate` | Button |  | NavButtonMixin | `interface/addons/blizzard_framexml/mainline/navigationbar.xml:123` |
+| `NavBarTemplate` | Frame |  |  | `interface/addons/blizzard_framexml/mainline/navigationbar.xml:244` |
+| `NavButtonTemplate` | Button |  |  | `interface/addons/blizzard_framexml/mainline/navigationbar.xml:123` |
 | `NavigationBarButtonTemplate` | Button |  | NavigationBarButtonMixin | `interface/addons/blizzard_catalogshop/blizzard_catalogshop_elements.xml:545` |
 | `NavigationBarNavigationButtonTemplate` | Button |  | NavigationBarNavigationButtonMixin | `interface/addons/blizzard_catalogshop/blizzard_catalogshop_elements.xml:595` |
 | `NavigationBarTemplate` | Frame | CallbackRegistrantTemplate | NavigationBarMixin | `interface/addons/blizzard_catalogshop/blizzard_catalogshop_elements.xml:619` |
@@ -2855,7 +2854,7 @@ Virtual frames that Blizzard's UI defines. Inherit one with `CreateFrame("Button
 | `ProductRefundContainerTemplate` | Frame |  | ProductRefundContainerMixin | `interface/addons/blizzard_catalogshop/blizzard_catalogshop_elements.xml:505` |
 | `ProfessionButtonTemplate` | CheckButton | SecureFrameTemplate, FlyoutButtonTemplate | ProfessionSpellButtonMixin | `interface/addons/blizzard_professionsbook/blizzard_professionsbooktemplates.xml:4` |
 | `ProfessionButtonTemplate` | CheckButton | SecureFrameTemplate, FlyoutButtonTemplate | SpellButtonMixin | `interface/addons/blizzard_uipanels_game/cata/spellbookframe.xml:213` |
-| `ProfessionsBookFrameTemplate` | Frame |  |  | `interface/addons/blizzard_professionsbook/camelot/blizzard_professionsbooktemplates.xml:191` |
+| `ProfessionsBookFrameTemplate` | Frame |  |  | `interface/addons/blizzard_professionsbook/camelot/blizzard_professionsbooktemplates.xml:221` |
 | `ProfessionsBookFrameTemplate` | Frame |  |  | `interface/addons/blizzard_professionsbook/mainline/blizzard_professionsbooktemplates.xml:164` |
 | `ProfessionsBookPageTemplate` | Frame | ProfessionsBookFrameTemplate | ProfessionsBookPageFrameMixin | `interface/addons/blizzard_professions/blizzard_professionscrafting.xml:397` |
 | `ProfessionsButtonTemplate` | ItemButton |  | ProfessionsButtonMixin | `interface/addons/blizzard_professionstemplates/blizzard_professionstemplates.xml:41` |
@@ -2958,30 +2957,30 @@ Virtual frames that Blizzard's UI defines. Inherit one with `CreateFrame("Button
 | `PVPCasualActivityButton` | Button |  | PVPCasualActivityButtonMixin | `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.xml:645` |
 | `PVPCasualSpecialEventButtonTemplate` | Button | PVPCasualActivityButton | PVPSpecialEventButtonMixin | `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.xml:695` |
 | `PVPCasualStandardButtonTemplate` | Button | PVPCasualActivityButton |  | `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.xml:686` |
-| `PVPCellClassTemplate` | Frame | PVPIconTemplate | PVPCellClassMixin | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:58` |
-| `PVPCellHonorLevelTemplate` | Frame | PVPIconTemplate | PVPCellHonorLevelMixin | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:52` |
-| `PVPCellNameTemplate` | Button | PVPStringTemplate | PVPCellNameMixin | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:64` |
-| `PVPCellStatTemplate` | Frame | PVPStringTemplate | PVPCellStatMixin | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:78` |
-| `PVPCellStringTemplate` | Frame | PVPStringTemplate | PVPCellStringMixin | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:72` |
+| `PVPCellClassTemplate` | Frame | PVPIconTemplate | PVPCellClassMixin | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:56` |
+| `PVPCellHonorLevelTemplate` | Frame | PVPIconTemplate | PVPCellHonorLevelMixin | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:50` |
+| `PVPCellNameTemplate` | Button | PVPStringTemplate | PVPCellNameMixin | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:62` |
+| `PVPCellStatTemplate` | Frame | PVPStringTemplate | PVPCellStatMixin | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:76` |
+| `PVPCellStringTemplate` | Frame | PVPStringTemplate | PVPCellStringMixin | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:70` |
 | `PVPConquestBarTemplate` | StatusBar |  | PVPConquestBarMixin | `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.xml:466` |
 | `PVPConquestRewardButton` | Button |  | PVPConquestRewardMixin | `interface/addons/blizzard_framexml/pvpuitemplates.xml:3` |
 | `PVPCurrencyDisplayTemplate` | Button |  |  | `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.xml:525` |
 | `PVPCurrencyRewardTemplate` | Frame |  |  | `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.xml:562` |
-| `PVPHeaderIconTemplate` | Button | PVPIconTemplate | PVPHeaderIconMixin | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:89` |
-| `PVPHeaderStringTemplate` | Button | PVPStringTemplate | PVPHeaderStringMixin | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:82` |
+| `PVPHeaderIconTemplate` | Button | PVPIconTemplate | PVPHeaderIconMixin | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:87` |
+| `PVPHeaderStringTemplate` | Button | PVPStringTemplate | PVPHeaderStringMixin | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:80` |
 | `PVPHonorFrameButtonTemplate` | Button | PVPBattlegroundButtonTemplate |  | `interface/addons/blizzard_uipanels_game/cata/pvpframe.xml:70` |
 | `PVPHonorRewardCodeTemplate` | Frame |  | PVPHonorRewardCodeMixin | `interface/addons/blizzard_framexml/pvphonorsystem.xml:3` |
 | `PVPHonorRewardTemplate` | Button |  | PVPHonorRewardMixin | `interface/addons/blizzard_framexml/pvpuitemplates.xml:50` |
 | `PVPHonorSystemLargeXPBar` | Frame |  |  | `interface/addons/blizzard_framexml/pvphonorsystem.xml:10` |
 | `PVPHonorSystemSmallXPBar` | Frame |  |  | `interface/addons/blizzard_framexml/pvphonorsystem.xml:217` |
-| `PVPIconTemplate` | Frame |  |  | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:39` |
+| `PVPIconTemplate` | Frame |  |  | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:37` |
 | `PVPInfoTextFont` | Font | SystemFont_OutlineThick_Huge2 |  | `interface/addons/blizzard_fonts_shared/shared/gamefontstyles.xml:127` |
 | `PVPInstanceListEntryButtonTemplate` | Button |  |  | `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.xml:193` |
 | `PVPInstanceListHeaderButtonTemplate` | Button |  |  | `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.xml:165` |
 | `PVPLootTemplate` | Button | LootItemExtended | PVPLootMixin | `interface/addons/blizzard_framexml/pvpuitemplates.xml:132` |
-| `PVPMatchResultsCurrencyRewardTemplate` | Button |  | PVPMatchResultsCurrencyRewardMixin | `interface/addons/blizzard_pvpmatch/pvpmatchresults.xml:11` |
-| `PVPMatchResultsLoot` | Button | PVPLootTemplate |  | `interface/addons/blizzard_pvpmatch/pvpmatchresults.xml:5` |
-| `PVPNewRatingTemplate` | Frame | PVPStringTemplate | PVPNewRatingMixin | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:81` |
+| `PVPMatchResultsCurrencyRewardTemplate` | Button |  | PVPMatchResultsCurrencyRewardMixin | `interface/addons/blizzard_pvpmatch/pvpmatchresults.xml:10` |
+| `PVPMatchResultsLoot` | Button | PVPLootTemplate |  | `interface/addons/blizzard_pvpmatch/pvpmatchresults.xml:4` |
+| `PVPNewRatingTemplate` | Frame | PVPStringTemplate | PVPNewRatingMixin | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:79` |
 | `PVPQuestRewardTemplate` | Frame | PVPRewardTemplate | PVPQuestRewardMixin | `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.xml:437` |
 | `PVPQueueFrameButtonTemplate` | Button |  |  | `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.xml:591` |
 | `PVPQueueInfoScrollFrameTemplate` | ScrollFrame | UIPanelScrollFrameTemplate |  | `interface/addons/blizzard_uipanels_game/cata/pvpframe.xml:88` |
@@ -2995,13 +2994,13 @@ Virtual frames that Blizzard's UI defines. Inherit one with `CreateFrame("Button
 | `PvpRoleStatusTemplate` | Frame |  |  | `interface/addons/blizzard_lfgutil/mainline/pvppopup.xml:3` |
 | `PVPSeasonChangesDescriptionTemplate` | FontString |  |  | `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.xml:24` |
 | `PVPSeasonChangesNoticeTemplate` | Frame |  | NewPvpSeasonMixin | `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.xml:29` |
-| `PVPSoloShuffleCellNameTemplate` | Button | PVPCellNameTemplate | PVPSoloShuffleCellNameMixin | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:71` |
-| `PVPSoloShuffleCellStatTemplate` | Button | PVPCellStatTemplate | PVPSoloShuffleCellStatMixin | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:79` |
+| `PVPSoloShuffleCellNameTemplate` | Button | PVPCellNameTemplate | PVPSoloShuffleCellNameMixin | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:69` |
+| `PVPSoloShuffleCellStatTemplate` | Button | PVPCellStatTemplate | PVPSoloShuffleCellStatMixin | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:77` |
 | `PVPSpecificBattlegroundButtonTemplate` | Button | PVPInstanceListEntryButtonTemplate |  | `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.xml:292` |
 | `PVPSpecificTrainingGroundButtonTemplate` | Button | PVPInstanceListEntryButtonTemplate, CallbackRegistrantTemplate | PVPSpecificTrainingGroundButtonMixin | `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.xml:299` |
 | `PVPStandardRewardTemplate` | Frame | CallbackRegistrantTemplate, PVPRewardTemplate | PVPStandardRewardMixin | `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.xml:429` |
-| `PVPStringTemplate` | Frame |  |  | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:31` |
-| `PVPTableRowTemplate` | Frame |  | PVPRowMixin | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:5` |
+| `PVPStringTemplate` | Frame |  |  | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:29` |
+| `PVPTableRowTemplate` | Frame |  | PVPRowMixin | `interface/addons/blizzard_pvpmatch/pvpmatchtable.xml:3` |
 | `PvPTalentListButtonTemplate` | Button |  | PvPTalentListButtonMixin | `interface/addons/blizzard_playerspells/pvptalents/blizzard_pvptalentlisttemplates.xml:5` |
 | `PvPTalentListTemplate` | Frame | CallbackRegistrantTemplate | PvPTalentListMixin | `interface/addons/blizzard_playerspells/pvptalents/blizzard_pvptalentlisttemplates.xml:72` |
 | `PvPTalentSlotButtonTemplate` | Button |  | PvPTalentSlotButtonMixin | `interface/addons/blizzard_playerspells/pvptalents/blizzard_pvptalentslottemplates.xml:5` |
@@ -3302,7 +3301,7 @@ Virtual frames that Blizzard's UI defines. Inherit one with `CreateFrame("Button
 | `SearchBoxNineSliceTemplate` | EditBox | InputBoxInstructionsNineSliceTemplate | NarrationSearchBoxMixin | `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.xml:441` |
 | `SearchBoxTemplate` | EditBox | InputBoxInstructionsTemplate | NarrationSearchBoxMixin | `interface/addons/blizzard_sharedxml/shared/inputbox/inputboxtemplates.xml:209` |
 | `SeasonRewardFrameTemplate` | Frame |  | PVPAchievementRewardMixin | `interface/addons/blizzard_pvpui/mainline/blizzard_pvpui.xml:3` |
-| `SecondaryProfessionTemplate` | Frame |  |  | `interface/addons/blizzard_professionsbook/camelot/blizzard_professionsbooktemplates.xml:114` |
+| `SecondaryProfessionTemplate` | Frame |  |  | `interface/addons/blizzard_professionsbook/camelot/blizzard_professionsbooktemplates.xml:124` |
 | `SecondaryProfessionTemplate` | Frame |  |  | `interface/addons/blizzard_professionsbook/mainline/blizzard_professionsbooktemplates.xml:103` |
 | `SecondaryProfessionTemplate` | Frame |  |  | `interface/addons/blizzard_uipanels_game/cata/spellbookframe.xml:457` |
 | `SecureActionButtonTemplate` | Button | SecureFrameTemplate | SecureActionButtonMixin | `interface/addons/blizzard_framexml/securetemplates.xml:4` |
@@ -3351,8 +3350,8 @@ Virtual frames that Blizzard's UI defines. Inherit one with `CreateFrame("Button
 | `services-ring-large-glow` | Texture |  |  | `interface/addons/blizzard_gluexml/mainline/characterservicespatchwerk.xml:23` |
 | `services-ring-large-glowpulse` | Texture |  |  | `interface/addons/blizzard_gluexml/mainline/characterservicespatchwerk.xml:15` |
 | `services-ring-large-glowspin` | Texture |  |  | `interface/addons/blizzard_gluexml/mainline/characterservicespatchwerk.xml:27` |
-| `SettingButtonControlTemplate` | Frame | SettingsListElementTemplate | SettingsButtonControlMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:127` |
-| `SettingsAddOnDisabledLabelTemplate` | Frame |  |  | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:36` |
+| `SettingButtonControlTemplate` | Frame | SettingsListElementTemplate | SettingsButtonControlMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:129` |
+| `SettingsAddOnDisabledLabelTemplate` | Frame |  |  | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:37` |
 | `SettingsAdvancedDropdownTemplate` | Frame |  | SettingsAdvancedDropdownMixin | `interface/addons/blizzard_settingsdefinitions_shared/graphics.xml:5` |
 | `SettingsAdvancedQualityControlsTemplate` | Frame |  | SettingsAdvancedQualityControlsMixin | `interface/addons/blizzard_settingsdefinitions_shared/graphics.xml:140` |
 | `SettingsAdvancedQualitySectionTemplate` | EventFrame |  | SettingsAdvancedQualitySectionMixin | `interface/addons/blizzard_settingsdefinitions_shared/graphics.xml:234` |
@@ -3364,17 +3363,17 @@ Virtual frames that Blizzard's UI defines. Inherit one with `CreateFrame("Button
 | `SettingsCategoryListHeaderTemplate` | Frame |  | SettingsCategoryListHeaderMixin | `interface/addons/blizzard_settings_shared/blizzard_categorylist.xml:29` |
 | `SettingsCategoryListSpacerTemplate` | Frame |  |  | `interface/addons/blizzard_settings_shared/blizzard_categorylist.xml:4` |
 | `SettingsCategoryListTemplate` | Frame |  | SettingsCategoryListMixin | `interface/addons/blizzard_settings_shared/blizzard_categorylist.xml:8` |
-| `SettingsCheckboxControlTemplate` | Frame | SettingsListElementTemplate | SettingsCheckboxControlMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:106` |
-| `SettingsCheckboxDropdownControlTemplate` | Frame | SettingsListElementTemplate | SettingsCheckboxDropdownControlMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:155` |
-| `SettingsCheckboxSliderControlTemplate` | Frame | SettingsListElementTemplate | SettingsCheckboxSliderControlMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:148` |
-| `SettingsCheckboxTemplate` | CheckButton |  | SettingsCheckboxMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:79` |
-| `SettingsCheckboxWithButtonControlTemplate` | Frame | SettingsListElementTemplate | SettingsCheckboxWithButtonControlMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:141` |
-| `SettingsCheckboxWithColorSwatchControlTemplate` | Frame | SettingsListElementTemplate | SettingsCheckboxWithColorSwatchControlMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:162` |
-| `SettingsColorSwatchControlTemplate` | Frame | SettingsListElementTemplate | SettingsColorSwatchControlMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:134` |
-| `SettingsColorSwatchTemplate` | Button | ColorSwatchTemplate | SettingsColorSwatchMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:98` |
-| `SettingsDropdownControlTemplate` | Frame | SettingsListElementTemplate | SettingsDropdownControlMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:120` |
-| `SettingsDropdownWithButtonsTemplate` | Frame | Metal2DropdownWithSteppersAndLabelTemplate |  | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:189` |
-| `SettingsExpandableSectionTemplate` | EventFrame |  | SettingsExpandableSectionMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:191` |
+| `SettingsCheckboxControlTemplate` | Frame | SettingsListElementTemplate | SettingsCheckboxControlMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:107` |
+| `SettingsCheckboxDropdownControlTemplate` | Frame | SettingsListElementTemplate | SettingsCheckboxDropdownControlMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:157` |
+| `SettingsCheckboxSliderControlTemplate` | Frame | SettingsListElementTemplate | SettingsCheckboxSliderControlMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:150` |
+| `SettingsCheckboxTemplate` | CheckButton |  | SettingsCheckboxMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:80` |
+| `SettingsCheckboxWithButtonControlTemplate` | Frame | SettingsListElementTemplate | SettingsCheckboxWithButtonControlMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:143` |
+| `SettingsCheckboxWithColorSwatchControlTemplate` | Frame | SettingsListElementTemplate | SettingsCheckboxWithColorSwatchControlMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:164` |
+| `SettingsColorSwatchControlTemplate` | Frame | SettingsListElementTemplate | SettingsColorSwatchControlMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:136` |
+| `SettingsColorSwatchTemplate` | Button | ColorSwatchTemplate | SettingsColorSwatchMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:99` |
+| `SettingsDropdownControlTemplate` | Frame | SettingsListElementTemplate | SettingsDropdownControlMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:121` |
+| `SettingsDropdownWithButtonsTemplate` | Frame | Metal2DropdownWithSteppersAndLabelTemplate |  | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:191` |
+| `SettingsExpandableSectionTemplate` | EventFrame |  | SettingsExpandableSectionMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:193` |
 | `SettingsFrameTemplate` | Frame |  |  | `interface/addons/blizzard_settings_shared/mainline/blizzard_settingspaneltemplates.xml:4` |
 | `SettingsKeybindingPrefaceTemplate` | Frame |  | SettingsKeybindingPrefaceMixin | `interface/addons/blizzard_settingsdefinitions_frame/keybindings.xml:9` |
 | `SettingsKeybindingSectionTemplate` | EventFrame | SettingsExpandableSectionTemplate | SettingsKeybindingSectionMixin | `interface/addons/blizzard_settingsdefinitions_frame/keybindings.xml:23` |
@@ -3384,11 +3383,11 @@ Virtual frames that Blizzard's UI defines. Inherit one with `CreateFrame("Button
 | `SettingsLanguageDropdownWithSteppersAndLabelTemplate` | Frame | DropdownWithSteppersTemplate | DropdownWithSteppersAndLabelMixin | `interface/addons/blizzard_settingsdefinitions_shared/languages.xml:17` |
 | `SettingsLanguageRestartNeededTemplate` | Frame | SettingsListElementTemplate | LanguageRestartNeededMixin | `interface/addons/blizzard_settingsdefinitions_shared/languages.xml:49` |
 | `SettingsLanguageTemplate` | Frame | SettingsLanguageBaseTemplate | SettingsLanguageDropdownControlMixin | `interface/addons/blizzard_settingsdefinitions_shared/languages.xml:46` |
-| `SettingsListElementTemplate` | Frame |  | SettingsListElementMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:49` |
+| `SettingsListElementTemplate` | Frame |  | SettingsListElementMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:50` |
 | `SettingsListSearchCategoryTemplate` | Button |  | SettingsListSearchCategoryMixin | `interface/addons/blizzard_settings_shared/blizzard_settingslist.xml:64` |
 | `SettingsListSectionHeaderTemplate` | Frame |  | SettingsListSectionHeaderMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:12` |
 | `SettingsListTemplate` | Frame |  | SettingsListMixin | `interface/addons/blizzard_settings_shared/blizzard_settingslist.xml:4` |
-| `SettingsSliderControlTemplate` | Frame | SettingsListElementTemplate | SettingsSliderControlMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:113` |
+| `SettingsSliderControlTemplate` | Frame | SettingsListElementTemplate | SettingsSliderControlMixin | `interface/addons/blizzard_settings_shared/blizzard_settingcontrols.xml:114` |
 | `ShadowedStatusBarOverlaySegmentTemplate` | Frame | StatusBarOverlaySegmentTemplate |  | `interface/addons/blizzard_unitframe/shared/statusbaroverlaysegment.xml:40` |
 | `ShadowOverlaySmallTemplate` | Frame |  |  | `interface/addons/blizzard_uipaneltemplates/mainline/uipaneltemplates.xml:1045` |
 | `ShadowOverlayTemplate` | Frame |  |  | `interface/addons/blizzard_sharedxml/mainline/shareduipaneltemplates.xml:163` |
@@ -4318,14 +4317,14 @@ Virtual frames that Blizzard's UI defines. Inherit one with `CreateFrame("Button
 | `WorldMapFrameTemplate` | Frame | MapCanvasFrameTemplate | QuestLogOwnerMixin, WorldMapMixin | `interface/addons/blizzard_worldmap/blizzard_worldmap.xml:4` |
 | `WorldMapInvasionOverlayPinTemplate` | Frame |  | WorldMap_EventOverlayPinMixin | `interface/addons/blizzard_worldmap/wm_eventoverlaydataprovider.xml:5` |
 | `WorldMapNavBarTemplate` | Frame | NavBarTemplate | WorldMapNavBarMixin | `interface/addons/blizzard_worldmap/blizzard_worldmaptemplates.xml:72` |
-| `WorldMapSidePanelToggleTemplate` | Frame |  | WorldMapSidePanelToggleMixin | `interface/addons/blizzard_worldmap/blizzard_worldmaptemplates.xml:172` |
+| `WorldMapSidePanelToggleTemplate` | Frame |  | WorldMapSidePanelToggleMixin | `interface/addons/blizzard_worldmap/blizzard_worldmaptemplates.xml:175` |
 | `WorldMapTextFont` | Font | SystemFont_OutlineThick_WTF |  | `interface/addons/blizzard_fonts_shared/shared/gamefontstyles.xml:141` |
-| `WorldMapThreatFrameTemplate` | Frame |  | WorldMapThreatFrameMixin | `interface/addons/blizzard_worldmap/blizzard_worldmaptemplates.xml:252` |
+| `WorldMapThreatFrameTemplate` | Frame |  | WorldMapThreatFrameMixin | `interface/addons/blizzard_worldmap/blizzard_worldmaptemplates.xml:255` |
 | `WorldMapThreatOverlayPinTemplate` | Frame |  | WorldMap_EventOverlayPinMixin | `interface/addons/blizzard_worldmap/wm_eventoverlaydataprovider.xml:15` |
 | `WorldMapTrackingOptionsButtonTemplate` | DropdownButton |  | WorldMapTrackingOptionsButtonMixin | `interface/addons/blizzard_worldmap/camelot/blizzard_worldmaptemplates.xml:4` |
 | `WorldMapTrackingOptionsButtonTemplate` | DropdownButton |  | WorldMapTrackingOptionsButtonMixin | `interface/addons/blizzard_worldmap/mainline/blizzard_worldmaptemplates.xml:4` |
 | `WorldMapTrackingPinButtonTemplate` | Button |  | WorldMapTrackingPinButtonMixin | `interface/addons/blizzard_worldmap/blizzard_worldmaptemplates.xml:6` |
-| `WorldMapZoneTimerTemplate` | Frame |  | WorldMapZoneTimerMixin | `interface/addons/blizzard_worldmap/blizzard_worldmaptemplates.xml:236` |
+| `WorldMapZoneTimerTemplate` | Frame |  | WorldMapZoneTimerMixin | `interface/addons/blizzard_worldmap/blizzard_worldmaptemplates.xml:239` |
 | `WorldQuestCompleteAlertFrameTemplate` | ContainedAlertFrame | AlertFrameTemplate |  | `interface/addons/blizzard_framexml/mainline/alertframesystems.xml:2400` |
 | `WorldQuestFrameRewardTemplate` | Button | DungeonCompletionAlertFrameRewardTemplate |  | `interface/addons/blizzard_framexml/mainline/alertframesystems.xml:47` |
 | `WorldQuestPinTemplate` | Button | POIButtonTemplate, LegendHighlightableMapPoiPinTemplate | WorldQuestPinMixin | `interface/addons/blizzard_sharedmapdataproviders/worldquestdataprovider.xml:5` |

@@ -375,3 +375,4 @@ Fields:
 | `regionID` | `number` |  |
 | `isInCurrentRegion` | `bool` |  |
 | `timerunningSeasonID` | `number?` |  |
+| `subIcon` | `string?` |  |

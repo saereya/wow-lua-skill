@@ -61,7 +61,7 @@ C_Texture.GetFilenameFromFileDataID(fileDataID: number) -> filename: string
 ### GetTitleIconTexture
 
 ```lua
-C_Texture.GetTitleIconTexture(titleID: string, version: TitleIconVersion, callback: GetTitleIconTextureCallback)
+C_Texture.GetTitleIconTexture(titleID: string, version: TitleIconVersion, callback: GetTitleIconTextureCallback, subIcon: string?)
 ```
 
 `SecretArguments=AllowedWhenUntainted`
@@ -69,7 +69,7 @@ C_Texture.GetTitleIconTexture(titleID: string, version: TitleIconVersion, callba
 ### IsTitleIconTextureReady
 
 ```lua
-C_Texture.IsTitleIconTextureReady(titleID: string, version: TitleIconVersion) -> ready: bool
+C_Texture.IsTitleIconTextureReady(titleID: string, version: TitleIconVersion, subIcon: string?) -> ready: bool
 ```
 
 `SecretArguments=AllowedWhenUntainted`
@@ -77,7 +77,7 @@ C_Texture.IsTitleIconTextureReady(titleID: string, version: TitleIconVersion) ->
 ### SetTitleIconTexture
 
 ```lua
-C_Texture.SetTitleIconTexture(texture: SimpleTexture, titleID: string, version: TitleIconVersion)
+C_Texture.SetTitleIconTexture(texture: SimpleTexture, titleID: string, version: TitleIconVersion, subIcon: string?)
 ```
 
 `SecretArguments=AllowedWhenUntainted`

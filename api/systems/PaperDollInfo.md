@@ -22,7 +22,7 @@ C_PaperDollInfo.CanAutoEquipCursorItem() -> canAutoEquip: bool
 C_PaperDollInfo.CancelTemporaryEnchantment(slot: LuaInventorySlot)
 ```
 
-Cancels active temporary enchantments on inventory slot items.
+Cancels active temporary enchantments on inventory slot items. Imbue enchants take priority over temporary enchants.
 
 `SecretArguments=AllowedWhenUntainted` `HasRestrictions`
 
@@ -134,7 +134,7 @@ C_PaperDollInfo.GetStaggerPercentage(unit: UnitToken) -> stagger: number, stagge
 C_PaperDollInfo.GetTemporaryEnchantmentInfo(slot: LuaInventorySlot) -> enchantInfo: TemporaryItemEnchantInfo
 ```
 
-Queries information about active temporary enchants on inventory slot items.
+Queries information about active temporary enchants on inventory slot items. Imbue enchants take priority over temporary enchants.
 
 `SecretArguments=AllowedWhenUntainted` `MayReturnNothing`
 

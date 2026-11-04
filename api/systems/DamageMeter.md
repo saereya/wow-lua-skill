@@ -163,7 +163,7 @@ Fields:
 | `sourceCreatureID` | `number?` |  |
 | `name` | `cstring` | `ConditionalSecret` |
 | `classFilename` | `cstring` | `NeverSecret` |
-| `specIconID` | `fileID` | `NeverSecret` |
+| `specIconID` | `fileID` | `SecretValue` |
 | `totalAmount` | `number` |  |
 | `amountPerSecond` | `number` |  |
 | `isLocalPlayer` | `bool` | `NeverSecret` |
@@ -208,4 +208,4 @@ Fields:
 | `isPet` | `bool` |  |
 | `isMob` | `bool` |  |
 | `amount` | `number` |  |
-| `specIconID` | `fileID` | `NeverSecret` |
+| `specIconID` | `fileID` | `SecretValue` |

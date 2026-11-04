@@ -547,6 +547,14 @@ C_ActionBar.IsHelpfulAction(actionID: luaIndex, useNeutral: bool) -> isHelpful: 
 
 `SecretArguments=AllowedWhenUntainted`
 
+### IsHighestSpellRank
+
+```lua
+C_ActionBar.IsHighestSpellRank(spellID: SpellIdentifier) -> isHighestRank: bool
+```
+
+`SecretArguments=AllowedWhenUntainted`
+
 ### IsInterruptAction
 
 ```lua

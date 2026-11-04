@@ -1,13 +1,13 @@
 ---
 name: wow-addon-api-wowf
-description: Exact Lua API reference for World of Warcraft wowf 1.60.1.70532 (build WOW-70532patch1.60.1_Retail), generated from the game client's own interface files. Use when writing, debugging or reviewing WoW addon code (Lua, XML, .toc files), when checking whether an API function, event, enum, widget method or FrameXML template exists in this game version, or when looking up arguments, return values, event payloads and combat or secret-value restrictions.
+description: Exact Lua API reference for World of Warcraft wowf 1.60.1.70755 (build WOW-70755patch1.60.1_Retail), generated from the game client's own interface files. Use when writing, debugging or reviewing WoW addon code (Lua, XML, .toc files), when checking whether an API function, event, enum, widget method or FrameXML template exists in this game version, or when looking up arguments, return values, event payloads and combat or secret-value restrictions.
 ---
 
-# World of Warcraft addon API (wowf 1.60.1.70532)
+# World of Warcraft addon API (wowf 1.60.1.70755)
 
-These files describe the Lua API of exactly this game build: 5,140 API functions,
-1,477 widget methods, 1,814 events, 900 enums and
-4,363 FrameXML templates. WoW's API changes a lot between expansions and client flavours.
+These files describe the Lua API of exactly this game build: 5,143 API functions,
+1,477 widget methods, 1,816 events, 900 enums and
+4,362 FrameXML templates. WoW's API changes a lot between expansions and client flavours.
 Functions move into `C_` namespaces, get renamed or disappear. **When these files disagree with what you
 remember, trust the files.** All paths below are relative to this skill's folder.
 
@@ -32,6 +32,8 @@ remember, trust the files.** All paths below are relative to this skill's folder
    gives `path:line` in the client's interface code. These exist only once that part of Blizzard's UI has
    loaded, and they change more often than the C API.
 6. Search by keyword when you don't know the name: `grep -i 'mount' signatures.txt | grep '^fn'`.
+
+**Updating an existing addon?** `CHANGES.md` lists every function, event, type and template added, removed or changed since wowf 1.60.1.70707. Check the code's API calls against it.
 
 Avoid reading `api.json` (10.7 MB) or `framexml/mixins.md` (2.3 MB) whole.
 Grep them, or use `jq` on `api.json` for structured queries.
@@ -115,11 +117,12 @@ the addon's `.luarc.json` together with `"runtime.version": "Lua 5.1"`.
 | `signatures.txt` | 1.2 MB | every symbol, one per line |
 | `api/systems/*.md` | 560 files | API systems: functions, events, types |
 | `api/widgets/*.md` | 81 files | widget methods |
-| `api/events.md` | 130 KB | events with payloads |
+| `api/events.md` | 131 KB | events with payloads |
 | `api/enums.md` | 244 KB | `Enum.*` and constants |
 | `framexml/templates.md` | 654 KB | XML templates and intrinsic frames |
 | `framexml/mixins.md` | 2.3 MB | mixins and utility tables with methods |
-| `framexml/functions.md` | 814 KB | global Lua functions in Blizzard's UI |
+| `framexml/functions.md` | 816 KB | global Lua functions in Blizzard's UI |
 | `luals/*.lua` | 1 MB | language server stubs |
 | `api.json` | 10.7 MB | all of the above as data |
 | `README.md` | 4 KB | overview for people |
+| `CHANGES.md` | 4 KB | API changes since wowf 1.60.1.70707 |

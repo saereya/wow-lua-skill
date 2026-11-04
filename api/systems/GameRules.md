@@ -199,10 +199,18 @@ C_GameRules.IsStandard() -> active: bool
 C_GameRules.IsWoWHack() -> active: bool
 ```
 
-### SetForeverExperiencePreset
+### SetForeverExperiencePresetPostLogin
 
 ```lua
-C_GameRules.SetForeverExperiencePreset(preset: ForeverExperiencePreset)
+C_GameRules.SetForeverExperiencePresetPostLogin(preset: ForeverExperiencePreset)
+```
+
+`SecretArguments=AllowedWhenUntainted`
+
+### SetForeverExperiencePresetPreLogin
+
+```lua
+C_GameRules.SetForeverExperiencePresetPreLogin(preset: ForeverExperiencePreset)
 ```
 
 `SecretArguments=AllowedWhenUntainted`
@@ -265,6 +273,14 @@ GAME_RULES_CHANGED()
 
 `SynchronousEvent`
 
+### SETTINGS_HEADER_TEXT_UPDATE
+
+```lua
+SETTINGS_HEADER_TEXT_UPDATE()
+```
+
+`SynchronousEvent`
+
 ## Types
 
 ### ForeverExperiencePreset
@@ -278,7 +294,7 @@ Values:
 | Name | Type | Notes |
 |---|---|---|
 | `Classic` | `ForeverExperiencePreset` | = 0 |
-| `Modern` | `ForeverExperiencePreset` | = 1 |
+| `Enhanced` | `ForeverExperiencePreset` | = 1 |
 
 ### SdToggleUsageLocationUI
 

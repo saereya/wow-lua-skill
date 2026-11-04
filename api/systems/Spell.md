@@ -614,7 +614,7 @@ C_Spell.IsSpellCrowdControl(spellIdentifier: SpellIdentifier) -> isCrowdControl:
 
 Returns true if the spell causes a crowd control effect when cast on a valid target.
 
-`SecretArguments=AllowedWhenTainted`
+`SecretArguments=AllowedWhenUntainted`
 
 ### IsSpellDataCached
 

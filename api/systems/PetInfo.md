@@ -78,6 +78,12 @@ C_PetInfo.IsPetActionPassive(actionID: number) -> isPassive: bool
 
 `SecretArguments=AllowedWhenUntainted`
 
+### IsPetOrderMoveToPending
+
+```lua
+C_PetInfo.IsPetOrderMoveToPending() -> isPetOrderMoveToPending: bool
+```
+
 ### PetAbandon
 
 ```lua
@@ -154,6 +160,14 @@ PET_DISMISS_START(delay: number)
 
 ```lua
 PET_FORCE_NAME_DECLENSION(name: cstring, petNumber: number?, declinedName1: cstring?, declinedName2: cstring?, declinedName3: cstring?, declinedName4: cstring?, declinedName5: cstring?)
+```
+
+`SynchronousEvent`
+
+### PET_ORDER_MOVE_TO_PENDING_CHANGED
+
+```lua
+PET_ORDER_MOVE_TO_PENDING_CHANGED(isPetOrderMoveToPending: bool)
 ```
 
 `SynchronousEvent`
